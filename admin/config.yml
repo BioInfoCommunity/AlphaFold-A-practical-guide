@@ -1,7 +1,9 @@
 backend:
   name: github
-  repo: your-org/your-course-repo
+  repo: bioinfocommunity/alphafold-a-practical-guide
   branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: /auth
   # You’ll use GitHub authentication via OAuth app (see step 3)
 
 media_folder: "assets/uploads"
