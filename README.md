@@ -32,23 +32,27 @@ Translations are maintained in **language-specific branches**, e.g.:
 
 We welcome contributions from the community! To maintain quality:
 
-1. **Forking**  
+1. **Request access**
+   - Interested users need to request access to this repo by filling this form.
+   - Once the accessed is approved, users can start contibuting to this project.
+
+2. **Forking**  
    - The repository is public for reading, but forks by unauthorized users will **not be merged**.
 
-2. **Submitting Pull Requests (PRs)**  
+3. **Submitting Pull Requests (PRs)**  
    - Only authorized users with write access can submit PRs.  
    - PRs must target the appropriate language branch.  
    - Include a brief description of changes in your PR.  
 
-3. **Quality and Formatting**  
+4. **Quality and Formatting**  
    - Keep Markdown formatting consistent.  
    - Ensure translations are accurate and consistent with the original English content.
 
-4. **Review Process**  
+5. **Review Process**  
    - PRs are reviewed by **Community content maintainers** before merging.  
    - Unauthorized PRs or forks will be closed without review.
      
-5. **Code of Conduct**  
+6. **Code of Conduct**  
    - Be respectful and constructive.  
    - Keep discussions on-topic and professional.  
    - Offensive or low-quality contributions may be rejected.
