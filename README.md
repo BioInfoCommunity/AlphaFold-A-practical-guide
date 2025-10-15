@@ -45,7 +45,7 @@ We welcome contributions from the community! To maintain quality:
    - Ensure translations are accurate and consistent with the original English content.
 
 4. **Review Process**  
-   - PRs are reviewed by **EBI content maintainers** before merging.  
+   - PRs are reviewed by **Community content maintainers** before merging.  
    - Unauthorized PRs or forks will be closed without review.
      
 5. **Code of Conduct**  
