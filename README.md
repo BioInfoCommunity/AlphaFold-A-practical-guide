@@ -17,12 +17,12 @@ Welcome to the **AlphaFold-A-practical-guide** repository! This repo hosts the o
 The default content is in **English (`main` branch`)**.  
 Translations are maintained in **language-specific branches**, e.g.:
 
-| Branch | Language |
-|--------|----------|
-| `main` | English |
-| `-es`  | Spanish |
-| `-fr`  | French |
-| `-de`  | German |
+| Branch | Language | Status |
+|--------|----------|--------|
+| `main` | English | Active |
+| `-es`  | Spanish | --     |
+| `-fr`  | French | In progress |
+| `-de`  | German | --      |
 
 > ⚠️ Only users **with write access** to the repo can contribute to these branches.
 
