@@ -34,7 +34,8 @@ jobs:
       - name: Copy content to deploy folder
         run: |
           mkdir -p $DEPLOY_DIR
-          cp -r * $DEPLOY_DIR
+          # Copy everything except the deploy folder itself
+          rsync -av --exclude "$DEPLOY_DIR" ./ $DEPLOY_DIR/
           # Optional: remove workflow file from deploy
           rm -f $DEPLOY_DIR/.github/workflows/gh-pages.yml
 
