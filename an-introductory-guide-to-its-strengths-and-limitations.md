@@ -7,3 +7,4 @@ Les protéines sont des composants fondamentaux de la vie. Chaque molécule de p
 - Évaluez les concepts fondamentaux derrière AlphaFold et pourquoi il est considéré comme une avancée significative dans la prédiction de la structure des protéines.
 - Décrivez les points forts et les limites des prédictions de structure d’AlphaFold.
 
+Date updated: 14.10.2025
