@@ -11,11 +11,18 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <script>
         if (window.netlifyIdentity) {
+           console.log(window.netlifyIdentity)
             window.netlifyIdentity.on('init', user => {
                 if (user) {
                     window.netlifyIdentity.close();
                 }
-            })
+            });
+
+          // This hook specifically handles the external login redirect
+          window.netlifyIdentity.on('login', function() {
+              // Force a full page redirect after successful login to reload the CMS
+              document.location.reload(true); 
+          });
         }
     </script>
 </body>
