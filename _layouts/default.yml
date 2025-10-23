@@ -80,16 +80,53 @@
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
 												<nav>
-											      <ul class="vf-tree__list  vf-tree__list--1 | vf-list">
-												  <li class="vf-tree__item"><a class="vf-tree__link" href="/nextjs-blog-2/">Course overview</a></li>
-											        {% assign pages_list = site.pages | sort: "title" %}
-											        {% for p in pages_list %}
-											          {% if p.title and p.url != "/" %}
-											            <li class="vf-tree__item"><a class="vf-tree__link" href="{{ p.url | relative_url }}">{{ p.title }}</a></li>
-											          {% endif %}
-											        {% endfor %}
-											      </ul>
-											    </nav>
+												  <ul>
+												    {% comment %}
+												      Collect all pages except the root index.md
+												    {% endcomment %}
+												    {% assign pages_list = site.pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
+												
+												    {% comment %}
+												      Group pages by their first-level directory (e.g., "1.introduction")
+												    {% endcomment %}
+												    {% assign grouped_pages = pages_list | group_by_exp: "p", "p.path | split: '/' | first" %}
+												
+												    {% for group in grouped_pages %}
+												      {% assign folder = group.name %}
+												      {% assign folder_pages = group.items %}
+												
+												      {% comment %}
+												        Find the index.md file in the folder (if any)
+												      {% endcomment %}
+												      {% assign index_page = folder_pages | where: "name", "index.md" | first %}
+												
+												      <li>
+												        {% if index_page %}
+												          <a href="{{ index_page.url | relative_url }}">
+												            {{ index_page.title | default: folder | replace: '-', ' ' | capitalize }}
+												          </a>
+												        {% else %}
+												          {{ folder | replace: '-', ' ' | capitalize }}
+												        {% endif %}
+												
+												        {% comment %}
+												          Show subpages (excluding index.md)
+												        {% endcomment %}
+												        <ul>
+												          {% assign subpages = folder_pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
+												          {% for sub in subpages %}
+												            <li>
+												              <a href="{{ sub.url | relative_url }}">
+												                {{ sub.title | default: sub.name | replace: '.md', '' | replace: '-', ' ' | capitalize }}
+												              </a>
+												            </li>
+												          {% endfor %}
+												        </ul>
+												      </li>
+												    {% endfor %}
+												  </ul>
+												</nav>
+
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
 													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
