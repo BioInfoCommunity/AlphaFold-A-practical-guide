@@ -80,7 +80,9 @@
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
 												<nav>
-												  <ul>
+												  <ul class="vf-tree__list  vf-tree__list--1 | vf-list">
+												  <li class="vf-tree__item">
+												  <a class="vf-tree__linnk" hreaf="/AlphaFold-A-practical-guide">Course overview</a>
 												    {% comment %}
 												      Get only markdown files (exclude README.md)
 												    {% endcomment %}
@@ -116,9 +118,9 @@
 												        {% endcomment %}
 												        {% assign index_page = folder_pages | where: "name", "index.md" | first %}
 												
-												        <li>
+												        <li class="vf-tree__item">
 												          {% if index_page %}
-												            <a href="{{ index_page.url | relative_url }}">
+												            <a class="vf-tree__link" href="{{ index_page.url | relative_url }}">
 												              {{ index_page.title | default: folder_clean | capitalize }}
 												            </a>
 												          {% else %}
