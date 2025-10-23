@@ -82,9 +82,10 @@
 												<nav>
 												  <ul>
 												    {% comment %}
-												      Collect all pages except the root index.md
+												      Collect all pages with `.md` extension, excluding root-level index.md
 												    {% endcomment %}
-												    {% assign pages_list = site.pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
+												    {% assign markdown_pages = site.pages | where_exp: "p", "p.path contains '.md'" %}
+												    {% assign pages_list = markdown_pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
 												
 												    {% comment %}
 												      Group pages by their first-level directory (e.g., "1.introduction")
@@ -96,28 +97,51 @@
 												      {% assign folder_pages = group.items %}
 												
 												      {% comment %}
-												        Find the index.md file in the folder (if any)
+												        Skip root-level pages without a directory
+												      {% endcomment %}
+												      {% if folder contains '.' %}
+												        {% assign folder_clean = folder 
+												          | remove: '_' 
+												          | remove: '-' 
+												          | remove: '/' 
+												          | replace: '.md','' 
+												          | replace: '_', ' ' 
+												          | replace: '-', ' ' 
+												        %}
+												        {% assign folder_clean = folder_clean | split: '.' | last %}
+												      {% else %}
+												        {% assign folder_clean = folder %}
+												      {% endif %}
+												
+												      {% comment %}
+												        Find index.md in this folder
 												      {% endcomment %}
 												      {% assign index_page = folder_pages | where: "name", "index.md" | first %}
 												
 												      <li>
 												        {% if index_page %}
 												          <a href="{{ index_page.url | relative_url }}">
-												            {{ index_page.title | default: folder | replace: '-', ' ' | capitalize }}
+												            {{ index_page.title 
+												              | default: folder_clean 
+												              | capitalize }}
 												          </a>
 												        {% else %}
-												          {{ folder | replace: '-', ' ' | capitalize }}
+												          {{ folder_clean | capitalize }}
 												        {% endif %}
 												
-												        {% comment %}
-												          Show subpages (excluding index.md)
-												        {% endcomment %}
 												        <ul>
 												          {% assign subpages = folder_pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
 												          {% for sub in subpages %}
+												            {% assign name_clean = sub.name 
+												              | replace: '.md', '' 
+												              | split: '.' 
+												              | last 
+												              | replace: '-', ' ' 
+												              | strip 
+												            %}
 												            <li>
 												              <a href="{{ sub.url | relative_url }}">
-												                {{ sub.title | default: sub.name | replace: '.md', '' | replace: '-', ' ' | capitalize }}
+												                {{ sub.title | default: name_clean | capitalize }}
 												              </a>
 												            </li>
 												          {% endfor %}
@@ -126,6 +150,7 @@
 												    {% endfor %}
 												  </ul>
 												</nav>
+
 
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
