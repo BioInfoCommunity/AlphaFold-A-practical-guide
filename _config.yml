@@ -1,0 +1,16 @@
+title: AlphaFold - A practical guide
+description: This tutorial is aimed at researchers who are interested in using AlphaFold to predict protein structures and integrate these predictions into their projects
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-feed
+remote_theme: pages-themes/minimal@v0.2.0
+plugins:
+  - jekyll-remote-theme
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
