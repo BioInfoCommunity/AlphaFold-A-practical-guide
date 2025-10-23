@@ -82,7 +82,7 @@
 												<nav>
 												  <ul class="vf-tree__list  vf-tree__list--1 | vf-list">
 												  <li class="vf-tree__item">
-												  <a class="vf-tree__linnk" hreaf="/AlphaFold-A-practical-guide">Course overview</a>
+												  <a class="vf-tree__link" href="/AlphaFold-A-practical-guide">Course overview</a>
 												    {% comment %}
 												      Get only markdown files (exclude README.md)
 												    {% endcomment %}
@@ -130,7 +130,7 @@
 												          {% comment %}
 												            Render subpages inside folder (excluding index.md)
 												          {% endcomment %}
-												          <ul>
+												          <ul class="vf-tree__list  vf-tree__list--1 | vf-list">
 												            {% assign subpages = folder_pages 
 												              | where_exp: "p", "p.name != 'index.md'" 
 												              | where_exp: "p", "p.name != 'README.md'" 
@@ -144,8 +144,8 @@
 												                | replace: '-', ' ' 
 												                | strip 
 												              %}
-												              <li>
-												                <a href="{{ sub.url | relative_url }}">
+												              <li class="vf-tree__item">
+												                <a class="vf-tree__link" href="{{ sub.url | relative_url }}">
 												                  {{ sub.title | default: name_clean | capitalize }}
 												                </a>
 												              </li>
