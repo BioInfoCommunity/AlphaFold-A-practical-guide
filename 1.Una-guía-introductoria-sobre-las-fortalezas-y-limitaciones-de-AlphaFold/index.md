@@ -1,6 +1,7 @@
-Las proteínas son componentes fundamentales de la vida. Cada molécula de proteína tiene una forma tridimensional distintiva que determina sus funciones, como catalizar (acelerar) una reacción bioquímica o permitir las contracciones musculares. Predecir con precisión la estructura de una proteína nos permite comprender mejor sus funciones y roles.
+# Una guía introductoria a las fortalezas y limitaciones de AlphaFold
+Las proteínas son un componente esencial de la vida. Cada molécula proteica tiene una estructura tridimensional (3D) particular que determina sus funciones, por ejemplo, catalizar (acelerar) una reacción bioquímica o permitir la contracción muscular. Predecir con precisión la estructura de una proteína nos permite entender mejor su rol y sus funciones.
 
-### Al final de esta sección usted podrá::
-- Recordemos la importancia del problema del plegamiento de proteínas.
-- Evalúe los conceptos fundamentales detrás de AlphaFold y por qué se considera un avance significativo en la predicción de la estructura de las proteínas.
-- Describe las fortalezas y limitaciones de las predicciones de estructura de AlphaFold.
+Al terminar esta sección podrás:
+- Recordar la importancia del problema del plegamiento de proteínas
+- Evaluar los conceptos fundamentales detrás de AlphaFold y por qué se lo considera un avance significativo en la predicción de estructuras proteicas
+- Describir las fortalezas y limitaciones de las estructuras predichas por AlphaFold
