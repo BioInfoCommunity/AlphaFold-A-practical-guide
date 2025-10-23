@@ -33,9 +33,9 @@
 								<div class="vf-body">
 									<section class="vf-hero | vf-u-fullbleed" style="background:none;">
 										<div class="vf-hero__content | vf-box | vf-stack vf-stack--400" style="min-width:350px">
-											<p class="vf-hero__kicker" style="text-transform:uppercase">Online tutorial</p>
+											<p class="vf-hero__kicker" style="text-transform:uppercase">Tutorial en línea</p>
 											<h2 id="course_title" class="vf-hero__heading">AlphaFold</h2>
-											<p class="vf-hero__subheading">A practical guide</p>
+											<p class="vf-hero__subheading">Una guía práctica</p>
 										</div>
 									</section>
 								</div>
@@ -55,12 +55,12 @@
 												</figure>
 												<div class="vf-u-margin__top--500"></div>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0">
-													Time to complete: </p>
-												<p class="vf-u-type__text-body--3 vf-u-margin--0">3 hours</p>
+													Tiempo para completar: </p>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0">3 horas</p>
 												</p>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
-													Written by:</p>
+													Escrito por:</p>
 												<div class="vf-u-margin__top--100"></div>
 												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
 													<li class="vf-list__item ">
@@ -73,8 +73,22 @@
 															href=https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy> Oleg Kovalevskiy </a>
 													</li>
 												</ul>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
+													Traducido por:</p>
+												<div class="vf-u-margin__top--100"></div>
+												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
+													<li class="vf-list__item ">
+														Translator 1
+													</li>
+													<li class="vf-list__item ">
+														Translator 2
+													</li>
+												</ul>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
-													Last reviewed: June 2025</p>
+													traducido el: Octubre de 2025</p>
+												</p>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
+													Última revisión: Junio ​​de 2025</p>
 												</p>
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
@@ -165,12 +179,9 @@
 															src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"
 															style="width: 125px; height: 44px;" width="125" height="44"></a>
 												</p>
-												<p class="vf-u-type__text-body--3">All materials are free cultural works licensed under a
-													Creative
-													Commons
+												<p class="vf-u-type__text-body--3">Todos los materiales son obras culturales gratuitas con licencia Creative Commons.
 													<a href="https://creativecommons.org/licenses/by/4.0/"
-														class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Attribution 4.0
-														International (CC BY 4.0) license</a>, except where further licensing details are provided.
+														class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia..
 												</p>
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
