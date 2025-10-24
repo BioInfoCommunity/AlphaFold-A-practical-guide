@@ -1,0 +1,26 @@
+# .github/workflows/deploy.yml
+name: Deploy branch to GitHub Pages
+on:
+  push:
+    branches:
+      - main
+      - dev
+      - feature1
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Build site
+        run: |
+          npm install
+          npm run build
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          destination_dir: ${{ github.ref_name }}
