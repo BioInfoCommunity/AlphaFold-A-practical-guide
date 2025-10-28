@@ -45,5 +45,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          branch: sync-from-wordpress
           title: "Sync from WordPress"
-          branch: sync-branch
+          body: "Automated sync commit"
+          base: main
