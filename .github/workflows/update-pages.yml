@@ -1,10 +1,10 @@
 name: Update Pages from WordPress
 
 on:
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  workflow_dispatch:
 
 permissions:
-  contents: write  # ✅ allows git push using GITHUB_TOKEN
+  contents: write
 
 jobs:
   update-pages:
@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -22,22 +22,24 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install requests markdownify
+        run: |
+          pip install requests markdownify
 
       - name: Run sync script
-        run: python sync_wp_pages.py
+        run: python sync_pages.py
 
-      - name: Commit and push changes
+      - name: Commit and push to temp branch
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git diff-index --quiet HEAD || git commit -m "Sync from WordPress on $(date +'%Y-%m-%d %H:%M:%S')"
 
-          BRANCH=sync-wp-$(date +'%Y%m%d-%H%M%S')
-          git checkout -b $BRANCH
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git $BRANCH
-          
+          BRANCH="sync-wp-$(date +'%Y%m%d-%H%M%S')"
+          echo "BRANCH=$BRANCH" >> $GITHUB_ENV
+          git checkout -b "$BRANCH"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git "$BRANCH"
+
       - name: Create pull request
         uses: peter-evans/create-pull-request@v6
         with:
@@ -45,5 +47,4 @@ jobs:
           branch: ${{ env.BRANCH }}
           title: "Sync from WordPress"
           body: "Automated sync from WordPress content"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          delete-branch: true
