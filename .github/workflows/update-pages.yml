@@ -33,6 +33,17 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add .
           git diff-index --quiet HEAD || git commit -m "Sync from WordPress on $(date +'%Y-%m-%d %H:%M:%S')"
-          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:${{ github.ref }}
+
+          BRANCH=sync-wp-$(date +'%Y%m%d-%H%M%S')
+          git checkout -b $BRANCH
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git $BRANCH
+          
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ env.BRANCH }}
+          title: "Sync from WordPress"
+          body: "Automated sync from WordPress content"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
