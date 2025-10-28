@@ -8,6 +8,9 @@ on:
       - fr
       - de
 
+permissions:
+  contents: write   # 👈 this gives GitHub Actions permission to push
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
