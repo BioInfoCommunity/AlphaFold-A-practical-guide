@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install requests markdownify
 
       - name: Run sync script
         run: python sync_wp_pages.py
