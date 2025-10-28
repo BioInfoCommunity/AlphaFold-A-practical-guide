@@ -45,9 +45,5 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Sync from WordPress"
           title: "Sync from WordPress"
-          body: "Automated content sync from WordPress REST API."
-          branch: "sync-wp-${{ github.run_id }}"  # ✅ Always new branch name
-          base: main  # ✅ Explicitly set PR base branch
-          delete-branch: true
+          branch: sync-branch
