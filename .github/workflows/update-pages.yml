@@ -22,7 +22,7 @@ jobs:
         run: pip install requests
 
       - name: Run sync script
-        run: python sync_pages.py
+        run: python sync_wp_pages.py
 
       - name: Commit and push changes
         run: |
