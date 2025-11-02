@@ -1,6 +1,6 @@
 # AlphaFold-A-practical-guide
 
-Welcome to the **AlphaFold-A-practical-guide** repository! This repo hosts the official course content in English and supports community-driven translations into multiple languages.
+Welcome to the **AlphaFold-A-practical-guide** repository! This repo hosts the official course content in English and supports community-driven translations into multiple languages. The published course can be visited at https://www.ebi.ac.uk/training/online/courses/alphafold/
 
 ---
 
@@ -19,9 +19,9 @@ Translations are maintained in **language-specific branches**, e.g.:
 
 | Branch | Language | Status |
 |--------|----------|--------|
-| `main` | English | Active |
-| `-es`  | Spanish | --     |
-| `-fr`  | French | In progress |
+| `main` | English | [Active](https://github.com/BioInfoCommunity/AlphaFold-A-practical-guide/tree/main) |
+| `-es`  | Spanish | [In progress](https://github.com/BioInfoCommunity/AlphaFold-A-practical-guide/tree/es) |
+| `-fr`  | French | --      |
 | `-de`  | German | --      |
 
 > ⚠️ Only users **with write access** to the repo can contribute to these branches.
@@ -30,32 +30,8 @@ Translations are maintained in **language-specific branches**, e.g.:
 
 ## 👥 Contribution Guidelines
 
-We welcome contributions from the community! To maintain quality:
+We welcome contributions from the community! Please refer to these [guidelines](https://docs.google.com/document/d/1h9wpkmLGjUezFNFoCf3DGeJlh_VLm_981cMZLy8KgSo/edit?tab=t.0#heading=h.vz9n0ixugqnr)  for contributing to the content.
 
-1. **Request access**
-   - Interested users need to request access to this repo by filling this form.
-   - Once the accessed is approved, users can start contibuting to this project.
-
-2. **Forking**  
-   - The repository is public for reading, but forks by unauthorized users will **not be merged**.
-
-3. **Submitting Pull Requests (PRs)**  
-   - Only authorized users with write access can submit PRs.  
-   - PRs must target the appropriate language branch.  
-   - Include a brief description of changes in your PR.  
-
-4. **Quality and Formatting**  
-   - Keep Markdown formatting consistent.  
-   - Ensure translations are accurate and consistent with the original English content.
-
-5. **Review Process**  
-   - PRs are reviewed by **Community content maintainers** before merging.  
-   - Unauthorized PRs or forks will be closed without review.
-     
-6. **Code of Conduct**  
-   - Be respectful and constructive.  
-   - Keep discussions on-topic and professional.  
-   - Offensive or low-quality contributions may be rejected.
 
 ---
 
@@ -77,7 +53,7 @@ We welcome contributions from the community! To maintain quality:
 
 ## 🔗 Resources
 
-- [Official EBI LMS](https://trainingcontent.embl.org)  
+- [Published course](https://www.ebi.ac.uk/training/online/courses/alphafold/)
 - [Markdown Formatting Guide](https://www.markdownguide.org/basic-syntax/)  
 - [GitHub Fork & PR Tutorial](https://docs.github.com/en/get-started/quickstart/fork-a-repo)
 
