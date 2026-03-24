@@ -1,18 +1,19 @@
 import fs from "fs";
 import path from "path";
 
-const CONTENT_DIR = "."; // your markdown folder
-const OUTPUT_FILE = "./navigation.yml";
+const CONTENT_DIR = ".";           // root of markdown files
+const OUTPUT_FILE = "./_data/navigation.yml";
 
+// helper to remove leading numbers
 function stripNumber(name) {
-  // Remove leading numbers and dash, e.g., "01-intro" => "intro"
   return name.replace(/^\d+-/, "");
 }
 
+// recursively get pages
 function getPages(dir, parentUrl = "") {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
     .filter(e => e.name.endsWith(".md") || e.isDirectory())
-    .sort((a, b) => a.name.localeCompare(b.name)); // preserve numeric order
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   const pages = [];
 
@@ -23,6 +24,7 @@ function getPages(dir, parentUrl = "") {
       const folderName = stripNumber(entry.name);
       const folderUrl = `${parentUrl}/${folderName}`;
       const indexPath = path.join(entryPath, "index.md");
+
       if (fs.existsSync(indexPath)) {
         pages.push({
           title: folderName,
@@ -33,22 +35,26 @@ function getPages(dir, parentUrl = "") {
         pages.push(...getPages(entryPath, folderUrl));
       }
     } else if (entry.name.endsWith(".md")) {
-      if (
-        entry.name.toLowerCase() === "readme.md" ||
-        entry.name.toLowerCase() === "index.md"
-      )
-        return;
+      if (entry.name.toLowerCase() === "readme.md" || entry.name.toLowerCase() === "index.md") continue;
       const fileName = stripNumber(entry.name.replace(".md", ""));
       pages.push({
         title: fileName,
         url: `${parentUrl}/${fileName}/`,
       });
     }
+  }
 
   return pages;
 }
 
+// ensure _data folder exists
+if (!fs.existsSync("./_data")) fs.mkdirSync("./_data");
+
+// generate navigation
 const navigation = getPages(CONTENT_DIR);
 
-fs.writeFileSync(OUTPUT_FILE, `navigation: ${JSON.stringify(navigation, null, 2)}\n`);
+// write YAML
+const yamlContent = `navigation: ${JSON.stringify(navigation, null, 2)}\n`;
+fs.writeFileSync(OUTPUT_FILE, yamlContent);
+
 console.log(`Navigation generated at ${OUTPUT_FILE}`);
