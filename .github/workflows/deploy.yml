@@ -20,6 +20,15 @@ jobs:
         with:
           fetch-depth: 0
 
+      # 1️⃣ Set up Node.js to run your generateNavigation.js
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      # 3️⃣ Run your navigation generation script
+      - name: Generate navigation
+        run: node scripts/generateNavigation.js
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
