@@ -1,0 +1,244 @@
+navigation: [
+  {
+    "title": "01.an-introductory-guide-to-its-strengths-and-limitations",
+    "url": "/01.an-introductory-guide-to-its-strengths-and-limitations/",
+    "children": [
+      {
+        "title": "01.what-are-proteins-and-how-do-we-know-their-structures",
+        "url": "/01.an-introductory-guide-to-its-strengths-and-limitations/01.what-are-proteins-and-how-do-we-know-their-structures/"
+      },
+      {
+        "title": "02.what-is-the-protein-folding-problem",
+        "url": "/01.an-introductory-guide-to-its-strengths-and-limitations/02.what-is-the-protein-folding-problem/"
+      },
+      {
+        "title": "03.what-is-alphafold",
+        "url": "/01.an-introductory-guide-to-its-strengths-and-limitations/03.what-is-alphafold/"
+      },
+      {
+        "title": "04.strengths-and-limitations-of-alphafold",
+        "url": "/01.an-introductory-guide-to-its-strengths-and-limitations/04.strengths-and-limitations-of-alphafold/"
+      },
+      {
+        "title": "05.test-your-knowledge",
+        "url": "/01.an-introductory-guide-to-its-strengths-and-limitations/05.test-your-knowledge/"
+      }
+    ]
+  },
+  {
+    "title": "02.validation-and-impact",
+    "url": "/02.validation-and-impact/",
+    "children": [
+      {
+        "title": "01.how-have-alphafolds-predictions-of-protein-structure-been-validated",
+        "url": "/02.validation-and-impact/01.how-have-alphafolds-predictions-of-protein-structure-been-validated/"
+      },
+      {
+        "title": "02.how-accurate-are-alphafold-structure-predictions",
+        "url": "/02.validation-and-impact/02.how-accurate-are-alphafold-structure-predictions/"
+      },
+      {
+        "title": "03.how-is-alphafold-used-by-scientists",
+        "url": "/02.validation-and-impact/03.how-is-alphafold-used-by-scientists/"
+      }
+    ]
+  },
+  {
+    "title": "03.inputs-and-outputs",
+    "url": "/03.inputs-and-outputs/",
+    "children": [
+      {
+        "title": "01.a-high-level-overview",
+        "url": "/03.inputs-and-outputs/01.a-high-level-overview/"
+      },
+      {
+        "title": "02.evaluating-alphafolds-predicted-structures-using-confidence-scores",
+        "url": "/03.inputs-and-outputs/02.evaluating-alphafolds-predicted-structures-using-confidence-scores/",
+        "children": [
+          {
+            "title": "01.plddt-understanding-local-confidence",
+            "url": "/03.inputs-and-outputs/02.evaluating-alphafolds-predicted-structures-using-confidence-scores/01.plddt-understanding-local-confidence/"
+          },
+          {
+            "title": "02.pae-a-measure-of-global-confidence-in-alphafold-predictions",
+            "url": "/03.inputs-and-outputs/02.evaluating-alphafolds-predicted-structures-using-confidence-scores/02.pae-a-measure-of-global-confidence-in-alphafold-predictions/"
+          },
+          {
+            "title": "03.confidence-scores-in-alphafold-multimer",
+            "url": "/03.inputs-and-outputs/02.evaluating-alphafolds-predicted-structures-using-confidence-scores/03.confidence-scores-in-alphafold-multimer/"
+          }
+        ]
+      },
+      {
+        "title": "03.alphafold-inputs-and-outputs-recap",
+        "url": "/03.inputs-and-outputs/03.alphafold-inputs-and-outputs-recap/"
+      },
+      {
+        "title": "04.other-tools-to-check-quality-of-the-predicted-structures",
+        "url": "/03.inputs-and-outputs/04.other-tools-to-check-quality-of-the-predicted-structures/"
+      }
+    ]
+  },
+  {
+    "title": "04.accessing-and-predicting-protein-structures-with-alphafold",
+    "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/",
+    "children": [
+      {
+        "title": "01.choosing-how-to-access-alphafold",
+        "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/01.choosing-how-to-access-alphafold/"
+      },
+      {
+        "title": "02.accessing-predicted-protein-structures-in-the-alphafold-database",
+        "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/02.accessing-predicted-protein-structures-in-the-alphafold-database/",
+        "children": [
+          {
+            "title": "01.whats-the-best-way-to-access-the-database",
+            "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/02.accessing-predicted-protein-structures-in-the-alphafold-database/01.whats-the-best-way-to-access-the-database/"
+          },
+          {
+            "title": "02.using-the-alphafold-database-for-analysis",
+            "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/02.accessing-predicted-protein-structures-in-the-alphafold-database/02.using-the-alphafold-database-for-analysis/",
+            "children": [
+              {
+                "title": "01.navigating-the-structural-landscape",
+                "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/02.accessing-predicted-protein-structures-in-the-alphafold-database/02.using-the-alphafold-database-for-analysis/01.navigating-the-structural-landscape/"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "03.predicting-protein-structures-with-colabfold-and-alphafold-colab",
+        "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/03.predicting-protein-structures-with-colabfold-and-alphafold-colab/"
+      },
+      {
+        "title": "04.predicting-protein-structures-using-the-alphafold-open-source-code",
+        "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/04.predicting-protein-structures-using-the-alphafold-open-source-code/"
+      },
+      {
+        "title": "05.other-ways-to-access-predicted-protein-structures",
+        "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/05.other-ways-to-access-predicted-protein-structures/"
+      },
+      {
+        "title": "06.how-to-cite-alphafold",
+        "url": "/04.accessing-and-predicting-protein-structures-with-alphafold/06.how-to-cite-alphafold/"
+      }
+    ]
+  },
+  {
+    "title": "05.advanced-modeling-and-applications-of-predicted-protein-structures",
+    "url": "/05.advanced-modeling-and-applications-of-predicted-protein-structures/",
+    "children": [
+      {
+        "title": "01.customising-alphafold-structure-predictions",
+        "url": "/05.advanced-modeling-and-applications-of-predicted-protein-structures/01.customising-alphafold-structure-predictions/",
+        "children": [
+          {
+            "title": "01.outputs-from-colabfold",
+            "url": "/05.advanced-modeling-and-applications-of-predicted-protein-structures/01.customising-alphafold-structure-predictions/01.outputs-from-colabfold/"
+          }
+        ]
+      },
+      {
+        "title": "02.using-alphafold-predicted-structures-to-tackle-deeper-questions",
+        "url": "/05.advanced-modeling-and-applications-of-predicted-protein-structures/02.using-alphafold-predicted-structures-to-tackle-deeper-questions/"
+      },
+      {
+        "title": "03.enhancements-to-alphafold-from-the-wider-scientific-community",
+        "url": "/05.advanced-modeling-and-applications-of-predicted-protein-structures/03.enhancements-to-alphafold-from-the-wider-scientific-community/"
+      }
+    ]
+  },
+  {
+    "title": "06.classifying-the-effects-of-missense-variants-using-alphamissense",
+    "url": "/06.classifying-the-effects-of-missense-variants-using-alphamissense/",
+    "children": [
+      {
+        "title": "01.introducing-missense-variants-and-alphamissense",
+        "url": "/06.classifying-the-effects-of-missense-variants-using-alphamissense/01.introducing-missense-variants-and-alphamissense/"
+      },
+      {
+        "title": "02.understanding-pathogenicity-scores-from-alphamissense",
+        "url": "/06.classifying-the-effects-of-missense-variants-using-alphamissense/02.understanding-pathogenicity-scores-from-alphamissense/"
+      },
+      {
+        "title": "03.alphamissense-in-the-alphafold-database",
+        "url": "/06.classifying-the-effects-of-missense-variants-using-alphamissense/03.alphamissense-in-the-alphafold-database/"
+      }
+    ]
+  },
+  {
+    "title": "07.alphafold-3-and-alphafold-server",
+    "url": "/07.alphafold-3-and-alphafold-server/",
+    "children": [
+      {
+        "title": "01.introducing-alphafold-3",
+        "url": "/07.alphafold-3-and-alphafold-server/01.introducing-alphafold-3/",
+        "children": [
+          {
+            "title": "01.how-does-alphafold-3-work",
+            "url": "/07.alphafold-3-and-alphafold-server/01.introducing-alphafold-3/01.how-does-alphafold-3-work/"
+          },
+          {
+            "title": "02.what-alphafold-3-struggles-with",
+            "url": "/07.alphafold-3-and-alphafold-server/01.introducing-alphafold-3/02.what-alphafold-3-struggles-with/"
+          },
+          {
+            "title": "03.should-i-use-alphafold-2-or-alphafold-3",
+            "url": "/07.alphafold-3-and-alphafold-server/01.introducing-alphafold-3/03.should-i-use-alphafold-2-or-alphafold-3/"
+          },
+          {
+            "title": "04.how-have-alphafold-3s-predictions-been-validated",
+            "url": "/07.alphafold-3-and-alphafold-server/01.introducing-alphafold-3/04.how-have-alphafold-3s-predictions-been-validated/"
+          }
+        ]
+      },
+      {
+        "title": "02.alphafold-server-your-gateway-to-alphafold-3",
+        "url": "/07.alphafold-3-and-alphafold-server/02.alphafold-server-your-gateway-to-alphafold-3/",
+        "children": [
+          {
+            "title": "01.a-step-by-step-guide-to-generating-predictions-with-alphafold-server",
+            "url": "/07.alphafold-3-and-alphafold-server/02.alphafold-server-your-gateway-to-alphafold-3/01.a-step-by-step-guide-to-generating-predictions-with-alphafold-server/"
+          },
+          {
+            "title": "02.advanced-features-of-alphafold-server",
+            "url": "/07.alphafold-3-and-alphafold-server/02.alphafold-server-your-gateway-to-alphafold-3/02.advanced-features-of-alphafold-server/"
+          },
+          {
+            "title": "03.interpreting-results-from-alphafold-server",
+            "url": "/07.alphafold-3-and-alphafold-server/02.alphafold-server-your-gateway-to-alphafold-3/03.interpreting-results-from-alphafold-server/"
+          }
+        ]
+      },
+      {
+        "title": "03.how-to-assess-the-quality-of-alphafold-3-predictions",
+        "url": "/07.alphafold-3-and-alphafold-server/03.how-to-assess-the-quality-of-alphafold-3-predictions/"
+      },
+      {
+        "title": "04.using-the-alphafold-3-source-code",
+        "url": "/07.alphafold-3-and-alphafold-server/04.using-the-alphafold-3-source-code/"
+      }
+    ]
+  },
+  {
+    "title": "08.summary",
+    "url": "/08.summary/"
+  },
+  {
+    "title": "09.course-slides",
+    "url": "/09.course-slides/"
+  },
+  {
+    "title": "10.your-feedback",
+    "url": "/10.your-feedback/"
+  },
+  {
+    "title": "11.glossary-of-terms",
+    "url": "/11.glossary-of-terms/"
+  },
+  {
+    "title": "12.references",
+    "url": "/12.references/"
+  }
+]
