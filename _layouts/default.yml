@@ -93,9 +93,10 @@
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
-												<nav>
-													<ul class="vf-tree__list  vf-tree__list--1 | vf-list">
-													<li class="vf-tree__item">
+												<div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
+												  <div class="vf-tree__inner">
+													<ul class="vf-tree__list  vf-tree__list--1 | vf-list" aria-role="tree">
+													<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
 													<a class="vf-tree__link" href="/AlphaFold-A-practical-guide">Course overview</a>
 														{% comment %}
 															Get only markdown files (exclude README.md)
@@ -132,7 +133,7 @@
 																{% endcomment %}
 																{% assign index_page = folder_pages | where: "name", "index.md" | first %}
 												
-																<li class="vf-tree__item">
+																<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
 																	{% if index_page %}
 																		<a class="vf-tree__link" href="{{ index_page.url | relative_url }}">
 																			{{ index_page.title | default: folder_clean | capitalize }}
@@ -158,7 +159,7 @@
 																				| replace: '-', ' ' 
 																				| strip 
 																			%}
-																			<li class="vf-tree__item">
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="{{ sub.url | relative_url }}">
 																					{{ sub.title | default: name_clean | capitalize }}
 																				</a>
@@ -169,7 +170,8 @@
 															{% endif %}
 														{% endfor %}
 													</ul>
-												</nav>
+												</div>
+											</div>
 
 												<!-- dummy nav for vf-tree -->
 
