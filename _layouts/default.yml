@@ -388,14 +388,13 @@
 					</div>
 				</div>
 			</main>
+  <script src="https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js"></script>
   <script>
-	var script = document.createElement("script");
-	script.src = "https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js";
-	script.onload = function() {
-	    vfTree(); // safe to run now
-	};
-	document.head.appendChild(script);
+document.addEventListener('DOMContentLoaded', function() {
+    vfTree(); // will make the .vf-tree collapsible
+});
 </script>
+  
 		</div>
 
 	</div>
