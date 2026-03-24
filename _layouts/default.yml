@@ -160,7 +160,7 @@
 																	{% comment %}
 																		Render subpages inside folder (excluding index.md)
 																	{% endcomment %}
-																	<ul class="vf-tree__list  vf-tree__list--2 | vf-list" style="margin-left: 16px">
+																	<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" style="margin-left: 16px" aria-role="group">
 																		{% assign subpages = folder_pages 
 																			| where_exp: "p", "p.name != 'index.md'" 
 																			| where_exp: "p", "p.name != 'README.md'" 
