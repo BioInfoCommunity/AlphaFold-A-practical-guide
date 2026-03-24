@@ -22,27 +22,28 @@ function getPages(dir, parentUrl = "") {
     if (entry.isDirectory()) {
       const folderName = stripNumber(entry.name);
       const folderUrl = `${parentUrl}/${folderName}`;
-      // Check if folder has index.md
       const indexPath = path.join(entryPath, "index.md");
       if (fs.existsSync(indexPath)) {
         pages.push({
           title: folderName,
           url: folderUrl + "/",
-          children: getPages(entryPath, folderUrl)
+          children: getPages(entryPath, folderUrl),
         });
       } else {
-        // Folder without index.md → just process children
         pages.push(...getPages(entryPath, folderUrl));
       }
     } else if (entry.name.endsWith(".md")) {
-      if (entry.name.toLowerCase() === "readme.md" || entry.name.toLowerCase() === "index.md") continue;
+      if (
+        entry.name.toLowerCase() === "readme.md" ||
+        entry.name.toLowerCase() === "index.md"
+      )
+        return;
       const fileName = stripNumber(entry.name.replace(".md", ""));
       pages.push({
         title: fileName,
-        url: `${parentUrl}/${fileName}/`
+        url: `${parentUrl}/${fileName}/`,
       });
     }
-  }
 
   return pages;
 }
