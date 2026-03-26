@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Understanding pathogenicity scores from AlphaMissense'
+---
+
 # Understanding pathogenicity scores from AlphaMissense
 
 AlphaMissense assigns each missense variant a score between 0 and 1. These indicate the probability of the variant being pathogenic. For example, a score of 0.8 suggests that 8 out of 10 variants with this score are likely to be pathogenic.

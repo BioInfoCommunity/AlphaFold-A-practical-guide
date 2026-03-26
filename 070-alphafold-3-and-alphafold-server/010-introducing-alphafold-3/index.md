@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Introducing AlphaFold 3'
+---
+
 # Introducing AlphaFold 3
 
 **Although AlphaFold 3 is based on the same general principles as AlphaFold 2, it has a substantially updated architecture. This enables AlphaFold 3 to model complexes that contain multiple classes of biomolecules. These include DNA, RNA, small molecule ligands, ions, post-translational modifications of proteins, and chemical modifications of nucleic acids.**

@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'What AlphaFold 3 struggles with'
+---
+
 # What AlphaFold 3 struggles with
 
 AlphaFold 3 can model chemically different entities like proteins, small molecules and metal ions. It therefore explores a much wider chemical space than just proteins. Nevertheless, AlphaFold 3 still has limitations.

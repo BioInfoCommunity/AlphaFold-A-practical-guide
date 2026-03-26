@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Using AlphaFold2 predicted structures to tackle deeper questions'
+---
+
 # Using AlphaFold2 predicted structures to tackle deeper questions
 
 **AlphaFold2 predicted structures have many uses, beyond pure structural biology. By predicting the structures of proteins that have not yet been solved, AlphaFold2 enables the generation of hypotheses about those proteins’ functions and interactions. Furthermore, the ability to compare proteins by shape enables us to uncover deep evolutionary relationships. AlphaFold2 is not intended for, validated for or approved for clinical use – see Disclaimer** [1](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/using-alphafold-predicted-structures-to-tackle-deeper-questions/#:~:text=1.%20Disclaimer%3A%20%E2%80%9CAlphaFold,a%20qualified%20professional.%E2%80%9D).

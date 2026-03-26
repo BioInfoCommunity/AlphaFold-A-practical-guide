@@ -56,28 +56,34 @@ jobs:
           mkdir site
           mkdir -p site/_data
 
+          # English
           mkdir -p site/en
           rsync -av --exclude="_data" --exclude=".git" repo-main/ site/en/
           cp repo-main/_data/en.yml site/_data/
 
+          # Spanish
           mkdir -p site/es
           rsync -av --exclude="_data" --exclude=".git" repo-spanish/ site/es/
           cp repo-spanish/_data/es.yml site/_data/
 
+          # French
           # mkdir -p site/fr
           # rsync -av --exclude="_data" --exclude=".git" repo-french/ site/fr/
           # cp repo-french/_data/fr.yml site/_data/
 
+          # German
           # mkdir -p site/de
           # rsync -av --exclude="_data" --exclude=".git" repo-german/ site/de/
           # cp repo-german/_data/de.yml site/_data/
 
+          # Portuguese
           # mkdir -p site/pt
           # rsync -av --exclude="_data" --exclude=".git" repo-portuguese/ site/pt/
           # cp repo-portuguese/_data/pt.yml site/_data/
 
           # remove .git folders if any
           find site -name ".git" -type d -exec rm -rf {} + || true
+
       # ----------------------------
       # Copy config + layouts
       # ----------------------------
@@ -88,7 +94,7 @@ jobs:
           cp -r repo-main/_layouts/* site/_layouts/ || true
 
       # ----------------------------
-      # Add Gemfile (IMPORTANT)
+      # Add Gemfile for Jekyll
       # ----------------------------
       - name: Create Gemfile
         run: |
@@ -98,7 +104,7 @@ jobs:
           EOF
 
       # ----------------------------
-      # Setup Ruby + install deps
+      # Setup Ruby + Bundler
       # ----------------------------
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -108,7 +114,7 @@ jobs:
           working-directory: site
 
       # ----------------------------
-      # Build Jekyll
+      # Build Jekyll (dynamic .md processing)
       # ----------------------------
       - name: Build site
         run: |
@@ -117,12 +123,12 @@ jobs:
           bundle exec jekyll build --trace
 
       # ----------------------------
-      # Debug (VERY IMPORTANT)
+      # Debug (optional)
       # ----------------------------
       - name: Debug build output
         run: |
           ls -R site/_site | head -100
-      
+
       # ----------------------------
       # Deploy to gh-pages
       # ----------------------------      

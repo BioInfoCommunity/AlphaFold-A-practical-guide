@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Classifying the effects of missense variants using AlphaMissense'
+---
+
 # Classifying the effects of missense variants using AlphaMissense
 
 AlphaMissense is a new tool, based on AlphaFold2 but separate from it. It can predict whether a missense variant is likely to be pathogenic. Like AlphaFold2, AlphaMissense supplies confidence metrics to enable careful interpretation of its predictions.

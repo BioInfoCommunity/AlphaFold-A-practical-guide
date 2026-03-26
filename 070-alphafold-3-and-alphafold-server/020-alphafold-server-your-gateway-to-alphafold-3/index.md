@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'AlphaFold Server: Your gateway to AlphaFold 3'
+---
+
 # AlphaFold Server: Your gateway to AlphaFold 3
 
 AlphaFold Server is a user-friendly online portal for making AlphaFold 3 structure predictions.  

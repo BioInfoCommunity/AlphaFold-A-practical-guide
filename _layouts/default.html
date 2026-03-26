@@ -119,149 +119,56 @@
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
-                        <ul>
-{% for group in grouped_pages %}
-  {% assign section = group.name %}
-  {% assign pages = group.items %}
+                       {% assign lang = page.path | split: '/' | first %}
+                      {% assign t = site.data[lang] | default: site.data['en'] %}
 
-  {% assign index_page = pages | where: "name", "index.md" | first %}
+                      <nav>
+                        <ul class="vf-tree__list vf-tree__list--1 | vf-list">
 
-  <li>
-    {% if index_page %}
-      <a href="{{ index_page.url | relative_url }}">
-        {{ index_page.title | default: section | replace: '-', ' ' | capitalize }}
-      </a>
-    {% else %}
-      {{ section | replace: '-', ' ' | capitalize }}
-    {% endif %}
+                          <!-- Course overview -->
+                          <li class="vf-tree__item">
+                            {% assign course_slug = t.course.title | downcase | replace: ':','' | replace: ' ', '-' %}
+                            <a class="vf-tree__link" href="/{{ lang }}/{{ course_slug }}/">
+                              {{ t.course.title }}
+                            </a>
+                          </li>
 
-    <ul>
-      {% assign subpages = pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
-      {% for sub in subpages %}
-        <li>
-          <a href="{{ sub.url | relative_url }}">
-            {{ sub.title | default: sub.name | replace: '.md', '' | replace: '-', ' ' | capitalize }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
+                          {% assign pages_in_lang = site.pages | where_exp: "p", "p.path contains lang" %}
+                          {% assign grouped_pages = pages_in_lang | group_by_exp: "p", "p.path | split: '/' | slice: 1,1 | first" %}
 
-  </li>
-{% endfor %}
-</ul>
+                          {% for group in grouped_pages %}
+                            {% assign section = group.name %}
+                            {% assign pages = group.items %}
+                            {% assign index_page = pages | where: "name", "index.md" | first %}
 
-another test
-<ul>
-{% for p in site.pages %}
-  <li>{{ p.path }} → {{ p.url }}</li>
-{% endfor %}
-</ul>
-
-                        <nav>
-                          {% assign lang = page.path | split: '/' | first %}
-                          {% assign t = site.data[lang] | default: site.data['en'] %}
-                          <ul class="vf-tree__list vf-tree__list--1 | vf-list">
-
-                            <!-- Course overview -->
                             <li class="vf-tree__item">
-                              <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/">
-                                {{ t.course.title }}
-                              </a>
-                            </li>
-
-                            {% comment %}
-                              Get only markdown pages for current language
-                            {% endcomment %}
-                            {% assign markdown_pages = site.pages 
-                              | where_exp: "p", "p.path contains '.md'" 
-                              | where_exp: "p", "p.path contains lang" 
-                              | where_exp: "p", "p.name != 'README.md'" 
-                            %}
-
-                            {% comment %}
-                              Group by course folder (SECOND segment now!)
-                            {% endcomment %}
-                            {% assign grouped_pages = markdown_pages 
-                              | group_by_exp: "p", "p.path | split: '/' | slice: 1,1 | first" 
-                            %}
-
-                            {% for group in grouped_pages %}
-                              {% assign folder = group.name %}
-                              {% assign folder_pages = group.items %}
-
-                              {% comment %}
-                                Skip invalid groups
-                              {% endcomment %}
-                              {% if folder != nil and folder != "" and folder contains '-' %}
-
-                                {% comment %}
-                                  Clean folder name
-                                {% endcomment %}
-                                {% assign folder_clean = folder
-                                  | replace: '-', ' '
-                                  | split: '.'
-                                  | last
-                                  | strip
-                                %}
-
-                                {% comment %}
-                                  Find index.md for section
-                                {% endcomment %}
-                                {% assign index_page = folder_pages 
-                                  | where: "name", "index.md" 
-                                  | first 
-                                %}
-
-                                <li class="vf-tree__item">
-
-                                  {% if index_page %}
-                                    <a class="vf-tree__link" href="{{ index_page.url | relative_url }}">
-                                      {{ index_page.title | default: folder_clean | capitalize }}
-                                    </a>
-                                  {% else %}
-                                    {{ folder_clean | capitalize }}
-                                  {% endif %}
-
-                                  {% comment %}
-                                    Subpages (exclude index.md)
-                                  {% endcomment %}
-                                  <ul class="vf-tree__list vf-tree__list--1 | vf-list" style="margin-left: 16px">
-
-                                    {% assign subpages = folder_pages
-                                      | where_exp: "p", "p.name != 'index.md'"
-                                      | sort: "path"
-                                    %}
-
-                                    {% for sub in subpages %}
-
-                                      {% assign name_clean = sub.name
-                                        | replace: '.md', ''
-                                        | split: '.'
-                                        | last
-                                        | replace: '-', ' '
-                                        | strip
-                                      %}
-
-                                      <li class="vf-tree__item">
-                                        <a class="vf-tree__link" href="{{ sub.url | relative_url }}">
-                                          {{ sub.title | default: name_clean | capitalize }}
-                                        </a>
-                                      </li>
-
-                                    {% endfor %}
-
-                                  </ul>
-                                </li>
-
+                              {% if index_page %}
+                                <a href="{{ index_page.url | relative_url }}">
+                                  {{ index_page.title | default: section | replace: '-', ' ' | capitalize }}
+                                </a>
+                              {% else %}
+                                {{ section | replace: '-', ' ' | capitalize }}
                               {% endif %}
-                            {% endfor %}
 
-                          </ul>
-                        </nav>
+                              {% assign subpages = pages | where_exp: "p", "p.name != 'index.md'" | sort: "path" %}
+                              {% if subpages.size > 0 %}
+                                <ul class="vf-tree__list vf-tree__list--1 | vf-list" style="margin-left: 16px">
+                                  {% for sub in subpages %}
+                                    <li class="vf-tree__item">
+                                      <a href="{{ sub.url | relative_url }}">
+                                        {{ sub.title | default: sub.name | replace: '.md','' | replace: '-', ' ' | capitalize }}
+                                      </a>
+                                    </li>
+                                  {% endfor %}
+                                </ul>
+                              {% endif %}
 
+                            </li>
+                          {% endfor %}
 
-
-												<hr class="vf-divider vf-u-margin__bottom-md">
+                        </ul>
+                      </nav>
+		                  <hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
 													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
 															src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"

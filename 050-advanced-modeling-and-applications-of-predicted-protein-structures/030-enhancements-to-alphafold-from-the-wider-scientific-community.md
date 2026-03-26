@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Enhancements to AlphaFold2 from the wider scientific community'
+---
+
 # Enhancements to AlphaFold2 from the wider scientific community
 
 **Ever since the open release of the AlphaFold2 source code, researchers have been extending AlphaFold2’s capabilities. In this way, researchers have made progress on problems that the original version of AlphaFold2 was not trained to solve.**

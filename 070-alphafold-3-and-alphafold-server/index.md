@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'AlphaFold 3 and AlphaFold Server'
+---
+
 # AlphaFold 3 and AlphaFold Server
 
 AlphaFold 3 is a new version of AlphaFold. It has additional capabilities, especially the ability to predict the structures of complexes containing multiple non-protein molecules (e.g. DNA, RNA, ligands). For non-commercial projects, AlphaFold 3 is available as a service via [AlphaFold Server](https://alphafoldserver.com/) and as source code via the [AlphaFold 3 GitHub repository](https://github.com/google-deepmind/alphafold3).
