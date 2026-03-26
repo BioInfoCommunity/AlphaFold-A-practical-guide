@@ -242,18 +242,52 @@
 												    {% endfor %}
 
 ================*****=========================
-{% assign nav = site.data.navigation %}
-<ul>
-{% for section in nav %}
-  <li><a href="/{{ lang }}/{{ section.slug }}/">{{ section.section }}</a>
-    <ul>
-    {% for child in section.children %}
-      <li><a href="/{{ lang }}/{{ child.slug }}/">{{ child.title }}</a></li>
+{% comment %}
+  Determine current language from URL.
+  Assuming your pages are under /en/, /es/, /fr/, etc.
+{% endcomment %}
+{% assign lang = page.url | split: '/' | second %}
+{% assign nav = site.data.navigation[lang] %}
+
+<nav>
+  <ul class="vf-tree__list vf-tree__list--1 | vf-list">
+
+    {% for section in nav %}
+      <li class="vf-tree__item">
+        <a class="vf-tree__link" href="{{ section.url | relative_url }}">
+          {{ section.title | replace: '-', ' ' | capitalize }}
+        </a>
+
+        {% if section.children %}
+          <ul class="vf-tree__list vf-tree__list--2 | vf-list" style="margin-left: 16px">
+            {% for child in section.children %}
+              <li class="vf-tree__item">
+                <a class="vf-tree__link" href="{{ child.url | relative_url }}">
+                  {{ child.title | replace: '-', ' ' | capitalize }}
+                </a>
+
+                {% if child.children %}
+                  <ul class="vf-tree__list vf-tree__list--3 | vf-list" style="margin-left: 16px">
+                    {% for subchild in child.children %}
+                      <li class="vf-tree__item">
+                        <a class="vf-tree__link" href="{{ subchild.url | relative_url }}">
+                          {{ subchild.title | replace: '-', ' ' | capitalize }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                {% endif %}
+
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+      </li>
     {% endfor %}
-    </ul>
-  </li>
-{% endfor %}
-</ul>
+
+  </ul>
+</nav>
 
                         </ul>
                       </nav>
