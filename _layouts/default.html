@@ -240,7 +240,20 @@
 												        </li>
 												      {% endif %}
 												    {% endfor %}
-                            
+
+================*****=========================
+{% assign nav = site.data.navigation %}
+<ul>
+{% for section in nav %}
+  <li><a href="/{{ lang }}/{{ section.slug }}/">{{ section.section }}</a>
+    <ul>
+    {% for child in section.children %}
+      <li><a href="/{{ lang }}/{{ child.slug }}/">{{ child.title }}</a></li>
+    {% endfor %}
+    </ul>
+  </li>
+{% endfor %}
+</ul>
 
                         </ul>
                       </nav>
