@@ -12,12 +12,16 @@ labels:
   last_updated_value: "June 2025"
   written_by_text: "Written by"
   written_by_name:
-    - "Some Author"
-    - "John Doe"
+    - name: "Some Author"
+      profile_url: "https://example.com/some-author"
+    - name: "John Doe"
+      profile_url: null
   translated_by_text: "Translated by"
   translated_by_name:
-    - "Translator 1"
-    - "Translator 2"
+    - name: "Translator 1"
+      profile_url: null
+    - name: "Translator 2"
+      profile_url: null
   translated_on_text: "Translated on"
   translated_on_value: "October 2025"
   next: "Next"
