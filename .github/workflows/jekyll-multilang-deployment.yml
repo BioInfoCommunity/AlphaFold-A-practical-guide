@@ -55,7 +55,7 @@ jobs:
           node-version: '20'
       # 3️⃣ Run your navigation generation script
       - name: Generate navigation
-        run: node scripts/generateNavigation.js
+        run: node repo-main/scripts/generateNavigation.js
 
       # ----------------------------
       # Prepare multilingual structure
