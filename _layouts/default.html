@@ -127,7 +127,6 @@
 
                           <!-- Course overview -->
                           <li class="vf-tree__item">
-                            {% assign course_slug = t.course.title | downcase | replace: ':','' | replace: ' ', '-' %}
                             <a class="vf-tree__link" href="/{{ lang }}/{{ course_slug }}/">
                               {{ t.course.title }}
                             </a>
