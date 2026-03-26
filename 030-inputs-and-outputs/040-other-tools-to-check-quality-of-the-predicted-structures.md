@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Other tools to check quality of the predicted structures'
+---
+
 # Other tools to check quality of the predicted structures
 
 **Users who wish to further evaluate the quality of predicted protein structures from AlphaFold2 can use a variety of open-source tools.**

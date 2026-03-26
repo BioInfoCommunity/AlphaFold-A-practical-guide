@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Accessing and predicting protein structures with AlphaFold 2'
+---
+
 # Accessing and predicting protein structures with AlphaFold 2
 
 AlphaFold2 is a powerful tool for protein structure prediction. However, the best way to access it depends on your specific needs and resources. The main options are:

@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Using the AlphaFold database for analysis'
+---
+
 # Using the AlphaFold database for analysis
 
 This section explores how the AlphaFold Database (AFDB) can be used to analyse protein structures and their relationships. We’ll delve into two powerful features: clustering and Foldseek.

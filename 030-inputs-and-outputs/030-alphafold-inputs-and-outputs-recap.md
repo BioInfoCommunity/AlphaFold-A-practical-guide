@@ -1,3 +1,8 @@
+---
+layout: default
+title: "AlphaFold2 inputs and outputs &#8211; Recap"
+---
+
 # AlphaFold2 inputs and outputs &#8211; Recap
 
 **The only required input is the amino acid sequence of your protein of interest. However, you may also supply additional data to guide AlphaFold2’s structure prediction. AlphaFold2 will output the predicted structure of the protein, accompanied by confidence scores such as pLDDT and PAE.**

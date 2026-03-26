@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'What’s the best way to access the database?'
+---
+
 # What’s the best way to access the database?
 
 Users can access the predicted structures and their associated confidence metrics from AFDB through four distinct channels: directly from the AFDB web page, via FTP, Google Cloud Public Data, or via Programmatic Access (API).

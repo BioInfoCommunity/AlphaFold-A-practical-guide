@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Accessing predicted protein structures in the AlphaFold Database'
+---
+
 # Accessing predicted protein structures in the AlphaFold Database
 
 **Users can download many predicted protein structures from the AlphaFold Protein Structure Database (AFDB), without running the AlphaFold algorithm. Each predicted structure comes with valuable metadata and confidence metrics, supporting critical assessment. The database is freely available and can be accessed via multiple routes.**

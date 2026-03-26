@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Predicting protein structures with ColabFold and AlphaFold2 Colab'
+---
+
 # Predicting protein structures with ColabFold and AlphaFold2 Colab
 
 **ColabFold and AlphaFold2 Colab allow you to predict protein structures without installing and running the full AlphaFold2 software. They are good options if you need a quick and easy way to get started with AlphaFold2, if you only need to predict a few structures, or if you don’t have access to a powerful computing resource.**

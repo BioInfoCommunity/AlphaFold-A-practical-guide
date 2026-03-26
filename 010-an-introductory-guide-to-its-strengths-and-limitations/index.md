@@ -1,3 +1,8 @@
+---
+layout: default
+title: An introductory guide to AlphaFold&#8217;s strengths and limitations
+---
+
 # An introductory guide to AlphaFold&#8217;s strengths and limitations
 
 Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.

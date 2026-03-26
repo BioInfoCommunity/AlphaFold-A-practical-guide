@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Other ways to access predicted protein structures'
+---
+
 # Other ways to access predicted protein structures
 
 **There are many different ways to access protein structures predicted by AlphaFold2. The 3D-Beacons Network provides standardised macromolecular structures from a host of providers, including AlphaFold2. Furthermore, AlphaFold2 and its database have been integrated into many pieces of software used to work with predicted structures.**

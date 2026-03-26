@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'AlphaFold2: A high-level overview'
+---
+
 # AlphaFold2: A high-level overview
 
 **Users wishing to predict the 3D structure of a protein only need to supply its amino acid sequence. To analyse this, AlphaFold2 uses a multiple sequence alignment (MSA) combining the sequences of multiple related proteins. The software generates a set of pair representations modelling the relationships between every pair of amino acid residues. The software uses the MSA to predict all the pair representations and thus the 3D structure of the protein.**

@@ -1,3 +1,8 @@
+---
+layout: default
+title: How have AlphaFold2’s predictions of protein structure been validated?
+---
+
 # How have AlphaFold2’s predictions of protein structure been validated?
 
 **AlphaFold2’s capability to predict protein structure was first demonstrated when it triumphed in the CASP14 assessment of structure predictions. Since then it has been validated by multiple lines of evidence from structural biology experiments, including studies of X-ray crystallography, cryogenic electron microscopy and cross-linking mass spectrometry.**
