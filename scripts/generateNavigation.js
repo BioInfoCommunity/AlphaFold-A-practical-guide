@@ -89,8 +89,9 @@ function toYAML(obj, indent = 0) {
   }
   return yaml;
 }
-
+console.log("Navigation structure:", JSON.stringify(navigation, null, 2));
 const yamlContent = toYAML(navigation);
+console.log("Generated YAML content:\n", yamlContent);
 fs.writeFileSync(OUTPUT_FILE, yamlContent);
 
 console.log(`Navigation generated at ${OUTPUT_FILE}`);
