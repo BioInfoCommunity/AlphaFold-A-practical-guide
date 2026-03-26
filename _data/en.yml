@@ -1,0 +1,26 @@
+course:
+  title: "AlphaFold: A Practical Guide"
+  subtitle: "A practical guide"
+  hero_kicker_text: "Online tutorial"
+
+labels:
+  time_to_complete_text: "Time to complete"
+  time_to_complete_value: "2-3 hours"
+  difficulty_text: "Difficulty"
+  difficulty_value: "Beginner-friendly"
+  last_updated_text: "Last updated"
+  last_updated_value: "June 2025"
+  written_by_text: "Written by"
+  written_by_name:
+    - "Some Author"
+    - "John Doe"
+  translated_by_text: "Translated by"
+  translated_by_name:
+    - "Translator 1"
+    - "Translator 2"
+  translated_on_text: "Translated on"
+  translated_on_value: "October 2025"
+  next: "Next"
+  previous: "Previous"
+  contents: "Contents"
+  language: "Language"

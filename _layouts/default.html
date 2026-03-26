@@ -2,7 +2,7 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>AlphaFold | EMBL-EBI Training</title>
+	<title>{{ site.data[lang].course.title }} | EMBL-EBI Training</title>
 	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.25/css/styles.css" type="text/css">
 
 	<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css"
@@ -26,6 +26,14 @@
 					<a id="main-content" tabindex="-1">
 					</a>
 				</div>
+          {% assign lang = page.url | split: '/' | second %}
+          {% assign t = site.data[lang] %}
+
+        <nav>
+          <a href="/en/">English</a> |
+          <a href="/es/">Español</a> |
+          <a href="/fr/">Français</a>
+        </nav>
 				<div class="vf-content">
 					<div>
 						<div id="block-ebi-academy-content--89">
@@ -33,9 +41,9 @@
 								<div class="vf-body">
 									<section class="vf-hero | vf-u-fullbleed" style="background:none;">
 										<div class="vf-hero__content | vf-box | vf-stack vf-stack--400" style="min-width:350px">
-											<p class="vf-hero__kicker" style="text-transform:uppercase">Tutorial en línea</p>
-											<h2 id="course_title" class="vf-hero__heading">AlphaFold</h2>
-											<p class="vf-hero__subheading">Una guía práctica</p>
+											<p class="vf-hero__kicker" style="text-transform:uppercase">{{ t.course.hero_kicker_text }}</p>
+											<h2 id="course_title" class="vf-hero__heading">{{ t.course.title }}</h2>
+											<p class="vf-hero__subheading">{{ t.course.subtitle }}</p>
 										</div>
 									</section>
 								</div>
@@ -55,12 +63,12 @@
 												</figure>
 												<div class="vf-u-margin__top--500"></div>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0">
-													Tiempo para completar: </p>
-												<p class="vf-u-type__text-body--3 vf-u-margin--0">3 horas</p>
+													{{ t.labels.time_to_complete_text }}: </p>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0">{{ t.labels.time_to_complete_value }}</p>
 												</p>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
-													Escrito por:</p>
+													{{ t.labels.written_by_text }}:</p>
 												<div class="vf-u-margin__top--100"></div>
 												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
 													<li class="vf-list__item ">
