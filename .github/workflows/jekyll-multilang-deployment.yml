@@ -58,17 +58,17 @@ jobs:
           rsync -av --exclude="_data" repo-spanish/ site/es/
           cp repo-spanish/_data/es.yml site/_data/
 
-          mkdir -p site/fr
-          rsync -av --exclude="_data" repo-french/ site/fr/
-          cp repo-french/_data/fr.yml site/_data/
+          # mkdir -p site/fr
+          # rsync -av --exclude="_data" repo-french/ site/fr/
+          # cp repo-french/_data/fr.yml site/_data/
 
-          mkdir -p site/de
-          rsync -av --exclude="_data" repo-german/ site/de/
-          cp repo-german/_data/de.yml site/_data/
+          # mkdir -p site/de
+          # rsync -av --exclude="_data" repo-german/ site/de/
+          # cp repo-german/_data/de.yml site/_data/
 
-          mkdir -p site/pt
-          rsync -av --exclude="_data" repo-portuguese/ site/pt/
-          cp repo-portuguese/_data/pt.yml site/_data/
+          # mkdir -p site/pt
+          # rsync -av --exclude="_data" repo-portuguese/ site/pt/
+          # cp repo-portuguese/_data/pt.yml site/_data/
 
           # remove .git folders if any
           find site -name ".git" -type d -exec rm -rf {} + || true
