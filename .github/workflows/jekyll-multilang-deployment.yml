@@ -48,19 +48,10 @@ jobs:
           ref: portuguese
           path: repo-portuguese
 
-      # 1️⃣ Set up Node.js to run your generateNavigation.js
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '20'
-      # 3️⃣ Run your navigation generation script
-      - name: Generate navigation
-        run: node repo-main/scripts/generateNavigation.js
-
       # ----------------------------
-      # Prepare multilingual structure
+      # Prepare unified structure
       # ----------------------------
-      - name: Prepare unified structure
+      - name: Prepare site folder
         run: |
           mkdir site
           mkdir -p site/_data
@@ -75,23 +66,24 @@ jobs:
           rsync -av --exclude="_data" --exclude=".git" repo-spanish/ site/es/
           cp repo-spanish/_data/*.yml site/_data/
 
-          # French
-          # mkdir -p site/fr
-          # rsync -av --exclude="_data" --exclude=".git" repo-french/ site/fr/
-          # cp repo-french/_data/*.yml site/_data/
-
-          # German
-          # mkdir -p site/de
-          # rsync -av --exclude="_data" --exclude=".git" repo-german/ site/de/
-          # cp repo-german/_data/*.yml site/_data/
-
-          # Portuguese
-          # mkdir -p site/pt
-          # rsync -av --exclude="_data" --exclude=".git" repo-portuguese/ site/pt/
-          # cp repo-portuguese/_data/*.yml site/_data/
-
           # remove .git folders if any
           find site -name ".git" -type d -exec rm -rf {} + || true
+
+      # ----------------------------
+      # Set up Node.js to generate navigation
+      # ----------------------------
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      # ----------------------------
+      # Generate navigation inside site folder
+      # ----------------------------
+      - name: Generate navigation
+        run: |
+          cd site
+          node ../repo-main/scripts/generateNavigation.js
 
       # ----------------------------
       # Copy config + layouts
@@ -123,7 +115,7 @@ jobs:
           working-directory: site
 
       # ----------------------------
-      # Build Jekyll (dynamic .md processing)
+      # Build Jekyll
       # ----------------------------
       - name: Build site
         run: |
@@ -132,7 +124,7 @@ jobs:
           bundle exec jekyll build --trace
 
       # ----------------------------
-      # Debug (optional)
+      # Debug build output
       # ----------------------------
       - name: Debug build output
         run: |
@@ -140,7 +132,7 @@ jobs:
 
       # ----------------------------
       # Deploy to gh-pages
-      # ----------------------------      
+      # ----------------------------
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
