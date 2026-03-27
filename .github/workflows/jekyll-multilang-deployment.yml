@@ -4,10 +4,10 @@ on:
   push:
     branches:
       - main
-      - spanish
       - french
       - german
       - portuguese
+      - spanish
   workflow_dispatch:
 
 jobs:
@@ -16,34 +16,66 @@ jobs:
 
     steps:
       # ----------------------------
-      # Checkout current branch only
+      # Checkout all branches
       # ----------------------------
-      - name: Checkout branch
+      - name: Checkout main (English)
         uses: actions/checkout@v4
+        with:
+          ref: main
+          path: repo-main
+
+      - name: Checkout Spanish
+        uses: actions/checkout@v4
+        with:
+          ref: spanish
+          path: repo-spanish
+
+      - name: Checkout French
+        uses: actions/checkout@v4
+        with:
+          ref: french
+          path: repo-french
+
+      - name: Checkout German
+        uses: actions/checkout@v4
+        with:
+          ref: german
+          path: repo-german
+
+      - name: Checkout Portuguese
+        uses: actions/checkout@v4
+        with:
+          ref: portuguese
+          path: repo-portuguese
 
       # ----------------------------
-      # Determine language from branch
+      # Prepare unified structure
       # ----------------------------
-      - name: Set language
-        id: lang
+      - name: Prepare site folder
         run: |
-          case "${GITHUB_REF##*/}" in
-            main) echo "LANG=en" >> $GITHUB_ENV ;;
-            spanish) echo "LANG=es" >> $GITHUB_ENV ;;
-            french) echo "LANG=fr" >> $GITHUB_ENV ;;
-            german) echo "LANG=de" >> $GITHUB_ENV ;;
-            portuguese) echo "LANG=pt" >> $GITHUB_ENV ;;
-            *) echo "LANG=en" >> $GITHUB_ENV ;;
-          esac
-          echo "Building language: $LANG"
+          mkdir site
+          mkdir -p site/_data
+
+          # English
+          mkdir -p site/en
+          rsync -av --exclude="_data" --exclude=".git" repo-main/ site/en/
+          cp repo-main/_data/*.yml site/_data/
+
+          # Spanish
+          mkdir -p site/es
+          rsync -av --exclude="_data" --exclude=".git" repo-spanish/ site/es/
+          cp repo-spanish/_data/*.yml site/_data/
+
+          # remove .git folders if any
+          find site -name ".git" -type d -exec rm -rf {} + || true
 
       # ----------------------------
-      # Set up Node.js for navigation
+      # Set up Node.js to generate navigation
       # ----------------------------
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20"
+          node-version: '20'
 
       # ----------------------------
       # Install dependencies
@@ -54,38 +86,21 @@ jobs:
           npm install js-yaml
 
       # ----------------------------
-      # Prepare site folder
-      # ----------------------------
-      - name: Prepare site folder
-        run: |
-          mkdir site
-          mkdir -p site/_data
-          mkdir -p site/$LANG
-
-          # Copy branch markdown files
-          rsync -av --exclude="_data" --exclude=".git" ./ site/$LANG/
-          
-          # Copy language-specific data files
-          if [ -d "./_data" ]; then
-            cp ./_data/${LANG}.yml site/_data/
-          fi
-
-      # ----------------------------
-      # Generate navigation YAML
+      # Generate navigation inside site folder
       # ----------------------------
       - name: Generate navigation
         run: |
           cd site
-          node ../scripts/generateNavigation.js
+          node ../repo-main/scripts/generateNavigation.js
 
       # ----------------------------
-      # Copy layouts and config
+      # Copy config + layouts
       # ----------------------------
-      - name: Copy layouts + config
+      - name: Copy config + layouts
         run: |
-          cp ./_config.yml site/
+          cp repo-main/_config.yml site/
           mkdir -p site/_layouts
-          cp -r ./_layouts/* site/_layouts/ || true
+          cp -r repo-main/_layouts/* site/_layouts/ || true
 
       # ----------------------------
       # Add Gemfile for Jekyll
@@ -98,7 +113,7 @@ jobs:
           EOF
 
       # ----------------------------
-      # Setup Ruby
+      # Setup Ruby + Bundler
       # ----------------------------
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
@@ -117,19 +132,19 @@ jobs:
           bundle exec jekyll build --trace
 
       # ----------------------------
-      # Debug build
+      # Debug build output
       # ----------------------------
       - name: Debug build output
-        run: ls -R site/_site | head -100
+        run: |
+          ls -R site/_site | head -100
 
       # ----------------------------
-      # Deploy to gh-pages/<lang>
+      # Deploy to gh-pages
       # ----------------------------
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site/_site
-          destination_dir: ${{ env.LANG }}
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
