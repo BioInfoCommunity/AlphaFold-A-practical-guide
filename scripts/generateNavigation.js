@@ -1,18 +1,15 @@
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path");
+const yaml = require("js-yaml");
 
-const CONTENT_DIR = ".";           // root of markdown files
+const CONTENT_DIR = "."; // root (no /en)
 const OUTPUT_FILE = "./_data/navigation.yml";
 
-// array of languages
-const LANGS = ["en", "es", "fr", "de", "pt"];
-
-// helper to remove leading numbers
+// remove leading numbers
 function stripNumber(name) {
   return name.replace(/^\d+-/, "");
 }
 
-// recursively get pages for a given folder
 function getPages(dir, parentUrl = "") {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
     .filter(e => e.name.endsWith(".md") || e.isDirectory())
@@ -23,25 +20,31 @@ function getPages(dir, parentUrl = "") {
   for (const entry of entries) {
     const entryPath = path.join(dir, entry.name);
 
+    // ❗ skip unwanted folders
     if (entry.isDirectory()) {
-      const folderName = stripNumber(entry.name);
+      if (["_site", "_layouts", "_data", "scripts", ".git"].includes(entry.name)) continue;
+
+      // const folderName = stripNumber(entry.name);
+      const folderName = entry.name;
       const folderUrl = `${parentUrl}/${folderName}`;
       const indexPath = path.join(entryPath, "index.md");
-
-      const children = getPages(entryPath, folderUrl);
 
       if (fs.existsSync(indexPath)) {
         pages.push({
           title: folderName,
           url: folderUrl + "/",
-          children: children.length > 0 ? children : undefined,
+          children: getPages(entryPath, folderUrl),
         });
       } else {
-        pages.push(...children);
+        pages.push(...getPages(entryPath, folderUrl));
       }
+
     } else if (entry.name.endsWith(".md")) {
-      if (entry.name.toLowerCase() === "readme.md" || entry.name.toLowerCase() === "index.md") continue;
-      const fileName = stripNumber(entry.name.replace(".md", ""));
+      if (["index.md", "README.md"].includes(entry.name)) continue;
+
+      // const fileName = stripNumber(entry.name.replace(".md", ""));
+      const fileName = entry.name.replace(".md", "");
+
       pages.push({
         title: fileName,
         url: `${parentUrl}/${fileName}/`,
@@ -52,46 +55,13 @@ function getPages(dir, parentUrl = "") {
   return pages;
 }
 
-// ensure _data folder exists
+// ensure _data exists
 if (!fs.existsSync("./_data")) fs.mkdirSync("./_data");
 
-// generate navigation for all languages
-const navigation = {};
-
-for (const lang of LANGS) {
-  const langDir = path.join(CONTENT_DIR, lang);
-  if (fs.existsSync(langDir)) {
-    navigation[lang] = getPages(langDir, `/${lang}`);
-  }
-}
+// generate navigation
+const navigation = getPages(CONTENT_DIR);
 
 // write YAML
-function toYAML(obj, indent = 0) {
-  const spaces = " ".repeat(indent);
-  let yaml = "";
-  for (const key in obj) {
-    const value = obj[key];
-    if (Array.isArray(value)) {
-      yaml += `${spaces}${key}:\n`;
-      for (const item of value) {
-        yaml += `${spaces}- title: "${item.title}"\n`;
-        yaml += `${spaces}  url: "${item.url}"\n`;
-        if (item.children) {
-          yaml += `${spaces}  children:\n`;
-          yaml += toYAML({ temp: item.children }, indent + 4).replace(/  temp:/g, "");
-        }
-      }
-    } else if (typeof value === "object") {
-      yaml += `${spaces}${key}:\n` + toYAML(value, indent + 2);
-    } else {
-      yaml += `${spaces}${key}: ${value}\n`;
-    }
-  }
-  return yaml;
-}
-console.log("Navigation structure:", JSON.stringify(navigation, null, 2));
-const yamlContent = toYAML(navigation);
-console.log("Generated YAML content:\n", yamlContent);
-fs.writeFileSync(OUTPUT_FILE, yamlContent);
+fs.writeFileSync(OUTPUT_FILE, yaml.dump({ navigation }));
 
-console.log(`Navigation generated at ${OUTPUT_FILE}`);
+console.log("✅ Navigation generated:", OUTPUT_FILE);

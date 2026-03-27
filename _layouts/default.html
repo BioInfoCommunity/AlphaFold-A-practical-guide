@@ -289,6 +289,29 @@
   </ul>
 </nav>
 
+*****************************
+{% assign nav = site.data.navigation.navigation %}
+
+<ul>
+{% for section in nav %}
+  <li>
+    <a href="{{ section.url }}">{{ section.title }}</a>
+
+    {% if section.children %}
+    <ul>
+      {% for child in section.children %}
+        <li>
+          <a href="{{ child.url }}">{{ child.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+
+
                         </ul>
                       </nav>
 		                  <hr class="vf-divider vf-u-margin__bottom-md">
