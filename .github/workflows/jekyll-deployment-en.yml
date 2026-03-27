@@ -1,13 +1,9 @@
-name: Build and Deploy Multilingual Jekyll Site
+name: Build and Deploy Jekyll Site
 
 on:
   push:
     branches:
       - main
-      - french
-      - german
-      - portuguese
-      - spanish
   workflow_dispatch:
 
 jobs:
@@ -24,30 +20,6 @@ jobs:
           ref: main
           path: repo-main
 
-      - name: Checkout Spanish
-        uses: actions/checkout@v4
-        with:
-          ref: spanish
-          path: repo-spanish
-
-      - name: Checkout French
-        uses: actions/checkout@v4
-        with:
-          ref: french
-          path: repo-french
-
-      - name: Checkout German
-        uses: actions/checkout@v4
-        with:
-          ref: german
-          path: repo-german
-
-      - name: Checkout Portuguese
-        uses: actions/checkout@v4
-        with:
-          ref: portuguese
-          path: repo-portuguese
-
       # ----------------------------
       # Prepare unified structure
       # ----------------------------
@@ -61,15 +33,7 @@ jobs:
           rsync -av --exclude="_data" --exclude=".git" repo-main/ site/en/
           cp repo-main/_data/*.yml site/_data/
 
-          # Spanish
-          mkdir -p site/es
-          rsync -av --exclude="_data" --exclude=".git" repo-spanish/ site/es/
-          cp repo-spanish/_data/*.yml site/_data/
-
-          # remove .git folders if any
-          find site -name ".git" -type d -exec rm -rf {} + || true
-
-      # ----------------------------
+    # ----------------------------
       # Set up Node.js to generate navigation
       # ----------------------------
       - name: Set up Node.js
