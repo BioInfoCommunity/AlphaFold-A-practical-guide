@@ -122,8 +122,7 @@
                        {% assign lang = page.path | split: '/' | first %}
                       {% assign t = site.data[lang] | default: site.data['en'] %}
 
-                      <nav>
-                        <ul class="vf-tree__list vf-tree__list--1 | vf-list">
+                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
 
                           <!-- Course overview -->
                           <li class="vf-tree__item">
@@ -137,7 +136,7 @@
 
                         {% for section in nav %}
                           <li class="vf-tree__item">
-                            <a class="vf-tree__link" href="{{ section.url | relative_url }}">
+                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/{{ section.url | relative_url }}">
                              {{ section.title }}
                             </a>
 
@@ -145,7 +144,7 @@
                               <ul class="vf-tree__list vf-tree__list--2 | vf-list" style="margin-left: 16px">
                                 {% for child in section.children %}
                                   <li class="vf-tree__item">
-                                    <a class="vf-tree__link" href="{{ child.url | relative_url }}">
+                                    <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/{{ child.url }}">
                                       {{ child.title }}
                                     </a>
 
@@ -169,34 +168,6 @@
                           </li>
                         {% endfor %}
                       </ul>
-
-*****************************
-<!-- {% assign nav = site.data.navigation.navigation %} -->
-{% assign lang = page.url | split: '/' | second %}
-{% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
-
-<ul>
-{% for section in nav %}
-  <li>
-    <a href="{{ section.url }}">{{ section.title }}</a>
-
-    {% if section.children %}
-    <ul>
-      {% for child in section.children %}
-        <li>
-          <a href="{{ child.url }}">{{ child.title }}</a>
-        </li>
-      {% endfor %}
-    </ul>
-    {% endif %}
-  </li>
-{% endfor %}
-</ul>
-
-
-
-                        </ul>
-                      </nav>
 		                  <hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
 													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
