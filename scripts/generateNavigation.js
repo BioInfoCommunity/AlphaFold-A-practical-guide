@@ -60,7 +60,9 @@ if (!fs.existsSync("./_data")) fs.mkdirSync("./_data");
 
 // generate navigation
 const navigation = getPages(CONTENT_DIR);
+console.log("Generated navigation structure:", JSON.stringify(navigation, null, 2));
 
+console.log("yaml navigation:", yaml.dump({ navigation }));
 // write YAML
 fs.writeFileSync(OUTPUT_FILE, yaml.dump({ navigation }));
 
