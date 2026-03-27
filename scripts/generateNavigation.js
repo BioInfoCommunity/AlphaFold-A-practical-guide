@@ -12,19 +12,29 @@ function stripNumber(name) {
 
 function getPages(dir, parentUrl = "") {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
-    .filter(e => e.name.endsWith(".md") || e.isDirectory())
+    .filter(e => e.isDirectory() || e.name.endsWith(".md"))
     .sort((a, b) => a.name.localeCompare(b.name));
+
+  // root: return language keys
+  if (parentUrl === "" && dir === CONTENT_DIR) {
+    const navigation = {};
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      if (["_site", "_layouts", "_data", "scripts", ".git"].includes(entry.name)) continue;
+
+      navigation[entry.name] = getPages(path.join(dir, entry.name), `/${entry.name}`);
+    }
+    return navigation;
+  }
 
   const pages = [];
 
   for (const entry of entries) {
     const entryPath = path.join(dir, entry.name);
 
-    // ❗ skip unwanted folders
     if (entry.isDirectory()) {
       if (["_site", "_layouts", "_data", "scripts", ".git"].includes(entry.name)) continue;
 
-      // const folderName = stripNumber(entry.name);
       const folderName = entry.name;
       const folderUrl = `${parentUrl}/${folderName}`;
       const indexPath = path.join(entryPath, "index.md");
@@ -38,13 +48,10 @@ function getPages(dir, parentUrl = "") {
       } else {
         pages.push(...getPages(entryPath, folderUrl));
       }
-
     } else if (entry.name.endsWith(".md")) {
       if (["index.md", "README.md"].includes(entry.name)) continue;
 
-      // const fileName = stripNumber(entry.name.replace(".md", ""));
       const fileName = entry.name.replace(".md", "");
-
       pages.push({
         title: fileName,
         url: `${parentUrl}/${fileName}/`,
