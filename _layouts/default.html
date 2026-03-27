@@ -290,12 +290,9 @@
 </nav>
 
 *****************************
-{% assign nav = site.data.navigation.navigation %}
-{% assign nav = site.data.navigation[lang] %}
-{{ site.data.navigation.navigation | inspect }}
-{% if site.data.navigation.navigation[0].folder == 'en' %}
-<p>First folder is en</p>
-{% endif %}
+<!-- {% assign nav = site.data.navigation.navigation %} -->
+{% assign lang = page.url | split: '/' | second %}
+{% assign nav = site.data.navigation[lang] | default: site.data.navigation['en'] %}
 
 <ul>
 {% for section in nav %}
