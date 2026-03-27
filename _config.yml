@@ -1,8 +1,8 @@
 title: AlphaFold - A practical guide
 description: This tutorial is aimed at researchers who are interested in using AlphaFold to predict protein structures and integrate these predictions into their projects
 
-baseurl: "/AlphaFold-A-practical-guide" # important for GitHub Pages
-url: "https://sandykadam.github.io"
+baseurl: ""
+url: "https://sandykadam.github.io/AlphaFold-A-practical-guide"
 
 markdown: kramdown
 theme: null
