@@ -136,7 +136,7 @@
 
                         {% for section in nav %}
                           <li class="vf-tree__item">
-                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/{{ section.url | relative_url }}">
+                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ section.url }}">
                              {{ section.title }}
                             </a>
 
@@ -144,7 +144,7 @@
                               <ul class="vf-tree__list vf-tree__list--2 | vf-list" style="margin-left: 16px">
                                 {% for child in section.children %}
                                   <li class="vf-tree__item">
-                                    <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/{{ child.url }}">
+                                    <a class="vf-tree__link" href="/{{ course_slug }}/{{ child.url }}">
                                       {{ child.title }}
                                     </a>
 
@@ -152,7 +152,7 @@
                                       <ul class="vf-tree__list vf-tree__list--3 | vf-list" style="margin-left: 16px">
                                         {% for subchild in child.children %}
                                           <li class="vf-tree__item">
-                                            <a class="vf-tree__link" href="{{ subchild.url | relative_url }}">
+                                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ subchild.url }}">
                                               {{ subchild.title }}
                                             </a>
                                           </li>
