@@ -292,7 +292,10 @@
 *****************************
 <!-- {% assign nav = site.data.navigation.navigation %} -->
 {% assign lang = page.url | split: '/' | second %}
-{% assign nav = site.data.navigation[lang] | default: site.data.navigation['en'] %}
+
+{{ lang }}
+
+{% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
 
 <ul>
 {% for section in nav %}
