@@ -46,6 +46,14 @@ jobs:
           node-version: "20"
 
       # ----------------------------
+      # Install dependencies
+      # ----------------------------
+      - name: Install Node dependencies
+        run: |
+          npm init -y
+          npm install js-yaml
+
+      # ----------------------------
       # Prepare site folder
       # ----------------------------
       - name: Prepare site folder
