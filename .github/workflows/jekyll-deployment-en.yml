@@ -1,4 +1,4 @@
-name: Build and Deploy Jekyll Site
+name: Build and Deploy Jekyll Site for English
 
 on:
   push:
@@ -103,6 +103,19 @@ jobs:
           ls -R site/_site | head -100
 
       # ----------------------------
+      # Set language environment variable based on branch
+      # ----------------------------
+      - name: Set language
+        run: |
+          case "${GITHUB_REF##*/}" in
+            main) echo "LANG=en" >> $GITHUB_ENV ;;
+            spanish) echo "LANG=es" >> $GITHUB_ENV ;;
+            french) echo "LANG=fr" >> $GITHUB_ENV ;;
+            german) echo "LANG=de" >> $GITHUB_ENV ;;
+            portuguese) echo "LANG=pt" >> $GITHUB_ENV ;;
+          esac
+
+      # ----------------------------
       # Deploy to gh-pages
       # ----------------------------
       - name: Deploy to gh-pages
@@ -110,5 +123,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: site/_site
+          destination_dir: ${{ env.LANG }}
+          keep_files: true
           user_name: github-actions[bot]
           user_email: github-actions[bot]@users.noreply.github.com
