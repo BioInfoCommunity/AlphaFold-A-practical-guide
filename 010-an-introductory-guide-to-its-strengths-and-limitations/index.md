@@ -1,11 +1,11 @@
 ---
 layout: default
-title: An introductory guide to AlphaFold&#8217;s strengths and limitations
+title: अल्फाफोल्ड की ताकत और कमियों के लिए एक शुरुआती गाइड
 ---
 
-# An introductory guide to AlphaFold&#8217;s strengths and limitations
+# अल्फाफोल्ड की ताकत और कमियों के लिए एक शुरुआती गाइड
 
-Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.
+प्रोटीन जीवन के बुनियादी हिस्से हैं। हर प्रोटीन मॉलिक्यूल का एक खास 3D आकार होता है जो उसके कामों को तय करता है, जैसे बायोकेमिकल रिएक्शन को कैटलाइज़ करना (तेज़ करना) या मांसपेशियों में सिकुड़न को मुमकिन बनाना। प्रोटीन के स्ट्रक्चर का सही अंदाज़ा लगाने से हम उसके कामों और भूमिकाओं को बेहतर ढंग से समझ पाते हैं।
 
 ### By the end of this section you will be able to:
 
