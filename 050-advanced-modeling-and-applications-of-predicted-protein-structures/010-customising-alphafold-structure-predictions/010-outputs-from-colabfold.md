@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Outputs from ColabFold'
+---
+
 # Outputs from ColabFold
 
 ColabFold generates PDB files containing the predicted 3D coordinates of the protein or protein complex. These can be analysed with standard molecular visualisation software packages, such as [PyMOL](https://pymol.org) or [Chimera](https://www.cgl.ucsf.edu/chimera/).

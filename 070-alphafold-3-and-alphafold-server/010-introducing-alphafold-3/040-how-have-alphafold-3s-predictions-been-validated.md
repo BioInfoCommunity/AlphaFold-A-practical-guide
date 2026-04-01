@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'How have AlphaFold 3’s predictions been validated?'
+---
+
 # How have AlphaFold 3’s predictions been validated?
 
 The announcement of AlphaFold 3 (AF3) in May 2024 triggered a rapid response from the scientific community. Within months, a wave of independent validation studies and high-performing alternatives began to emerge.

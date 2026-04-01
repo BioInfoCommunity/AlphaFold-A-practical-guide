@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Predicting protein structures using the AlphaFold2 open-source code'
+---
+
 # Predicting protein structures using the AlphaFold2 open-source code
 
 **Installing the AlphaFold2 source code gives you total control over protein structure prediction. This is the most powerful and adaptable way to use AlphaFold2. However, the software places considerable demands on servers and requires a high degree of computer skill to install and run.**

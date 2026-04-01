@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'PAE: A measure of global confidence in AlphaFold2 predictions'
+---
+
 # PAE: A measure of global confidence in AlphaFold2 predictions
 
 Predicted aligned error (PAE) is a measure of how confident AlphaFold2 is in the relative position of two residues within the predicted structure. PAE is defined as the expected positional error at residue X, measured in Ångströms (Å), if the predicted and actual structures were aligned on residue Y.

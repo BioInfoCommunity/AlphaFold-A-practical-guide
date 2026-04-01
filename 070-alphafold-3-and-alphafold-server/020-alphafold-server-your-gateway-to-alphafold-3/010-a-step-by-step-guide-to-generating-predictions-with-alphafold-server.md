@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'A step-by-step guide to generating predictions with AlphaFold Server'
+---
+
 # A step-by-step guide to generating predictions with AlphaFold Server
 
 AlphaFold Server was designed for simple and intuitive use. For a simple introduction to the workflow, please see the video below.

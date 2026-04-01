@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Choosing how to access AlphaFold2'
+---
+
 # Choosing how to access AlphaFold2
 
 **There are multiple ways to access AlphaFold2, from simply viewing a predicted protein structure online in the AlphaFold Protein Structure Database, to installing the source code and running custom predictions yourself. You should choose judiciously, based on your needs and the resources you have available.**

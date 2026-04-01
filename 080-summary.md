@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Summary'
+---
+
 # Summary
 
 AlphaFold 3 represents a significant leap forward in our ability to understand the molecular world. By predicting the structures of complexes encompassing a vast array of biomolecules and their interactions, it opens up new avenues for research and discovery across multiple disciplines.

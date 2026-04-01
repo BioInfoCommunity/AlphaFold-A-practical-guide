@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'pLDDT: Understanding local confidence'
+---
+
 # pLDDT: Understanding local confidence
 
 The predicted local distance difference test (pLDDT) is a per-residue measure of local confidence. It is scaled from 0 to 100, with higher scores indicating higher confidence and usually a more accurate prediction.

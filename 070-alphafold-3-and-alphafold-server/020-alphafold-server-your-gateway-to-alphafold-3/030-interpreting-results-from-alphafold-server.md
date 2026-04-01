@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Interpreting results from AlphaFold Server'
+---
+
 # Interpreting results from AlphaFold Server
 
 **Alongside predicted structures, AlphaFold 3 supplies a range of confidence metrics, enabling you to assess the accuracy of the predictions. The confidence metrics are similar to those used by AlphaFold 2.**

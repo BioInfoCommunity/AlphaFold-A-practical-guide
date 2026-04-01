@@ -1,3 +1,8 @@
+---
+layout: default
+title: Validation and impact
+---
+
 # Validation and impact
 
 Are AlphaFold structures “just structure predictions”? Are they even close to the experimentally determined structures? Are they good enough for any research use? This section answers these questions.

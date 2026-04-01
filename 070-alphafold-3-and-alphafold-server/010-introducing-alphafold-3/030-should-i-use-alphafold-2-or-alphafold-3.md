@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Should I use AlphaFold 2 or AlphaFold 3?'
+---
+
 # Should I use AlphaFold 2 or AlphaFold 3?
 
 In terms of functionality, AlphaFold 3 can do everything AlphaFold 2 can, and do it better. It also has additional capabilities, in particular predicting the structures of complexes containing multiple types of molecules.

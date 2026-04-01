@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'References'
+---
+
 # References
 
 * Abanades, B., Wong, W. K., Boyles, F., Georges, G., Bujotzek, A., & Deane, C. M. (2023). ImmuneBuilder: Deep-Learning models for predicting the structures of immune proteins. Communications Biology, 6(1), Article 1. https://doi.org/10.1038/s42003-023-04927-7

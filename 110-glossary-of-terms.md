@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Glossary of terms'
+---
+
 # Glossary of terms
 
 This glossary focuses on terms that are specific to AlphaFold and protein folding. For a wider set of terms used in protein biology and structural biology, we recommend the Protein Data Bank’s extensive [glossary](https://www.rcsb.org/docs/general-help/glossary).

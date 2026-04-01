@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'How does AlphaFold 3 work?'
+---
+
 # How does AlphaFold 3 work?
 
 AlphaFold 3 is built on similar general principles as AlphaFold 2 (for more on AlphaFold 2, see section [AlphaFold 2: A high-level overview](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/a-high-level-overview/)).

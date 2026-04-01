@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Customising AlphaFold2 structure predictions'
+---
+
 # Customising AlphaFold2 structure predictions
 
 **There are many ways to customise the protein structure predictions AlphaFold performs. They include varying the number of recycles, customising the MSA, and supplying a template structure. These kinds of customisation may improve AlphaFold2’s performance on challenging structures, such as proteins that have multiple conformations.**

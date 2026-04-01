@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Confidence scores in AlphaFold-Multimer'
+---
+
 # Confidence scores in AlphaFold-Multimer
 
 AlphaFold-Multimer is a specialised version of the software. It is designed to predict the structures of protein complexes. AlphaFold-Multimer provides two additional metrics for evaluating the accuracy of its predictions: the predicted template modelling (pTM) score and the interface predicted template modelling (ipTM) score.

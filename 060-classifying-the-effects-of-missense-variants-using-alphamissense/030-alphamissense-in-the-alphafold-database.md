@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'AlphaMissense in the AlphaFold Database'
+---
+
 # AlphaMissense in the AlphaFold Database
 
 At the AlphaFold Database, you can now explore the predicted structures for canonical human proteins and seamlessly toggle between two key visual representations, the quality of structure model (pLDDT) and the average pathogenicity scores from AlphaMissense.

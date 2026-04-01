@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Advanced modelling and applications of predicted protein structures'
+---
+
 # Advanced modelling and applications of predicted protein structures
 
 In the previous sections, we covered the basics of AlphaFold2, including how it works, the different metrics used to assess the predicted structures, and the different ways to access and predict structures using the algorithm.

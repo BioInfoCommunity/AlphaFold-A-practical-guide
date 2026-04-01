@@ -1,45 +1,112 @@
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path");
+const yaml = require("js-yaml");
 
-const CONTENT_DIR = ".";           // root of markdown files
+const CONTENT_DIR = ".";
 const OUTPUT_FILE = "./_data/navigation.yml";
 
-// helper to remove leading numbers
+// remove leading numbers like 010-
 function stripNumber(name) {
   return name.replace(/^\d+-/, "");
 }
 
-// recursively get pages
+// convert slug to readable title
+function toTitle(str) {
+  return stripNumber(str)
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// inject permalink into markdown file
+function addPermalink(filePath, permalink) {
+  let content = fs.readFileSync(filePath, "utf8");
+
+  // skip if already exists
+  if (content.includes("permalink:")) return;
+
+  if (content.startsWith("---")) {
+    content = content.replace(
+      /^---\n/,
+      `---\npermalink: ${permalink}\n`
+    );
+  } else {
+    // no front matter → add it
+    content = `---\npermalink: ${permalink}\nlayout: default\n---\n\n${content}`;
+  }
+
+  fs.writeFileSync(filePath, content);
+}
+
 function getPages(dir, parentUrl = "") {
   const entries = fs.readdirSync(dir, { withFileTypes: true })
-    .filter(e => e.name.endsWith(".md") || e.isDirectory())
+    .filter(e => e.isDirectory() || e.name.endsWith(".md"))
     .sort((a, b) => a.name.localeCompare(b.name));
+
+  // ROOT → language folders
+  if (parentUrl === "" && dir === CONTENT_DIR) {
+    const navigation = {};
+
+    for (const entry of entries) {
+      if (!entry.isDirectory()) continue;
+      if (["_site", "_layouts", "_data", "scripts", ".git"].includes(entry.name)) continue;
+
+      navigation[entry.name] = getPages(
+        path.join(dir, entry.name),
+        `/${entry.name}`
+      );
+    }
+
+    return navigation;
+  }
 
   const pages = [];
 
   for (const entry of entries) {
     const entryPath = path.join(dir, entry.name);
 
+    // ----------------------------
+    // FOLDER
+    // ----------------------------
     if (entry.isDirectory()) {
-      const folderName = stripNumber(entry.name);
-      const folderUrl = `${parentUrl}/${folderName}`;
+      if (["_site", "_layouts", "_data", "scripts", ".git"].includes(entry.name)) continue;
+
+      const rawName = entry.name;
+      const cleanName = stripNumber(rawName);
+
+      const folderUrl = `${parentUrl}/${cleanName}`;
       const indexPath = path.join(entryPath, "index.md");
 
       if (fs.existsSync(indexPath)) {
+        // ✅ inject permalink into index.md
+        addPermalink(indexPath, `${folderUrl}/`);
+
         pages.push({
-          title: folderName,
-          url: folderUrl + "/",
+          title: toTitle(rawName),
+          url: `${folderUrl}/`,
           children: getPages(entryPath, folderUrl),
         });
       } else {
         pages.push(...getPages(entryPath, folderUrl));
       }
-    } else if (entry.name.endsWith(".md")) {
-      if (entry.name.toLowerCase() === "readme.md" || entry.name.toLowerCase() === "index.md") continue;
-      const fileName = stripNumber(entry.name.replace(".md", ""));
+    }
+
+    // ----------------------------
+    // FILE
+    // ----------------------------
+    else if (entry.name.endsWith(".md")) {
+      if (["index.md", "README.md"].includes(entry.name)) continue;
+
+      const rawName = entry.name.replace(".md", "");
+      const cleanName = stripNumber(rawName);
+
+      const fileUrl = `${parentUrl}/${cleanName}/`;
+
+      // ✅ inject permalink into file
+      addPermalink(entryPath, fileUrl);
+
       pages.push({
-        title: fileName,
-        url: `${parentUrl}/${fileName}/`,
+        title: toTitle(rawName),
+        url: fileUrl,
       });
     }
   }
@@ -47,14 +114,16 @@ function getPages(dir, parentUrl = "") {
   return pages;
 }
 
-// ensure _data folder exists
+// ensure _data exists
 if (!fs.existsSync("./_data")) fs.mkdirSync("./_data");
 
 // generate navigation
 const navigation = getPages(CONTENT_DIR);
 
-// write YAML
-const yamlContent = `navigation: ${JSON.stringify(navigation, null, 2)}\n`;
-fs.writeFileSync(OUTPUT_FILE, yamlContent);
+console.log("Generated navigation:");
+console.log(JSON.stringify(navigation, null, 2));
 
-console.log(`Navigation generated at ${OUTPUT_FILE}`);
+// write YAML
+fs.writeFileSync(OUTPUT_FILE, yaml.dump({ navigation }));
+
+console.log("✅ Navigation generated at:", OUTPUT_FILE);

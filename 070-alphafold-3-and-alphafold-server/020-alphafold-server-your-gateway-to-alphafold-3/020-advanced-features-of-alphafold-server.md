@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Advanced features of AlphaFold Server'
+---
+
 # Advanced features of AlphaFold Server
 
 AlphaFold Server was primarily designed as an easy-to-use tool. The aim is to unlock biomolecule modelling for biologists, including those with no experience with computational methods.

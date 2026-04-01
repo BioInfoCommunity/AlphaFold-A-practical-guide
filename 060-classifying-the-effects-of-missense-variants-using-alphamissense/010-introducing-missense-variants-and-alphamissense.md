@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Introducing missense variants and AlphaMissense'
+---
+
 # Introducing missense variants and AlphaMissense
 
 Missense variants are the most common type of genetic variant. A single change in the DNA sequence results in the substitution of one amino acid for another in a protein. While some missense variants are harmless, others can lead to genetic disorders.

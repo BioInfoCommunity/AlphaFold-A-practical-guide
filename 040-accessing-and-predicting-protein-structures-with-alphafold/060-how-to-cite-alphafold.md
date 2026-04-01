@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'How to cite AlphaFold'
+---
+
 # How to cite AlphaFold
 
 **Please always credit AlphaFold2 when you use results derived from it. Depending on exactly how you use AlphaFold2, there are different papers to cite.**

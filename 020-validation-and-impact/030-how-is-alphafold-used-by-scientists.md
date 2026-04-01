@@ -1,3 +1,8 @@
+---
+layout: default
+title: How is AlphaFold 2 used by scientists?
+---
+
 # How is AlphaFold 2 used by scientists?
 
 **AlphaFold2 has been used in a wide range of research applications, with impressive results. AlphaFold2 is not intended as a rival to experimental methods. Instead, the starting point provided by AlphaFold2 is facilitating experimental structure determination, assisting with interpretation of low-resolution structural data, and accelerating structural studies. Also, AlphaFold2 can provide testable hypotheses that guide biochemical and cell biology experiments.**

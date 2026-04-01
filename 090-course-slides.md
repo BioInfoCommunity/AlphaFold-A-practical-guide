@@ -1,3 +1,8 @@
+---
+layout: default
+title: 'Course slides'
+---
+
 # Course slides
 
 These slides are specifically designed for those who wish to present AlphaFold and its practical applications to others. Whether you’re preparing a seminar, a workshop, or an internal team briefing, these materials offer a comprehensive and visually engaging foundation for your presentation.

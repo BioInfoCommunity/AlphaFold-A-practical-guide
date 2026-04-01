@@ -1,3 +1,8 @@
+---
+layout: default
+title: Strengths and limitations of AlphaFold 2
+---
+
 # Strengths and limitations of AlphaFold 2
 
 **What a neural network can and can’t do largely depends on the data used for its training. For training AlphaFold2, only the protein parts of the PDB structures were used: other parts like small molecules and nucleic acids were not included in the training. This means there are some aspects of the structures that AlphaFold cannot predict, or cannot guarantee accuracy.**
