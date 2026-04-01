@@ -1,3 +1,8 @@
+---
+layout: default
+title: Una guía introductoria a las fortalezas y limitaciones de AlphaFold
+---
+
 # Una guía introductoria a las fortalezas y limitaciones de AlphaFold
 Las proteínas son un componente esencial de la vida. Cada molécula proteica tiene una estructura tridimensional (3D) particular que determina sus funciones, por ejemplo, catalizar (acelerar) una reacción bioquímica o permitir la contracción muscular. Predecir con precisión la estructura de una proteína nos permite entender mejor su rol y sus funciones.
 
