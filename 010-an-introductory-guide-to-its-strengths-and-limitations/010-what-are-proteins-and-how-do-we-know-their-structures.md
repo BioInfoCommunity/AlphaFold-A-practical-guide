@@ -1,11 +1,11 @@
 ---
 layout: default
-title: What are proteins and how do we know their structures?
+title: प्रोटीन क्या हैं और हम उनके स्ट्रक्चर को कैसे जानते हैं?
 ---
 
-# What are proteins and how do we know their structures?
+# प्रोटीन क्या हैं और हम उनके स्ट्रक्चर को कैसे जानते हैं?
 
-**Proteins are large molecules that are essential to life as we know it. If you examine any biological process, you will find proteins involved and often playing critical roles. The structures of proteins are strongly related to their functions, but determining their 3D structures is very difficult.**
+**प्रोटीन बड़े मॉलिक्यूल होते हैं जो ज़िंदगी के लिए ज़रूरी हैं, जैसा कि हम जानते हैं। अगर आप किसी भी बायोलॉजिकल प्रोसेस को देखेंगे, तो आपको प्रोटीन शामिल मिलेंगे और अक्सर अहम भूमिका निभाते हैं। प्रोटीन के स्ट्रक्चर उनके काम से बहुत जुड़े होते हैं, लेकिन उनके 3D स्ट्रक्चर का पता लगाना बहुत मुश्किल है।.**
 
 ## **What is a protein?**
 

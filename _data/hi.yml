@@ -1,0 +1,31 @@
+course:
+  title: "अल्फाफोल्ड: एक प्रैक्टिकल गाइड"
+  subtitle: "एक प्रैक्टिकल गाइड"
+  hero_kicker_text: "ऑनलाइन ट्यूटोरियल"
+  slug: "AlphaFold-A-practical-guide" # should match repo name for GitHub Pages and should be english for consistency across languages
+
+labels:
+  time_to_complete_text: "पूरा करने का समय"
+  time_to_complete_value: "2-3 घंटे"
+  difficulty_text: "कठिनाई"
+  difficulty_value: "शुरुआती के अनुकूल"
+  last_updated_text: "आखरी अपडेट"
+  last_updated_value: "जून 2025"
+  written_by_text: "द्वारा लिखित"
+  written_by_name:
+    - name: "Some Author"
+      profile_url: "https://example.com/some-author"
+    - name: "John Doe"
+      profile_url: null
+  translated_by_text: "द्वारा अनुवादित"
+  translated_by_name:
+    - name: "Translator 1"
+      profile_url: null
+    - name: "Translator 2"
+      profile_url: null
+  translated_on_text: "अनुवादित"
+  translated_on_value: "अप्रैल 2026"
+  next: "अगला"
+  previous: "पिछला"
+  contents: "अंतर्वस्तु"
+  language: "भाषा"

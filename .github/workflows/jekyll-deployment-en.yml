@@ -1,9 +1,9 @@
-name: Build and Deploy Jekyll Site for English
+name: Build and Deploy Jekyll Site for Hindi
 
 on:
   push:
     branches:
-      - main
+      - hindi
   workflow_dispatch:
 
 jobs:
@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: main
-          path: repo-main
+          path: repo-hindi
 
       # ----------------------------
       # Prepare unified structure
@@ -29,9 +29,9 @@ jobs:
           mkdir -p site/_data
 
           # English
-          mkdir -p site/en
-          rsync -av --exclude="_data" --exclude=".git" repo-main/ site/en/
-          cp repo-main/_data/*.yml site/_data/
+          mkdir -p site/hi
+          rsync -av --exclude="_data" --exclude=".git" repo-hindi/ site/hi/
+          cp repo-hindi/_data/*.yml site/_data/
 
     # ----------------------------
       # Set up Node.js to generate navigation
@@ -55,16 +55,16 @@ jobs:
       - name: Generate navigation
         run: |
           cd site
-          node ../repo-main/scripts/generateNavigation.js
+          node ../repo-hindi/scripts/generateNavigation.js
 
       # ----------------------------
       # Copy config + layouts
       # ----------------------------
       - name: Copy config + layouts
         run: |
-          cp repo-main/_config.yml site/
+          cp repo-hindi/_config.yml site/
           mkdir -p site/_layouts
-          cp -r repo-main/_layouts/* site/_layouts/ || true
+          cp -r repo-hindi/_layouts/* site/_layouts/ || true
 
       # ----------------------------
       # Add Gemfile for Jekyll
