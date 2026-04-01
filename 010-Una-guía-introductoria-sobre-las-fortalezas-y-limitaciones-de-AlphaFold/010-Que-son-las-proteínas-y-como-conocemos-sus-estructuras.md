@@ -1,3 +1,7 @@
+---
+layout: default
+title: ¿Qué son las proteínas y cómo conocemos sus estructuras?
+---
 # ¿Qué son las proteínas y cómo conocemos sus estructuras?
 
 <b>Las proteínas son macromoléculas esenciales para la vida tal como la conocemos. Si examinas cualquier proceso biológico, encontrarás proteínas involucradas y frecuentemente cumpliendo funciones críticas. Las estructuras de las proteínas están fuertemente relacionadas con sus funciones, pero determinar su estructura 3D es muy difícil.</b>

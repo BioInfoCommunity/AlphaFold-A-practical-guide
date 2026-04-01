@@ -1,3 +1,8 @@
+---
+layout: default
+title: Fortalezas y limitaciones de AlphaFold 2
+---
+
 # Fortalezas y limitaciones de AlphaFold 2
 
 **Lo que una red neuronal puede y no puede hacer depende en gran medida de los datos que se usaron para su entrenamiento. Para entrenar a AlphaFold2, solo se usaron las partes proteicas de las estructuras de PDB. Otras partes, como pequeñas moléculas o ácidos nucleicos, no fueron incluidas en el entrenamiento. Esto significa que hay algunos aspectos estructurales que AlphaFold no puede predecir, o no puede garantizar su precisión.**

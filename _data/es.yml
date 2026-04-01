@@ -1,0 +1,31 @@
+course:
+  title: "AlphaFold: Una guía práctica"
+  subtitle: "Una guía práctica"
+  hero_kicker_text: "Tutorial en línea"
+  slug: "AlphaFold-A-practical-guide" # should match repo name for GitHub Pages and should be english for consistency across languages
+
+labels:
+  time_to_complete_text: "Tiempo para completar"
+  time_to_complete_value: "2-3 horas"
+  difficulty_text: "Dificultad"
+  difficulty_value: "Apto para principiantes"
+  last_updated_text: "Última actualización"
+  last_updated_value: "Junio ​​de 2025"
+  written_by_text: "Escrito por"
+  written_by_name:
+    - name: "Some Author"
+      profile_url: "https://example.com/some-author"
+    - name: "John Doe"
+      profile_url: null
+  translated_by_text: "Traducido por"
+  translated_by_name:
+    - name: "Translator 1"
+      profile_url: null
+    - name: "Translator 2"
+      profile_url: null
+  translated_on_text: "Traducido en"
+  translated_on_value: "Octubre de 2025"
+  next: "Próxima"
+  previous: "Previa"
+  contents: "Contenido"
+  language: "Idioma"
