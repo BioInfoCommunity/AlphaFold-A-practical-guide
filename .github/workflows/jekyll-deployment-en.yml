@@ -30,7 +30,7 @@ jobs:
 
           # English
           mkdir -p site/en
-          rsync -av --exclude="_data" --exclude=".git" repo-main/ site/en/
+          rsync -av --exclude="_data" --exclude=".git" repo-spanish/ site/es/
           cp repo-main/_data/*.yml site/_data/
 
     # ----------------------------
