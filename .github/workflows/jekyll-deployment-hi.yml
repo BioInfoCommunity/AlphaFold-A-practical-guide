@@ -14,10 +14,10 @@ jobs:
       # ----------------------------
       # Checkout all branches
       # ----------------------------
-      - name: Checkout main (English)
+      - name: Checkout hindi
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: hindi
           path: repo-hindi
 
       # ----------------------------
@@ -113,6 +113,7 @@ jobs:
             french) echo "LANG=fr" >> $GITHUB_ENV ;;
             german) echo "LANG=de" >> $GITHUB_ENV ;;
             portuguese) echo "LANG=pt" >> $GITHUB_ENV ;;
+            hindi) echo "LANG=hi" >> $GITHUB_ENV ;;
           esac
 
       # ----------------------------
