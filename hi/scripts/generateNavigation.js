@@ -17,6 +17,22 @@ function toTitle(str) {
     .replace(/\b\w/g, c => c.toUpperCase());
 }
 
+function getFrontmatterTitle(filePath) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+
+    if (!content.startsWith("---")) return null;
+
+    const match = content.match(/^---\n([\s\S]*?)\n---/);
+    if (!match) return null;
+
+    const data = yaml.load(match[1]);
+    return data?.title || null;
+  } catch (e) {
+    return null;
+  }
+}
+
 // inject permalink into markdown file
 function addPermalink(filePath, permalink) {
   let content = fs.readFileSync(filePath, "utf8");
@@ -80,8 +96,15 @@ function getPages(dir, parentUrl = "") {
         // ✅ inject permalink into index.md
         addPermalink(indexPath, `${folderUrl}/`);
 
+        // pages.push({
+        //   title: toTitle(rawName),
+        //   url: `${folderUrl}/`,
+        //   children: getPages(entryPath, folderUrl),
+        // });
+        const indexTitle = getFrontmatterTitle(indexPath);
+
         pages.push({
-          title: toTitle(rawName),
+          title: indexTitle || toTitle(rawName),
           url: `${folderUrl}/`,
           children: getPages(entryPath, folderUrl),
         });
@@ -104,8 +127,14 @@ function getPages(dir, parentUrl = "") {
       // ✅ inject permalink into file
       addPermalink(entryPath, fileUrl);
 
+      // pages.push({
+      //   title: toTitle(rawName),
+      //   url: fileUrl,
+      // });
+      const fmTitle = getFrontmatterTitle(entryPath);
+
       pages.push({
-        title: toTitle(rawName),
+        title: fmTitle || toTitle(rawName),
         url: fileUrl,
       });
     }
