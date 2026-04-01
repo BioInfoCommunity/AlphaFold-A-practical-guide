@@ -31,7 +31,7 @@ jobs:
           # English
           mkdir -p site/en
           rsync -av --exclude="_data" --exclude=".git" repo-spanish/ site/es/
-          cp repo-main/_data/*.yml site/_data/
+          cp repo-spanish/_data/*.yml site/_data/
 
     # ----------------------------
       # Set up Node.js to generate navigation
@@ -55,16 +55,16 @@ jobs:
       - name: Generate navigation
         run: |
           cd site
-          node ../repo-main/scripts/generateNavigation.js
+          node ../repo-spanish/scripts/generateNavigation.js
 
       # ----------------------------
       # Copy config + layouts
       # ----------------------------
       - name: Copy config + layouts
         run: |
-          cp repo-main/_config.yml site/
+          cp repo-spanish/_config.yml site/
           mkdir -p site/_layouts
-          cp -r repo-main/_layouts/* site/_layouts/ || true
+          cp -r repo-spanish/_layouts/* site/_layouts/ || true
 
       # ----------------------------
       # Add Gemfile for Jekyll
