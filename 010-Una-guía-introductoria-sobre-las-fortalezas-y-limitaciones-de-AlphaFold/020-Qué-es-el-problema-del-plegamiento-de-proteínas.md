@@ -1,3 +1,7 @@
+---
+layout: default
+title: ¿Qué es el problema del plegamiento de proteínas?
+---
 # ¿Qué es el problema del plegamiento de proteínas?
 
 <b>Es teóricamente posible predecir la estructura 3D de una proteína exclusivamente a partir de su estructura de aminoácidos. Sin embargo, esto es extremadamente desafiante debido al enorme número de conformaciones posibles. La inteligencia artificial es ideal para resolver este problema.</b>
