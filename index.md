@@ -1,16 +1,16 @@
 ---
 layout: default
-title: AlphaFold - A practical guide
+title: अल्फाफोल्ड - एक प्रैक्टिकल गाइड
 ---
 
-# AlphaFold - A practical guide
-Proteins are essential components of life, predicting their 3D structure enables researchers to get an insight into its function and role. AlphaFold is an artificial intelligence (AI) system, developed by Google DeepMind, that predicts a protein’s 3D structure based on its primary amino acid sequence.  It regularly achieves accuracy competitive with experiment.
+# अल्फाफोल्ड - एक प्रैक्टिकल गाइड
+प्रोटीन जीवन के ज़रूरी हिस्से हैं, उनके 3D स्ट्रक्चर का अनुमान लगाने से रिसर्चर्स को उनके काम और भूमिका के बारे में जानकारी मिलती है। अल्फाफोल्ड एक आर्टिफिशियल इंटेलिजेंस (AI) सिस्टम है, जिसे गूगल डीपमाइंड ने बनाया है, जो किसी प्रोटीन के प्राइमरी अमीनो एसिड सीक्वेंस के आधार पर उसके 3D स्ट्रक्चर का अनुमान लगाता है। यह रेगुलर तौर पर एक्सपेरिमेंट के मुकाबले ज़्यादा सटीकता हासिल करता है।
 
-## Who is this course for?
-This tutorial is aimed at researchers who are interested in using AlphaFold to predict protein structures and integrate these predictions into their projects. An undergraduate-level knowledge of protein structure and structural biology would be an advantage.
-The content of this course provides an understanding of the fundamental concepts behind AlphaFold, how users can run protein predictions and how AlphaFold has been used to enhance research.
-Throughout the course there may be terms used you are unfamiliar with. If so, please review the Glossary of terms of help.
-This training module on AlphaFold has been developed in collaboration with Google DeepMind.
+## इस पाठ्यक्रम के लिए कौन है?
+यह ट्यूटोरियल उन रिसर्चर्स के लिए है जो प्रोटीन स्ट्रक्चर का अनुमान लगाने और इन अनुमानों को अपने प्रोजेक्ट्स में शामिल करने के लिए AlphaFold का इस्तेमाल करने में दिलचस्पी रखते हैं। प्रोटीन स्ट्रक्चर और स्ट्रक्चरल बायोलॉजी का अंडरग्रेजुएट लेवल का ज्ञान फायदेमंद होगा।
+इस कोर्स का कंटेंट AlphaFold के पीछे के बुनियादी कॉन्सेप्ट्स, यूज़र्स प्रोटीन का अनुमान कैसे लगा सकते हैं और रिसर्च को बेहतर बनाने के लिए AlphaFold का इस्तेमाल कैसे किया गया है, इसकी समझ देता है।
+पूरे कोर्स में ऐसे शब्द इस्तेमाल हो सकते हैं जिनके बारे में आप नहीं जानते। अगर ऐसा है, तो कृपया मदद के लिए शब्दों की ग्लॉसरी देखें।
+AlphaFold पर यह ट्रेनिंग मॉड्यूल Google DeepMind के साथ मिलकर बनाया गया है।
 
 
 Please note that we do not provide certificates for completing our on-demand training courses. However, if you have an account with us, you can easily track your progress. All the courses you undertake will be listed on your 'My Learning' page.
