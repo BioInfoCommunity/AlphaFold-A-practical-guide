@@ -14,10 +14,10 @@ jobs:
       # ----------------------------
       # Checkout all branches
       # ----------------------------
-      - name: Checkout main (English)
+      - name: Checkout hindi
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: hindi
           path: repo-hindi
 
       # ----------------------------
