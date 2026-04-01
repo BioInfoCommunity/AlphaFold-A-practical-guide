@@ -2,7 +2,11 @@
 
 <head>
 	<meta charset="utf-8" />
-	<title>AlphaFold | EMBL-EBI Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% assign lang = page.path | split: '/' | first %}
+  {% assign t = site.data[lang] | default: site.data['en'] %}
+  {% assign course_slug = t.course.slug  %}
+  <title>{{ t.course.title }} | EMBL-EBI Training</title>
 	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.25/css/styles.css" type="text/css">
 
 	<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css"
@@ -26,6 +30,12 @@
 					<a id="main-content" tabindex="-1">
 					</a>
 				</div>
+
+        <nav>
+          <a href="/{{ course_slug }}/en/">English</a> |
+          <a href="/{{ course_slug }}/es/">Español</a> |
+          <a href="/{{ course_slug }}/fr/">Français</a>
+        </nav>
 				<div class="vf-content">
 					<div>
 						<div id="block-ebi-academy-content--89">
@@ -33,9 +43,9 @@
 								<div class="vf-body">
 									<section class="vf-hero | vf-u-fullbleed" style="background:none;">
 										<div class="vf-hero__content | vf-box | vf-stack vf-stack--400" style="min-width:350px">
-											<p class="vf-hero__kicker" style="text-transform:uppercase">Tutorial en línea</p>
-											<h2 id="course_title" class="vf-hero__heading">AlphaFold</h2>
-											<p class="vf-hero__subheading">Una guía práctica</p>
+											<p class="vf-hero__kicker" style="text-transform:uppercase">{{ t.course.hero_kicker_text }}</p>
+											<h2 id="course_title" class="vf-hero__heading">{{ t.course.title }}</h2>
+											<p class="vf-hero__subheading">{{ t.course.subtitle }}</p>
 										</div>
 									</section>
 								</div>
@@ -55,140 +65,107 @@
 												</figure>
 												<div class="vf-u-margin__top--500"></div>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0">
-													Tiempo para completar: </p>
-												<p class="vf-u-type__text-body--3 vf-u-margin--0">3 horas</p>
+													{{ t.labels.time_to_complete_text }}: </p>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0">{{ t.labels.time_to_complete_value }}</p>
 												</p>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
-													Escrito por:</p>
+													{{ t.labels.written_by_text }}:</p>
 												<div class="vf-u-margin__top--100"></div>
 												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
-													<li class="vf-list__item ">
-														<a class="vf-link vf-link--primary vf-u-type__text-body--3 "
-															href=https://www.ebi.ac.uk/people/person/paulyna-gabriela-magana-gomez> Paulyna Gabriela
-															Magana Gomez </a>
-													</li>
-													<li class="vf-list__item ">
-														<a class="vf-link vf-link--primary vf-u-type__text-body--3 "
-															href=https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy> Oleg Kovalevskiy </a>
-													</li>
-												</ul>
+                            {% assign lang = page.path | split: '/' | first %}
+                            {% assign t = site.data[lang] | default: site.data['en'] %}
+
+                            {% for author in t.labels.written_by_name %}
+                              <li class="vf-list__item">
+                                {% if author.profile_url %}
+                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ author.profile_url }}">
+                                    {{ author.name }}
+                                  </a>
+                                {% else %}
+                                  {{ author.name }}
+                                {% endif %}
+                              </li>
+                            {% endfor %}
+                          </ul>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
-													Traducido por:</p>
+													{{ t.labels.translated_by_text }}:</p>
 												<div class="vf-u-margin__top--100"></div>
 												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
-													<li class="vf-list__item ">
-														Translator 1
-													</li>
-													<li class="vf-list__item ">
-														Translator 2
-													</li>
+													{% assign lang = page.path | split: '/' | first %}
+                            {% assign t = site.data[lang] | default: site.data['en'] %}
+
+                            {% for translator in t.labels.translated_by_name %}
+                              <li class="vf-list__item">
+                                {% if translator.profile_url %}
+                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.profile_url }}">
+                                    {{ translator.name }}
+                                  </a>
+                                {% else %}
+                                  {{ translator.name }}
+                                {% endif %}
+                              </li>
+                            {% endfor %}
 												</ul>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
-													traducido el: Octubre de 2025</p>
+													{{ t.labels.translated_on_text }}: {{ t.labels.translated_on_value }}</p>
 												</p>
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
-													Última revisión: Junio ​​de 2025</p>
+													{{ t.labels.last_updated_text }}: {{ t.labels.last_updated_value }}</p>
 												</p>
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
-												<div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
-												  <div class="vf-tree__inner">
-													<ul class="vf-tree__list  vf-tree__list--1 | vf-list" aria-role="tree">
-													<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-													<a class="vf-tree__link" href="/AlphaFold-A-practical-guide">Course overview</a>
-														{% comment %}
-															Get only markdown files (exclude README.md)
-														{% endcomment %}
-														{% assign markdown_pages = site.pages | where_exp: "p", "p.path contains '.md'" %}
-														{% assign filtered_pages = markdown_pages | where_exp: "p", "p.name != 'README.md'" | sort: "path" %}
-												
-														{% comment %}
-															Group pages by their top-level directory
-														{% endcomment %}
-														{% assign grouped_pages = filtered_pages | group_by_exp: "p", "p.path | split: '/' | first" %}
-												
-														{% for group in grouped_pages %}
-															{% assign folder = group.name %}
-															{% assign folder_pages = group.items %}
-												
-															{% comment %}
-																Skip root-level files (those not inside a folder)
-															{% endcomment %}
-															{% if folder contains '.' %}
-																{% comment %}
-																	Clean folder name — remove leading numbers and format to sentence case
-																{% endcomment %}
-																{% assign folder_clean = folder 
-																	| replace: '_', ' ' 
-																	| replace: '-', ' ' 
-																	| split: '.' 
-																	| last 
-																	| strip 
-																%}
-												
-																{% comment %}
-																	Find index.md in this folder
-																{% endcomment %}
-																{% assign index_page = folder_pages | where: "name", "index.md" | first %}
-												
-																<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-																	{% if index_page %}
-																		<a class="vf-tree__link" href="{{ index_page.url | relative_url }}">
-																			{{ index_page.title | default: folder_clean | capitalize }}
-																			{% assign subpages = folder_pages 
-																				| where_exp: "p", "p.name != 'index.md'" 
-																				| where_exp: "p", "p.name != 'README.md'" 
-																				| sort: "path" 
-																			%}
-																			{% if subpages.size > 0 %}
-																				<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-																				  <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-																					Open Tree
-																				  </p>
-																				  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-																					<path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-																				  </svg>
-																				</button>
-																		  {% endif %}
-																	  </a>
-																	{% else %}
-																		{{ folder_clean | capitalize }}
-																	{% endif %}
-												
-																	{% comment %}
-																		Render subpages inside folder (excluding index.md)
-																	{% endcomment %}
-																	<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" style="margin-left: 16px" aria-role="group">
-																		{% assign subpages = folder_pages 
-																			| where_exp: "p", "p.name != 'index.md'" 
-																			| where_exp: "p", "p.name != 'README.md'" 
-																			| sort: "path" 
-																		%}
-																		{% for sub in subpages %}
-																			{% assign name_clean = sub.name 
-																				| replace: '.md', '' 
-																				| split: '.' 
-																				| last 
-																				| replace: '-', ' ' 
-																				| strip 
-																			%}
-																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-																				<a class="vf-tree__link" href="{{ sub.url | relative_url }}">
-																					{{ sub.title | default: name_clean | capitalize }}
-																				</a>
-																			</li>
-																		{% endfor %}
-																	</ul>
-																</li>
-															{% endif %}
-														{% endfor %}
-													</ul>
-												</div>
-											</div>
+                       {% assign lang = page.path | split: '/' | first %}
+                      {% assign t = site.data[lang] | default: site.data['en'] %}
 
-												<hr class="vf-divider vf-u-margin__bottom-md">
+                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
+
+                          <!-- Course overview -->
+                          <li class="vf-tree__item">
+                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/">
+                              {{ t.course.title }}
+                            </a>
+                          </li>
+                        <!-- {% assign nav = site.data.navigation.navigation %} -->
+                        {% assign lang = page.url | split: '/' | second %}
+                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
+
+                        {% for section in nav %}
+                          <li class="vf-tree__item">
+                            <a class="vf-tree__link" href="/{{ course_slug }}{{ section.url }}">
+                             {{ section.title }}
+                            </a>
+
+                            {% if section.children %}
+                              <ul class="vf-tree__list vf-tree__list--2 | vf-list" style="margin-left: 16px">
+                                {% for child in section.children %}
+                                  <li class="vf-tree__item">
+                                    <a class="vf-tree__link" href="/{{ course_slug }}{{ child.url }}">
+                                      {{ child.title }}
+                                    </a>
+
+                                    {% if child.children %}
+                                      <ul class="vf-tree__list vf-tree__list--3 | vf-list" style="margin-left: 16px">
+                                        {% for subchild in child.children %}
+                                          <li class="vf-tree__item">
+                                            <a class="vf-tree__link" href="/{{ course_slug }}{{ subchild.url }}">
+                                              {{ subchild.title }}
+                                            </a>
+                                          </li>
+                                        {% endfor %}
+                                      </ul>
+                                    {% endif %}
+
+                                  </li>
+                                {% endfor %}
+                              </ul>
+                            {% endif %}
+
+                          </li>
+                        {% endfor %}
+                      </ul>
+		                  <hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
 													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
 															src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"
@@ -222,12 +199,6 @@
 				</div>
 			</main>
   <script src="https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js"></script>
-  <script>
-document.addEventListener('load', function() {
-    vfTree(); // will make the .vf-tree collapsible
-});
-</script>
-  
 		</div>
 
 	</div>
