@@ -3,9 +3,9 @@ layout: default
 title: What is the protein folding problem?
 ---
 
-# What is the protein folding problem?
+# प्रोटीन फोल्डिंग समस्या क्या है?
 
-**It is theoretically possible to predict the 3D structure of a protein just from its amino acid sequence. However, this is extremely challenging because of the sheer number of possible conformations. Artificial intelligence is ideally suited to this problem.**
+**सैद्धांतिक रूप से, केवल अमीनो एसिड अनुक्रम (sequence) से प्रोटीन की 3D संरचना का पूर्वानुमान लगाना संभव है। हालांकि, संभावित संरचनाओं की विशाल संख्या के कारण यह अत्यंत चुनौतीपूर्ण है। आर्टिफिशियल इंटेलिजेंस (AI) इस समस्या के लिए आदर्श रूप से उपयुक्त है।**
 
 ## **Protein folding problem: predicting protein structure from sequence**
 
