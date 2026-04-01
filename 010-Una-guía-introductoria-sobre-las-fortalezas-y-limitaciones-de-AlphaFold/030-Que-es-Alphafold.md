@@ -1,3 +1,7 @@
+---
+layout: default
+title: ¿Qué es AlphaFold?
+---
 # ¿Qué es AlphaFold?
 
 <b>AlphaFold es la contribución de Google DeepMind al problema de la predicción de la estructura de las proteínas. Predice la estructura 3D de proteínas con un alto grado de precisión y es ampliamente usado por los investigadores en la actualidad.</b>
