@@ -1,3 +1,7 @@
+---
+layout: default
+title: Un guide d'introduction aux forces et aux limites d'AlphaFold
+---
 # Un guide d'introduction aux forces et aux limites d'AlphaFold
 
 Les protéines sont des composants fondamentaux de la vie. Chaque molécule de protéine possède une forme tridimensionnelle distinctive qui détermine ses fonctions, comme catalyser (accélérer) une réaction biochimique ou permettre les contractions musculaires. Prédire avec précision la structure d'une protéine nous permet de mieux comprendre ses fonctions et ses rôles.
