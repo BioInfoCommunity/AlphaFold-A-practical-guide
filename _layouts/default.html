@@ -35,6 +35,7 @@
           <a href="/{{ course_slug }}/en/">English</a> |
           <a href="/{{ course_slug }}/es/">Español</a> |
           <a href="/{{ course_slug }}/pt/">Portuguese</a>
+		  <a href="/{{ course_slug }}/hi/">Hindi</a>
         </nav>
 				<div class="vf-content">
 					<div>
@@ -129,7 +130,7 @@
                           </li>
                         <!-- {% assign nav = site.data.navigation.navigation %} -->
                         {% assign lang = page.url | split: '/' | second %}
-                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
+                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['hi'] %}
 
                         {% for section in nav %}
                           <li class="vf-tree__item">
