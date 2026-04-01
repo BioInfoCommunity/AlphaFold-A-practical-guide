@@ -113,6 +113,7 @@ jobs:
             french) echo "LANG=fr" >> $GITHUB_ENV ;;
             german) echo "LANG=de" >> $GITHUB_ENV ;;
             portuguese) echo "LANG=pt" >> $GITHUB_ENV ;;
+            hindi) echo "LANG=hi" >> $GITHUB_ENV ;;
           esac
 
       # ----------------------------
