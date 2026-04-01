@@ -1,3 +1,8 @@
+---
+layout: default
+title: ¿Cómo se han validado las predicciones de la estructura de las proteínas de AlphaFold 2?
+---
+
 # ¿Cómo se han validado las predicciones de la estructura de las proteínas de AlphaFold 2?
 La capacidad de AlphaFold2 para predecir la estructura de las proteínas quedó demostrada por primera vez cuando triunfó en la evaluación CASP14 de predicciones estructurales. Desde entonces ha sido validada por múltiples líneas de evidencia procedentes de experimentos de biología estructural, incluyendo estudios de cristalografía de rayos X, microscopía electrónica criogénica y espectrometría de masas con entrecruzamiento químico.
 
