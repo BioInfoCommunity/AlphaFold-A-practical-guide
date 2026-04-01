@@ -1,3 +1,7 @@
+---
+layout: default
+title: second
+--- 
 # Deuxième page du tutoriel
 
 Ceci est la deuxième page
