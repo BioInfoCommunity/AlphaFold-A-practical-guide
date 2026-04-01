@@ -1,0 +1,28 @@
+title: AlphaFold - Um guia prático
+description: Este tutorial destina-se a pesquisadores interessados ​​em usar o AlphaFold para prever estruturas de proteínas e integrar essas previsões em seus projetos.
+
+baseurl: ""
+url: "https://bioinfocommunity.github.io/AlphaFold-A-practical-guide"
+
+markdown: kramdown
+theme: null
+
+permalink: pretty
+
+# Build settings
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+
+# Collections (optional if needed later)
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
