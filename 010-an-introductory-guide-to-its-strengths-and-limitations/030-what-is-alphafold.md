@@ -30,7 +30,7 @@ Crucially, AlphaFold also provides confidence metrics, such as pLDDT, pTM and PA
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/Diagram.gif)
 
 
-Figure 3. From Sequence to Structure. AlphaFold2 takes the protein sequence and, in minutes, predicts their 3D structure
+Figure 3. अनुक्रम से संरचना तक। अल्फाफोल्ड2 प्रोटीन अनुक्रम लेता है और मिनटों में उनकी 3D संरचना की भविष्यवाणी करता है।
 
 ## **AlphaFold milestones**
 
