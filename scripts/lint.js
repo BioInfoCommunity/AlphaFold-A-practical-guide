@@ -1,7 +1,7 @@
 // scripts/lint.js
 
-import fs from "fs";
-import path from "path";
+const fs = require("fs");
+const path = require("path");
 
 const ROOT = process.cwd();
 
