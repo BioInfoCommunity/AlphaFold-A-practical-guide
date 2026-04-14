@@ -1,3 +1,8 @@
+---
+layout: default
+title: What are proteins and how do we know their structures?
+---
+
 # Que sont les protéines et comment connaît-on leur structure ?
 
 **Proteins are large molecules that are essential to life as we know it. If you examine any biological process, you will find proteins involved and often playing critical roles. The structures of proteins are strongly related to their functions, but determining their 3D structures is very difficult.**
