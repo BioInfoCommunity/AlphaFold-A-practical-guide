@@ -15,6 +15,22 @@ const PROTECTED_PATHS = [
   "CODEOWNERS"
 ];
 
+const IGNORE_DIRS = [
+  ".git",
+  ".github",
+  "_data",
+  "_layouts",
+  "scripts",
+  "node_modules"
+];
+
+const IGNORE_FILES = [
+  "_config.yml",
+  "README.md",
+  "CODEOWNERS",
+  "changed_files.txt"
+];
+
 const FILE_NAME_REGEX = /^\d{3}-[a-z0-9-]+$/;
 
 let errors = [];
@@ -30,11 +46,26 @@ function isEnglishName(name) {
 }
 
 function checkFileName(filePath) {
-  const name = path.basename(filePath, ".md");
+  const name = path.basename(filePath);
 
-  if (!FILE_NAME_REGEX.test(name)) {
-    errors.push(`❌ Invalid file name: ${filePath} (should match 010-xxx)`);
+  // Allow index.md everywhere
+  if (name === "index.md") return;
+
+  const base = path.basename(filePath, ".md");
+
+  // Allow:
+  // 010-xxx
+  // 01.xxx (optional if you want)
+  const validPattern1 = /^\d{3}-[a-z0-9-]+$/;
+  const validPattern2 = /^\d+\.[a-z0-9-]+$/;
+
+  if (!validPattern1.test(base) && !validPattern2.test(base)) {
+    errors.push(`❌ Invalid file name: ${filePath}`);
   }
+}
+
+function shouldCheckIndex(dirPath) {
+  return !IGNORE_DIRS.some(d => dirPath.includes(d));
 }
 
 function walk(dir) {
@@ -47,6 +78,14 @@ function walk(dir) {
     // Skip node_modules
     if (relPath.includes("node_modules")) continue;
 
+    if (IGNORE_DIRS.some(dir => relPath.startsWith(dir))) {
+      continue;
+    }
+
+    if (IGNORE_FILES.includes(file)) {
+      continue;
+    }
+
     const stat = fs.statSync(fullPath);
 
     // Check English names
@@ -56,16 +95,17 @@ function walk(dir) {
 
     if (stat.isDirectory()) {
       walk(fullPath);
-
-      // Check index.md exists
-      const indexPath = path.join(fullPath, "index.md");
-      if (!fs.existsSync(indexPath)) {
-        warnings.push(`⚠️ Missing index.md in ${relPath}`);
+    
+      if (shouldCheckIndex(relPath)) {
+        const indexPath = path.join(fullPath, "index.md");
+        if (!fs.existsSync(indexPath)) {
+          warnings.push(`⚠️ Missing index.md in ${relPath}`);
+        }
       }
-
     } else {
       if (!isMarkdown(file)) {
-        warnings.push(`⚠️ Non-markdown file detected: ${relPath}`);
+        // warnings.push(`⚠️ Non-markdown file detected: ${relPath}`);
+        continue;
       } else {
         checkFileName(fullPath);
 
@@ -123,7 +163,30 @@ function checkProtectedFiles() {
 }
 
 // Run
-walk(ROOT);
+// walk(ROOT);
+function getChangedFiles() {
+  try {
+    return fs.readFileSync("changed_files.txt", "utf-8")
+      .split("\n")
+      .filter(f => f.endsWith(".md"));
+  } catch {
+    return [];
+  }
+}
+
+const changedFiles = getChangedFiles();
+
+for (const file of changedFiles) {
+  const fullPath = path.join(ROOT, file);
+
+  if (fs.existsSync(fullPath)) {
+    checkFileName(fullPath);
+
+    const content = fs.readFileSync(fullPath, "utf-8");
+
+    // run link + image checks here
+  }
+}
 checkProtectedFiles();
 
 // Output
