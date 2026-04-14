@@ -64,6 +64,38 @@ function checkFileName(filePath) {
   }
 }
 
+function checkFrontmatter(filePath, content) {
+  const name = path.basename(filePath);
+  if (name === "README.md") return false;
+  
+  // Must start with ---
+  if (!content.startsWith("---")) {
+    errors.push(`❌ Missing frontmatter in ${filePath}`);
+    return;
+  }
+
+  const parts = content.split("---");
+
+  // Expect at least: ['', frontmatter, rest]
+  if (parts.length < 3) {
+    errors.push(`❌ Invalid frontmatter format in ${filePath}`);
+    return;
+  }
+
+  const frontmatter = parts[1].trim();
+
+  // Check required fields
+  if (!frontmatter.includes("layout: default")) {
+    errors.push(`❌ Missing "layout: default" in ${filePath}`);
+  }
+
+  const titleMatch = frontmatter.match(/title:\s*(.+)/);
+
+  if (!titleMatch || !titleMatch[1].trim()) {
+    errors.push(`❌ Missing or empty "title" in ${filePath}`);
+  }
+}
+
 function shouldCheckIndex(dirPath) {
   return !IGNORE_DIRS.some(d => dirPath.includes(d));
 }
@@ -110,6 +142,7 @@ function walk(dir) {
         checkFileName(fullPath);
 
         const content = fs.readFileSync(fullPath, "utf-8");
+        checkFrontmatter(fullPath, content);
 
         // Check broken relative links
         const linkRegex = /\[.*?\]\((.*?)\)/g;
