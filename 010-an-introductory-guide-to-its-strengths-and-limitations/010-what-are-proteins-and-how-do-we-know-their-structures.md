@@ -3,17 +3,17 @@ layout: default
 title: What are proteins and how do we know their structures?
 ---
 
-# What are proteins and how do we know their structures?
+# Que sont les protéines et comment connaît-on leur structure?
 
-**Proteins are large molecules that are essential to life as we know it. If you examine any biological process, you will find proteins involved and often playing critical roles. The structures of proteins are strongly related to their functions, but determining their 3D structures is very difficult.**
+**Les protéines sont de grosses molécules essentielles à la vie telle que nous la connaissons. Tout processus biologique implique des protéines, qui y jouent souvent un rôle crucial. La structure des protéines est étroitement liée à leur fonction, mais la détermination de leur structure tridimensionnelle est très complexe.**
 
-## **What is a protein?**
+## **Qu'est-ce qu'une protéine ?**
 
-Each protein molecule consists of one or more chains, made by linking small molecules called amino acids. The amino acid residues are arranged in a specific sequence along each chain. These chains are folded into a distinctive 3D shape, determined by interactions between the amino acids.
+Chaque molécule de protéine est constituée d'une ou plusieurs chaînes, formées par l'assemblage de petites molécules appelées acides aminés. Les résidus d'acides aminés sont agencés selon une séquence spécifique le long de chaque chaîne. Ces chaînes se replient en une structure tridimensionnelle caractéristique, déterminée par les interactions entre les acides aminés.
 
-There is a strong relationship between protein structure and protein function. The 3D shape of the protein determines the actions it can perform.
+Il existe une relation étroite entre la structure et la fonction des protéines. La forme tridimensionnelle de la protéine détermine les actions qu'elle peut accomplir.
 
-Figuring out protein structure is like opening a black box. Revealing the 3D structure enables scientists to determine how exactly proteins perform their duties.
+Déterminer la structure des protéines, c'est comme ouvrir une boîte noire. La révélation de leur structure tridimensionnelle permet aux scientifiques de comprendre précisément comment les protéines remplissent leurs fonctions.
 
 
 
