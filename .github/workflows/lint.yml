@@ -1,0 +1,46 @@
+# .github/workflows/lint.yml
+
+name: Lint PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Get changed files
+        run: |
+          git diff --name-only origin/${{ github.base_ref }} > changed_files.txt
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Run Lint Script
+        run: node scripts/lint.js
+
+      - name: Run Lint with Output
+        id: lint
+        run: |
+          node scripts/lint.js > report.txt || true
+
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const report = fs.readFileSync('report.txt', 'utf8');
+
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: report
+            });
