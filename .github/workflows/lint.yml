@@ -13,10 +13,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Get changed files
         run: |
-          git diff --name-only origin/${{ github.base_ref }} > changed_files.txt
+          git fetch origin ${{ github.base_ref }}
+          git diff --name-only origin/${{ github.base_ref }}...HEAD > changed_files.txt
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -30,6 +33,9 @@ jobs:
         id: lint
         run: |
           node scripts/lint.js > report.txt || true
+
+      - name: Debug branches
+        run: git branch -a
 
       - name: Comment PR
         uses: actions/github-script@v7
