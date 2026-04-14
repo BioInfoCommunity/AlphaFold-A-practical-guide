@@ -141,9 +141,6 @@ function walk(dir) {
       } else {
         checkFileName(fullPath);
 
-        const content = fs.readFileSync(fullPath, "utf-8");
-        checkFrontmatter(fullPath, content);
-
         // Check broken relative links
         const linkRegex = /\[.*?\]\((.*?)\)/g;
         let match;
@@ -213,10 +210,9 @@ for (const file of changedFiles) {
   const fullPath = path.join(ROOT, file);
 
   if (fs.existsSync(fullPath)) {
-    checkFileName(fullPath);
-
     const content = fs.readFileSync(fullPath, "utf-8");
-
+    checkFrontmatter(fullPath, content);
+    checkFileName(fullPath);
     // run link + image checks here
   }
 }
