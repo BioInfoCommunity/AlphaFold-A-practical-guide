@@ -13,4 +13,4 @@ Proteins are foundational components of life. Each protein molecule has a distin
 * Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.
 * Describe the strengths and limitations of AlphaFold’s structure predictions.
 
-  ![Alt text](AlphaFold.png)
+  ![Alt text](/images/AlphaFold.png)
