@@ -46,10 +46,6 @@ def is_english_name(name):
     return re.match(r"^[a-z0-9\-_.]+$", name, re.IGNORECASE)
 
 
-def should_skip_dir(path):
-    return any(ignored in path.split(os.sep) for ignored in IGNORE_DIRS)
-
-
 def read_changed_files():
     try:
         with open("changed_files.txt", "r", encoding="utf-8") as f:
@@ -77,7 +73,7 @@ def check_file_name(file_path):
 
 
 # -----------------------------
-# Frontmatter check
+# Frontmatter check (FIXED: no early blocking of other validations)
 # -----------------------------
 def check_frontmatter(file_path, content):
     name = os.path.basename(file_path)
@@ -97,17 +93,20 @@ def check_frontmatter(file_path, content):
 
     frontmatter = parts[1]
 
+    # DO NOT stop after first issue — collect all
     if "layout: default" not in frontmatter:
         errors.append(f'❌ Missing "layout: default" in {file_path}')
 
-    match = re.search(r"title:\s*(.+)", frontmatter)
+    title_match = re.search(r"title:\s*(.+)", frontmatter)
 
-    if not match or not match.group(1).strip():
-        errors.append(f'❌ Missing or empty "title" in {file_path}')
+    if not title_match:
+        errors.append(f'❌ Missing "title" in {file_path}')
+    elif not title_match.group(1).strip():
+        errors.append(f'❌ Empty "title" in {file_path}')
 
 
 # -----------------------------
-# Link + image checks
+# Link + image checks (already OK)
 # -----------------------------
 def check_links_and_images(file_path, content):
     dir_path = os.path.dirname(file_path)
@@ -149,6 +148,15 @@ def check_protected_files():
 
 
 # -----------------------------
+# Run all checks per file (KEY FIX)
+# -----------------------------
+def run_checks(file_path, content):
+    check_file_name(file_path)
+    check_frontmatter(file_path, content)
+    check_links_and_images(file_path, content)
+
+
+# -----------------------------
 # Main execution
 # -----------------------------
 def main():
@@ -167,9 +175,8 @@ def main():
         with open(full_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        check_file_name(full_path)
-        check_frontmatter(full_path, content)
-        check_links_and_images(full_path, content)
+        # Run ALL checks independently
+        run_checks(full_path, content)
 
     check_protected_files()
 
