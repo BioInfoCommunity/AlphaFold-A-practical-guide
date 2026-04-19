@@ -198,6 +198,24 @@ def main():
     if not errors and not warnings:
         print("✅ All checks passed!")
 
+    def write_report():
+    with open("report.txt", "w", encoding="utf-8") as f:
+        f.write("## 🤖 Lint Report\n\n")
+
+        if errors:
+            f.write("### ❌ Errors\n")
+            for e in errors:
+                f.write(e + "\n")
+
+        if warnings:
+            f.write("\n### ⚠️ Warnings\n")
+            for w in warnings:
+                f.write(w + "\n")
+
+        if not errors and not warnings:
+            f.write("✅ All checks passed!\n")
+        write_report()
+
     return 1 if errors else 0
 
 
