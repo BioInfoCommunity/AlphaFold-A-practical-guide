@@ -38,14 +38,6 @@ warnings = []
 # -----------------------------
 # Helpers
 # -----------------------------
-def is_markdown(file):
-    return file.endswith(".md")
-
-
-def is_english_name(name):
-    return re.match(r"^[a-z0-9\-_.]+$", name, re.IGNORECASE)
-
-
 def read_changed_files():
     try:
         with open("changed_files.txt", "r", encoding="utf-8") as f:
@@ -54,8 +46,12 @@ def read_changed_files():
         return []
 
 
+def is_english_name(name):
+    return re.match(r"^[a-z0-9\-_.]+$", name, re.IGNORECASE)
+
+
 # -----------------------------
-# File name check
+# Checks
 # -----------------------------
 def check_file_name(file_path):
     name = os.path.basename(file_path)
@@ -65,16 +61,13 @@ def check_file_name(file_path):
 
     base = os.path.splitext(name)[0]
 
-    valid1 = re.match(r"^\d{3}-[a-z0-9-]+$", base)
-    valid2 = re.match(r"^\d+\.[a-z0-9-]+$", base)
-
-    if not (valid1 or valid2):
+    if not (
+        re.match(r"^\d{3}-[a-z0-9-]+$", base)
+        or re.match(r"^\d+\.[a-z0-9-]+$", base)
+    ):
         errors.append(f"❌ Invalid file name: {file_path}")
 
 
-# -----------------------------
-# Frontmatter check (FIXED: no early blocking of other validations)
-# -----------------------------
 def check_frontmatter(file_path, content):
     name = os.path.basename(file_path)
 
@@ -93,7 +86,6 @@ def check_frontmatter(file_path, content):
 
     frontmatter = parts[1]
 
-    # DO NOT stop after first issue — collect all
     if "layout: default" not in frontmatter:
         errors.append(f'❌ Missing "layout: default" in {file_path}')
 
@@ -105,13 +97,9 @@ def check_frontmatter(file_path, content):
         errors.append(f'❌ Empty "title" in {file_path}')
 
 
-# -----------------------------
-# Link + image checks (already OK)
-# -----------------------------
 def check_links_and_images(file_path, content):
     dir_path = os.path.dirname(file_path)
 
-    # Markdown links
     for match in re.finditer(r"\[.*?\]\((.*?)\)", content):
         link = match.group(1)
 
@@ -120,7 +108,6 @@ def check_links_and_images(file_path, content):
             if not os.path.exists(target):
                 errors.append(f"❌ Broken link in {file_path} → {link}")
 
-    # Images
     for match in re.finditer(r"!\[.*?\]\((.*?)\)", content):
         img = match.group(1)
 
@@ -130,9 +117,6 @@ def check_links_and_images(file_path, content):
                 errors.append(f"❌ Missing image in {file_path} → {img}")
 
 
-# -----------------------------
-# Protected file check
-# -----------------------------
 def check_protected_files():
     try:
         with open("changed_files.txt", "r", encoding="utf-8") as f:
@@ -147,9 +131,6 @@ def check_protected_files():
         warnings.append("⚠️ Could not verify protected files")
 
 
-# -----------------------------
-# Run all checks per file (KEY FIX)
-# -----------------------------
 def run_checks(file_path, content):
     check_file_name(file_path)
     check_frontmatter(file_path, content)
@@ -157,7 +138,40 @@ def run_checks(file_path, content):
 
 
 # -----------------------------
-# Main execution
+# Report builder (KEY FIX: LINT_REPORT support)
+# -----------------------------
+def build_report():
+    lines = []
+    lines.append("## 🤖 Lint Report\n")
+
+    if errors:
+        lines.append("### ❌ Errors")
+        lines.extend(errors)
+
+    if warnings:
+        lines.append("\n### ⚠️ Warnings")
+        lines.extend(warnings)
+
+    if not errors and not warnings:
+        lines.append("✅ All checks passed!")
+
+    return "\n".join(lines)
+
+
+def write_outputs(report):
+    # Always write file (useful locally + CI artifact style)
+    with open("report.txt", "w", encoding="utf-8") as f:
+        f.write(report)
+
+    # Export to GitHub Actions env (THIS is your LINT_REPORT fix)
+    github_env = os.environ.get("GITHUB_ENV")
+    if github_env:
+        with open(github_env, "a", encoding="utf-8") as f:
+            f.write(f"LINT_REPORT<<EOF\n{report}\nEOF\n")
+
+
+# -----------------------------
+# Main
 # -----------------------------
 def main():
     changed_files = read_changed_files()
@@ -175,47 +189,15 @@ def main():
         with open(full_path, "r", encoding="utf-8") as f:
             content = f.read()
 
-        # Run ALL checks independently
         run_checks(full_path, content)
 
     check_protected_files()
 
-    # -------------------------
-    # Output
-    # -------------------------
-    print("\n## 🤖 Lint Report\n")
+    report = build_report()
 
-    if errors:
-        print("### ❌ Errors")
-        for e in errors:
-            print(e)
+    print(report)
+    write_outputs(report)
 
-    if warnings:
-        print("\n### ⚠️ Warnings")
-        for w in warnings:
-            print(w)
-
-    if not errors and not warnings:
-        print("✅ All checks passed!")
-
-    def write_report():
-        with open("report.txt", "w", encoding="utf-8") as f:
-            f.write("## 🤖 Lint Report\n\n")
-    
-            if errors:
-                f.write("### ❌ Errors\n")
-                for e in errors:
-                    f.write(e + "\n")
-    
-            if warnings:
-                f.write("\n### ⚠️ Warnings\n")
-                for w in warnings:
-                    f.write(w + "\n")
-    
-            if not errors and not warnings:
-                f.write("✅ All checks passed!\n")
-    
-    write_report()
     return 1 if errors else 0
 
 
