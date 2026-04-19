@@ -1,8 +1,3 @@
----
-layout: default
-title: How accurate are AlphaFold 2 structure predictions?
----
-
 # How accurate are AlphaFold 2 structure predictions?
 
 **High-confidence regions of AlphaFold2 structure predictions are usually very close to the experimental structures, and therefore very useful in designing downstream experiments. However, low-confidence regions may deviate substantially. AlphaFold2 gets the fold and majority of the side chain positions right, but if you are interested in the features that require atomic precision, like understanding the fine details of catalysis, AlphaFold2 may not be able to match such requirements.**
