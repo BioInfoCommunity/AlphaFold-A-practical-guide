@@ -33,6 +33,17 @@ jobs:
         id: lint
         run: |
           node scripts/lint.js > report.txt || true
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.11
+
+      - name: Install dependencies
+        run: pip install pyyaml
+
+      - name: Run Frontmatter Validator
+        run: python scripts/frontmatter_lint.py
 
       - name: Debug branches
         run: git branch -a
