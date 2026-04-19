@@ -30,7 +30,7 @@ jobs:
         run: pip install pyyaml
 
       - name: Run Frontmatter Validator
-        run: python scripts/frontmatter_lint.py
+        run: python scripts/lint.py
 
       - name: Debug branches
         run: git branch -a
@@ -40,7 +40,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const report = fs.readFileSync('report.txt', 'utf8');
+            const report = process.env.LINT_REPORT || "No report generated.";
 
             github.rest.issues.createComment({
               issue_number: context.issue.number,
