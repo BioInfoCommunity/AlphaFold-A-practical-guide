@@ -32,6 +32,8 @@ IGNORE_FILES = {
     "changed_files.txt",
 }
 
+ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png"}
+
 errors = []
 warnings = []
 
@@ -41,7 +43,8 @@ warnings = []
 def read_changed_files():
     try:
         with open("changed_files.txt", "r", encoding="utf-8") as f:
-            return [line.strip() for line in f if line.strip().endswith(".md")]
+            ## return [line.strip() for line in f if line.strip().endswith(".md")]
+            return [line.strip() for line in f if line.strip()]
     except FileNotFoundError:
         return []
 
@@ -180,16 +183,37 @@ def main():
         print("No markdown files to validate.")
         return 0
 
+    # for file in changed_files:
+    #     full_path = os.path.join(ROOT, file)
+
+    #     if not os.path.exists(full_path):
+    #         continue
+
+    #     with open(full_path, "r", encoding="utf-8") as f:
+    #         content = f.read()
+
+    #     run_checks(full_path, content)
+
     for file in changed_files:
         full_path = os.path.join(ROOT, file)
+        ext = os.path.splitext(file)[1].lower()
 
-        if not os.path.exists(full_path):
+        # 1. Validate extension FIRST
+        if ext not in ALLOWED_EXTENSIONS:
+            errors.append(f"❌ Invalid file type: {file}")
             continue
+    
+        # 2. Markdown validation
+        if ext == ".md":
+            if os.path.exists(full_path):
+                with open(full_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+    
+                run_checks(full_path, content)
 
-        with open(full_path, "r", encoding="utf-8") as f:
-            content = f.read()
-
-        run_checks(full_path, content)
+        # 3. Image validation (future)
+        elif ext in {".jpg", ".jpeg", ".png"}:
+            pass
 
     check_protected_files()
 
