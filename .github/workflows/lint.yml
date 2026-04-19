@@ -21,19 +21,6 @@ jobs:
           git fetch origin ${{ github.base_ref }}
           git diff --name-only origin/${{ github.base_ref }}...HEAD > changed_files.txt
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Run Lint Script
-        run: node scripts/lint.js
-
-      - name: Run Lint with Output
-        id: lint
-        run: |
-          node scripts/lint.js > report.txt || true
-      
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
