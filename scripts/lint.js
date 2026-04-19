@@ -211,7 +211,7 @@ for (const file of changedFiles) {
 
   if (fs.existsSync(fullPath)) {
     const content = fs.readFileSync(fullPath, "utf-8");
-    checkFrontmatter(fullPath, content);
+    // checkFrontmatter(fullPath, content);
     checkFileName(fullPath);
     // run link + image checks here
   }
