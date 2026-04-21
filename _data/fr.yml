@@ -1,6 +1,6 @@
 course:
-  title: "AlphaFold: A practical guide"
-  subtitle: "A practical guide"
+  title: "FR - AlphaFold: A practical guide"
+  subtitle: "FR - A practical guide"
   hero_kicker_text: "Online tutorial"
   slug: "AlphaFold-A-practical-guide" # should match repo name for GitHub Pages and should be english for consistency across languages
 
