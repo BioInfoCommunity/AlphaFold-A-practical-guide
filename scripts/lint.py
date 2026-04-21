@@ -16,7 +16,7 @@ PROTECTED_PATHS = [
     "CODEOWNERS",
 ]
 
-ALLOWED_PROTECTED_FILES = {
+ALLOWED_METADATA_FILES = {
     "_data/fr.yml",
 }
 
@@ -112,7 +112,7 @@ def check_protected_files():
 
         for file in changed:
             # Allow explicitly permitted files
-            if file in ALLOWED_PROTECTED_FILES:
+            if file in ALLOWED_METADATA_FILES:
                 continue
 
             for protected in PROTECTED_PATHS:
@@ -176,8 +176,14 @@ def main():
         full_path = os.path.join(ROOT, file)
         ext = os.path.splitext(file)[1].lower()
 
+        # -----------------------------------
+        # 1. Bypass metadata file i.e. en.yml
+        # -----------------------------------
+        if file in ALLOWED_METADATA_FILES:
+            continue
+
         # -----------------------------
-        # 1. Validate extension
+        # 2. Validate extension
         # -----------------------------
         if ext not in ALLOWED_EXTENSIONS:
             errors.append(f"❌ Invalid file type: {file}")
