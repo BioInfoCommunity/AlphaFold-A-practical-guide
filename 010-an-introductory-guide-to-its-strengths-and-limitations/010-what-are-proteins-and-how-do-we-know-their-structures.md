@@ -59,7 +59,7 @@ revolutionised the field by predicting protein structures with remarkable accura
 
 Furthermore, the gap has widened considerably in recent years, thanks to advances in DNA sequencing. Experimental structure determination can’t keep up with the pace of sequencing, so there have been hundreds of millions of known proteins with unknown structures.
 
-[AlphaFold logo](./images/AlphaFold.png)
+![AlphaFold logo](./images/AlphaFold.png)
 
 
 
