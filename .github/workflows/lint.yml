@@ -24,7 +24,7 @@ jobs:
         run: |
           git fetch origin ${{ github.base_ref }} --depth=1
 
-          git diff --name-only \
+          git diff --name-status \
             ${{ github.event.pull_request.base.sha }} \
             ${{ github.event.pull_request.head.sha }} \
             > changed_files.txt
