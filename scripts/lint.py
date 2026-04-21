@@ -99,10 +99,28 @@ def check_links_and_images(file_path, content):
     for match in re.finditer(r"!\[.*?\]\((.*?)\)", content):
         img = match.group(1)
 
-        if not img.startswith("http"):
+        # Skip external images
+        if img.startswith("http"):
+            continue
+
+        # if not img.startswith("http"):
+        #     img_path = os.path.abspath(os.path.join(dir_path, img))
+        #     if not os.path.exists(img_path):
+        #         errors.append(f"❌ Missing image in {file_path} → {img}")
+
+        # -----------------------------
+        # Handle root-relative paths
+        # -----------------------------
+        if img.startswith("/"):
+            img_path = os.path.join(ROOT, img.lstrip("/"))
+            # -----------------------------
+        # Handle relative paths
+        # -----------------------------
+        else:
             img_path = os.path.abspath(os.path.join(dir_path, img))
-            if not os.path.exists(img_path):
-                errors.append(f"❌ Missing image in {file_path} → {img}")
+
+        if not os.path.exists(img_path):
+            errors.append(f"❌ Missing image in {file_path} → {img}")
 
 
 def check_protected_files():
