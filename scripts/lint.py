@@ -31,7 +31,25 @@ warnings = []
 def read_changed_files():
     try:
         with open("changed_files.txt", "r", encoding="utf-8") as f:
-            return [line.strip() for line in f if line.strip()]
+            files = []
+            for line in f:
+                parts = line.strip().split("\t")
+
+                if not parts:
+                    continue
+
+                status = parts[0]
+
+                # For normal files (M, A, etc.)
+                if len(parts) == 2:
+                    files.append(parts[1])
+
+                # For renames (Rxxx old new)
+                elif status.startswith("R") and len(parts) == 3:
+                    files.append(parts[2])  # use new path
+
+            return files
+
     except FileNotFoundError:
         return []
 
@@ -52,6 +70,30 @@ def check_file_name(file_path):
         or re.match(r"^\d+\.[a-z0-9-]+$", base)
     ):
         errors.append(f"❌ Invalid file name: {file_path}")
+
+def check_renames():
+    try:
+        with open("changed_files.txt", "r", encoding="utf-8") as f:
+            lines = [line.strip() for line in f if line.strip()]
+
+        for line in lines:
+            parts = line.split("\t")
+
+            status = parts[0]
+
+            # -----------------------------
+            # Detect rename (Rxxx)
+            # -----------------------------
+            if status.startswith("R"):
+                old_path = parts[1]
+                new_path = parts[2]
+
+                errors.append(
+                    f"❌ File/folder rename not allowed: {old_path} → {new_path}"
+                )
+
+    except FileNotFoundError:
+        warnings.append("⚠️ Could not verify renames")
 
 
 def check_frontmatter(file_path, content):
@@ -227,6 +269,7 @@ def main():
                 errors.append(f"❌ Missing image file: {file}")
 
     check_protected_files()
+    check_renames()
 
     report = build_report()
 
