@@ -1,3 +1,8 @@
+---
+layout: default
+title: What are proteins and how do we know their structures?
+---
+
 # What are proteins and how do we know their structures?
 
 **Proteins are large molecules that are essential to life as we know it. If you examine any biological process, you will find proteins involved and often playing critical roles. The structures of proteins are strongly related to their functions, but determining their 3D structures is very difficult.**
@@ -53,6 +58,8 @@ for determining protein structure: X-ray, NMR and cryo-EM. AlphaFold2, a powerfu
 revolutionised the field by predicting protein structures with remarkable accuracy. Source: [What Is AlphaFold? | NEJM](https://youtu.be/7q8Uw3rmXyE) , “A Holy Grail — The Prediction of Protein Structure” ([Altman, 2023](https://doi.org/10.1056/nejmcibr2307735))
 
 Furthermore, the gap has widened considerably in recent years, thanks to advances in DNA sequencing. Experimental structure determination can’t keep up with the pace of sequencing, so there have been hundreds of millions of known proteins with unknown structures.
+
+[ghost image](/images/ghost.png)
 
 It is therefore extremely important to figure out the structures of these proteins with reasonable accuracy and speed, in order to narrow the gap between sequences and available structures.
 
