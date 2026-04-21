@@ -1,5 +1,5 @@
 ---
-layput: default
+layout: default
 title: What are proteins and how do we know their structures?
 ---
 
