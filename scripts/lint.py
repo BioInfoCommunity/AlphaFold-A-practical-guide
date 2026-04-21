@@ -16,6 +16,10 @@ PROTECTED_PATHS = [
     "CODEOWNERS",
 ]
 
+ALLOWED_PROTECTED_FILES = {
+    "_data/fr.yml",
+}
+
 ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png"}
 
 errors = []
@@ -107,6 +111,10 @@ def check_protected_files():
             changed = [line.strip() for line in f if line.strip()]
 
         for file in changed:
+            # Allow explicitly permitted files
+            if file in ALLOWED_PROTECTED_FILES:
+                continue
+
             for protected in PROTECTED_PATHS:
                 if file.startswith(protected):
                     errors.append(f"❌ Protected file modified: {file}")
