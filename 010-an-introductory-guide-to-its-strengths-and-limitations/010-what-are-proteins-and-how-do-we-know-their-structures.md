@@ -1,9 +1,7 @@
----
-layout: default
-title: What are proteins and how do we know their structures?
+
 ---
 
-# What are proteins and how do we know their structures?
+# What are protein?
 
 **Proteins are large molecules that are essential to life as we know it. If you examine any biological process, you will find proteins involved and often playing critical roles. The structures of proteins are strongly related to their functions, but determining their 3D structures is very difficult.**
 
@@ -14,6 +12,9 @@ Each protein molecule consists of one or more chains, made by linking small mole
 There is a strong relationship between protein structure and protein function. The 3D shape of the protein determines the actions it can perform.
 
 Figuring out protein structure is like opening a black box. Revealing the 3D structure enables scientists to determine how exactly proteins perform their duties.
+![Ghost image](/images/ghost.png)
+
+https://www.ebi.acuk/traiing/ 
 
 
 
