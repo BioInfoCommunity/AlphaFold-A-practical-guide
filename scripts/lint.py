@@ -17,7 +17,7 @@ PROTECTED_PATHS = [
 ]
 
 ALLOWED_METADATA_FILES = {
-    "_data/fr.yml",
+    "_data/en.yml",
 }
 
 ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png"}
