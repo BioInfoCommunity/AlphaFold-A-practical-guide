@@ -157,17 +157,51 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="how-have-alphafold2s-predictions-of-protein-structure-been-validated">How have AlphaFold2’s predictions of protein structure been validated?</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p><strong>AlphaFold2’s capability to predict protein structure was first demonstrated when it triumphed in the CASP14 assessment of structure predictions. Since then it has been validated by multiple lines of evidence from structural biology experiments, including studies of X-ray crystallography, cryogenic electron microscopy and cross-linking mass spectrometry.</strong></p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<h2 id="alphafolds-success-in-casp"><strong>AlphaFold’s success in CASP</strong></h2>
 
-<ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
-</ul>
+<p>Critical Assessment of Structure Prediction (<a href="https://predictioncenter.org/index.cgi">CASP</a>) is an experimental test of protein structure predictions. It has been carried out every two years since 1994. The assessment is open to anyone.</p>
+
+<p>CASP entrants submit predicted structures for proteins. The proteins in question have their structures determined by experiment, by X-ray crystallography, nuclear magnetic resonance (NMR), or cryogenic electron microscopy (cryo-EM). However, these structures are not released to the public until assessment is over. Predicted structures are then compared against these experimental structures.</p>
+
+<p>Google DeepMind entered structure predictions from AlphaFold2 into <a href="https://predictioncenter.org/casp14/index.cgi">CASP14</a> in 2020. The software outperformed all the other entrants by a wide margin.</p>
+
+<p><img src="https://ftp.ebi.ac.uk/pub/training/2024/On-demand/AF_CASP14.gif" alt="" /></p>
+
+<p>Figure 7. The ten highest scoring entries into CASP14 in 2020, based on their cumulative scores across all proteins attempted. AlphaFold2 was by far the most successful.</p>
+
+<p>Previously, overall structure prediction accuracy, measured by global distance from ground truth (GDT_TS), had only reached about 60. AlphaFold2 scored over 90. This score meant the predicted protein structures closely matched the experimentally-resolved structures. CASP coordinators proclaimed that the protein-folding problem had been “largely solved”, at least for single protein chains.</p>
+
+<p>Google DeepMind previously entered an earlier version of AlphaFold in 2018’s <a href="https://predictioncenter.org/casp13/">CASP13</a>. It took the first place but by a small margin. Those predictions were not accurate enough, so the protein structure prediction problem was not considered solved.</p>
+
+<p><img src="https://lh7-us.googleusercontent.com/_BkbLSDY5zMIDo4Sza-QXz24DxJ7WHwcmFpm_xOIZIZGuTEiO_ZkgGicn-aIDErGAOlOeFLMELERcPRyamc_SkckEwF1p0jGOkHGcQ8AAoMkjjrRVS56eOWtlmjwsE_os6G-ITrsyU7WVHXAr7SiNbs" alt="" /></p>
+
+<p>Figure 8. Overall success at protein structure prediction in CASPs over the years. AlphaFold drove rapid improvements in 2018 and 2020.</p>
+
+<p>Google DeepMind did not directly participate in <a href="https://predictioncenter.org/casp15/index.cgi">CASP15</a> in 2022. However, all the top performers used modified or customised versions of AlphaFold2. Because Google DeepMind released the source code for AlphaFold, other researchers were able to build on it and in some cases outperform the standard version of the software (<a href="https://doi.org/10.1016/j.sbi.2023.102594">Elofsson, 2023</a>; <a href="https://onlinelibrary.wiley.com/doi/10.1002/prot.26617">Kryshtafovych et al., 2023</a>).</p>
+
+<p><img src="https://lh7-us.googleusercontent.com/PfuIC2A8rK2wOrPVEnVhJT_2Kp3KHg3QTk20KXc-PdhDfpthIjM_NdTB1yElVEHaGOEYD9HU8KqopwW_8Zj-C9MEaAauhWBbIgS-WBmsrqRL6zRIKlWG1nIgCkLkugfJvCoB1So2FQp_iJTkRMFzK6g" alt="" /></p>
+
+<h2 id="subsequent-evidence-from-structural-biology"><strong>Subsequent evidence from structural biology</strong></h2>
+
+<p>In CASP14, AlphaFold2 succeeded in predicting the structures of dozens of proteins. However, there are millions of proteins in nature. Hence subsequent experimenters have subjected the software to further validation.</p>
+
+<p>Structural biology experiments demonstrate that AlphaFold2 structures (or well-defined parts of the predicted structures, like protein domains) work well as search models for molecular replacement in X-ray crystallography (<a href="https://doi.org/10.1107/S2059798322002157">Barbarin-Bocahu and Graille, 2022</a>; <a href="https://doi.org/10.1107/S2059798321012122">McCoy et al., 2022</a>; <a href="https://doi.org/10.1002/prot.26214">Millán et al., 2021</a>). This implies the AlphaFold2 structures closely resemble the protein crystal structures.</p>
+
+<p>AlphaFold2 structures fit well into experimental cryo-EM electron density maps (<a href="https://doi.org/10.1107/s2059798322005009">Chojnowski, 2022</a>; <a href="https://doi.org/10.1016/j.sbi.2023.102536">Giri et al., 2023</a>). This again suggests a good match between structure predictions and the experimental data.</p>
+
+<p>AlphaFold2 structures are still a good fit when proteins are in solution, as opposed to crystallised. Using AlphaFold2 models to interpret nuclear magnetic resonance (NMR) data obtained in solution suggested an excellent fit in the vast majority of the cases (<a href="https://doi.org/10.1016/j.str.2022.04.005">Fowler and Williamson, 2022</a>; <a href="https://doi.org/10.3389/fmolb.2022.877000">Tejero et al., 2022</a>). Interestingly, this indicates that AlphaFold2 models are not that biassed towards predicting a crystal state, despite AlphaFold2 mainly having been trained on data derived from protein crystals.</p>
+
+<h5 id="figure-10-specialized-acyl-carrier-protein-protein">Figure 10. Specialized acyl carrier protein protein</h5>
+
+<p>Notably, AlphaFold’s prediction (AlphaFold ID: <a href="https://alphafold.ebi.ac.uk/entry/Q6N882">AF-Q6N882-F1</a>) demonstrates a closer match to the NMR structure (green, PDB ID: <a href="https://doi.org/10.2210/pdb2lpk/pdb">2LPK</a>) than the corresponding X-ray crystal structure (grey, PDB ID: <a href="https://doi.org/10.2210/pdb3lmo/pdb">3LMO</a>) (<a href="https://doi.org/10.3389/fmolb.2022.877000">Tejero et al., 2022</a>)</p>
+
+<p>Cross-linking mass-spectrometry experiments showed that the majority of AlphaFold2 structure predictions were correct for both single protein chains and protein-protein complexes <em>in situ</em> (<a href="https://doi.org/10.1073/pnas.2219418120">Bartolec et al., 2023</a>; <a href="https://doi.org/10.1038/s42003-023-04773-7">McCafferty et al., 2023</a>).</p>
+
+<p>Taken together, these data validate AlphaFold2’s accuracy. They also suggest that AlphaFold2 models can be useful for a variety of research applications.</p>
 
 
 

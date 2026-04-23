@@ -157,17 +157,76 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="using-the-alphafold-3-source-code">Using the AlphaFold 3 source code</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p>Installing AlphaFold 3 locally gives you total control over structure prediction. This is the most potent and adaptable way to use AlphaFold 3. However, the software requires access to the state-of-the-art hardware (i.e. GPUs with maximal RAM size) or a virtual machine and requires a high degree of computer skill to install and run.</p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<h2 id="installing-the-alphafold-3-source-code"><strong>Installing the AlphaFold 3 source code</strong></h2>
+
+<p>The AlphaFold 3 source code is available on the <a href="https://github.com/google-deepmind/alphafold3">official GitHub repository</a>. This repository provides an implementation of the AlphaFold 3 inference pipeline.</p>
+
+<p>Model parameters must be obtained directly from Google, as detailed in the “<a href="https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters">Obtaining model parameters</a>” section on Github.</p>
+
+<p>AlphaFold 3 requires a Linux environment; other operating systems are not supported. The full installation requires up to 1 TB of disk space, for genetic databases (SSD storage is strongly recommended). An NVIDIA GPU with compute capability 7.0 or higher is required. For larger protein structures, GPUs with higher memory capacity are recommended.</p>
+
+<p>For reference, inputs with up to 5,120 tokens can fit on a single NVIDIA A100 80 GB or NVIDIA H100 80 GB. Numerical accuracy has been verified on both hardware types.</p>
+
+<p>Alphafold 3, like AlphaFold 2, requires local access to large databases, including PDB, MGnify, UniProt, UniRef90, NT, RFam, RNACentral, and a modified version of BFD.</p>
+
+<p>If you don’t have access to such hardware, one of the possibilities is to use a virtual machine (equipped according to these specifications) from any Cloud provider.</p>
+
+<h2 id="considerations-for-initial-structure-predictions"><strong>Considerations for initial structure predictions</strong></h2>
+
+<p>The data pipeline runtime (i.e. genetic sequence search and template search) can vary significantly depending on the size of the input and the number of homologous sequences found, as well as the available hardware (disk speed can influence genetic search speed in particular).</p>
+
+<p>AlphaFold 3 can be run efficiently on a single NVIDIA A100 80 GB GPU. This configuration is well-suited for high-throughput predictions.</p>
+
+<p>For better resource management, the pipeline can be split into:</p>
 
 <ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
+  <li>Data pipeline stage (CPU-intensive): This part performs genetic sequence search and template identification. Disk speed significantly impacts genetic search performance, so we recommend using an SSD drive.</li>
+  <li>Model inference stage (GPU-intensive): This stage predicts the structure using the trained model.</li>
 </ul>
+
+<p>If you would like to improve performance, it’s recommended to increase the disk speed (e.g. by leveraging a RAM-backed filesystem), or increase the available CPU cores and add more parallelisation.</p>
+
+<p>For sequences with deep MSAs, RAM usage may exceed the recommended 64 GB.</p>
+
+<p>Please carefully review the “<a href="https://github.com/google-deepmind/alphafold3/blob/main/docs/installation.md">Installation and Running Your First Prediction</a>” for guidance on installation and running predictions. You can also run the pipeline in stages to optimise resource utilisation. See the note on <a href="https://github.com/google-deepmind/alphafold3/blob/main/docs/performance.md">Performance</a>.</p>
+
+<h2 id="alphafold-3-input-format">AlphaFold 3 input format</h2>
+
+<p>AlphaFold 3 introduces a flexible JSON-based input format that offers expanded customisation. This differs from the AlphaFold Server format and allows users to define complex biomolecular assemblies. Key features include:</p>
+
+<ul>
+  <li>Protein, RNA, and DNA chains, with options for modified residues.</li>
+  <li>Custom multiple sequence alignments (MSAs) for proteins and RNA.</li>
+  <li>Structural templates for protein chains.</li>
+  <li>Ligand specification using <a href="https://www.wwpdb.org/data/ccd">Chemical Component Dictionary (CCD)</a> codes, SMILES strings, or user-defined entries in mmCIF format. GitHub AlphaFold 3 supports any custom ligands without restrictions.</li>
+  <li>Covalent bond definitions between entities.</li>
+  <li>Support for multiple random seeds to generate alternative structure predictions.</li>
+</ul>
+
+<h2 id="compatibility-with-alphafold-server-json">Compatibility with AlphaFold Server JSON</h2>
+
+<p>AlphaFold 3 provides a converter in <em>run_alphafold.py</em> that translates AlphaFold Server JSON files into the AlphaFold 3 format. For more information, see “<a href="https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md#alphafold-3-input">AlphaFold 3 Input</a>”. Key points include:</p>
+
+<ul>
+  <li>The converter assigns unique sequence identifiers where required.</li>
+  <li>At least one random seed is required for AlphaFold 3. If a converted JSON lacks this, the converter will assign one automatically.</li>
+  <li>AlphaFold Server treats ions and ligands separately, AlphaFold 3 treats ions as ligands.</li>
+  <li>Note that glycans specified in AlphaFold Server JSONs are not supported in conversion.</li>
+</ul>
+
+<h2 id="special-considerations">Special considerations</h2>
+
+<p>Start with smaller proteins or well-characterized targets to familiarise yourself with the workflow and parameters.</p>
+
+<p>Run single predictions by providing a JSON file path or multiple predictions by providing a directory path.</p>
+
+<p>Your institution may already have central AF3 installation, so then you shall refer to the local guides on how to run it. Otherwise you may want to contact your system administrators for assistance with AF3 installation and consider making a central installation for the local users.</p>
+
+<p>For more detailed guidance, please refer to the AlphaFold 3 Input <a href="https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md">README</a>.</p>
 
 
 

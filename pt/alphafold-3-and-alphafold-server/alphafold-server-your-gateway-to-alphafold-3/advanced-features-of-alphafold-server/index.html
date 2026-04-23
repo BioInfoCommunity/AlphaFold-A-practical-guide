@@ -157,17 +157,49 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="advanced-features-of-alphafold-server">Advanced features of AlphaFold Server</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p>AlphaFold Server was primarily designed as an easy-to-use tool. The aim is to unlock biomolecule modelling for biologists, including those with no experience with computational methods.</p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<p>However, AlphaFold Server does provide additional options and automation possibilities for more advanced users.</p>
 
-<ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
-</ul>
+<h2 id="json-job-submission">JSON job submission</h2>
+
+<p>You can specify an AlphaFold Server job using a JSON file, rather than the standard visual web interface. This could be used to automatically generate jobs, for example for computational screening of protein-protein interactions.</p>
+
+<p>You may import multiple draft jobs by uploading JSON files with up to 100 jobs per file. However, please note that you are only allowed up to 500 saved drafts in your History.</p>
+
+<p>To create a JSON file, please refer to this <a href="https://github.com/google-deepmind/alphafold/blob/main/server/README.md">documentation and examples</a>. However, you don’t need to start from scratch. Inside each zip file with modelling results, downloaded from the AlphaFold Server, you’ll find a JSON file named <strong>fold_&lt;job_name&gt;_job_request.json.</strong> This contains all the job inputs that were specified through the web interface. These files offer a convenient starting point for generating new jobs: they are easily editable in standard text editors, or in a programming system like Google Colab notebooks.</p>
+
+<p>Once your JSON file is prepared, click the ‘Upload JSON’ button to upload it. Imported jobs will appear as saved drafts in your job history and you can click on your jobs to further edit or run them. Please note that running jobs specified through JSON files will use your job quota in exactly the same way as normal jobs specified through the web interface.</p>
+
+<p><img src="http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-24-at-17.10.52.png" alt="" /></p>
+
+<p>Figure 43. A screenshot to show the window dialogue for uploading JSON inputs.</p>
+
+<h2 id="sampling-multiple-seeds">Sampling multiple seeds</h2>
+
+<p>Compared to older systems, AlphaFold 3 often produces more accurate structural predictions for such difficult targets as antigen-antibody complexes. However, achieving the highest accuracy often requires extensive sampling of the latent space, i.e. generation and subsequent ranking of numerous predictions using different random seeds. In such cases, we have seen predictions improve even up to 1,000 seeds. However, 20 seeds is usually enough to get a prediction of reasonable confidence and accuracy.</p>
+
+<p>Currently, AlphaFold Server runs just one seed for each job. If you want to sample multiple seeds, you must run multiple identical jobs and compare their confidence scores (like overall pTM/ipTM) to choose the best one. This is easily done using job cloning.</p>
+
+<p>Select the “Clone and reuse” option in the vertical ellipsis menu of a job in History to bring it to the job editor, then submit the job as many times as you wish without making any changes. Please make sure that the seed option in the “Confirm and submit job” dialogue is set to “Auto”. Alternatively, if you choose to specify the seeds manually, set different seeds for each repeat of the job.</p>
+
+<p><img src="http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-18.29.22.png" alt="" /></p>
+
+<p>Figure 46. The “Confirm and submit job” dialogue, where you can edit the seed value. The recommended default option is to use auto-generated random seeds, as shown here.</p>
+
+<h2 id="reproducing-jobs">Reproducing jobs</h2>
+
+<p>In scientific research it is often important to reproduce previously-run jobs or jobs run by someone else, including published results. You can easily do this on AlphaFold Server.</p>
+
+<p>Running the model with the same seed and identical input will result in identical or highly similar predicted structures.</p>
+
+<p>The exact seed value for the reproduced job is displayed on the Results page and is also saved in the <strong>fold_&lt;job_name&gt;_job_request.json</strong> file (available in the zip file for download). Similarly, if you want to enable others to reproduce your modelling results, the easiest way is to share the <strong>fold_&lt;job_name&gt;_job_request.json</strong> file:  it contains all the information required for the reproduction and can be directly submitted to AlphaFold Server via the ‘Upload JSON’ button.</p>
+
+<p><img src="http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-18.33.38.png" alt="" /></p>
+
+<p>Figure 44. A sample results page on the AlphaFold Server</p>
 
 
 

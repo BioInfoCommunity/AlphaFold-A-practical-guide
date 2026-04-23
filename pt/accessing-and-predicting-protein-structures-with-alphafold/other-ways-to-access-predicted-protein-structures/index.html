@@ -157,17 +157,80 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="other-ways-to-access-predicted-protein-structures">Other ways to access predicted protein structures</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p><strong>There are many different ways to access protein structures predicted by AlphaFold2. The 3D-Beacons Network provides standardised macromolecular structures from a host of providers, including AlphaFold2. Furthermore, AlphaFold2 and its database have been integrated into many pieces of software used to work with predicted structures.</strong></p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<h2 id="the-3d-beacons-network"><strong>The 3D-Beacons Network</strong></h2>
 
-<ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
-</ul>
+<p>The<a href="https://www.ebi.ac.uk/pdbe/pdbe-kb/3dbeacons/">3D-Beacons Network</a> is an open collaboration of macromolecular structure model providers.</p>
+
+<p>It aims to provide standardised model coordinates and meta-information from all contributing data resources on a unified platform. It also provides unified programmatic access to experimentally-determined and predicted structure models. The 3D-Beacons Network brings together providers including: <a href="https://www.ebi.ac.uk/pdbe/">PDBe</a>, <a href="https://alphafold.ebi.ac.uk/">AFDB</a>, <a href="https://proteinensemble.org/">Protein Ensemble Database</a>, <a href="https://www.isoform.io/">Isoform.io</a>, <a href="https://swissmodel.expasy.org/">SWISS-MODEL</a>, <a href="https://alphafill.eu/">AlphaFill</a>, <a href="https://www.sasbdb.org/">SASBDB</a> and more.</p>
+
+<p>All data on the 3D-Beacons Network is freely available for both academic and commercial use, under the Creative Commons Attribution 4.0 (CC-BY 4.0) licence.</p>
+
+<p><img src="https://ftp.ebi.ac.uk/pub/training/2024/On-demand/3D_Beacons.gif" alt="" /></p>
+
+<p>Figure 26. The 3D-Beacons Network is an open collaboration of macromolecular structure providers. You can compare experimentally determined and predicted structures of macromolecules from a range of providers, including AlphaFold Database.</p>
+
+<h2 id="software-packages-supporting-access-to-alphafold2"><strong>Software packages supporting access to AlphaFold</strong>2</h2>
+
+<p>AlphaFold2 and the AlphaFold Protein Structure Database (AFDB) have been integrated into specialised pieces of software, used for importing, processing and further working with predicted structures.</p>
+
+<p>This means that, for many practical applications, users don’t need to run AlphaFold2 predictions manually. You don’t even need to download the structures from the AFDB. These specialist programs offer automated access to AlphaFold2 structures as standard.</p>
+
+<p>For example, suppose you are an experimental structural biologist interested in solving a crystal structure by molecular replacement. We recommend using automated software for crystallography like <a href="https://doi.org/10.1107/S2059798318003455">MrBUMP</a> from the <a href="https://www.ccp4.ac.uk/">CCP4 Suite</a> (<a href="https://doi.org/10.1107/S2059798323003595">Agirre et al., 2023</a>) . It will automatically analyse your protein sequence, fetch the corresponding predicted structures from AFDB, and solve the structure. No user intervention is required (<a href="https://doi.org/10.1107/S2059798323006289">Simpkin et al., 2023</a>).</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Software</th>
+      <th>AlphaFold2 functions supported</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><a href="https://www.ccp4.ac.uk/">CCP4: Software for Macromolecular X-Ray Crystallography</a></td>
+      <td>* Integrates AlphaFold in all relevant software, such as molecular replacement pipelines * Automated import of AlphaFold models * <a href="https://cloud.ccp4.ac.uk/">CCP4 Cloud</a> can run AlphaFold modeling (<a href="https://doi.org/10.1107/S2059798323006289">Simpkin et al., 2023</a>).</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.ccpem.ac.uk/">CCP-EM</a></td>
+      <td>* Import from the AFDB</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.cgl.ucsf.edu/chimerax/docs/user/commands/alphafold.html">ChimeraX</a></td>
+      <td>* Modelling via ColabFold * Retrieving from the AFDB (<a href="https://www.rbvi.ucsf.edu/chimerax/data/alphafold-nov2021/af_sbgrid.html">see presentation</a>) * Interactive visualization of PAE plots</td>
+    </tr>
+    <tr>
+      <td><a href="https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/">COOT</a></td>
+      <td>* Import from the AFDB</td>
+    </tr>
+    <tr>
+      <td><a href="http://ekhidna2.biocenter.helsinki.fi/dali/">DALI server</a></td>
+      <td>* Structure-based search over AFDB</td>
+    </tr>
+    <tr>
+      <td><a href="https://search.foldseek.com/search">Foldseek Search Server</a></td>
+      <td>* Structure-based search over AFDB</td>
+    </tr>
+    <tr>
+      <td><a href="https://www.jalview.org/">Jalview</a></td>
+      <td>* Import from the AFDB</td>
+    </tr>
+    <tr>
+      <td><a href="https://molstar.org/viewer/">Mol* Viewer</a></td>
+      <td>* Import from the AFDB</td>
+    </tr>
+    <tr>
+      <td><a href="https://phenix-online.org/">PHENIX</a></td>
+      <td>* Integrates AlphaFold in all relevant software, such as molecular replacement pipelines (<a href="https://doi.org/10.1107/S2059798322010026">Oeffner et al., 2022)</a></td>
+    </tr>
+    <tr>
+      <td><a href="https://pymol.org/">PyMOL</a></td>
+      <td>* Import from the AFDB, pLDDT colouring to illustrate regions of high and low confidence</td>
+    </tr>
+  </tbody>
+</table>
 
 
 

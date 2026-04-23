@@ -157,17 +157,19 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="outputs-from-colabfold">Outputs from ColabFold</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p>ColabFold generates PDB files containing the predicted 3D coordinates of the protein or protein complex. These can be analysed with standard molecular visualisation software packages, such as <a href="https://pymol.org">PyMOL</a> or <a href="https://www.cgl.ucsf.edu/chimera/">Chimera</a>.</p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<p>pLDDT values are stored in the B-factor field. This means you can use molecular graphics programs like PyMOL to colour-code the predicted structure according to the pLDDT scores (e.g. see <a href="https://github.com/sokrypton/ColabFold#faq">ColabFold’s FAQ</a> for the instructions).</p>
 
-<ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
-</ul>
+<p>For monomer structures, the predictions are ranked by pLDDT, where ‘rank_001’ represents the structure with the highest confidence. For protein complexes, the predictions are ranked by pTM (see section “<a href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/">Evaluating AlphaFold2’s predicted structures using confidence scores</a>” for explanations of these confidence metrics).</p>
+
+<p>ColabFold also provides a pLDDT plot (_plddt.png). This shows the pLDDT score for each amino acid position. Meanwhile, the PAEs for all models are stored as one png file (_PAE.png).</p>
+
+<p>The MSA file (a3m format) contains the sequences used by ColabFold in the prediction.  This file can be inspected using your favourite alignment viewer, e.g. <a href="https://www.jalview.org">JalView</a>.</p>
+
+<p>The MSA coverage and diversity can be examined by visualising the coverage plot  (_coverage.png). This plot shows the number of sequences in the MSA and their identity to specific amino acid positions. This can provide insights into the sequence information used for the prediction.</p>
 
 
 

@@ -157,17 +157,40 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="predicting-protein-structures-with-colabfold-and-alphafold2-colab">Predicting protein structures with ColabFold and AlphaFold2 Colab</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p><strong>ColabFold and AlphaFold2 Colab allow you to predict protein structures without installing and running the full AlphaFold2 software. They are good options if you need a quick and easy way to get started with AlphaFold2, if you only need to predict a few structures, or if you don’t have access to a powerful computing resource.</strong></p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<h2 id="colabfold-and-alphafold2-colab-an-overview-and-comparison"><strong>ColabFold and AlphaFold2 Colab: An overview and comparison</strong></h2>
+
+<p>ColabFold and AlphaFold2 Colab are online implementations of AlphaFold2. All operations take place in the cloud, so you can use the software without installing it on your own computer. Both systems are based on <a href="https://colab.research.google.com/">Colab</a> (short for Colaboratory): a system that enables you to write and execute Python in your browser.</p>
 
 <ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
+  <li>The <a href="https://colab.sandbox.google.com/github/deepmind/alphafold/blob/main/notebooks/AlphaFold.ipynb">AlphaFold2 Colab</a> is a simplified version of AlphaFold2. It only uses a portion of the <a href="https://bfd.mmseqs.com/">BFD</a> (Big Fantastic Database) dataset and does not use homologous structures as templates. As a result, its accuracy is marginally lower than the full version of AlphaFold2. Users also cannot customise structure predictions by varying the parameters.</li>
+  <li><a href="https://colab.sandbox.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb">ColabFold</a> is a community implementation of a Colab for running AlphaFold2. It offers many more adjustable parameters than AlphaFold2 Colab, such as the depth of the MSA and the number of recycles. Furthermore, ColabFold uses quick MSA preparation via the <a href="https://github.com/soedinglab/mmseqs2">MMseqs2</a> server. You can also use a custom MSA as input and supply templates (<a href="https://doi.org/10.1038/s41592-022-01488-1">Mirdita et al, 2022</a>).</li>
 </ul>
+
+<p>Therefore, we recommend using ColabFold because it is more powerful than AlphaFold2 Colab. Many studies that used AlphaFold2 modelling, published in top-tier journals, actually used ColabFold (e.g. <a href="https://doi.org/10.1016/j.cell.2023.04.003">Healy et al., 2023</a>).</p>
+
+<h2 id="how-to-run-colabfold-and-alphafold2-colab"><strong>How to run ColabFold and AlphaFold2 Colab</strong></h2>
+
+<p>Both applications offer a simple interface: essentially, a form to fill out. For AlphaFold2 Colab, only the protein sequence is required. ColabFold also offers some additional options. The final step is to go to the “Runtime” menu and choose “Run all”.</p>
+
+<p><img src="https://ftp.ebi.ac.uk/pub/training/2024/On-demand/AlphaFold_Colab_and_ColabFold.gif" alt="" /></p>
+
+<p>Figure 24. You can predict protein structures online using ColabFold or AlphaFold2 Colab. These options do not require you to install the AlphaFold2 source code.</p>
+
+<p>Running the Colabs and generating the prediction can take minutes to hours, depending on the length of your protein and on the type of GPU assigned to you by Colab.</p>
+
+<p>For details on using ColabFold’s more advanced options, please refer to the original ColabFold paper (<a href="https://doi.org/10.1038/s41592-022-01488-1">Mirdita et al., 2022</a>), ColabFold <a href="https://github.com/sokrypton/ColabFold">documentation</a>, and section “<a href="https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/">Advanced modelling and applications of predicted protein structures</a>“.</p>
+
+<p>Please note that advanced users with cutting-edge GPU hardware can set up a <a href="https://github.com/YoshitakaMo/localcolabfold">local Colab</a>. This enables you to run ColabFold, utilising your own GPU’s processing power. This could be an easier alternative to setting up a full open-source AlphaFold2 installation.</p>
+
+<h2 id="limitations-of-colabfold-and-alphafold2-colab"><strong>Limitations of ColabFold and AlphaFold2 Colab:</strong></h2>
+
+<p>In both cases, there are limits on the size of protein (measured by the number of amino acid residues) that can be predicted. The restrictions are primarily set by the quantity of RAM available on the free GPU provided by Colab. There is a maximum of 4,000 residues for predicting multimer models. The monomer model has a limit of 2,500 residues.</p>
+
+<p>The Google Colab platform that runs both ColabFold and AlphaFold2 Colab provides users with a limited amount of computational resources for free. Colab notebooks on the free tier time out after a certain amount of time. However, you can get access to a <a href="https://colab.research.google.com/signup">Google Colab Pro</a> for GPUs.</p>
 
 
 

@@ -157,17 +157,17 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="other-tools-to-check-quality-of-the-predicted-structures">Other tools to check quality of the predicted structures</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p><strong>Users who wish to further evaluate the quality of predicted protein structures from AlphaFold2 can use a variety of open-source tools.</strong></p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<h2 id="open-source-tools-for-evaluating-predicted-structures"><strong>Open-source tools for evaluating predicted structures</strong></h2>
 
-<ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
-</ul>
+<p>One option is a general structural biology validation tool like <a href="http://molprobity.biochem.duke.edu/">MolProbity</a>. These are used for diagnosing “correctness” in 3D models of proteins, nucleic acids or complexes. AlphaFold2 models generally have excellent geometrical quality in high-confidence regions. Nevertheless, if MolProbity flags part of the structure, you should examine it carefully.</p>
+
+<p>For protein-protein complexes, tools like <a href="https://www.ebi.ac.uk/pdbe/pisa/">PISA</a> can be used to further assess the quality of the predicted interface. The software allows you to check details like the total buried surface area and the number of cross-interface hydrogen bonds, which in turn give an indication of whether the predicted interface corresponds to reality or is artefactual. Note that PISA validation criteria may have some exceptions, e.g. strongly bound antibody-antigen complexes could be reported as weakly bound by PISA.</p>
+
+<p>The <a href="http://www.subtiwiki.uni-goettingen.de/v4/paeViewerDemo">PAE viewer</a> is a web server designed to facilitate the interpretation of PAE scores for multimeric predictions. The visualisation highlights the violations and/or satisfactions of crosslinker length restraints.</p>
 
 
 

@@ -157,17 +157,31 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="an-introductory-guide-to-alphafolds-strengths-and-limitations">An introductory guide to AlphaFold’s strengths and limitations</h1>
+												<h1 id="what-is-the-protein-folding-problem">What is the protein folding problem?</h1>
 
-<p>Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.</p>
+<p><strong>It is theoretically possible to predict the 3D structure of a protein just from its amino acid sequence. However, this is extremely challenging because of the sheer number of possible conformations. Artificial intelligence is ideally suited to this problem.</strong></p>
 
-<h3 id="by-the-end-of-this-section-you-will-be-able-to">By the end of this section you will be able to:</h3>
+<h2 id="protein-folding-problem-predicting-protein-structure-from-sequence"><strong>Protein folding problem: predicting protein structure from sequence</strong></h2>
 
-<ul>
-  <li>Recall the significance of the protein folding problem.</li>
-  <li>Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.</li>
-  <li>Describe the strengths and limitations of AlphaFold’s structure predictions.</li>
-</ul>
+<p>The protein folding problem encompasses two interrelated challenges: understanding the process of protein chain folding and accurately predicting a protein’s final folded structure</p>
+
+<p>In 1972 Christian Anfinsen shared the Nobel Prize in Chemistry for proposing that, in its standard physiological environment, a protein’s structure is determined by the sequence of amino acids that make it up. This came to be known as <a href="https://www.science.org/doi/10.1126/science.181.4096.223">Anfinsen’s dogma</a>.</p>
+
+<p>This hypothesis was important, because it suggested we should be able to reliably predict a protein’s structure from its sequence. Decades of research into structural biology have since shown that Anfinsen was largely correct.</p>
+
+<h2 id="the-computational-challenge"><strong>The computational challenge</strong></h2>
+
+<p>However, it turns out that predicting protein structure from sequence is not so simple. This is because of a second concept called <a href="https://doi.org/10.1073/pnas.89.1.20">Levinthal’s paradox</a>.</p>
+
+<p>In the 1960s, Cyrus Levinthal showed that there is a very large number of possible conformations a protein chain could theoretically adopt. If a protein was to explore them all, it would take an incomprehensible amount of time, comparable with the lifetime of the Universe.</p>
+
+<p>Nevertheless, Anfinsen’s findings inspired a search for an efficient system that could reliably identify the most likely native structure of a protein, based solely on its amino acid sequence. While challenging, this was at least theoretically possible.</p>
+
+<h2 id="the-role-of-artificial-intelligence"><strong>The role of artificial intelligence</strong></h2>
+
+<p>This is where artificial intelligence comes in. Modern machine learning methods can help identify complex relationships in large datasets, enabling prediction of protein structures.</p>
+
+<p>Crucially, Anfinsen’s dogma implies that predicting the folded state of a protein does not necessarily require an understanding of the folding process. That is, it should be possible to predict the final 3D shape of a protein without predicting the sequence of movements that leads to this shape – sidestepping Levinthal’s paradox.</p>
 
 
 
