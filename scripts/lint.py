@@ -96,28 +96,28 @@ def check_renames():
         warnings.append("⚠️ Could not verify renames")
 
 
-def check_frontmatter(file_path, content):
+def check_fontmatter(file_path, content):
     name = os.path.basename(file_path)
 
     if name == "README.md":
         return
 
     if not content.startswith("---"):
-        errors.append(f"❌ Missing frontmatter in {file_path}")
+        errors.append(f"❌ Missing fontmatter in {file_path}")
         return
 
     parts = content.split("---")
 
     if len(parts) < 3:
-        errors.append(f"❌ Invalid frontmatter format in {file_path}")
+        errors.append(f"❌ Invalid fontmatter format in {file_path}")
         return
 
-    frontmatter = parts[1]
+    fontmatter = parts[1]
 
-    if "layout: default" not in frontmatter:
+    if "layout: default" not in fontmatter:
         errors.append(f'❌ Missing "layout: default" in {file_path}')
 
-    title_match = re.search(r"title:\s*(.+)", frontmatter)
+    title_match = re.search(r"title:\s*(.+)", fontmatter)
 
     if not title_match:
         errors.append(f'❌ Missing "title" in {file_path}')
@@ -185,7 +185,7 @@ def check_protected_files():
 
 def run_checks(file_path, content):
     check_file_name(file_path)
-    check_frontmatter(file_path, content)
+    check_fontmatter(file_path, content)
     check_links_and_images(file_path, content)
 
 
