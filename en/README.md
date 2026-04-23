@@ -20,7 +20,8 @@ Translations are maintained in **language-specific branches**, e.g.:
 | Branch | Language | Status |
 |--------|----------|--------|
 | `main` | English | [Active](https://github.com/BioInfoCommunity/AlphaFold-A-practical-guide/tree/main) |
-| `-es`  | Spanish | [In progress](https://github.com/BioInfoCommunity/AlphaFold-A-practical-guide/tree/es) |
+| `-hi`  | Hindi | [In progress](https://github.com/BioInfoCommunity/AlphaFold-A-practical-guide/tree/hi) |
+| `-pt`  | Portuguese | --      |
 | `-fr`  | French | --      |
 | `-de`  | German | --      |
 
