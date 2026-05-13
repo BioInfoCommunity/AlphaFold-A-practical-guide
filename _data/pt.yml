@@ -6,26 +6,22 @@ course:
 
 labels:
   time_to_complete_text: "Time to complete"
-  time_to_complete_value: "2-3 hours"
-  difficulty_text: "Difficulty"
-  difficulty_value: "Beginner-friendly"
-  last_updated_text: "Last updated"
+  time_to_complete_value: "3 hours"
+  last_updated_text: "Last reviewed"
   last_updated_value: "June 2025"
   written_by_text: "Written by"
   written_by_name:
-    - name: "Some Author"
-      profile_url: "https://example.com/some-author"
-    - name: "John Doe"
-      profile_url: null
+    - name: "Paulyna Gabriela Magana Gomez"
+      profile_url: ""
+    - name: "Oleg Kovalevskiy"
+      profile_url: "https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy"
   translated_by_text: "Translated by"
   translated_by_name:
     - name: "Translator 1"
       profile_url: null
+      orcid: null
     - name: "Translator 2"
       profile_url: null
+      orcid: null
   translated_on_text: "Translated on"
   translated_on_value: "October 2025"
-  next: "Next"
-  previous: "Previous"
-  contents: "Contents"
-  language: "Language"
