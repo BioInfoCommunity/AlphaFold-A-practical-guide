@@ -10,7 +10,10 @@ Proteins are essential components of life, predicting their 3D structure enables
 This tutorial is aimed at researchers who are interested in using AlphaFold to predict protein structures and integrate these predictions into their projects. An undergraduate-level knowledge of protein structure and structural biology would be an advantage.
 The content of this course provides an understanding of the fundamental concepts behind AlphaFold, how users can run protein predictions and how AlphaFold has been used to enhance research.
 Throughout the course there may be terms used you are unfamiliar with. If so, please review the Glossary of terms of help.
+
 This training module on AlphaFold has been developed in collaboration with Google DeepMind.
+
+![Google DeepMind](images/Google_DeepMind_Logo_rgb_3320x512px.png)
 
 
 Please note that we do not provide certificates for completing our on-demand training courses. However, if you have an account with us, you can easily track your progress. All the courses you undertake will be listed on your 'My Learning' page.
