@@ -3,7 +3,7 @@ layout: default
 title: Qual é o problema do dobramento de proteínas?
 ---
 
-# What is the protein folding problem?
+# Qual é o problema do dobramento de proteínas??
 
 **Em teoria, é possível prever a estrutura 3D de uma proteína apenas a partir de sua sequência de aminoácidos. No entanto, isso é extremamente desafiador devido à enorme quantidade de conformações possíveis. A inteligência artificial (IA) é ideal para esse problema.**
 
@@ -22,8 +22,9 @@ No entanto, descobre-se que prever a estrutura da proteína a partir da sequênc
 Na década de 1960, Cyrus Levinthal mostrou que há um número muito grande de conformações possíveis que uma cadeia protéica poderia, teoricamente, adotar. Se uma proteína explorasse todos eles, levaria um tempo incompreensível, tempo comparável à vida do Universo.
 
 No entanto, as descobertas de Anfinsen inspiraram a busca por um sistema eficiente que pudesse identificar de forma confiável a estrutura nativa mais provável de uma proteína, baseada unicamente em sua sequência de aminoácidos. Embora desafiador, isso era ao menos teoricamente possível.
-## **The role of artificial intelligence**
 
-This is where artificial intelligence comes in. Modern machine learning methods can help identify complex relationships in large datasets, enabling prediction of protein structures.
+## **O papel da inteligência artificial**
 
-Crucially, Anfinsen’s dogma implies that predicting the folded state of a protein does not necessarily require an understanding of the folding process. That is, it should be possible to predict the final 3D shape of a protein without predicting the sequence of movements that leads to this shape – sidestepping Levinthal’s paradox.
+É aí que entra a inteligência artificial. Métodos modernos de aprendizado de máquina podem ajudar a identificar relacionamentos complexos em grandes conjuntos de dados, permitindo a predição das estruturas proteicas.
+
+Fundamentalmente, o dogma de Anfinsen implica que prever o estado dobrado de uma proteína não requer necessariamente compreensão do processo de dobramento. Ou seja, deveria ser possível prever a forma final 3D de uma proteína sem prever a sequência de movimentos que leva a essa forma –  contornando o paradoxo de Levinthal.
