@@ -1,21 +1,19 @@
 ---
 layout: default
-title: What are proteins and how do we know their structures?
+title: O que são proteínas e como sabemos suas estruturas?
 ---
 
-# What are proteins and how do we know their structures?
+O que são proteínas e como sabemos suas estruturas?
 
-**Proteins are large molecules that are essential to life as we know it. If you examine any biological process, you will find proteins involved and often playing critical roles. The structures of proteins are strongly related to their functions, but determining their 3D structures is very difficult.**
+**Proteínas são moléculas grandes que são essenciais para a vida como a conhecemos. Se você examinar qualquer processo biológico, encontrará proteínas envolvidas e frequentemente desempenhando papéis cruciais. As estruturas das proteínas estão fortemente relacionadas às suas funções, mas determinar suas estruturas 3D é muito difícil.**
 
-## **What is a protein?**
+## **O que é uma proteína?**
 
-Each protein molecule consists of one or more chains, made by linking small molecules called amino acids. The amino acid residues are arranged in a specific sequence along each chain. These chains are folded into a distinctive 3D shape, determined by interactions between the amino acids.
+Cada molécula de proteína consiste em uma ou mais cadeias, formadas pela ligação de pequenas moléculas chamadas aminoácidos. Os resíduos de aminoácidos são organizados em uma sequência específica ao longo de cada cadeia. Essas cadeias são dobradas em uma forma 3D distinta, determinada pelas interações entre os aminoácidos.
 
-There is a strong relationship between protein structure and protein function. The 3D shape of the protein determines the actions it can perform.
+Existe uma forte relação entre a estrutura e a função da proteína. A forma 3D da proteína determina as ações que ela pode realizar.
 
-Figuring out protein structure is like opening a black box. Revealing the 3D structure enables scientists to determine how exactly proteins perform their duties.
-
-
+Descobrir a estrutura da proteína é como abrir uma caixa preta. Revelar a estrutura 3D permite que os cientistas determinem exatamente como as proteínas desempenham suas funções.
 
 
 
@@ -26,39 +24,40 @@ Figuring out protein structure is like opening a black box. Revealing the 3D str
 
 
 
-##### Salmonella alpha-2-macroglobulin (PDB ID: 4U48)
 
-Provides protection against proteases secreted from hosts
 
-##### HIV-1 Reverse Transcriptase (PDB ID: 8U6H)
 
-One of the key proteins responsible for the replication cycle of HIV-1 in the host.
+##### Alfa-2-macroglobulina da Salmonella(PDB ID: 4U48)
 
-##### SARS-CoV main protease (PDB ID: 6Y7M)
+Oferece proteção contra proteases secretadas pelo hospedeiro.
 
-This essential coronavirus protease processes the polyproteins translated from the viral RNA
+##### Transcriptase reversa do HIV-1 (PDB ID: 8U6H)
 
-##### Circadian Clock Protein KaiA (PDB ID: 1R8J)
+Uma das principais proteínas responsáveis ​​pelo ciclo de replicação do HIV-1 no hospedeiro.
 
-A tiny clockmaker that orchestrates the daily rhythms of cyanobacteria. KaiA regulates other proteins in a 24-hour cycle, like a metronome for time. To keep the rhythm on track, it senses light and other cues
+##### Protease principal do SARS-CoV (PDB ID: 6Y7M)
 
-Figure 1. The 3D structures depicted in this figure provide a visual journey into the functional diversity of proteins.
+ Esta proteína essencial do coronavírus processa as poliproteínas traduzidas a partir do RNA viral
 
-## **The struggle to determine protein structures**
+##### Proteína KaiA do relógio circadiano (PDB ID: 1R8J)
 
-For several decades, it has been possible to determine protein structures at atomic levels of detail, using experimental methods. Fundamental breakthroughs in the 1950s and 60s allowed the use of X-ray crystallography and later nuclear magnetic resonance (NMR). The 21st century has seen growing use of cryogenic electron microscopy (cryo-EM), especially after the “resolution revolution” ([Kühlbrandt, 2014](https://doi.org/10.1126/science.1251652)).
+Um minúsculo mecanismo que orquestra os ritmos diários das cianobactérias. A KaiA regula outras proteínas em um ciclo de 24 horas, como um metrônomo. Para manter o ritmo, detecta a luz e outros sinais.
 
-However, despite the progress made in experimental techniques, determining protein structure experimentally is inherently time and labour-consuming, and involves many troubleshooting steps. As a result, the number of known protein sequences has always been greater than the number of available protein structures. In January 2024, the number of experimental structures available in the PDB was slightly over 215,000, in comparison to the staggering ~250 million protein sequences available through UniProt.
+Figure 1. As estruturas 3D mostradas nesta figura mostram de forma visual a diversidade de funções das proteínas.
+
+## **O desafio para determinar estruturas de proteínas**
+
+Por várias décadas, foi possível determinar estruturas de proteínas em níveis atômicos de detalhe, usando métodos experimentais. Avanços fundamentais nas décadas de 1950 e 60 permitiram o uso da cristalografia de raios X e, posteriormente, da ressonância magnética nuclear (RMN). O século XXI viu um uso crescente da microscopia eletrônica criogênica (cryogenic electron microscopy - cryo-EM), e especialmente após a "revolução da resolução" ([Kühlbrandt, 2014](https://doi.org/10.1126/science.1251652)).
+
+No entanto, apesar do progresso feito em técnicas experimentais, determinar a estrutura da proteína experimentalmente é inerentemente demorado e trabalhoso, e envolve muitas etapas de solução de problemas. Como resultado, o número de sequências proteicas conhecidas sempre foi maior do que o número de estruturas proteicas disponíveis. Em janeiro de 2024, o número de estruturas experimentais disponíveis no PDB era pouco superior a 215.000, em comparação com os impressionantes ~250 milhões de sequências de proteínas disponíveis pelo UniProt.
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/Proteins.gif)
 
 
-Figure 2. Unlocking protein structures. Three experimental methods used
-for determining protein structure: X-ray, NMR and cryo-EM. AlphaFold2, a powerful AI-driven method, has
-revolutionised the field by predicting protein structures with remarkable accuracy. Source: [What Is AlphaFold? | NEJM](https://youtu.be/7q8Uw3rmXyE) , “A Holy Grail — The Prediction of Protein Structure” ([Altman, 2023](https://doi.org/10.1056/nejmcibr2307735))
+Figure 2.  Desbloqueando estruturas de proteínas. Três métodos experimentais utilizados para determinar a estrutura das proteínas: raio-X, RMN e cryo-EM. O AlphaFold2, um método poderoso impulsionado por IA, tem revolucionou o campo ao prever estruturas de proteínas com notável precisão. Fonte: [What Is AlphaFold? | NEJM](https://youtu.be/7q8Uw3rmXyE) , “Um Santo Graal — A predição da Estrutura da Proteína/ A Holy Grail — The Prediction of Protein Structure” ([Altman, 2023](https://doi.org/10.1056/nejmcibr2307735))
 
-Furthermore, the gap has widened considerably in recent years, thanks to advances in DNA sequencing. Experimental structure determination can’t keep up with the pace of sequencing, so there have been hundreds of millions of known proteins with unknown structures.
+Além disso, a lacuna se ampliou consideravelmente nos últimos anos, graças aos avanços no sequenciamento de DNA. A determinação experimental de estruturas não acompanha o ritmo do sequenciamento, então já existem centenas de milhões de proteínas conhecidas com estruturas desconhecidas.
 
-It is therefore extremely important to figure out the structures of these proteins with reasonable accuracy and speed, in order to narrow the gap between sequences and available structures.
+Por isso, é extremamente importante descobrir as estruturas dessas proteínas com precisão e rapidez razoáveis, a fim de reduzir a distância entre sequências e estruturas disponíveis.
 
-AlphaFold, as explained in subsequent sections, revolutionised the field by providing an effective way to predict highly accurate protein structures.
+O AlphaFold, como será explicado em seções subsequentes, revolucionou o campo ao fornecer uma forma eficaz de prever estruturas proteicas altamente precisas.
