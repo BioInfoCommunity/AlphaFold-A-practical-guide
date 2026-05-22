@@ -1,28 +1,27 @@
 ---
 layout: default
-title: What is the protein folding problem?
+title: Qual é o problema do dobramento de proteínas?
 ---
 
 # What is the protein folding problem?
 
-**It is theoretically possible to predict the 3D structure of a protein just from its amino acid sequence. However, this is extremely challenging because of the sheer number of possible conformations. Artificial intelligence is ideally suited to this problem.**
+**Em teoria, é possível prever a estrutura 3D de uma proteína apenas a partir de sua sequência de aminoácidos. No entanto, isso é extremamente desafiador devido à enorme quantidade de conformações possíveis. A inteligência artificial (IA) é ideal para esse problema.**
 
-## **Protein folding problem: predicting protein structure from sequence**
+## **Problema de dobramento de proteínas: predição da estrutura da proteína a partir da sequência**
 
-The protein folding problem encompasses two interrelated challenges: understanding the process of protein chain folding and accurately predicting a protein’s final folded structure
+O problema do dobramento de proteínas abrange dois desafios inter-relacionados: entender o processo de dobramento da cadeia proteica e prever com precisão a estrutura final de dobramento de uma proteína.
 
-In 1972 Christian Anfinsen shared the Nobel Prize in Chemistry for proposing that, in its standard physiological environment, a protein’s structure is determined by the sequence of amino acids that make it up. This came to be known as [Anfinsen’s dogma](https://www.science.org/doi/10.1126/science.181.4096.223).
+Em 1972, Christian Anfinsen recebeu o Prêmio Nobel de Química por propor que, em seu ambiente fisiológico padrão, a estrutura de uma proteína é determinada pela sequência de aminoácidos que a compõem. Isso ficou conhecido como o [dogma de Anfinsen](https://www.science.org/doi/10.1126/science.181.4096.223).
 
-This hypothesis was important, because it suggested we should be able to reliably predict a protein’s structure from its sequence. Decades of research into structural biology have since shown that Anfinsen was largely correct.
+Essa hipótese era importante porque sugeria que deveríamos ser capazes de prever de forma confiável a estrutura de uma proteína a partir de sua sequência. Décadas de pesquisa em biologia estrutural mostraram desde então que Anfinsen estava em grande parte correto.
 
-## **The computational challenge**
+## **O desafio computacional**
 
-However, it turns out that predicting protein structure from sequence is not so simple. This is because of a second concept called [Levinthal’s paradox](https://doi.org/10.1073/pnas.89.1.20).
+No entanto, descobre-se que prever a estrutura da proteína a partir da sequência não é tão simples. Isso se deve a um segundo conceito chamado [paradoxo de Levinthal](https://doi.org/10.1073/pnas.89.1.20).
 
-In the 1960s, Cyrus Levinthal showed that there is a very large number of possible conformations a protein chain could theoretically adopt. If a protein was to explore them all, it would take an incomprehensible amount of time, comparable with the lifetime of the Universe.
+Na década de 1960, Cyrus Levinthal mostrou que há um número muito grande de conformações possíveis que uma cadeia protéica poderia, teoricamente, adotar. Se uma proteína explorasse todos eles, levaria um tempo incompreensível, tempo comparável à vida do Universo.
 
-Nevertheless, Anfinsen’s findings inspired a search for an efficient system that could reliably identify the most likely native structure of a protein, based solely on its amino acid sequence. While challenging, this was at least theoretically possible.
-
+No entanto, as descobertas de Anfinsen inspiraram a busca por um sistema eficiente que pudesse identificar de forma confiável a estrutura nativa mais provável de uma proteína, baseada unicamente em sua sequência de aminoácidos. Embora desafiador, isso era ao menos teoricamente possível.
 ## **The role of artificial intelligence**
 
 This is where artificial intelligence comes in. Modern machine learning methods can help identify complex relationships in large datasets, enabling prediction of protein structures.
