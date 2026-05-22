@@ -1,20 +1,21 @@
 ---
 layout: default
-title: 'Accessing and predicting protein structures with AlphaFold 2'
+title: 'Acessando e prevendo estruturas proteicas com AlphaFold 2'
 ---
 
-# Accessing and predicting protein structures with AlphaFold 2
+# Acessando e prevendo estruturas proteicas com AlphaFold 2
 
-AlphaFold2 is a powerful tool for protein structure prediction. However, the best way to access it depends on your specific needs and resources. The main options are:
+AlphaFold2 é uma ferramenta poderosa para a predição da estrutura das proteínas. No entanto, a melhor forma de acessá-la depende das suas necessidades e recursos específicos. As principais opções são:
 
-* Using the AlphaFold2 [source code](https://github.com/google-deepmind/alphafold) for protein structure prediction.
-* A cloud-based approach via [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb).
-* Accessing the free [AlphaFold Protein Structure Database.](https://alphafold.ebi.ac.uk/) Developed by Google DeepMind in collaboration with EMBL-EBI, it offers a user-friendly interface and over 200 million predicted protein structures.
-* Using specialised software that incorporates AlphaFold algorithm and/or data.
+* Usando o [código-fonte](https://github.com/google-deepmind/alphafold) AlphaFold2 para predição da estrutura da proteína.
+* Uma abordagem baseada em nuvem via [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb).
+* Acessando o banco de dados gratuito de [Estruturas de Proteínas AlphaFold. Desenvolvido/ AlphaFold Protein Structure Database.](https://alphafold.ebi.ac.uk/) Desenvolvido pelo Google DeepMind em colaboração com o EMBL-EBI, oferece uma interface amigável e mais de 200 milhões de estruturas proteicas previstas.
+* Uso de softwares especializados que incorporam algoritmos AlphaFold e/ou dados.
 
-### By the end of this section you will be able to:
+### Ao final desta seção, você será capaz de:
 
-* Describe the key differences between using the AlphaFold source code, Google Colab notebooks or the AlphaFold Protein Structure Database to predict protein structures.
-* Determine the best approach to using AlphaFold, based on your computational resources, coding experience and need for customisation.
-* Recall the ways to access the pre-computed predictions from the AlphaFold Protein Structure Database.
-* Identify other resources for accessing and predicting structures of proteins and macromolecules.
+* Descrever as principais diferenças entre usar o código-fonte do AlphaFold, pesquisar no Google notebooks Colab ou o Banco de Dados de Estruturas de Proteínas AlphaFold para prever estruturas de proteínas.
+* Determinar a melhor abordagem para usar o AlphaFold, com base nos seus recursos computacionais, experiência em programação e necessidade de personalização.
+* Lembrar-se das formas de acessar as previsões pré-computadas do Banco de Dados de Estrutura de Proteínas AlphaFold.
+* Identificar outros recursos para acessar e prever estruturas de proteínas e macromoléculas.
+
