@@ -1,14 +1,15 @@
 ---
 layout: default
-title: 'Classifying the effects of missense variants using AlphaMissense'
+title: 'Classificando os efeitos das variantes missense usando AlphaMissense'
 ---
 
-# Classifying the effects of missense variants using AlphaMissense
+# Classificando os efeitos das variantes missense usando AlphaMissense
 
-AlphaMissense is a new tool, based on AlphaFold2 but separate from it. It can predict whether a missense variant is likely to be pathogenic. Like AlphaFold2, AlphaMissense supplies confidence metrics to enable careful interpretation of its predictions.
+AlphaMissense é uma ferramenta nova, baseada no AlphaFold2, mas separada dele. Ela pode prever se uma variante do missense provavelmente é patogênica. Assim como o AlphaFold2, o AlphaMissense fornece métricas de confiança para permitir uma interpretação cuidadosa de suas previsões
 
-### **By the end of this section, you will be able to:**
+### **Ao final desta seção, você será capaz de:**
 
-* Understand the significance of missense variants for biomedical research
-* Understand how to use AlphaMissense to explore whether or not a missense variation is likely to be pathogenic
-* Critically interpret AlphaMissense predictions using both confidence metrics and an understanding of the scores limitations
+* Entender a importância das variantes do missense para a pesquisa biomédica
+* Entender como usar o AlphaMissense para explorar se uma variação missense é provavelmente patogênica
+* Interpretar criticamente as previsões do AlphaMissense usando tanto métricas de confiança quanto compreensão das limitações das pontuações
+
