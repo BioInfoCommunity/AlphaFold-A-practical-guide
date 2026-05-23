@@ -1,17 +1,18 @@
 ---
 layout: default
-title: 'Advanced modelling and applications of predicted protein structures'
+title: 'Modelagem avançada e aplicações de estruturas proteicas previstas'
 ---
 
-# Advanced modelling and applications of predicted protein structures
+# Modelagem avançada e aplicações de estruturas proteicas previstas
 
-In the previous sections, we covered the basics of AlphaFold2, including how it works, the different metrics used to assess the predicted structures, and the different ways to access and predict structures using the algorithm.
+Nas seções anteriores, abordamos o básico do AlphaFold2, incluindo como ele funciona, as diferentes métricas usadas para avaliar as estruturas previstas e as diferentes formas de acessar e prever estruturas usando o algoritmo.
 
-This section will cover how to use AlphaFold for advanced modelling, such as predicting protein-protein interactions, modelling large protein complexes and alternative structural states. You will learn how to use AlphaFold to gain new insights into protein structure and function.
+Esta seção abordará como usar o AlphaFold para modelagem avançada, como prever interações proteína-proteína, modelar grandes complexos proteicos e estados estruturais alternativos. Você aprenderá a usar o AlphaFold para obter novos insights sobre a estrutura e a função das proteínas.
 
-### By the end of this section you will be able to:
+### Ao final desta seção, você será capaz de:
 
-* Recall the different ways to use AlphaFold for advanced modelling using the source code, Colab notebooks and the database.
-* Use AlphaFold to predict protein structures.
-* Recall the different ways to customise the AlphaFold structure prediction process to meet specific needs.
-* Interpret and analyse structure predictions from AlphaFold.
+* Lembrar-se das diferentes formas de usar o AlphaFold para modelagem avançada usando o código-fonte, notebooks Colab e o banco de dados.
+* Usar o AlphaFold para prever estruturas de proteínas.
+* Lembrar-se das diferentes formas de personalizar o processo de predição da estrutura AlphaFold para atender a necessidades específicas.
+* Interpretar e analise previsões de estrutura a partir do AlphaFold.
+
