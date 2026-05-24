@@ -1,24 +1,19 @@
 ---
 layout: default
-title: 'Course slides'
+title: 'Slides do Curso'
 ---
 
-# Course slides
+# CSlides do Curso
 
-These slides are specifically designed for those who wish to present AlphaFold and its practical applications to others. Whether you’re preparing a seminar, a workshop, or an internal team briefing, these materials offer a comprehensive and visually engaging foundation for your presentation.
+Estes slides foram especialmente concebidos para quem deseja apresentar o AlphaFold e suas aplicações práticas. Seja para um seminário, workshop ou reunião interna da equipe, este material oferece uma base abrangente e visualmente atraente para sua apresentação.
 
-Feel free to download and adapt these slides for your own use. They cover key concepts, papers, and practical insights from the course, providing a robust framework for your audience.
+Sinta-se à vontade para baixar e adaptar estes slides para seu próprio uso. Eles abrangem conceitos-chave, artigos e insights práticos do curso, fornecendo uma estrutura sólida para sua apresentação.
 
-### AlphaFold: A Practical Guide – Presentation Slides
+### AlphaFold: Um Guia Prático – Slides da Apresentação
 
-Download the complete presentation slides for your own use to present AlphaFold and its practical applications.
+Baixe os slides completos da apresentação para usar em sua apresentação sobre o AlphaFold e suas aplicações práticas.
 
+[Baixar Apresentação Completa](https://docs.google.com/presentation/d/14fWYhE30-ya45vKft4mOdO8e8Y3qbezVipM3o_Fdr-Q/export/pptx)
 
-[Download Full Presentation](https://docs.google.com/presentation/d/14fWYhE30-ya45vKft4mOdO8e8Y3qbezVipM3o_Fdr-Q/export/pptx)
-
-(Clicking this button will download the presentation file directly to your device.)
-
-
-
-
+(Clicar neste botão fará o download do arquivo da apresentação diretamente para o seu dispositivo.)
 ---
