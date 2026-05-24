@@ -1,9 +1,9 @@
 ---
 layout: default
-title: 'References'
+title: 'Referências'
 ---
 
-# References
+# Referências
 
 * Abanades, B., Wong, W. K., Boyles, F., Georges, G., Bujotzek, A., & Deane, C. M. (2023). ImmuneBuilder: Deep-Learning models for predicting the structures of immune proteins. Communications Biology, 6(1), Article 1. https://doi.org/10.1038/s42003-023-04927-7
 * Agirre, J., Atanasova, M., Bagdonas, H., Ballard, C. B., Baslé, A., Beilsten-Edmands, J., Borges, R. J., Brown, D. G., Burgos-Mármol, J. J., Berrisford, J. M., Bond, P. S., Caballero, I., Catapano, L., Chojnowski, G., Cook, A. G., Cowtan, K. D., Croll, T. I., Debreczeni, J. É., Devenish, N. E., … Yamashita, K. (2023). The CCP4 suite: Integrative software for macromolecular crystallography. Acta Crystallographica Section D: Structural Biology, 79(6), 449–461. https://doi.org/10.1107/S2059798323003595
