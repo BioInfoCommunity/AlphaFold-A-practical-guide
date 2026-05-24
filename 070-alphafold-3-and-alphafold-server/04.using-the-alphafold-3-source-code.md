@@ -1,69 +1,69 @@
 ---
 layout: default
-title: 'Using the AlphaFold 3 source code'
+title: 'Usando o código-fonte do AlphaFold 3'
 ---
 
-# Using the AlphaFold 3 source code
+# Usando o código-fonte do AlphaFold 3
 
-Installing AlphaFold 3 locally gives you total control over structure prediction. This is the most potent and adaptable way to use AlphaFold 3. However, the software requires access to the state-of-the-art hardware (i.e. GPUs with maximal RAM size) or a virtual machine and requires a high degree of computer skill to install and run.
+Instalar o AlphaFold 3 localmente te dá controle total sobre a predição estrutural. Essa é a forma mais potente e adaptável de usar o AlphaFold 3. No entanto, o software requer acesso ao hardware de última geração (ou seja, GPUs com tamanho máximo de RAM) ou a uma máquina virtual e exige um alto grau de habilidade em computador para instalar e executar.
 
-## **Installing the AlphaFold 3 source code**
+## **Instalação do código-fonte do AlphaFold 3**
 
-The AlphaFold 3 source code is available on the [official GitHub repository](https://github.com/google-deepmind/alphafold3). This repository provides an implementation of the AlphaFold 3 inference pipeline.
+O código-fonte do AlphaFold 3 está disponível no [repositório oficial do GitHub](https://github.com/google-deepmind/alphafold3). Este repositório fornece uma implementação do pipeline de inferência AlphaFold 3.
 
-Model parameters must be obtained directly from Google, as detailed in the “[Obtaining model parameters](https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters)” section on Github.
+Os parâmetros do modelo devem ser obtidos diretamente do Google, conforme detalhado na seção “[Obtenção dos parâmetros do modelo](https://github.com/google-deepmind/alphafold3?tab=readme-ov-file#obtaining-model-parameters)” no Github.
 
-AlphaFold 3 requires a Linux environment; other operating systems are not supported. The full installation requires up to 1 TB of disk space, for genetic databases (SSD storage is strongly recommended). An NVIDIA GPU with compute capability 7.0 or higher is required. For larger protein structures, GPUs with higher memory capacity are recommended.
+O AlphaFold 3 requer um ambiente Linux; outros sistemas operacionais não são suportados. A instalação completa requer até 1 TB de espaço em disco para bancos de dados genéticos (o armazenamento SSD é fortemente recomendado). É necessária uma GPU NVIDIA com capacidade de computação 7.0 ou superior. Para estruturas proteicas maiores, GPUs com maior capacidade de memória são recomendadas.
 
-For reference, inputs with up to 5,120 tokens can fit on a single NVIDIA A100 80 GB or NVIDIA H100 80 GB. Numerical accuracy has been verified on both hardware types.
+Para referência, entradas com até 5.120 tokens podem caber em um único NVIDIA A100 80 GB ou NVIDIA H100 80 GB. A precisão numérica foi verificada em ambos os tipos de hardware.
 
-Alphafold 3, like AlphaFold 2, requires local access to large databases, including PDB, MGnify, UniProt, UniRef90, NT, RFam, RNACentral, and a modified version of BFD.
+AlphaFold 3, assim como AlphaFold 2, requer acesso local a grandes bancos de dados, incluindo PDB, MGnify, UniProt, UniRef90, NT, RFam, RNACentral e uma versão modificada do BFD.
 
-If you don’t have access to such hardware, one of the possibilities is to use a virtual machine (equipped according to these specifications) from any Cloud provider.
+Se você não tem acesso a esse tipo de hardware, uma das possibilidades é usar uma máquina virtual (equipada de acordo com essas especificações) de qualquer provedor de nuvem.
 
-## **Considerations for initial structure predictions**
+## **Considerações para previsões iniciais de estrutura**
 
-The data pipeline runtime (i.e. genetic sequence search and template search) can vary significantly depending on the size of the input and the number of homologous sequences found, as well as the available hardware (disk speed can influence genetic search speed in particular).
+O tempo de execução do pipeline de dados (ou seja, busca por sequências genéticas e busca por template) pode variar significativamente dependendo do tamanho da entrada e do número de sequências homólogas encontradas, bem como do hardware disponível (a velocidade do disco pode influenciar a velocidade da busca genética, em particular).
 
-AlphaFold 3 can be run efficiently on a single NVIDIA A100 80 GB GPU. This configuration is well-suited for high-throughput predictions.
+O AlphaFold 3 pode ser rodado eficientemente em uma única GPU NVIDIA A100 de 80 GB. Essa configuração é bem adequada para previsões de alta produtividade.
 
-For better resource management, the pipeline can be split into:
+Para melhor gerenciamento de recursos, o pipeline pode ser dividido em:
 
-* Data pipeline stage (CPU-intensive): This part performs genetic sequence search and template identification. Disk speed significantly impacts genetic search performance, so we recommend using an SSD drive.
-* Model inference stage (GPU-intensive): This stage predicts the structure using the trained model.
+* Estágio de pipeline de dados (intensivo em CPU): Esta parte realiza busca de sequências genéticas e identificação de modelos. A velocidade do disco impacta significativamente o desempenho da busca genética, então recomendamos o uso de um SSD drive.
+* Estágio de inferência do modelo (intensivo em GPU): Este estágio prevê a estrutura usando o modelo treinado.
 
-If you would like to improve performance, it’s recommended to increase the disk speed (e.g. by leveraging a RAM-backed filesystem), or increase the available CPU cores and add more parallelisation.
+Se você quiser melhorar o desempenho, recomenda-se aumentar a velocidade do disco (por exemplo, aproveitando um sistema de arquivos com RAM), ou aumentar o número de núcleos de CPU disponíveis e adicionar mais paralelização.
 
-For sequences with deep MSAs, RAM usage may exceed the recommended 64 GB.
+Para sequências com MSAs profundos, o uso de RAM pode exceder os recomendados 64 GB.
 
-Please carefully review the “[Installation and Running Your First Prediction](https://github.com/google-deepmind/alphafold3/blob/main/docs/installation.md)” for guidance on installation and running predictions. You can also run the pipeline in stages to optimise resource utilisation. See the note on [Performance](https://github.com/google-deepmind/alphafold3/blob/main/docs/performance.md).
+Por favor, revise cuidadosamente a seção “[Instalação e Execução da Sua Primeira predição](https://github.com/google-deepmind/alphafold3/blob/main/docs/installation.md)” para orientações sobre previsões de instalação e funcionamento. Você também pode rodar o pipeline em etapas para otimizar a utilização dos recursos. Veja a nota sobre [Performance](https://github.com/google-deepmind/alphafold3/blob/main/docs/performance.md).
 
-## AlphaFold 3 input format
+## Formato de entrada AlphaFold 3
 
-AlphaFold 3 introduces a flexible JSON-based input format that offers expanded customisation. This differs from the AlphaFold Server format and allows users to define complex biomolecular assemblies. Key features include:
+O AlphaFold 3 introduz um formato de entrada flexível baseado em JSON que oferece personalização ampliada. Isso difere do formato AlphaFold Server e permite que os usuários definam conjuntos biomoleculares complexos. Principais recursos incluem:
 
-* Protein, RNA, and DNA chains, with options for modified residues.
-* Custom multiple sequence alignments (MSAs) for proteins and RNA.
-* Structural templates for protein chains.
-* Ligand specification using [Chemical Component Dictionary (CCD)](https://www.wwpdb.org/data/ccd) codes, SMILES strings, or user-defined entries in mmCIF format. GitHub AlphaFold 3 supports any custom ligands without restrictions.
-* Covalent bond definitions between entities.
-* Support for multiple random seeds to generate alternative structure predictions.
+* Cadeias de proteínas, RNA e DNA, com opções para resíduos modificados.
+* Alinhamentos múltiplos de sequências (MSAs) personalizados para proteínas e RNA.
+* Modelos estruturais para cadeias proteicas.
+* Especificação de ligantes usando códigos do Dicionário de Componentes Químicos/[Chemical Component Dictionary (CCD)](https://www.wwpdb.org/data/ccd) strings SMILES ou entradas definidas pelo usuário no formato mmCIF. O GitHub AlphaFold 3 suporta ligantes personalizados sem restrições.
+* Definições de ligação covalente entre entidades.
+* Suporte para múltiplas sementes aleatórias para gerar previsões alternativas de estrutura.
 
-## Compatibility with AlphaFold Server JSON
+## Compatibilidade com JSON de AlphaFold Server
 
-AlphaFold 3 provides a converter in *run\_alphafold.py* that translates AlphaFold Server JSON files into the AlphaFold 3 format. For more information, see “[AlphaFold 3 Input](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md#alphafold-3-input)”. Key points include:
+O AlphaFold 3 oferece um conversor em *run\_alphafold.py* que traduz arquivos JSON do AlphaFold Server para o formato AlphaFold 3. Para mais informações, veja “[Arquivos de Entradas do AlphaFold 3](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md#alphafold-3-input)”. Pontos-chave incluem:
 
-* The converter assigns unique sequence identifiers where required.
-* At least one random seed is required for AlphaFold 3. If a converted JSON lacks this, the converter will assign one automatically.
-* AlphaFold Server treats ions and ligands separately, AlphaFold 3 treats ions as ligands.
-* Note that glycans specified in AlphaFold Server JSONs are not supported in conversion.
+* O conversor atribui identificadores de sequência exclusivos quando necessário.
+* Pelo menos uma semente aleatória é necessária para o AlphaFold 3. Se um JSON convertido não a contiver, o conversor atribuirá uma automaticamente.
+* O AlphaFold Server trata íons e ligantes separadamente; o AlphaFold 3 trata íons como ligantes.
+* Observe que glicanos especificados em JSONs do AlphaFold Server não são suportados na conversão.
 
-## Special considerations
+## Considerações especiais
 
-Start with smaller proteins or well-characterized targets to familiarise yourself with the workflow and parameters.
+Comece com proteínas menores ou alvos bem caracterizados para se familiarizar com o fluxo de trabalho e os parâmetros.
 
-Run single predictions by providing a JSON file path or multiple predictions by providing a directory path.
+Execute previsões únicas fornecendo um caminho de arquivo JSON ou múltiplas previsões fornecendo um caminho de diretório.
 
-Your institution may already have central AF3 installation, so then you shall refer to the local guides on how to run it. Otherwise you may want to contact your system administrators for assistance with AF3 installation and consider making a central installation for the local users.
+Sua instituição pode já ter instalação central AF3, então você deve consultar os guias locais para saber como operá-lo. Caso contrário, talvez queira entrar em contato com os administradores do sistema para obter ajuda com a instalação do AF3 e considerar fazer uma instalação centralizada para os usuários locais.
 
-For more detailed guidance, please refer to the AlphaFold 3 Input [README](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md).
+Para orientações mais detalhadas, consulte o Arquivo de entrada AlphaFold 3 [README](https://github.com/google-deepmind/alphafold3/blob/main/docs/input.md).
