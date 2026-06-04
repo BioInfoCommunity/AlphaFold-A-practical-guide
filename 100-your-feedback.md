@@ -1,120 +1,124 @@
 ---
 layout: default
-title: 'Your feedback'
+title: 'Seu feedback'
 ---
 
-# Your feedback
+# Seu feedback
 
-Your feedback 2024 new
-Please tell us your thoughts about this tutorial. Your feedback helps us improve our training and enhance your learning experience.
-
-Please tell us your overall rating for the tutorial.
+Seu feedback 2024 novoPor favor, nos conte sua opinião sobre este tutorial. Seu feedback nos ajuda a melhorar nosso treinamento e a aprimorar sua experiência de aprendizado.
+Por favor, nos conte sua avaliação geral para o tutorial.
 \*
 
-Poor
+ Pobre
+ 
+ Satisfatório
+ 
+ Bom
+ 
+ Muito bom
+ 
+ Excelente
 
-Satisfactory
 
-Good
 
-Very good
+Você completou todo esse tutorial?
 
-Excellent
-
-Did you complete all of this tutorial?
 \*
 
-Yes
+ Sim
+ 
+ Não
 
-No
-
-Will you apply what you have learnt in your research/work?
+Você vai aplicar o que aprendeu em sua pesquisa/trabalho?
 \*
 
-Yes
+ Sim
+ 
+ Não
 
-No
+ Talvez
 
-Maybe
+Se sim, por favor, nos diga como você vai usar o conhecimento adquirido neste tutorial (você pode escolher mais de uma opção):
 
-If yes, please tell us how will you use the knowledge learned in this tutorial (you may chose more than one option):
+ Analisar dados
+ 
+ Para enviar dados a um recurso de dados
+ 
+ Para usar dados disponíveis publicamente
+ 
+ Para ensinar os outros
+ 
+ Para usar nos meus estudos
+ 
+ Outros
 
-To analyse data
 
-To submit data to a data resource
+Se você escolheu outra, por favor, conte mais.
 
-To use publicly available data
+O que você gostou no tutorial?
 
-To teach others
+O que poderia ser melhorado?
 
-To use in my studies
+Mais algum comentário?
 
-Other
+Por favor, selecione a opção que melhor descreve sua fase atual da carreira.
 
-If you selected other, please tell us more.
-
-What did you like about the tutorial?
-
-What could be improved?
-
-Any other comments?
-
-Please select the option that best describes your current career stage.
 \*
 
-Undergraduate student
+ Estudante de graduação
+ 
+ Estudante de mestrado
+ 
+ Estudante de doutorado
+ 
+ Pesquisador de pós-doutorado
+ 
+ Investigador principal
+ 
+ Técnico de pesquisa
+ 
+ Cientista da equipe
+ 
+ Outros
 
-Masters student
-
-PhD student
-
-Postdoctoral researcher
-
-Principal investigator
-
-Research technician
-
-Staff scientist
-
-Other
-
-What is your primary discipline?
+Qual é sua principal disciplina?
 \*
 
-Structural biology
+ Biologia estrutural
+ 
+ Biologia Molecular/Bioquímica/Biologia Celular
+ 
+ Medicinal chemistry / drug discovery
+ 
+ Protein design
+ 
+ Bioinformatics
+ 
+ AI/ML research
+ 
+ Other
 
-Molecular biology/Biochemistry/Cell Biology
 
-Medicinal chemistry / drug discovery
+Se você escolheu outro, por favor nos conte mais:
 
-Protein design
-
-Bioinformatics
-
-AI/ML research
-
-Other
-
-If you selected other, please tell us more.
-
-How would you describe the organisation in which you work?
+Como você descreveria a organização em que trabalha?
 \*
 
-An academic/research institute
+ Um instituto acadêmico/de pesquisa
+ 
+ Uma organização industrial
+ 
+ Uma organização clínica/de saúde
+ 
+ Outros
 
-An industrial organisation
-
-A clinical/healthcare organisation
-
-Other
-
-Country of residence
+País de residência
 \*
 
 AfghanistanAland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntarcticaAntigua and BarbudaArgentinaArmeniaArubaAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBouvet IslandBrazilBritish Indian Ocean TerritoryBruneiBulgariaBurkina FasoBurundiCôte d'IvoireCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCook IslandsCosta RicaCroatiaCubaCuracaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEast TimorEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland Islands (Malvinas)Faroe IslandsFijiFinlandFranceFrench GuianaFrench PolynesiaFrench Southern TerritoriesGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHeard Island and McDonald IslandsHoly SeeHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMacedoniaMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMicronesiaMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPitcairnPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthelemySaint Helena, Ascension and Tristan da CunhaSaint Kitts and NevisSaint LuciaSaint Martin (French part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint Maarten (Dutch part)SlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth Georgia and the South Sandwich IslandsSouth KoreaSouth SudanSpainSri LankaSudanSurinameSvalbard and Jan MayenSwazilandSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTimor-LesteTogoTokelauTongaTrinidad and TobagoTunisiaTurkeyTurkmenistanTurks and Caicos IslandsTuvaluUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUnited States Minor Outlying IslandsUruguayUzbekistanVanuatuVatican CityVenezuelaVietnamVirgin Islands, BritishVirgin Islands, U.S.Wallis and FutunaWestern SaharaYemenZambiaZimbabwe
 
-If you are human, leave this field blank.
+Se você for humano, deixe este campo em branco.
 
-If you would like some help, please email [trainonline@ebi.ac.uk](mailto: trainonline@ebi.ac.uk) or contact the relevant EMBL-EBI data resource directly using the [EMBL-EBI contact us](https://www.ebi.ac.uk/about/contact/support/) form.
+Caso precise de ajuda, envie um e-mail para trainonline@ebi.ac.uk ou entre em contato diretamente com o recurso de dados relevante do EMBL-EBI usando o formulário de [contato do EMBL-EBI](https://www.ebi.ac.uk/about/contact/support/).
 
-Submit
+Enviar
