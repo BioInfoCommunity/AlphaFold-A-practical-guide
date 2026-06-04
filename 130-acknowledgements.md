@@ -1,9 +1,7 @@
 ---
 layout: default
-title: Acknowledgements
+title: Agradecimentos
 ---
 
-Bringing these materials to life wouldn’t have been possible without the fruitful partnership between Google Deepmind and EMBL-EBI. We extend our deepest gratitude to Google Deepmind’s Rosalind Onions, Jack Mason, Agata Laydon, Meera Last, Stephanie Booth and Juan Mateos-Garcia for their invaluable support, guiding every step from conception to completion. And from EMBL-EBI, Sameer Velankar and Mihaly Varadi’s insights and collaboration have significantly enriched the depth of the training materials. We would also like to thank Michael Marshall for his meticulous work in refining and enhancing the clarity of the course.
-
-We would like to express our gratitude to the reviewers : Robbie Joosten, Jan Kosinski, Dan Rigden, Martin Steinegger, Sergey Ovchinnikov, Minkyung Baek, Wojciech Pawel Galej and Dmitry Molodenskiy, who offered their time and expertise. Their critical feedback and suggestions allowed polishing of these materials and helped bring this course to life.
-
+Dar vida a esses materiais não teria sido possível sem a parceria frutífera entre o Google Deepmind e a EMBL-EBI. Expressamos nossa mais profunda gratidão ao Google Deepmind Rosalind Onions, Jack Mason, Agata Laydon, Meera Last, Stephanie Booth e Juan Mateos-Garcia, do Google Deepmind, pelo apoio inestimável, guiando cada passo desde a concepção até a conclusão. E a partir do EMBL-EBI, os insights e a colaboração de Sameer Velankar e Mihaly Varad enriqueceram significativamente a profundidade dos materiais de treinamento. Também gostaríamos de agradecer a Michael Marshall por seu trabalho meticuloso em aprimorar e aprimorar a clareza do curso.
+Gostaríamos de expressar nossa gratidão aos críticos: Robbie Joosten, Jan Kosinski, Dan Rigden, Martin Steinegger, Sergey Ovchinnikov, Minkyung Baek, Wojciech Pawel Galej e Dmitry Molodenskiy, que ofereceram seu tempo e expertise. O feedback crítico e as sugestões permitiram o aprimoramento desses materiais e ajudaram a dar vida ao curso.
