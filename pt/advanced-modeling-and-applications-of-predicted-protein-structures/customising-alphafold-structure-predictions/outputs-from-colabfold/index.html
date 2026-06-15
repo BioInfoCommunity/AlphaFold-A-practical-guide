@@ -654,19 +654,19 @@
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
-												<h1 id="outputs-from-colabfold">Outputs from ColabFold</h1>
+												<h1 id="saídas-do-colabfold">Saídas do ColabFold</h1>
 
-<p>ColabFold generates PDB files containing the predicted 3D coordinates of the protein or protein complex. These can be analysed with standard molecular visualisation software packages, such as <a href="https://pymol.org">PyMOL</a> or <a href="https://www.cgl.ucsf.edu/chimera/">Chimera</a>.</p>
+<p>O ColabFold gera arquivos PDB contendo as coordenadas 3D previstas da proteína ou complexo proteico. Esses podem ser analisados com pacotes padrão de software de visualização molecular, como <a href="https://pymol.org">PyMOL</a> ou <a href="https://www.cgl.ucsf.edu/chimera/">Chimera</a>.</p>
 
-<p>pLDDT values are stored in the B-factor field. This means you can use molecular graphics programs like PyMOL to colour-code the predicted structure according to the pLDDT scores (e.g. see <a href="https://github.com/sokrypton/ColabFold#faq">ColabFold’s FAQ</a> for the instructions).</p>
+<p>Os valores de pLDDT são armazenados no campo do fator B (B-factor field). Isso significa que você pode usar programas de gráficos moleculares como o PyMOL para codificar por cores a estrutura prevista de acordo com as pontuações do pLDDT (por exemplo, veja as instruções do <a href="https://github.com/sokrypton/ColabFold#faq">FAQ do ColabFold</a>).</p>
 
-<p>For monomer structures, the predictions are ranked by pLDDT, where ‘rank_001’ represents the structure with the highest confidence. For protein complexes, the predictions are ranked by pTM (see section “<a href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/">Evaluating AlphaFold2’s predicted structures using confidence scores</a>” for explanations of these confidence metrics).</p>
+<p>Para estruturas de monômeros, as previsões são classificadas por pLDDT, onde ‘rank_001’ representa a estrutura com maior confiança. Para complexos proteicos, as previsões são classificadas por pTM (veja a seção “<a href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/">Avaliando as estruturas previstas do AlphaFold2 usando escores de confiança</a>” para explicações dessas métricas de confiança).</p>
 
-<p>ColabFold also provides a pLDDT plot (_plddt.png). This shows the pLDDT score for each amino acid position. Meanwhile, the PAEs for all models are stored as one png file (_PAE.png).</p>
+<p>O ColabFold também fornece um gráfico pLDDT (_plddt.png).  Isso mostra a pontuação de pLDDT para cada posição de aminoácido. Enquanto isso, os PAEs de todos os modelos são armazenados como um único arquivo png  (_PAE.png).</p>
 
-<p>The MSA file (a3m format) contains the sequences used by ColabFold in the prediction.  This file can be inspected using your favourite alignment viewer, e.g. <a href="https://www.jalview.org">JalView</a>.</p>
+<p>O arquivo MSA (formato a3m) contém as sequências usadas pelo ColabFold na predição. Esse arquivo pode ser inspecionado usando seu visualizador de alinhamento favorito, por exemplo, <a href="https://www.jalview.org">JalView</a>.</p>
 
-<p>The MSA coverage and diversity can be examined by visualising the coverage plot  (_coverage.png). This plot shows the number of sequences in the MSA and their identity to specific amino acid positions. This can provide insights into the sequence information used for the prediction.</p>
+<p>A cobertura e diversidade dos MSA podem ser examinadas visualizando o gráfico de cobertura  (_coverage.png). Este gráfico mostra o número de sequências no MSA e sua identidade em relação a posições específicas de aminoácidos. Isso pode fornecer insights sobre as informações de sequência usadas para a predição.</p>
 
 
 
