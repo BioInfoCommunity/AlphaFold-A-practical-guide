@@ -17,6 +17,19 @@ function toTitle(str) {
     .replace(/\b\w/g, c => c.toUpperCase());
 }
 
+// read title from frontmatter, fall back to generated title
+function getFrontmatterTitle(filePath, fallback) {
+  try {
+    const content = fs.readFileSync(filePath, "utf8");
+    const match = content.match(/^---\n([\s\S]*?)\n---/);
+    if (match) {
+      const fm = yaml.load(match[1]);
+      if (fm && fm.title) return fm.title;
+    }
+  } catch (_) {}
+  return fallback;
+}
+
 // inject permalink into markdown file
 function addPermalink(filePath, permalink) {
   let content = fs.readFileSync(filePath, "utf8");
@@ -81,7 +94,7 @@ function getPages(dir, parentUrl = "") {
         addPermalink(indexPath, `${folderUrl}/`);
 
         pages.push({
-          title: toTitle(rawName),
+          title: getFrontmatterTitle(indexPath, toTitle(rawName)),
           url: `${folderUrl}/`,
           children: getPages(entryPath, folderUrl),
         });
@@ -105,7 +118,7 @@ function getPages(dir, parentUrl = "") {
       addPermalink(entryPath, fileUrl);
 
       pages.push({
-        title: toTitle(rawName),
+        title: getFrontmatterTitle(entryPath, toTitle(rawName)),
         url: fileUrl,
       });
     }
