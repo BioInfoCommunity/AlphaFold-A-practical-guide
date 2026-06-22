@@ -133,7 +133,7 @@
 	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
 	
 	                        {% for section in nav %}
-	                          <li class="vf-tree__item">
+	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
 	                            <a class="vf-tree__link" href="/{{ course_slug }}{{ section.url }}">
 	                             {{ section.title }}
 									{% if section.children %}
@@ -149,9 +149,9 @@
 	                            </a>
 	
 	                            {% if section.children %}
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" >
+	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
 	                                {% for child in section.children %}
-	                                  <li class="vf-tree__item">
+	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
 	                                    <a class="vf-tree__link" href="/{{ course_slug }}{{ child.url }}">
 	                                      {{ child.title }}
 											{% if child.children %}
@@ -169,7 +169,7 @@
 	                                    {% if child.children %}
 	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
 	                                        {% for subchild in child.children %}
-	                                          <li class="vf-tree__item">
+	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
 	                                            <a class="vf-tree__link" href="/{{ course_slug }}{{ subchild.url }}">
 	                                              {{ subchild.title }}
 	                                            </a>
