@@ -119,52 +119,76 @@
                        {% assign lang = page.path | split: '/' | first %}
                       {% assign t = site.data[lang] | default: site.data['en'] %}
 
-                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
-
-                          <!-- Course overview -->
-                          <li class="vf-tree__item">
-                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/">
-                              {{ t.course.title }}
-                            </a>
-                          </li>
-                        <!-- {% assign nav = site.data.navigation.navigation %} -->
-                        {% assign lang = page.url | split: '/' | second %}
-                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
-
-                        {% for section in nav %}
-                          <li class="vf-tree__item">
-                            <a class="vf-tree__link" href="/{{ course_slug }}{{ section.url }}">
-                             {{ section.title }}
-                            </a>
-
-                            {% if section.children %}
-                              <ul class="vf-tree__list vf-tree__list--2 | vf-list" style="margin-left: 16px">
-                                {% for child in section.children %}
-                                  <li class="vf-tree__item">
-                                    <a class="vf-tree__link" href="/{{ course_slug }}{{ child.url }}">
-                                      {{ child.title }}
-                                    </a>
-
-                                    {% if child.children %}
-                                      <ul class="vf-tree__list vf-tree__list--3 | vf-list" style="margin-left: 16px">
-                                        {% for subchild in child.children %}
-                                          <li class="vf-tree__item">
-                                            <a class="vf-tree__link" href="/{{ course_slug }}{{ subchild.url }}">
-                                              {{ subchild.title }}
-                                            </a>
-                                          </li>
-                                        {% endfor %}
-                                      </ul>
-                                    {% endif %}
-
-                                  </li>
-                                {% endfor %}
-                              </ul>
-                            {% endif %}
-
-                          </li>
-                        {% endfor %}
-                      </ul>
+                        <div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
+  						<div class="vf-tree__inner">
+	                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
+	
+	                          <!-- Course overview -->
+	                          <li class="vf-tree__item">
+	                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/">
+	                              {{ t.course.title }}
+	                            </a>
+	                          </li>
+	                        <!-- {% assign nav = site.data.navigation.navigation %} -->
+	                        {% assign lang = page.url | split: '/' | second %}
+	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
+	
+	                        {% for section in nav %}
+	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
+	                            <a class="vf-tree__link" href="/{{ course_slug }}{{ section.url }}">
+	                             {{ section.title }}
+									{% if section.children %}
+										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+							              Open Tree
+							            </p>
+							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+							            </svg>
+							          </button>
+									{% endif %}
+	                            </a>
+	
+	                            {% if section.children %}
+	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
+	                                {% for child in section.children %}
+	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
+	                                    <a class="vf-tree__link" href="/{{ course_slug }}{{ child.url }}">
+	                                      {{ child.title }}
+											{% if child.children %}
+												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+									              Open Tree
+									            </p>
+									            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+									              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+									            </svg>
+									          </button>
+											{% endif %}
+	                                    </a>
+	
+	                                    {% if child.children %}
+	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
+	                                        {% for subchild in child.children %}
+	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
+	                                            <a class="vf-tree__link" href="/{{ course_slug }}{{ subchild.url }}">
+	                                              {{ subchild.title }}
+	                                            </a>
+	                                          </li>
+	                                        {% endfor %}
+	                                      </ul>
+	                                    {% endif %}
+	
+	                                  </li>
+	                                {% endfor %}
+	                              </ul>
+	                            {% endif %}
+	
+	                          </li>
+	                        {% endfor %}
+	                      </ul>
+						</div>
+					</div>
 		                  <hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
 													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
