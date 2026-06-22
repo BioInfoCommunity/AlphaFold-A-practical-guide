@@ -131,7 +131,7 @@
 	                          </li>
 	                        <!-- {% assign nav = site.data.navigation.navigation %} -->
 	                        {% assign lang = page.url | split: '/' | second %}
-	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
+	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
 	
 	                        {% for section in nav %}
 	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
