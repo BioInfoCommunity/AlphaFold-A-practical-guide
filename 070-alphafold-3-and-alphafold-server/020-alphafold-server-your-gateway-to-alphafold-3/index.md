@@ -1,66 +1,64 @@
 ---
 layout: default
-title: 'Servidor AlphaFold: Seu portal para o AlphaFold 3'
+title: 'AlphaFold Server: Your gateway to AlphaFold 3'
 ---
 
-# Servidor AlphaFold: Seu portal para o AlphaFold 3
+# AlphaFold Server: Your gateway to AlphaFold 3
 
-AlphaFold Server é um portal online amigável para fazer previsões de estruturas AlphaFold 3.
-O AlphaFold Server executará a maioria das previsões estruturais que o AlphaFold 3 pode lidar, com algumas limitações ditadas pelos termos da licença. O AlphaFold Server também possui alguns recursos adicionais para usuários avançados.
+AlphaFold Server is a user-friendly online portal for making AlphaFold 3 structure predictions.  
+AlphaFold Server will run most structural predictions that AlphaFold 3 can handle, with a few limitations dictated by the license terms. AlphaFold Server also has some additional features for advanced users.
 
+## What AlphaFold Server can do
 
-## O que o AlphaFold Server pode fazer
+[AlphaFold Server](https://alphafoldserver.com) is a web service powered by AlphaFold 3. It can generate highly accurate predictions of the structures of biomolecular complexes containing any combination of proteins, DNA, RNA, ligands, ions, and chemical modifications of proteins and nucleic acids.
 
-[AlphaFold Server](https://alphafoldserver.com) é um serviço web alimentado pelo AlphaFold 3. Ele pode gerar previsões altamente precisas das estruturas de complexos biomoleculares contendo qualquer combinação de proteínas, DNA, RNA, ligandos, íons e modificações químicas de proteínas e ácidos nucleicos.
+AlphaFold Server is currently available for non-commercial use to individuals and academic and non-commercial organisations (universities, non-profit organisations and research institutes, educational and government bodies).
 
-O AlphaFold Server está atualmente disponível para uso não comercial para indivíduos e organizações acadêmicas e não comerciais (universidades, organizações sem fins lucrativos e institutos de pesquisa, órgãos educacionais e governamentais).
-
-Você precisa se registrar usando sua conta Google para usar o AlphaFold Server. No entanto, o serviço é gratuito e você não precisa instalar nenhum software no seu computador.
+You need to register using your Google account to use AlphaFold Server. However, the service is free and you do not need to install any software on your computer.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-24-at-16.29.09.png)
 
-Figura 39. Uma captura de tela da interface do usuário do AlphaFold Server. O usuário está se preparando para modelar um complexo proteína-DNA com íons de cálcio e sódio.
+Figure 39. A screenshot of the AlphaFold Server user interface. The user is preparing to model a protein-DNA complex with calcium and sodium ions.
 
-Você pode usar o AlphaFold Server para modelar uma estrutura composta por um ou mais dos seguintes tipos de molécula biológica:
+You can use AlphaFold Server to model a structure consisting of one or more of the following types of biological molecule:
 
-* Proteínas
+* Proteins
 * DNA
 * RNA
-* Ligantes biologicamente comuns variando de ATP a clorofila
-* Íons metálicos e íons de cloro biologicamente comuns
-* Modificações pós-traducionais (PTMs) biologicamente comuns de resíduos de aminoácidos, variando desde fosforilação até citrulinização
-* Glicosilação proteica, incluindo cadeias ramificadas de glicanos, compostas pela maioria dos açúcares comuns
-* Modificações químicas biologicamente comuns de DNA e RNA, como metilação e formilação
+* Biologically common ligands ranging from ATP to chlorophyll
+* Biologically common metal ions and chlorine ions
+* Biologically common post-translational modifications (PTMs) of amino acid residues, ranging from phosphorylation to citrullination
+* Protein glycosylation, including branched glycan chains, composed of most common sugars
+* Biologically common chemical modifications of DNA and RNA, such as methylation and formylation
 
-A estrutura modelada pode ser composta por múltiplas proteínas, ácidos nucleicos, ligantes e íons. Além disso, cada cadeia de proteína e ácido nucleico pode apresentar qualquer número de modificações químicas.
+The modelled structure can be composed of multiple proteins, nucleic acids, ligands, and ions. Furthermore, each protein and nucleic acid chain can have any number of chemical modifications.
 
-O Servidor AlphaFold tentará modelar todas as interações entre todas as moléculas fornecidas na entrada do trabalho. Para a lista completa dos ligantes, íons e modificações químicas disponíveis, veja o
-[FAQ do AlphaFold Server](https://alphafoldserver.com/faq#what-biological-molecule-types-can-be-modeled-with-alphafold-server).
+AlphaFold Server will try to model all the interactions between all the molecules supplied in the job’s input. For the complete list of the available ligands, ions and chemical modifications, see the [AlphaFold Server FAQ](https://alphafoldserver.com/faq#what-biological-molecule-types-can-be-modeled-with-alphafold-server).
 
-O AlphaFold Server permite que você controle como os templates estruturais são usados em suas previsões. Você pode especificar uma data de corte para os templates de PDB a serem usados, usar templates de PDB com a data de corte padrão ou desligar completamente o uso de templates.
+AlphaFold Server allows you to control how structural templates are used in your predictions. You can specify a cut-off date for the PDB templates to be used, use PDB templates with the default cut-off date or turn off the use of templates altogether.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-24-at-16.31.38.png)
 
-Figura 40. Uma captura de tela mostrando a configuração para usar templates de PDB.
+Figure 40. A screenshot showing the setting for using PDB templates.
 
-Cada trabalho de modelagem é limitado a 5.000 tokens, devido às altas demandas computacionais de estruturas maiores. Um token corresponde a:
+Each modelling job is limited to 5,000 tokens, due to the high computational demands of larger structures. One token corresponds to:
 
-* um resíduo de aminoácido ou um nucleotídeo,
-* um átomo de um ligante, íon, resíduo de aminoácido quimicamente modificado ou nucleotídeo
+* one amino acid residue or one nucleotide,
+* one atom of a ligand, ion or chemically modified amino acid residue or nucleotide
 
-O comprimento mínimo de sequência para as macromoléculas é de quatro aminoácidos ou quatro nucleotídeos: isso permite a modelagem de complexos com peptídeos. Não há limites para o comprimento máximo de sequência para cadeias individuais de proteínas e nucleicas, exceto o limite geral de 5.000 tokens.
+The minimum sequence length for the macromolecules is four amino acids or four nucleotides: this enables modelling of complexes with peptides. There are no limits on the maximal sequence length for individual protein and nucleic chains, other than the overall 5,000-token limit.
 
-## O que o servidor AlphaFold não consegue fazer
+## What AlphaFold Server can’t do
 
-O AlphaFold Server é apenas para uso não comercial, sujeito aos [Termos de Serviço do AlphaFold Server](https://alphafoldserver.com/terms). As saídas do AlphaFold Server não podem ser usadas em ferramentas de acoplamento ou triagem, nem para treinar modelos de aprendizado de máquina ou tecnologia relacionada para predição de estrutura biomolecular, semelhante ao AlphaFold Server. No entanto, você pode publicar, compartilhar e adaptar a saída do AlphaFold Server de acordo com os [Termos de Serviço do AlphaFold Server](https://alphafoldserver.com/terms). Você é obrigado a fornecer um aviso claro de que o uso contínuo está sujeito aos [Termos de Uso de Saída do Servidor AlphaFold](https://alphafoldserver.com/output-terms), e se você fez alguma modificação nas previsões.
+AlphaFold Server is for non-commercial use only, subject to [AlphaFold Server Terms of Service](https://alphafoldserver.com/terms). AlphaFold Server outputs cannot be used in docking or screening tools or to train machine learning models or related technology for biomolecular structure prediction similar to AlphaFold Server. However, you can publish, share and adapt AlphaFold Server output in accordance with the [AlphaFold Server Terms of Service](https://alphafoldserver.com/terms). You are required to provide clear notice that ongoing use is subject to the [AlphaFold Server Output Terms of Use](https://alphafoldserver.com/output-terms), and if you have made any modifications to the predictions.
 
-O AlphaFold Server suporta apenas ligandos, íons e modificações específicas que estão na lista das [FAQs](https://alphafoldserver.com/faq#what-biological-molecule-types-can-be-modeled-with-alphafold-server). Em particular, o AlphaFold Server não é capaz de prever as posições de moléculas de água ou átomos de hidrogênio.
+AlphaFold Server only supports the specific ligands, ions and modifications that are on the list in the [FAQs](https://alphafoldserver.com/faq#what-biological-molecule-types-can-be-modeled-with-alphafold-server). In particular, AlphaFold Server is not capable of predicting the positions of water molecules or hydrogen atoms.
 
-O AlphaFold Server não conhece planos de membrana, então as estruturas previstas para proteínas de membrana não levam em conta o plano de membrana. No entanto, há relatos de que adicionar de 50 a 100 moléculas de ácidos graxos, como ácido oleico, a uma predição imita uma membrana. Isso pode até induzir o AlphaFold Server a prever a conformação correta de uma proteína de membrana, com domínios intracelulares e extracelulares adotando posições corretas.
+AlphaFold Server is not aware of membrane planes, so predicted structures for membrane proteins do not take the membrane plane into account. However, there have been reports that adding 50-100 fatty acid molecules such as oleic acid to a prediction mimics a membrane. This may even induce AlphaFold Server to predict the correct conformation of a membrane protein, with intracellular and extracellular domains adopting correct positions.
 
-Cada usuário está limitado a 30 tarefas por dia. No futuro, a equipe planeja explorar outras abordagens para a alocação de cotas, como alocações semanais ou mensais. Se você não tiver cota suficiente, pode salvar seu emprego e enviá-lo quando a cota renovar (à meia-noite, fuso horário BST).
+Each user is limited to 30 jobs per day. In the future the team plan to explore other approaches for quota allocation, such as weekly or monthly allocations. If you don’t have enough quota, you can save your job and submit it when your quota refreshes (at midnight, BST time zone).
 
-Atualmente, não é possível personalizar MSAs ou templates, mas a equipe está trabalhando nesses recursos.
-Por fim, o AlphaFold Server possui todas as limitações do modelo completo do AlphaFold 3 descrito acima (veja [O que o AlphaFold 3 enfrenta](https://www.ebi.ac.uk/training/online/courses/alphafold/introducing-alphafold-3/what-alphafold-3-struggles-with/)).
+It is not currently possible to customise MSAs or templates, but the team is working on these features.  
+Finally, AlphaFold Server has all the limitations of the full AlphaFold 3 model described above (see [What AlphaFold 3 struggles with](https://www.ebi.ac.uk/training/online/courses/alphafold/introducing-alphafold-3/what-alphafold-3-struggles-with/)).
 
-O AlphaFold Server está em desenvolvimento ativo, com muitos mais recursos em desenvolvimento. Veja as notas de [atualização de lançamento](https://alphafoldserver.com/release-updates) para se manter atualizado sobre as últimas melhorias no AlphaFold Server.
+AlphaFold Server is in active development, with many more features in the pipeline. See the [release updates notes](https://alphafoldserver.com/release-updates) to stay updated on the latest improvements on the AlphaFold Server.
