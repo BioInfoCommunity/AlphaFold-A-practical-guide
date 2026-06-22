@@ -1,50 +1,50 @@
 ---
 layout: default
-title: 'Resumo'
+title: 'Summary'
 ---
 
-# Resumo
+# Summary
 
-AlphaFold 3 representa um avanço significativo em nossa capacidade de entender o mundo molecular. Ao prever as estruturas de complexos que abrangem uma vasta gama de biomoléculas e suas interações, abre novas vias para pesquisa e descoberta em múltiplas disciplinas.
+AlphaFold 3 represents a significant leap forward in our ability to understand the molecular world. By predicting the structures of complexes encompassing a vast array of biomolecules and their interactions, it opens up new avenues for research and discovery across multiple disciplines.
 
-## **Principais chaves:**
+## **Key takeaways:**
 
-Exploramos como o AlphaFold 3 vai além da predição da estrutura de proteínas para modelar montagens biológicas complexas envolvendo DNA, RNA, ligandos, íons e diversas modificações químicas.
+We’ve explored how AlphaFold 3 extends beyond protein structure prediction to model intricate biological assemblies involving DNA, RNA, ligands, ions, and diverse chemical modifications.
 
-Vimos como a arquitetura inovadora do AlphaFold 3 leva a previsões estruturais mais precisas, em muitos casos até superando métodos especializados.
+We’ve seen how the innovative architecture of AlphaFold 3 leads to more accurate structure predictions, in many cases even surpassing specialised methods.
 
-Exploramos o uso prático do AlphaFold 3 via AlphaFold Server, incluindo tanto a geração de previsões estruturais quanto a interpretação crítica delas de forma crítica.
+We’ve delved into the practical use of AlphaFold 3 via AlphaFold Server, including both generating structure predictions and critically interpreting them.
 
-## **O impacto mais amplo e a evolução contínua do AlphaFold**
+## **The broader impact and ongoing evolution of AlphaFold**
 
-O AlphaFold revolucionou o campo da predição da estrutura de proteínas. Ele prevê as estruturas 3D das proteínas com notável precisão, baseando-se unicamente na sequência de aminoácidos. (Veja “[Guia introdutório](https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/)“). As capacidades do AlphaFold foram validadas por múltiplas linhas de evidência de experimentos de biologia estrutural, incluindo estudos de cristalografia de raios X, microscopia eletrônica criogênica e espectrometria de massa de reticulação. (Veja “[Validação e](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/) [Impacto](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/)“).
+AlphaFold has revolutionised the field of protein structure prediction. It predicts the 3D structures of proteins with remarkable accuracy, based solely on the amino acid sequence. (See “[Introductory guide](https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/)“). AlphaFold’s capabilities have been validated by multiple lines of evidence from structural biology experiments, including studies of X-ray crystallography, cryogenic electron microscopy, and cross-linking mass spectrometry. (See “[Validation and](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/) [Impact](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/)“).
 
-## **Predição dos efeitos variantes do missense**
+## **Prediction of missense variant effects**
 
-Variantes missense são o tipo mais comum de variante genética. Eles envolvem uma única alteração na sequência de DNA que resulta na substituição de um aminoácido por outro em uma proteína. Enquanto algumas variantes do missense são inofensivas, outras podem levar a distúrbios genéticos.
+Missense variants are the most common type of genetic variant. They involve a single change in the DNA sequence that results in a substitution of one amino acid for another in a protein. While some missense variants are harmless, others can lead to genetic disorders.
 
-Para prever os efeitos das variantes missens, o Google DeepMind desenvolveu uma nova ferramenta chamada [AlphaMissense](https://github.com/deepmind/alphamissense).  Baseado no AlphaFold 2, oAlphaMissense é um sistema separado que pode prever se uma variante genética missense provavelmente é patogênica (causadora de doença) ou benigna (efeito limitado).
+To predict the effects of missense variants, Google DeepMind has built a new tool called [AlphaMissense](https://github.com/deepmind/alphamissense). Based on AlphaFold 2, AlphaMissense is a separate system that can predict whether a missense genetic variant is likely to be pathogenic (disease-causing) or benign (limited effect).
 
-Para isso, o AlphaMissense analisa um enorme conjunto de dados de variantes. Isso inclui informações sobre a frequência de cada variante na população humana e sua localização na sequência proteica. Crucialmente, utiliza contexto estrutural derivado do AlphaFold para prever os efeitos das variantes missense na estrutura e função das proteínas.
+To achieve this, AlphaMissense analyses a massive dataset of variants. This includes information about each variant’s frequency in the human population and their location in the protein sequence. Crucially, it uses structural context derived from AlphaFold to predict the effects of the missense variants on protein structure and function.
 
-O AlphaMissense já forneceu previsões de alta confiança para a maioria das variantes humanas de missense ([Cheng et al., 2023](https://doi.org/10.1126/science.adg7492)).
+AlphaMissense has already provided high-confidence predictions for most human missense variants ([Cheng et al., 2023](https://doi.org/10.1126/science.adg7492)).
 
-## **O futuro do AlphaFold e seu impacto**
+## **The future of AlphaFold and its impact**
 
-A jornada de AlphaFold 3 está apenas começando. À medida que os pesquisadores continuam a explorar suas capacidades e limitações, prevemos descobertas inovadoras em biologia estrutural, bioquímica, ciências das plantas e além. Além disso, o AlphaFold Server está atualmente em desenvolvimento, e esperamos que mais recursos surjam em breve.
+The journey of AlphaFold 3 has just started. As researchers continue to explore its capabilities and limitations, we anticipate groundbreaking discoveries in structural biology, biochemistry, plant sciences, and beyond. Furthermore, AlphaFold Server is currently under development, and we expect more features to emerge soon.
 
-O AlphaFold pode fornecer hipóteses testáveis que orientam experimentos. Ele tem sido aplicado em uma ampla gama de áreas, incluindo análises mutacionais orientadoras, análise da ação de proteínas e interações potenciais, engenharia de proteínas e encontro de estruturas distantemente homólogas. Áreas tão diversas quanto descoberta de medicamentos, biologia computacional e biotecnologia provavelmente verão avanços significativos graças ao AlphaFold.
+AlphaFold can provide testable hypotheses that guide experiments. It has been applied in a wide range of areas, including guiding mutational analyses, analysis of protein action and potential interactions, protein engineering, and finding distantly homologous structures. Fields as diverse as drug discovery, computational biology, and biotechnology are likely to see significant advances thanks to AlphaFold.
 
-O AlphaFold não é apenas um avanço tecnológico, mas um catalisador para a inovação científica. O lançamento open source do AlphaFold fomentou uma onda de avanços dentro da comunidade científica, levando ao desenvolvimento de novas aplicações e ferramentas. A equipe do Google DeepMind está empolgada em testemunhar essas aplicações criativas e inovadoras do AlphaFold, e aguarda ansiosamente futuras contribuições da comunidade.
+AlphaFold is not just a technological breakthrough, but a catalyst for scientific innovation. The open-source release of AlphaFold has fostered a wave of advances within the scientific community, leading to the development of new applications and tools. The Google DeepMind team is thrilled to witness these creative and groundbreaking applications of AlphaFold, and eagerly anticipates future contributions from the community.
 
-Estamos à beira de uma era transformadora na pesquisa biológica. O AlphaFold está nos impulsionando para um futuro onde a predição da estrutura das proteínas não é mais um desafio, mas sim uma ferramenta onipresente para desbloquear novas descobertas e inovações.
+We stand at the precipice of a transformative era in biological research. AlphaFold is propelling us towards a future where protein structure prediction is no longer a challenge, but instead a ubiquitous tool for unlocking new discoveries and innovations.
 
-## **Empoderando pesquisadores**
+## **Empowering researchers**
 
-Por meio deste curso curto, você adquiriu o conhecimento e as habilidades para aproveitar o poder do AlphaFold 2 e 3 em sua própria pesquisa. Seja investigando a função das proteínas ou explorando as complexidades das interações moleculares, o AlphaFold 3 tem potencial para acelerar seu trabalho e desbloquear novos insights.
+Through this short course, you’ve gained the knowledge and skills to harness the power of AlphaFold 2 and 3 in your own research. Whether you’re investigating protein function or exploring the intricacies of molecular interactions, AlphaFold 3 has the potential to accelerate your work and unlock new insights.
 
-## **Recursos adicionais para aprendizado contínuo**
+## **Additional resources for further learning**
 
-Para saber mais sobre oportunidades de participar de cursos presenciais e treinamentos sob demanda no EMBL-EBI, [inscreva-se na newsletter(s) deles](https://embl.us13.list-manage.com/subscribe?u=03514d4ffac1e7f3086502eab&id=b9f46bb4da).
+To find out about more opportunities to join live courses and on-demand training at EMBL-EBI, [sign up to their newsletter(s)](https://embl.us13.list-manage.com/subscribe?u=03514d4ffac1e7f3086502eab&id=b9f46bb4da).
 
-Para se manter atualizado sobre os últimos desenvolvimentos do Google DeepMind, incluindo o AlphaFold, [siga o blog do Google DeepMind](https://deepmind.google/discover/blog/) ou [visite o site do Google DeepMind](https://deepmind.google/).
+To stay up-to-date on the latest developments from Google DeepMind, including AlphaFold, [follow the Google DeepMind blog](https://deepmind.google/discover/blog/) or [visit the Google DeepMind website](https://deepmind.google/).
