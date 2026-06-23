@@ -43,7 +43,7 @@ Uma das principais proteínas responsáveis ​​pelo ciclo de replicação do 
 
 Um minúsculo mecanismo que orquestra os ritmos diários das cianobactérias. A KaiA regula outras proteínas em um ciclo de 24 horas, como um metrônomo. Para manter o ritmo, detecta a luz e outros sinais.
 
-Figure 1. As estruturas 3D mostradas nesta figura mostram de forma visual a diversidade de funções das proteínas.
+Figura 1. As estruturas 3D mostradas nesta figura mostram de forma visual a diversidade de funções das proteínas.
 
 ## **O desafio para determinar estruturas de proteínas**
 
@@ -53,8 +53,10 @@ No entanto, apesar do progresso feito em técnicas experimentais, determinar a e
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/Proteins.gif)
 
+<img width="1152" height="648" alt="proteinas" src="https://github.com/user-attachments/assets/fc31a4b9-ccd8-4900-9450-f552cc63737f" />
 
-Figure 2.  Desbloqueando estruturas de proteínas. Três métodos experimentais utilizados para determinar a estrutura das proteínas: raio-X, RMN e cryo-EM. O AlphaFold2, um método poderoso impulsionado por IA, tem revolucionou o campo ao prever estruturas de proteínas com notável precisão. Fonte: [What Is AlphaFold? | NEJM](https://youtu.be/7q8Uw3rmXyE) , “Um Santo Graal — A predição da Estrutura da Proteína/ A Holy Grail — The Prediction of Protein Structure” ([Altman, 2023](https://doi.org/10.1056/nejmcibr2307735))
+
+Figura 2.  Desbloqueando estruturas de proteínas. Três métodos experimentais utilizados para determinar a estrutura das proteínas: raio-X, RMN e cryo-EM. O AlphaFold2, um método poderoso impulsionado por IA, tem revolucionou o campo ao prever estruturas de proteínas com notável precisão. Fonte: [What Is AlphaFold? | NEJM](https://youtu.be/7q8Uw3rmXyE) , “Um Santo Graal — A predição da Estrutura da Proteína/ A Holy Grail — The Prediction of Protein Structure” ([Altman, 2023](https://doi.org/10.1056/nejmcibr2307735))
 
 Além disso, a lacuna se ampliou consideravelmente nos últimos anos, graças aos avanços no sequenciamento de DNA. A determinação experimental de estruturas não acompanha o ritmo do sequenciamento, então já existem centenas de milhões de proteínas conhecidas com estruturas desconhecidas.
 
