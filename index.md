@@ -1,39 +1,36 @@
 ---
 layout: default
-title: AlphaFold - A practical guide
+title: AlphaFold - Um guia prático
 ---
 
-# AlphaFold - A practical guide
-Proteins are essential components of life, predicting their 3D structure enables researchers to get an insight into its function and role. AlphaFold is an artificial intelligence (AI) system, developed by Google DeepMind, that predicts a protein’s 3D structure based on its primary amino acid sequence.  It regularly achieves accuracy competitive with experiment.
+# AlphaFold – Um guia prático
+As proteínas são componentes essenciais da vida; prever sua estrutura 3D permite aos pesquisadores compreender sua função e seu papel. O AlphaFold é um sistema de inteligência artificial (IA) desenvolvido pela Google DeepMind que prevê a estrutura 3D de uma proteína com base em sua sequência primária de aminoácidos. Ele frequentemente alcança uma precisão competitiva em relação aos métodos experimentais.
 
-## Who is this course for?
-This tutorial is aimed at researchers who are interested in using AlphaFold to predict protein structures and integrate these predictions into their projects. An undergraduate-level knowledge of protein structure and structural biology would be an advantage.
-The content of this course provides an understanding of the fundamental concepts behind AlphaFold, how users can run protein predictions and how AlphaFold has been used to enhance research.
-Throughout the course there may be terms used you are unfamiliar with. If so, please review the Glossary of terms of help.
+## Para quem é este curso?
+Este tutorial destina-se a pesquisadores interessados ​​em usar o AlphaFold para prever estruturas de proteínas e integrar essas previsões em seus projetos. Um conhecimento de nível de graduação em estrutura de proteínas e biologia estrutural será uma vantagem.
+O conteúdo deste curso proporciona uma compreensão dos conceitos fundamentais por trás do AlphaFold, como os usuários podem executar previsões de proteínas e como o AlphaFold tem sido usado para aprimorar a pesquisa.
+Ao longo do curso, você poderá encontrar termos com os quais não esteja familiarizado. Nesse caso, consulte o Glossário de termos de ajuda.
 
-This training module on AlphaFold has been developed in collaboration with Google DeepMind.
+Este módulo de treinamento sobre AlphaFold foi desenvolvido em colaboração com o Google DeepMind.
 
 ![Google DeepMind](images/Google_DeepMind_Logo_rgb_3320x512px.png)
 
 
-Please note that we do not provide certificates for completing our on-demand training courses. However, if you have an account with us, you can easily track your progress. All the courses you undertake will be listed on your 'My Learning' page.
+Informamos que não emitimos certificados pela conclusão de nossos cursos de treinamento sob demanda. No entanto, se você tiver uma conta conosco, poderá acompanhar seu progresso facilmente. Todos os cursos que você realizar serão listados na página "Meu Aprendizado".
 
-## What will I achieve?
-By the end of the course you will be able to:
+## O que você vai aprender?
+Ao final do curso, você será capaz de:
 
-- Explain how AlphaFold works and its strengths and limitations
-- Describe how AlphaFold predictions were validated experimentally
-- Discuss the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction
-- Assess the best way to predict protein structures
-- Identify the best way to access pre-computed predictions from the AlphaFold Protein Structure Database
-- Evaluate predicted structures from AlphaFold by integrating the different confidence metrics
+- Explicar como o AlphaFold funciona, bem como seus pontos fortes e limitações
+- Descrever como as previsões do AlphaFold foram validadas experimentalmente
+- Discutir os conceitos fundamentais por trás do AlphaFold e por que ele é considerado um avanço significativo na previsão de estruturas de proteínas
+- Avaliar a melhor maneira de prever estruturas de proteínas
+- Identificar a melhor forma de acessar previsões pré-calculadas do Banco de Dados de Estruturas de Proteínas do AlphaFold
+- Avaliar estruturas previstas pelo AlphaFold integrando as diferentes métricas de confianças
 
-## What resources do I need?
-To access some of the resources listed in this course, you will need a Google Account which can be created at accounts.google.com.  
+## De quais recursos preciso?
+Para acessar alguns dos recursos listados neste curso, você precisará de uma Conta do Google, que pode ser criada em: accounts.google.com
 
-Disclaimer:
+Aviso legal:
 
-AlphaFold is a research tool and its outputs have varying levels of confidence. The information provided in these modules and by AlphaFold (including in the AlphaFold Database) is provided free of charge, strictly as-is and without representation or warranty of any kind. We are not responsible for the accuracy, reliability, availability, effectiveness, or correct use of this information or for any impact from ongoing use of such information. If you rely on any such information, you do so solely at your own risk. These modules, AlphaFold and its outputs are not intended for, have not been validated for, and are not approved for clinical use. You should not use any of this information for clinical purposes or rely on it for medical or other professional advice. Any content regarding those topics is provided for informational purposes only and is not a substitute for advice from a qualified professional.
-
-
-
+O AlphaFold é uma ferramenta de pesquisa, e seus resultados apresentam níveis variados de confiança. As informações fornecidas nestes módulos e pelo AlphaFold (incluindo no Banco de Dados do AlphaFold) são disponibilizadas gratuitamente, estritamente "no estado em que se encontram" e sem declarações ou garantias de qualquer tipo. Não nos responsabilizamos pela precisão, confiabilidade, disponibilidade, eficácia ou uso correto dessas informações, nem por qualquer impacto decorrente do uso contínuo de tais informações. Se você utilizar essas informações, fá-lo-á exclusivamente por sua conta e risco. Estes módulos, o AlphaFold e seus resultados não se destinam a uso clínico, não foram validados para tal fim e não possuem aprovação para uso clínico. Você não deve utilizar nenhuma dessas informações para fins clínicos nem basear-se nelas para obter aconselhamento médico ou outro tipo de orientação profissional. Qualquer conteúdo relacionado a esses temas é fornecido apenas para fins informativos e não substitui a orientação de um profissional qualificado.
