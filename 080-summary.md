@@ -7,7 +7,7 @@ title: 'Resumo'
 
 AlphaFold 3 representa um avanço significativo em nossa capacidade de entender o mundo molecular. Ao prever as estruturas de complexos que abrangem uma vasta gama de biomoléculas e suas interações, abre novas vias para pesquisa e descoberta em múltiplas disciplinas.
 
-## **Principais chaves:**
+## **Principais pontos:**
 
 Exploramos como o AlphaFold 3 vai além da predição da estrutura de proteínas para modelar montagens biológicas complexas envolvendo DNA, RNA, ligandos, íons e diversas modificações químicas.
 
