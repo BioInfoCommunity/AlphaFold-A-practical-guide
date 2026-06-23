@@ -17,13 +17,13 @@ Exploramos o uso prático do AlphaFold 3 via AlphaFold Server, incluindo tanto a
 
 ## **O impacto mais amplo e a evolução contínua do AlphaFold**
 
-O AlphaFold revolucionou o campo da predição da estrutura de proteínas. Ele prevê as estruturas 3D das proteínas com notável precisão, baseando-se unicamente na sequência de aminoácidos. (Veja “[Guia introdutório](https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/)“). As capacidades do AlphaFold foram validadas por múltiplas linhas de evidência de experimentos de biologia estrutural, incluindo estudos de cristalografia de raios X, microscopia eletrônica criogênica e espectrometria de massa de reticulação. (Veja “[Validação e](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/) [Impacto](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/)“).
+O AlphaFold revolucionou o campo da predição da estrutura de proteínas. Ele prevê as estruturas 3D das proteínas com notável precisão, baseando-se unicamente na sequência de aminoácidos (Veja “[Guia introdutório](https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/)“). As capacidades do AlphaFold foram validadas por múltiplas linhas de evidência de experimentos de biologia estrutural, incluindo estudos de cristalografia de raios X, microscopia eletrônica criogênica e espectrometria de massa de reticulação (Veja “[Validação e](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/) [Impacto](https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/)“).
 
 ## **Predição dos efeitos variantes do missense**
 
 Variantes missense são o tipo mais comum de variante genética. Eles envolvem uma única alteração na sequência de DNA que resulta na substituição de um aminoácido por outro em uma proteína. Enquanto algumas variantes do missense são inofensivas, outras podem levar a distúrbios genéticos.
 
-Para prever os efeitos das variantes missens, o Google DeepMind desenvolveu uma nova ferramenta chamada [AlphaMissense](https://github.com/deepmind/alphamissense).  Baseado no AlphaFold 2, oAlphaMissense é um sistema separado que pode prever se uma variante genética missense provavelmente é patogênica (causadora de doença) ou benigna (efeito limitado).
+Para prever os efeitos das variantes missens, o Google DeepMind desenvolveu uma nova ferramenta chamada [AlphaMissense](https://github.com/deepmind/alphamissense).  Baseado no AlphaFold 2, o AlphaMissense é um sistema separado que pode prever se uma variante genética missense provavelmente é patogênica (causadora de doença) ou benigna (efeito limitado).
 
 Para isso, o AlphaMissense analisa um enorme conjunto de dados de variantes. Isso inclui informações sobre a frequência de cada variante na população humana e sua localização na sequência proteica. Crucialmente, utiliza contexto estrutural derivado do AlphaFold para prever os efeitos das variantes missense na estrutura e função das proteínas.
 
