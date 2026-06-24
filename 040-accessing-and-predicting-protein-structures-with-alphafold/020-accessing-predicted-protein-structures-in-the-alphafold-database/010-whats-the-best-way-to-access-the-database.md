@@ -7,7 +7,7 @@ title: 'Qual é a melhor maneira de acessar o banco de dados?'
 
 Os usuários podem acessar as estruturas previstas e suas métricas de confiança associadas do AFDB por meio de quatro canais distintos: diretamente pela página web do AFDB, via FTP, Google Cloud Public Data ou via Acesso Programático (Programmatic Access - API).
 
-<img width="1152" height="648" alt="quatro_jeitos_acessar" src="https://github.com/user-attachments/assets/8f686950-5fb8-4aab-821c-240dfc8ee410" />
+![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/four_ways_to_access.gif)
 
 
 Figura 23. Quatro maneiras de acessar estruturas proteicas previstas na AFDB. No sentido horário a partir do canto superior esquerdo: site, API, BigQuery, download FTP.
