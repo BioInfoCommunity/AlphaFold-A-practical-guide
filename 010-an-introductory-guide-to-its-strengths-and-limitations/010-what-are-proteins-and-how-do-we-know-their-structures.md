@@ -51,8 +51,6 @@ Por várias décadas, foi possível determinar estruturas de proteínas em níve
 
 No entanto, apesar do progresso feito em técnicas experimentais, determinar a estrutura da proteína experimentalmente é inerentemente demorado e trabalhoso, e envolve muitas etapas de solução de problemas. Como resultado, o número de sequências proteicas conhecidas sempre foi maior do que o número de estruturas proteicas disponíveis. Em janeiro de 2024, o número de estruturas experimentais disponíveis no PDB era pouco superior a 215.000, em comparação com os impressionantes ~250 milhões de sequências de proteínas disponíveis pelo UniProt.
 
-![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/Proteins.gif)
-
 <img width="1152" height="648" alt="proteinas" src="https://github.com/user-attachments/assets/fc31a4b9-ccd8-4900-9450-f552cc63737f" />
 
 
