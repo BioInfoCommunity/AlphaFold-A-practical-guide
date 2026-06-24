@@ -1,45 +1,44 @@
 ---
 layout: default
-title: 'Advanced features of AlphaFold Server'
----
+title: 'Recursos avançados do AlphaFold Server'
 
-# Advanced features of AlphaFold Server
+# Recursos avançados do AlphaFold Server
 
-AlphaFold Server was primarily designed as an easy-to-use tool. The aim is to unlock biomolecule modelling for biologists, including those with no experience with computational methods.
+O AlphaFold Server foi projetado, primordialmente, como uma ferramenta de fácil utilização. O objetivo é tornar a modelagem de biomoléculas acessível a biólogos, inclusive àqueles sem experiência em métodos computacionais.
 
-However, AlphaFold Server does provide additional options and automation possibilities for more advanced users.
+No entanto, o AlphaFold Server oferece opções adicionais e possibilidades de automação para usuários mais avançados.
 
-## JSON job submission
+## Envio de tarefas via JSON
 
-You can specify an AlphaFold Server job using a JSON file, rather than the standard visual web interface. This could be used to automatically generate jobs, for example for computational screening of protein-protein interactions.
+Você pode definir uma tarefa para o AlphaFold Server usando um arquivo JSON, em vez de utilizar a interface web visual padrão. Isso permite gerar tarefas automaticamente — por exemplo, para a triagem computacional de interações proteína-proteína.
 
-You may import multiple draft jobs by uploading JSON files with up to 100 jobs per file. However, please note that you are only allowed up to 500 saved drafts in your History.
+É possível importar várias tarefas em rascunho enviando arquivos JSON que contenham até 100 tarefas cada. No entanto, observe que há um limite de 500 rascunhos salvos no seu Histórico.
 
-To create a JSON file, please refer to this [documentation and examples](https://github.com/google-deepmind/alphafold/blob/main/server/README.md). However, you don’t need to start from scratch. Inside each zip file with modelling results, downloaded from the AlphaFold Server, you’ll find a JSON file named **fold\_<job\_name>\_job\_request.json.** This contains all the job inputs that were specified through the web interface. These files offer a convenient starting point for generating new jobs: they are easily editable in standard text editors, or in a programming system like Google Colab notebooks.
+Para criar um arquivo JSON, consulte esta [documentação e os exemplos](https://github.com/google-deepmind/alphafold/blob/main/server/README.md). Contudo, não é necessário começar do zero. Dentro de cada arquivo ZIP com resultados de modelagem baixado do AlphaFold Server, você encontrará um arquivo JSON chamado **fold\_<job\_name>\_job\_request.json**. Ele contém todos os parâmetros de entrada da tarefa que foram especificados por meio da interface web. Esses arquivos oferecem um ponto de partida conveniente para gerar novas tarefas: são facilmente editáveis ​​em editores de texto padrão ou em ambientes de programação, como notebooks do Google Colab.
 
-Once your JSON file is prepared, click the ‘Upload JSON’ button to upload it. Imported jobs will appear as saved drafts in your job history and you can click on your jobs to further edit or run them. Please note that running jobs specified through JSON files will use your job quota in exactly the same way as normal jobs specified through the web interface.
+Assim que o arquivo JSON estiver pronto, clique no botão "Upload JSON" para enviá-lo. As tarefas importadas aparecerão como rascunhos salvos no seu histórico; você poderá clicar nelas para editá-las ou executá-las. Observe que a execução de tarefas definidas via arquivos JSON consumirá sua cota de tarefas exatamente da mesma forma que as tarefas comuns definidas pela interface web.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-24-at-17.10.52.png)
 
-Figure 43. A screenshot to show the window dialogue for uploading JSON inputs.
+Figura 43. Captura de tela mostrando a janela de diálogo para o upload de entradas em formato JSON.
 
-## Sampling multiple seeds
+## Amostragem com múltiplas sementes (seeds)
 
-Compared to older systems, AlphaFold 3 often produces more accurate structural predictions for such difficult targets as antigen-antibody complexes. However, achieving the highest accuracy often requires extensive sampling of the latent space, i.e. generation and subsequent ranking of numerous predictions using different random seeds. In such cases, we have seen predictions improve even up to 1,000 seeds. However, 20 seeds is usually enough to get a prediction of reasonable confidence and accuracy.
+Em comparação com sistemas anteriores, o AlphaFold 3 frequentemente produz previsões estruturais mais precisas para alvos desafiadores, como complexos antígeno-anticorpo. No entanto, alcançar a máxima precisão muitas vezes exige uma amostragem extensiva do espaço latente — isto é, a geração e a subsequente classificação de inúmeras previsões utilizando diferentes sementes aleatórias. Nesses casos, observamos melhorias nas previsões mesmo ao utilizar até 1.000 sementes. Contudo, 20 sementes geralmente bastam para obter uma previsão com nível razoável de confiança e precisão.
 
-Currently, AlphaFold Server runs just one seed for each job. If you want to sample multiple seeds, you must run multiple identical jobs and compare their confidence scores (like overall pTM/ipTM) to choose the best one. This is easily done using job cloning.
+Atualmente, o AlphaFold Server executa apenas uma semente por tarefa. Se você deseja realizar uma amostragem com múltiplas sementes, deve executar várias tarefas idênticas e comparar suas pontuações de confiança (como o pTM/ipTM global) para selecionar a melhor. Isso pode ser feito facilmente utilizando a função de clonagem de tarefas.
 
-Select the “Clone and reuse” option in the vertical ellipsis menu of a job in History to bring it to the job editor, then submit the job as many times as you wish without making any changes. Please make sure that the seed option in the “Confirm and submit job” dialogue is set to “Auto”. Alternatively, if you choose to specify the seeds manually, set different seeds for each repeat of the job.
+Selecione a opção "Clone and reuse" (Clonar e reutilizar) no menu de três pontos verticais de uma tarefa no Histórico para levá-la ao editor de tarefas; em seguida, envie a tarefa quantas vezes desejar, sem realizar alterações. Certifique-se de que a opção de semente na janela de diálogo "Confirm and submit job" (Confirmar e enviar tarefa) esteja definida como "Auto". Alternativamente, caso opte por especificar as sementes manualmente, defina sementes diferentes para cada repetição da tarefa.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-18.29.22.png)
 
-Figure 46. The “Confirm and submit job” dialogue, where you can edit the seed value. The recommended default option is to use auto-generated random seeds, as shown here.
+Figura 46. A caixa de diálogo "Confirmar e enviar tarefa" (Confirm and submit job), onde é possível editar o valor da semente (seed). A opção padrão recomendada é utilizar sementes aleatórias geradas automaticamente, conforme mostrado aqui.
 
-## Reproducing jobs
+## Reprodução de tarefas
 
-In scientific research it is often important to reproduce previously-run jobs or jobs run by someone else, including published results. You can easily do this on AlphaFold Server.
+Na pesquisa científica, é frequentemente importante reproduzir tarefas executadas anteriormente ou tarefas realizadas por outra pessoa, incluindo resultados publicados. Você pode fazer isso facilmente no AlphaFold Server.
 
-Running the model with the same seed and identical input will result in identical or highly similar predicted structures.
+Executar o modelo com a mesma semente e dados de entrada idênticos resultará em estruturas previstas idênticas ou altamente semelhantes.
 
 The exact seed value for the reproduced job is displayed on the Results page and is also saved in the **fold\_<job\_name>\_job\_request.json** file (available in the zip file for download). Similarly, if you want to enable others to reproduce your modelling results, the easiest way is to share the **fold\_<job\_name>\_job\_request.json** file:  it contains all the information required for the reproduction and can be directly submitted to AlphaFold Server via the ‘Upload JSON’ button.
 
