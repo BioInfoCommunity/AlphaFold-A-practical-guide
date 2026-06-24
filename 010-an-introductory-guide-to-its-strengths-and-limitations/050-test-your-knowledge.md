@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Test your knowledge
+title: Teste seus conhecimentos
 ---
 
-# Test your knowledge
+# Teste seus conhecimentos
 
-Throughout this section, you’ve explored the capabilities of AlphaFold, along with its potential impact on scientific research. Now, it’s time to solidify your knowledge. In this interactive exercise, you will explore the strengths and limitations of AlphaFold by dragging and dropping specific examples into their corresponding categories.
+Nesta seção, você explorou as capacidades do AlphaFold, bem como seu impacto potencial na pesquisa científica. Agora, é hora de consolidar o que você aprendeu. Neste exercício interativo, você explorará os pontos fortes e as limitações do AlphaFold ao arrastar e soltar exemplos específicos nas categorias correspondentes.
