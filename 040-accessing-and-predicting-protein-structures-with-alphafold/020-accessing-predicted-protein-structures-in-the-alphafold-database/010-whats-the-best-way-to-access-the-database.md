@@ -21,7 +21,6 @@ Figura 23. Quatro maneiras de acessar estruturas proteicas previstas na AFDB. No
 
 Apesar da escala da AFDB, há alguns casos em que pode ser necessário usar o algoritmo AlphaFold2 para prever a estrutura de uma proteína. Essas situações incluem:
 
-* The protein of interest is outside the range of lengths included in the database. The minimum length is 16 amino acids. The maximum is 2,700 for proteomes and Swiss-Prot (reviewed entries) and 1,280 for the rest of UniProt. For the human proteome only, and only via FTP, the download includes longer proteins segmented into fragments.
 * A proteína de interesse está fora da faixa de comprimentos incluída no banco de dados. O comprimento mínimo é de 16 aminoácidos. O máximo é de 2.700 para proteomas e Swiss-Prot (entradas revisadas) e 1.280 para o restante do UniProt. Para o proteoma humano, e somente via FTP, o download inclui proteínas mais longas segmentadas em fragmentos.
 * Você se interessa por oligômeros ou complexos proteína-proteína. O banco de dados inclui apenas estruturas de monômeros, então você precisaria rodar a modelagem por conta própria.
 * A sequência proteica foi adicionada ou modificada de alguma forma pelo UniProt em uma versão mais recente.
