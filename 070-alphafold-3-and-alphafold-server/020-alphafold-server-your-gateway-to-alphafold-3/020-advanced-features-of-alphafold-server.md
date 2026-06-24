@@ -1,6 +1,7 @@
 ---
 layout: default
 title: 'Recursos avançados do AlphaFold Server'
+---
 
 # Recursos avançados do AlphaFold Server
 
