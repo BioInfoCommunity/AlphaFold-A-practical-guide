@@ -17,11 +17,11 @@ labels:
       profile_url: "https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy"
   translated_by_text: "Translated by"
   translated_by_name:
-    - name: "Translator 1"
+    - name: "Joyce Karoline da Silva"
       profile_url: null
-      orcid: null
-    - name: "Translator 2"
+      orcid: "https://orcid.org/0000-0002-8039-9706"
+    - name: "Vinicius Maracaja-Coutinho"
       profile_url: null
-      orcid: null
+      orcid: "https://orcid.org/0000-0002-8873-9381"
   translated_on_text: "Translated on"
-  translated_on_value: "October 2025"
+  translated_on_value: "June 2026"
