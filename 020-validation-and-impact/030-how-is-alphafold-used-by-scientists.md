@@ -57,6 +57,6 @@ Mergulhe mais fundo na ciência e veja como o AlphaFold está transformando pesq
 Assista aos vídeos desta playlist para descobrir como os cientistas estão usando o AlphaFold2 para impulsionar suas pesquisas.
 
 
-Unfolded: Meet the scientists using AlphaFold
+Unfolded: Conheça os cientistas que utilizam o AlphaFold
 
-## Test your knowledge
+## Teste seus conhecimentos
