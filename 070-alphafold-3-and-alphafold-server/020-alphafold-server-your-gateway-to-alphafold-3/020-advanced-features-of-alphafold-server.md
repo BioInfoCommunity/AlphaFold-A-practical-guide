@@ -40,8 +40,9 @@ Na pesquisa científica, é frequentemente importante reproduzir tarefas executa
 
 Executar o modelo com a mesma semente e dados de entrada idênticos resultará em estruturas previstas idênticas ou altamente semelhantes.
 
-The exact seed value for the reproduced job is displayed on the Results page and is also saved in the **fold\_<job\_name>\_job\_request.json** file (available in the zip file for download). Similarly, if you want to enable others to reproduce your modelling results, the easiest way is to share the **fold\_<job\_name>\_job\_request.json** file:  it contains all the information required for the reproduction and can be directly submitted to AlphaFold Server via the ‘Upload JSON’ button.
+O valor exato da semente (*seed*) para o trabalho reproduzido é exibido na página de resultados e também é salvo no arquivo **fold\_<job\_name>\_job\_request.json**(disponível no arquivo zip para download). Da mesma forma, se você quiser permitir que outras pessoas reproduzam seus resultados de modelagem, a maneira mais fácil é compartilhar o arquivo **fold\_<job\_name>\_job\_request.json**: ele contém todas as informações necessárias para a reprodução e pode ser enviado diretamente ao AlphaFold Server por meio do botão "Upload JSON".
+
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-18.33.38.png)
 
-Figure 44. A sample results page on the AlphaFold Server
+Figura 44. Exemplo de página de resultados no AlphaFold Server
