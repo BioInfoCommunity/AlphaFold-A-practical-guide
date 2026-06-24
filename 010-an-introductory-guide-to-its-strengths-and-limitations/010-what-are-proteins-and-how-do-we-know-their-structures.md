@@ -51,7 +51,7 @@ Por várias décadas, foi possível determinar estruturas de proteínas em níve
 
 No entanto, apesar do progresso feito em técnicas experimentais, determinar a estrutura da proteína experimentalmente é inerentemente demorado e trabalhoso, e envolve muitas etapas de solução de problemas. Como resultado, o número de sequências proteicas conhecidas sempre foi maior do que o número de estruturas proteicas disponíveis. Em janeiro de 2024, o número de estruturas experimentais disponíveis no PDB era pouco superior a 215.000, em comparação com os impressionantes ~250 milhões de sequências de proteínas disponíveis pelo UniProt.
 
-<img width="1152" height="648" alt="proteinas" src="https://github.com/user-attachments/assets/fc31a4b9-ccd8-4900-9450-f552cc63737f" />
+![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/Proteins.gif)
 
 
 Figura 2.  Desbloqueando estruturas de proteínas. Três métodos experimentais utilizados para determinar a estrutura das proteínas: raio-X, RMN e cryo-EM. O AlphaFold2, um método poderoso impulsionado por IA, tem revolucionou o campo ao prever estruturas de proteínas com notável precisão. Fonte: [What Is AlphaFold? | NEJM](https://youtu.be/7q8Uw3rmXyE) , “Um Santo Graal — A predição da Estrutura da Proteína/ A Holy Grail — The Prediction of Protein Structure” ([Altman, 2023](https://doi.org/10.1056/nejmcibr2307735))
