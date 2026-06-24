@@ -1,32 +1,30 @@
 ---
 layout: default
-title: 'pLDDT: Understanding local confidence'
+title: 'pLDDT: Compreendendo a confiança local'
 ---
 
-# pLDDT: Understanding local confidence
+# pLDDT: Compreendendo a confiança local
 
-The predicted local distance difference test (pLDDT) is a per-residue measure of local confidence. It is scaled from 0 to 100, with higher scores indicating higher confidence and usually a more accurate prediction.
+O teste de diferença local de distância previsto (predicted local distance difference test/pLDDT) é uma medida por resíduo da confiança local. Ele é escalado de 0 a 100, com pontuações mais altas indicando maior confiança e geralmente uma predição mais precisa.
 
-pLDDT measures confidence in the local structure, estimating how well the prediction would agree with an experimental structure. It is based on the local distance difference test Cα ([lDDT-Cα](https://academic.oup.com/bioinformatics/article/29/21/2722/195896?login=true)), which is a score that does not rely on superposition but assesses the correctness of the local distances ([Mariani et al., 2013](https://doi.org/10.1093/bioinformatics/btt473)).
+A pLDDT mede a confiança na estrutura local, avaliando em que medida a predição estaria de acordo com uma estrutura obtida experimentalmente. Ele é baseado no teste de diferença de distância local Cα (local distance difference test [lDDT-Cα](https://academic.oup.com/bioinformatics/article/29/21/2722/195896?login=true)), que é uma pontuação que não depende da superposição, mas avalia a correção das distâncias locais ([Mariani et al., 2013](https://doi.org/10.1093/bioinformatics/btt473)).
 
-On this basis, a pLDDT above 90 would be taken as the highest accuracy category, in which both the backbone and side chains are typically predicted with high accuracy. In contrast, a pLDDT above 70 usually corresponds to a correct backbone prediction with misplacement of some side chains.
+Com base nisso, um pLDDT acima de 90 seria considerado a categoria de maior precisão, na qual tanto a cadeia dorsal quanto a cadeia lateral são tipicamente previstas com alta precisão. Em contraste, um pLDDT acima de 70 geralmente corresponde a uma predição correta da espinha dorsal com deslocamento de algumas cadeias laterais.
 
-The pLDDT score can vary significantly along a protein chain. This means AlphaFold2 can be very confident in the structure of some parts of the protein, but less confident in other regions. This gives users an indication of which parts of the predicted structure may be reliable and which are unlikely to be ([Guo et al., 2022](https://doi.org/10.1038/s41598-022-14382-9)).
+A pontuação de pLDDT pode variar significativamente ao longo de uma cadeia proteica. Isso significa que o AlphaFold2 pode ter muita confiança na estrutura de algumas partes da proteína, mas menos confiante em outras regiões. Isso dá aos usuários uma indicação de quais partes da estrutura prevista podem ser confiáveis e quais são improváveis ([Guo et al., 2022](https://doi.org/10.1038/s41598-022-14382-9)).
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/pLDDT_fixed.gif)
 
 
-Figure 14. Sample pLDDT (predicted Local Distance Difference Test) for a predicted protein structure. Different colours indicate AlphaFold2’s level of confidence in its prediction (see key).
+Figura 14. Amostra pLDDT (Teste de Diferença Local de Distância previsto/predicted Local Distance Difference Test) para uma estrutura proteica prevista. Cores diferentes indicam o nível de confiança do AlphaFold2 em sua predição (ver legenda).
 
-There are two classes of reasons why AlphaFold2 will assign a low confidence to a region of a protein. It may be that that region is naturally highly flexible or intrinsically disordered, in which case it does not have any well-defined structure. Alternatively, the region may have a predictable structure but AlphaFold2 does not have enough information to predict it with confidence. Both scenarios will typically give rise to a pLDDT below 50.
+Existem duas classes de razões pelas quais o AlphaFold2 atribui baixa confiança a uma região de uma proteína. Pode ser que essa região seja naturalmente altamente flexível ou intrinsecamente desordenada, caso em que não possua nenhuma estrutura bem definida. Alternativamente, a região pode ter uma estrutura previsível, mas o AlphaFold2 não possui informações suficientes para prevê-la com confiança. Ambos os cenários normalmente geram um pLDDT abaixo de 50.
 
-Notably, AlphaFold2 may be very confident in the structure of a globular domain of a protein, but less confident in the structure of the linkers between domains. This is because AlphaFold2 has more information to work with when predicting the structure of globular domains. These domains are typically conserved, i.e. they have changed less over evolutionary time. In contrast, linkers are more likely to be naturally variable, less structured and more flexible. There is no way to predict specific structures for such naturally-unstructured regions, so AlphaFold2 assigns its predictions a low confidence.
+Notavelmente, o AlphaFold2 pode estar muito confiante na estrutura de um domínio globular de uma proteína, mas menos confiante na estrutura dos ligadores entre domínios. Isso ocorre porque o AlphaFold2 tem mais informações para trabalhar ao prever a estrutura dos domínios globulares. Esses domínios são tipicamente conservados, ou seja, mudaram menos ao longo do tempo evolutivo. Em contraste, os conectores têm mais probabilidade de serem naturalmente variáveis, menos estruturados e mais flexíveis. Não há como prever estruturas específicas para regiões naturalmente não estruturadas, então o AlphaFold2 atribui às suas previsões uma confiança baixa.
 
-Most intrinsically disordered regions (IDRs) are always disordered. However, there are some IDRs where the protein lacks a defined structure under physiological conditions in its unbound state, but undergoes binding-induced folding upon interacting with its native macromolecular partner. In these uncommon instances, AlphaFold2 shows a tendency to predict the folded state with high pLDDT scores ([Alderson et al., 2023](https://doi.org/10.1073/pnas.2304302120); [Piovesan et al., 2022](https://doi.org/10.1002/pro.4466)).
+A maioria das regiões intrinsecamente desordenadas (intrinsically disordered regions - IDRs) é sempre desordenada. No entanto, existem algumas IDRs em que a proteína não possui uma estrutura definida sob condições fisiológicas em seu estado não ligado, mas passa por dobramento induzido pela ligação ao interagir com seu parceiro macromolecular nativo. Nesses casos incomuns, o AlphaFold2 mostra uma tendência a prever o estado dobrado com altas pontuações de pLDDT ([Alderson et al., 2023](https://doi.org/10.1073/pnas.2304302120); [Piovesan et al., 2022](https://doi.org/10.1002/pro.4466)).
 
-One such example is eukaryotic translation initiation factor 4E-binding protein 2 (4E-BP2, UniProt ID: [Q13542](https://www.uniprot.org/uniprotkb/Q13542/entry)). AlphaFold2 predicts a helical structure with high confidence: in nature, 4E-BP2 only adopts this structure in its bound state (PDB ID: [3AM7](https://www.wwpdb.org/pdb?id=pdb_00003am7)). Note that the bound structure was included in AlphaFold2’s training set, so the program had previously seen it.
-
-
+Um exemplo disso é a proteína de iniciação de tradução eucariótica 4E (4E-BP2, UniProt ID: [Q13542](https://www.uniprot.org/uniprotkb/Q13542/entry)). AlphaFold2 prevê uma estrutura helicoidal com alta confiança: na natureza, 4E-BP2 adota essa estrutura apenas em seu estado ligado (PDB ID: [3AM7](https://www.wwpdb.org/pdb?id=pdb_00003am7)). Note que a estrutura vinculada estava incluída no conjunto de treinamento do AlphaFold2, então o programa já havia visto isso anteriormente.
 
 
 
@@ -37,49 +35,52 @@ One such example is eukaryotic translation initiation factor 4E-binding protein 
 
 
 
-##### Eukaryotic translation initiation factor 4E-binding protein 2 (Uniprot ID: [Q13542](https://www.uniprot.org/uniprotkb/Q13542/entry))
 
-AlphaFold predicts a helical conformation for 4E-BP2 ([AF-Q13542-F1](https://alphafold.ebi.ac.uk/entry/Q13542)) which closely resembles the bound state (PDB ID: [3AM7](https://www.wwpdb.org/pdb?id=pdb_00003am7), purple)
+#####  Proteína 2 de ligação ao fator de iniciação da tradução eucariótica 4E (Uniprot ID: [Q13542](https://www.uniprot.org/uniprotkb/Q13542/entry))
 
-A similar behaviour occurs in IDRs that go through conformational changes due to post-translational modifications. In such instances, AlphaFold2 leans toward predicting the conditionally-folded state.
+O AlphaFold prevê uma conformação helicoidal para 4E-BP2 ([AF-Q13542-F1](https://alphafold.ebi.ac.uk/entry/Q13542)) que se assemelha muito ao estado ligado (PDB ID: [3AM7](https://www.wwpdb.org/pdb?id=pdb_00003am7), purple)
 
-Finally, it is essential to understand that a high pLDDT score for all domains of a protein does not necessarily mean that AlphaFold2 is confident in the relative positions or orientations of those domains. pLDDT does not measure confidence at such large scales, so a different metric is required.
+Um comportamento semelhante ocorre em IDRs que passam por mudanças conformacionais devido a modificações pós-traducionais. Nesses casos, o AlphaFold2 tende a prever o estado condicionalmente dobrado.
+
+Por fim, é essencial entender que uma pontuação alta de pLDDT para todos os domínios de uma proteína não significa necessariamente que o AlphaFold2 confie nas posições ou orientações relativas desses domínios. O pLDDT não mede confiança em escalas tão grandes, então uma métrica diferente é necessária.
+
 
 ---
 
-## Test your knowledge
+## Teste seu conhecimento
 
-Here’s a short exercise to help you evaluate predicted protein structures based on their pLDDT scores. Let’s see how well you can interpret these scores and make informed decisions about model reliability.
+Aqui está um exercício curto para ajudar você a avaliar as estruturas proteicas previstas com base nas pontuações de pLDDT delas. Vamos ver quão bem você consegue interpretar essas pontuações e tomar decisões informadas sobre a confiabilidade do modelo.
 
-Which structure has the best pLDDT score?
-
-
+Qual estrutura tem a melhor pontuação em pLDDT?
 
 
 
 
-Protein Viewer
 
 
 
-##### C-type lectin-like domain family ([AF-Q8IZS7-F1](https://alphafold.ebi.ac.uk/entry/Q8IZS7))
+Visualizador de Proteínas
 
-May function in mediating immune cell-cell interactions
 
-##### Apical membrane antigen 1 ([AF-Q3S2X4-F1](https://alphafold.ebi.ac.uk/entry/Q3S2X4))
 
-Involved in parasite invasion of erythrocytes
+##### Família de domínios tipo lectina C ([AF-Q8IZS7-F1](https://alphafold.ebi.ac.uk/entry/Q8IZS7))
 
-##### Chloramphenicol acetyltransferase ([AF-P36883-F1](https://alphafold.ebi.ac.uk/entry/P36883))
+Pode funcionar na mediação de interações célula-célula imunes
 
-Responsible for resistance to the antibiotic chloramphenicol
+##### Antígeno 1 da membrana apical ([AF-Q3S2X4-F1](https://alphafold.ebi.ac.uk/entry/Q3S2X4))
 
-Very high (pLDDT > 90)
+Envolvido na invasão de eritrócitos por parasitas
 
-Confident (90 > pLDDT > 70)
+##### Cloranfenicol acetiltransferase ([AF-P36883-F1](https://alphafold.ebi.ac.uk/entry/P36883))
 
-Low (70 > pLDDT > 50)
+Responsável pela resistência ao antibiótico cloranfenicol
 
-Very low (pLDDT < 50)
+Muito alta (pLDDT > 90)
 
-### Check your answers
+Confiável (90 > pLDDT > 70)
+
+Baixo (70 > pLDDT > 50)
+
+Muito baixo (pLDDT < 50)
+
+### Confira suas respostas
