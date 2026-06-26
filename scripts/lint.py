@@ -21,7 +21,7 @@ ALLOWED_METADATA_FILES = {
     "pt.yml"
 }
 
-ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png"}
+ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png", ".yml"}
 
 errors = []
 warnings = []
