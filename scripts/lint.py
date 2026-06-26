@@ -18,10 +18,11 @@ PROTECTED_PATHS = [
 
 ALLOWED_METADATA_FILES = {
     "_data/pt.yml",
-    "pt.yml"
+    "pt.yml",
+    "lint.py"
 }
 
-ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png", ".yml"}
+ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png", ".yml", ".py"}
 
 errors = []
 warnings = []
