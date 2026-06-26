@@ -1,38 +1,38 @@
 ---
 layout: default
-title: 'Predicting protein structures with ColabFold and AlphaFold2 Colab'
+title: 'Predição de estruturas proteicas com ColabFold e AlphaFold2 Colab'
 ---
 
-# Predicting protein structures with ColabFold and AlphaFold2 Colab
+# Predição de estruturas proteicas com ColabFold e AlphaFold2 Colab
 
-**ColabFold and AlphaFold2 Colab allow you to predict protein structures without installing and running the full AlphaFold2 software. They are good options if you need a quick and easy way to get started with AlphaFold2, if you only need to predict a few structures, or if you don’t have access to a powerful computing resource.**
+**ColabFold e AlphaFold2 Colab permitem que você preveja estruturas de proteínas sem precisar instalar e rodar o software completo do AlphaFold2. São boas opções se você precisa de uma forma rápida e fácil de começar com o AlphaFold2, se só precisa prever algumas estruturas, ou se não tem acesso a um recurso computacional poderoso.**
 
-## **ColabFold and AlphaFold2 Colab: An overview and comparison**
+## **ColabFold e AlphaFold2 Colab: Uma visão geral e comparação**
 
-ColabFold and AlphaFold2 Colab are online implementations of AlphaFold2. All operations take place in the cloud, so you can use the software without installing it on your own computer. Both systems are based on [Colab](https://colab.research.google.com/) (short for Colaboratory): a system that enables you to write and execute Python in your browser.
+ColabFold e AlphaFold2 Colab são implementações online do AlphaFold2. Todas as operações acontecem na nuvem, então você pode usar o software sem ter que instalá-lo no seu próprio computador. Ambos os sistemas são baseados em [Colab](https://colab.research.google.com/) (abreviação de Colaboratory): um sistema que permite escrever e executar Python no seu navegador.
 
-* The [AlphaFold2 Colab](https://colab.sandbox.google.com/github/deepmind/alphafold/blob/main/notebooks/AlphaFold.ipynb) is a simplified version of AlphaFold2. It only uses a portion of the [BFD](https://bfd.mmseqs.com/) (Big Fantastic Database) dataset and does not use homologous structures as templates. As a result, its accuracy is marginally lower than the full version of AlphaFold2. Users also cannot customise structure predictions by varying the parameters.
-* [ColabFold](https://colab.sandbox.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb) is a community implementation of a Colab for running AlphaFold2. It offers many more adjustable parameters than AlphaFold2 Colab, such as the depth of the MSA and the number of recycles. Furthermore, ColabFold uses quick MSA preparation via the [MMseqs2](https://github.com/soedinglab/mmseqs2) server. You can also use a custom MSA as input and supply templates ([Mirdita et al, 2022](https://doi.org/10.1038/s41592-022-01488-1)).
+* O [AlphaFold2 Colab](https://colab.sandbox.google.com/github/deepmind/alphafold/blob/main/notebooks/AlphaFold.ipynb) é uma versão simplificada do AlphaFold2. Ele usa apenas uma parte do conjunto de dados [BFD](https://bfd.mmseqs.com/) (Big Fantastic Database) e não utiliza estruturas homólogas como modelos. Como resultado, sua precisão é marginalmente inferior à da versão completa do AlphaFold2. Os usuários também não podem personalizar as previsões estruturais variando os parâmetros.
+* [ColabFold](https://colab.sandbox.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb) é uma implementação comunitária de um Colab para rodar o AlphaFold2. Ele oferece muito mais parâmetros ajustáveis do que o AlphaFold2 Colab, como a profundidade do MSA e o número de reciclagens. Além disso, o ColabFold utiliza preparação rápida de MSA via servidor [MMseqs2](https://github.com/soedinglab/mmseqs2). Você também pode usar um MSA personalizado como modelos de entrada e suprimento ([Mirdita et al, 2022](https://doi.org/10.1038/s41592-022-01488-1)).
 
-Therefore, we recommend using ColabFold because it is more powerful than AlphaFold2 Colab. Many studies that used AlphaFold2 modelling, published in top-tier journals, actually used ColabFold (e.g. [Healy et al., 2023](https://doi.org/10.1016/j.cell.2023.04.003)).
+Por isso, recomendamos o uso do ColabFold porque ele é mais potente que o AlphaFold2 Colab. Muitos estudos que usaram modelagem AlphaFold2, publicados em periódicos de alto nível, na verdade utilizaram ColabFold (e.g. [Healy et al., 2023](https://doi.org/10.1016/j.cell.2023.04.003)).
 
-## **How to run ColabFold and AlphaFold2 Colab**
+## **Como executar ColabFold e AlphaFold2 Colab**
 
-Both applications offer a simple interface: essentially, a form to fill out. For AlphaFold2 Colab, only the protein sequence is required. ColabFold also offers some additional options. The final step is to go to the “Runtime” menu and choose “Run all”.
+Ambos os aplicativos oferecem uma interface simples: basicamente, um formulário para preencher. Para o AlphaFold2 Colab, apenas a sequência proteica é necessária. O ColabFold também oferece algumas opções adicionais. O passo final é ir ao menu "Runtime" e escolher “Run all".
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/AlphaFold_Colab_and_ColabFold.gif)
 
 
-Figure 24. You can predict protein structures online using ColabFold or AlphaFold2 Colab. These options do not require you to install the AlphaFold2 source code.
+Figura 24. Você pode prever estruturas de proteínas online usando ColabFold ou AlphaFold2 Colab. Essas opções não exigem que você instale o código-fonte do AlphaFold2.
 
-Running the Colabs and generating the prediction can take minutes to hours, depending on the length of your protein and on the type of GPU assigned to you by Colab.
+Rodar os Colabs e gerar a predição pode levar minutos a horas, dependendo do comprimento da sua proteína e do tipo de GPU que o Colab atribuiu a você.
 
-For details on using ColabFold’s more advanced options, please refer to the original ColabFold paper ([Mirdita et al., 2022](https://doi.org/10.1038/s41592-022-01488-1)), ColabFold [documentation](https://github.com/sokrypton/ColabFold), and section “[Advanced modelling and applications of predicted protein structures](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/)“.
+Para detalhes sobre o uso das opções mais avançadas do ColabFold, consulte o artigo original do ColabFold ([Mirdita et al., 2022](https://doi.org/10.1038/s41592-022-01488-1)), [a documentação do ColabFold](https://github.com/sokrypton/ColabFold), e a seção “[Modelagem avançada e aplicações de estruturas proteicas previstas](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/)“.
 
-Please note that advanced users with cutting-edge GPU hardware can set up a [local Colab](https://github.com/YoshitakaMo/localcolabfold). This enables you to run ColabFold, utilising your own GPU’s processing power. This could be an easier alternative to setting up a full open-source AlphaFold2 installation.
+Por favor, note que usuários avançados com hardware de GPU de ponta podem configurar um [Colab local](https://github.com/YoshitakaMo/localcolabfold). Isso permite que você execute o ColabFold, utilizando o poder de processamento da sua própria GPU. Isso pode ser uma alternativa mais fácil a configurar uma instalação completa de código aberto do AlphaFold2.
 
-## **Limitations of ColabFold and AlphaFold2 Colab:**
+## **Limitações do ColabFold e do AlphaFold2 Colab:**
 
-In both cases, there are limits on the size of protein (measured by the number of amino acid residues) that can be predicted. The restrictions are primarily set by the quantity of RAM available on the free GPU provided by Colab. There is a maximum of 4,000 residues for predicting multimer models. The monomer model has a limit of 2,500 residues.
+Em ambos os casos, há limites no tamanho da proteína (medidos pelo número de resíduos de aminoácidos) que podem ser previstos. As restrições são definidas principalmente pela quantidade de RAM disponível na GPU gratuita fornecida pela Colab. Há um máximo de 4.000 resíduos para prever modelos de multômeros. O modelo de monômero tem um limite de 2.500 resíduos.
 
-The Google Colab platform that runs both ColabFold and AlphaFold2 Colab provides users with a limited amount of computational resources for free. Colab notebooks on the free tier time out after a certain amount of time. However, you can get access to a [Google Colab Pro](https://colab.research.google.com/signup) for GPUs.
+A plataforma Google Colab, que roda tanto o ColabFold quanto o AlphaFold2 Colab, oferece aos usuários uma quantidade limitada de recursos computacionais gratuitamente. Os cadernos do Colab no nível gratuito ficam em tempo após um certo tempo. No entanto, você pode acessar o [Google Colab Pro](https://colab.research.google.com/signup) para mais GPUs.

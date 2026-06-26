@@ -1,69 +1,69 @@
 ---
 layout: default
-title: 'Customising AlphaFold2 structure predictions'
+title: 'Personalizando previsões de estrutura do AlphaFold2'
 ---
 
-# Customising AlphaFold2 structure predictions
+# Personalizando previsões de estrutura do AlphaFold2
 
-**There are many ways to customise the protein structure predictions AlphaFold performs. They include varying the number of recycles, customising the MSA, and supplying a template structure. These kinds of customisation may improve AlphaFold2’s performance on challenging structures, such as proteins that have multiple conformations.**
+**Existem muitas maneiras de personalizar as previsões de estrutura proteica que o AlphaFold realiza. Elas incluem variar o número de reciclagens, customizar o MSA e fornecer uma estrutura de modelos. Esse tipo de personalização pode melhorar o desempenho do AlphaFold2 em estruturas desafiadoras, como proteínas que possuem múltiplas conformações.**
 
-## **Parameters available in ColabFold**
+## **Parâmetros disponíveis no ColabFold**
 
-When using [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb), you can control the version of the AlphaFold2 model you use. Choose the appropriate model type for your predictions, such as “monomer” or one of the AlphaFold-Multimer versions. We recommend using AlphaFold2.3 for modelling multimers.
+Ao usar o [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb), você pode controlar a versão do modelo AlphaFold2 que utiliza. Escolha o tipo de modelo apropriado para suas previsões, como "monômero" ou uma das versões AlphaFold-Multimer. Recomendamos o uso do AlphaFold2.3 para modelagem de multímeros.
 
-The most important parameters that can be changed are as follows:
+Os parâmetros mais importantes que podem ser alterados são os seguintes:
 
-* Number of recycles
-* Depth of the multiple sequence alignment (MSA)
-* Random seeds used to initialise predictions
-* Whether to supply a template structure to guide AlphaFold’s prediction
+* Número de reciclagens
+* Profundidade do alinhamento múltiplo de sequências (MSA)
+* Sementes aleatórias usadas para inicializar previsões
+* Se deve fornecer uma estrutura modelo para guiar a predição do AlphaFold
+* Cada parâmetro é explicado com mais detalhes nas seguintes subseções.
 
-Each parameter is explained in more detail in the following subsections.
+O ColabFold oferece cenários adicionais que você pode explorar. Para mais informações, confira as
+[instruções](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=UGUBLzB3C6WN).
 
-ColabFold offers additional settings that you can explore. For further information, check the [instructions](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb#scrollTo=UGUBLzB3C6WN).
+### **Reciclagem**
 
-### **Recycling**
+O AlphaFold2 recicla suas saídas para refinar suas previsões estruturais (veja a seção “[Uma visão geral de alto nível](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/a-high-level-overview/)“).
 
-AlphaFold2 recycles its outputs to refine its structure predictions (see section “[A high-level overview](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/a-high-level-overview/)“).
+Você pode aumentar o número de reciclagens para que as previsões estruturais convergem mais de perto. Adicionar mais etapas de reciclagem (normalmente de 3 a 20) é um método eficaz para melhorar a qualidade da predição.
 
-You can increase the number of recycles so that structure predictions converge more closely. Adding more recycling steps (normally from 3 to 20) is an effective method for improving prediction quality.
+Alternativamente, você pode diminuir o número de reciclagens para acelerar a predição estrutural.
 
-Alternatively, you may decrease the number of recycles to speed up the structure prediction.
+### **Otimizando o alinhamento de múltiplas sequências (MSA)**
 
-### **Optimising the multiple sequence alignment (MSA)**
+A precisão da predição de estrutura do AlphaFold2 depende da qualidade do alinhamento de múltiplas sequências (MSA). Os usuários têm diversas opções para otimizar seu MSA.
 
-The accuracy of an AlphaFold2 structure prediction relies on the quality of the multiple sequence alignment (MSA). Users have a number of options to optimise their MSA.
+Você pode alterar a profundidade do MSA, ou seja, o número de sequências incluídas. No ColabFold, a profundidade do MSA é controlada alterando o parâmetro ‘max\_msa’.
 
-You can change the depth of the MSA, i.e. the number of sequences included. In ColabFold, the depth of the MSA is controlled by changing the ‘max\_msa’ parameter.
+Um MSA mais profundo, com centenas ou milhares de sequências, geralmente leva a uma melhor predição da estrutura da proteína. No entanto, um MSA raso com menos de 100 sequências pode ser útil quando você fornece um modelo estrutural (veja "Usando modelos para guiar previsões estruturais", abaixo).
 
-A deeper MSA with many hundreds or thousands of sequences will generally lead to a better prediction of protein structure. However, a shallow MSA with fewer than 100 sequences might be useful when you are providing a structural template (see “Using templates to guide structure predictions”, below).
+Alternativamente, você pode fornecer um MSA personalizado para o ColabFold. Qualquer tipo de ferramenta de alinhamento pode ser usada para gerar o MSA.
 
-Alternatively, you can provide a custom MSA to ColabFold. Any type of alignment tool can be used to generate the MSA.
+Ajustar o MSA pode ser particularmente útil para prever as estruturas de diferentes estados conformacionais de uma proteína. Por exemplo, agrupar um MSA por similaridade de sequência pode provocar uma variedade de conformações ([Wayment-Steele et al., 2023](https://doi.org/10.1038/s41586-023-06832-9)). Alternativamente, reduzir a profundidade do MSA por subamostragem estocástica pode gerar modelos precisos de múltiplas conformações ([del Alamo et al, 2022](https://doi.org/10.7554/eLife.75751)).
 
-Adjusting the MSA can be particularly useful for predicting the structures of different conformational states of a protein. For example, clustering an MSA by sequence similarity can elicit a range of conformations ([Wayment-Steele et al., 2023](https://doi.org/10.1038/s41586-023-06832-9)). Alternatively, reducing the depth of the MSA by stochastic subsampling can generate accurate models of multiple conformations ([del Alamo et al, 2022](https://doi.org/10.7554/eLife.75751)).
+As configurações ideais de MSA dependerão da proteína. Por isso, talvez você precise ajustar esses parâmetros para obter o melhor resultado.
 
-The optimal MSA settings will depend on the protein. Hence you may need to play around with these parameters to get the best output.
+### **Uso de sementes (seeds) aleatórias para aumentar a qualidade da predição**
 
-### **Using random seeds to increase prediction quality**
+lphaFold2 usa sementes aleatórias para inicializar suas previsões estruturais. Você pode controlá-los mudando o parâmetro 'random_seed'. Dessa forma, às vezes você pode guiar o AlphaFold2 para uma predição correta.
 
-AlphaFold2 uses random seeds to initialise its structure predictions. You can control them by changing the ‘random\_seed’ parameter. In this way, you can sometimes guide AlphaFold2 towards a correct prediction.
+Do ponto de vista computacional, usar diferentes sementes aleatórias introduz variabilidade nos resultados da predição estrutural. Ao iniciar previsões de estruturas a partir de vários pontos aleatórios diferentes, o AlphaFold2 pode gerar uma maior diversidade de estruturas.
 
-From a computational standpoint, using different random seeds introduces variability in the structure prediction outcomes. By starting structure predictions from several different random points, AlphaFold2 can generate an increased diversity of structures.
+Normalmente, partes de alta confiança da estrutura convergem para a mesma conformação independentemente da semente aleatória usada. No entanto, partes de baixa confiança podem variar substancialmente.
 
-Normally, high-confidence parts of the structure will converge to the same conformation regardless of the random seed used. However, low-confidence parts may vary substantially.
+Por exemplo, quando há poucas ou nenhuma sequência na MSA, o AlphaFold2 terá dificuldade em prever a estrutura da proteína com alta confiança. No entanto, mudar as sementes aleatórias às vezes permite que o AlphaFold2 preveja a estrutura apesar desse obstáculo (embora isso não seja garantido). Adicionar mais reciclagens também pode ajudar nessa situação (veja "Reciclagem", acima).
 
-For example, when there are few to no sequences in the MSA, AlphaFold2 will struggle to predict the protein structure with high confidence. However, changing the random seeds will sometimes allow AlphaFold2 to predict the structure despite this hurdle (although this is not guaranteed). Adding more recycles can also help in this situation (see “Recycling”, above).
+Além disso, um MSA raso combinado com dropout e sementes aleatórias pode levar o AlphaFold2 a mostrar conformações alternativas e/ou diferentes previsões estruturais.
 
-Furthermore, a shallow MSA combined with dropout and random seeds can drive AlphaFold2 to sample alternative conformations and/or different structure predictions.
+### **Uso de estruturas modelo para guiar previsões estruturais**
 
-### **Using templates to guide structure predictions**
+Você pode fornecer modelos estruturais (preferencialmente no formato mmCIF) como modelos para guiar o AlphaFold2 na predição de uma proteína em um estado específico. O modelo funciona como referência, impulsionando a predição do AlphaFold2 para se assemelhar à estrutura que você forneceu.
 
-You can provide structure models (preferably in the mmCIF format) as templates to guide AlphaFold2 to predict a protein in a specific state. The template acts as  a reference, nudging AlphaFold2’s prediction to resemble the structure you have provided.
+Você pode fornecer um modelo personalizado. Como alternativa, você pode permitir que o ColabFold pesquise templates no banco de dados [PDB100](https://foldseek.steineggerlab.workers.dev/). Esta é uma versão agrupada do PDB, criada pesquisando estruturas representativas do PDB no Banco de Dados de Estruturas de Proteínas AlphaFold usando o Foldseek.
 
-You can provide a custom template. Alternatively, you can let ColabFold search for templates in the [PDB100](https://foldseek.steineggerlab.workers.dev/) database. This is a clustered version of PDB, created by searching PDB representative structures against the AlphaFold Protein Structure Database using Foldseek.
+É importante considerar a profundidade do MSA ao usar templates. Se o sinal coevolutivo do MSA for forte, o AlphaFold2 tende a ignorar estruturas de moldes. Por outro lado, um MSA muito superficial pode resultar em previsões de estruturas de baixa confiança. Portanto, você deve otimizar o valor de profundidade do MSA para encontrar o equilíbrio certo, garantindo tanto que o AlphaFold2 leve o template em conta quanto que o sinal do MSA seja forte o suficiente para permitir uma predição de estrutura confiante.
 
-It is important to consider MSA depth when using templates. If the coevolutionary signal from the MSA is strong, AlphaFold2 tends to ignore template structures. On the other hand, too shallow an MSA may result in low-confidence structure predictions. Therefore, you must optimise the MSA depth value to strike the right balance, ensuring both that AlphaFold2 takes the template into account and that the MSA signal is strong enough to enable a confident structure prediction.
+Aqui você pode encontrar um exemplo curto de como usar o ColabFold.
 
-Here you can find a short example on how you can use ColabFold.
-
-For additional protocols on using ColabFold for protein structure prediction, check the guide *“Easy and accurate protein structure prediction using ColabFold”* ([Kim et al., 2023](https://doi.org/10.21203/rs.3.pex-2490/v1))
+Para obter protocolos adicionais sobre como usar o ColabFold para predição da estrutura de proteínas, consulte o guia *“Easy and accurate protein structure prediction using ColabFold”* ([Kim et al., 2023](https://doi.org/10.21203/rs.3.pex-2490/v1))

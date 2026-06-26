@@ -3,7 +3,7 @@ layout: default
 title: Qual é o problema do dobramento de proteínas?
 ---
 
-# Qual é o problema do dobramento de proteínas??
+# Qual é o problema do dobramento de proteínas?
 
 **Em teoria, é possível prever a estrutura 3D de uma proteína apenas a partir de sua sequência de aminoácidos. No entanto, isso é extremamente desafiador devido à enorme quantidade de conformações possíveis. A inteligência artificial (IA) é ideal para esse problema.**
 
@@ -27,4 +27,4 @@ No entanto, as descobertas de Anfinsen inspiraram a busca por um sistema eficien
 
 É aí que entra a inteligência artificial. Métodos modernos de aprendizado de máquina podem ajudar a identificar relacionamentos complexos em grandes conjuntos de dados, permitindo a predição das estruturas proteicas.
 
-Fundamentalmente, o dogma de Anfinsen implica que prever o estado dobrado de uma proteína não requer necessariamente compreensão do processo de dobramento. Ou seja, deveria ser possível prever a forma final 3D de uma proteína sem prever a sequência de movimentos que leva a essa forma –  contornando o paradoxo de Levinthal.
+Fundamentalmente, o dogma de Anfinsen implica que prever o estado dobrado de uma proteína não requer necessariamente compreensão do processo de dobramento. Ou seja, deveria ser possível prever a forma final 3D de uma proteína sem prever a sequência de movimentos que leva a essa forma – contornando o paradoxo de Levinthal.
