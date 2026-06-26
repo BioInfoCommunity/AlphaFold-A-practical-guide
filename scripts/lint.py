@@ -17,10 +17,11 @@ PROTECTED_PATHS = [
 ]
 
 ALLOWED_METADATA_FILES = {
-    "_data/en.yml",
+    "_data/pt.yml",
+    "pt.yml"
 }
 
-ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png"}
+ALLOWED_EXTENSIONS = {".md", ".jpg", ".jpeg", ".png", ".yml"}
 
 errors = []
 warnings = []
