@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 'Explorando o panorama estrutural
+title: 'Explorando o panorama estrutural'
 ---
 
 # Explorando o panorama estrutural
