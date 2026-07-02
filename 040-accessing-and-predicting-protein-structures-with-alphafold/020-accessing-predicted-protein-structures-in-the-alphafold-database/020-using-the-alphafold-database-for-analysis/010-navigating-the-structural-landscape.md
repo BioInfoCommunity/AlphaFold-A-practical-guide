@@ -1,66 +1,66 @@
 ---
 layout: default
-title: 'Navigating the structural landscape'
+title: 'Explorando o panorama estrutural
 ---
 
-# Navigating the structural landscape
+# Explorando o panorama estrutural
 
-## Structure similarity cluster
+## Agrupamento por similaridade estrutural
 
-The AFDB now incorporates information about structurally similar proteins, facilitating exploration of the protein universe and understanding relationships between different proteins. This feature is based on the concept of clustering, providing valuable insights into protein similarity and evolutionary relationships.
+O AFDB agora incorpora informações sobre proteínas estruturalmente semelhantes, facilitando a exploração do universo proteico e a compreensão das relações entre diferentes proteínas. Esse recurso baseia-se no conceito de agrupamento (*clustering*), fornecendo insights valiosos sobre a similaridade de proteínas e as relações evolutivas.
 
-### **Understanding AFDB Clustering**
+### **Compreendendo o Agrupamento do AFDB**
 
-The clustering process in the AFDB involves two main steps:
+O processo de agrupamento no AFDB envolve duas etapas principais:
 
-1. **Sequence-based clustering (AFDB50/MMseqs2):** The initial step employs [MMseqs2](https://github.com/soedinglab/MMseqs2), a fast and sensitive protein sequence searching and clustering tool ([Steinegger et al., 2017](https://doi.org/10.1038/nbt.3988)), to group the 214 million UniProtKB protein sequences in AFDB based on sequence similarity. This creates a reduced set of clusters, each represented by the protein with the highest average pLDDT score.
-2. **Structure-based clustering (AFDB/Foldseek):** The representative proteins from the first step are then further clustered using [Foldseek](https://github.com/steineggerlab/foldseek), a powerful tool designed for fast and sensitive comparison of protein structures ([van Kempen et al., 2023](https://doi.org/10.1038/s41587-023-01773-0)). Foldseek identifies similarities in the 3D shapes of proteins, ensuring that proteins within a cluster share not only sequence similarity but also structural resemblance.
+1. **Agrupamento baseado em sequências (AFDB50/MMseqs2):** A etapa inicial utiliza o [MMseqs2](https://github.com/soedinglab/MMseqs2),uma ferramenta rápida e sensível de busca e agrupamento de sequências proteicas ([Steinegger et al., 2017](https://doi.org/10.1038/nbt.3988)), para agrupar as 214 milhões de sequências de proteínas do UniProtKB presentes no AFDB com base na similaridade de sequência. Isso gera um conjunto reduzido de agrupamentos, cada um representado pela proteína com a maior pontuação média de pLDDT.
+2. **Agrupamento baseado em estrutura (AFDB/Foldseek):** As proteínas representativas da primeira etapa são então agrupadas novamente utilizando o [Foldseek](https://github.com/steineggerlab/foldseek), uma ferramenta poderosa projetada para a comparação rápida e sensível de estruturas proteicas ([van Kempen et al., 2023](https://doi.org/10.1038/s41587-023-01773-0)). O Foldseek identifica similaridades nas formas 3D das proteínas, garantindo que as proteínas dentro de um mesmo agrupamento compartilhem não apenas similaridade de sequência, mas também semelhança estrutural.
 
-### **How to access cluster members in AFDB**
+### **Como acessar os membros do cluster no AFDB**
 
-On each protein’s page in the AFDB, you’ll find a table listing its cluster members. This table provides links to the pages of other proteins in the same cluster, allowing you to quickly compare their structures and explore potential functional relationships.
+Na página de cada proteína no AFDB, você encontrará uma tabela listando os membros do seu cluster. Essa tabela fornece links para as páginas de outras proteínas do mesmo cluster, permitindo comparar rapidamente suas estruturas e explorar possíveis relações funcionais.
 
 ![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/11/Screenshot-2024-11-22-at-13.16.44-1024x715.png)
 
 
-Figure 28. AlphaFold Database presents structurally similar protein predictions in clusters at the bottom of prediction pages, such as this one for  [D435](https://alphafold.ebi.ac.uk/entry/D435)  from uncultured bacteria. You can explore these clusters using two different methods: AFDB50/MMseqs2 or AFDB/Foldseek. To help you analyze these predictions, you can filter and sort them according to your needs.
+Figura 28. O banco de dados AlphaFold apresenta previsões de proteínas estruturalmente semelhantes em agrupamentos na parte inferior das páginas de previsão, como esta para a  [D435](https://alphafold.ebi.ac.uk/entry/D435)  proveniente de bactérias não cultivadas. Você pode explorar esses agrupamentos utilizando dois métodos diferentes: AFDB50/MMseqs2 ou AFDB/Foldseek. Para auxiliar na análise dessas previsões, é possível filtrá-las e ordená-las de acordo com suas necessidades.
 
-### **Why are cluster members useful?**
+### **Por que os membros de um cluster são úteis?**
 
-Exploring cluster members can provide valuable insights:
+Explorar os membros de um cluster pode fornecer insights valiosos:
 
-* **Evolutionary relationships:** Proteins clustered together may share a common evolutionary origin, even if their sequences have diverged significantly.
-* **Functional similarities:** Structural similarity often implies functional similarity. Examining cluster members can help predict the function of uncharacterised proteins.
-* **Unexpected connections:** Clustering can reveal unexpected structural similarities between proteins from different species or with different functions.
+* **Relações evolutivas:** Proteínas agrupadas no mesmo cluster podem compartilhar uma origem evolutiva comum, mesmo que suas sequências tenham divergido significativamente.
+* **Semelhanças funcionais:** A semelhança estrutural frequentemente implica semelhança funcional. Examinar os membros de um cluster pode ajudar a prever a função de proteínas não caracterizadas.
+* **Conexões inesperadas:** O agrupamento pode revelar semelhanças estruturais inesperadas entre proteínas de espécies diferentes ou com funções distintas.
 
 ---
 
-## **Structure-based search in the AlphaFold Database using Foldseek**
+## **Busca baseada em estrutura no banco de dados AlphaFold utilizando o Foldseek**
 
-Structure-based search focuses on identifying similarities between protein 3D structures rather than their sequences. This approach is critical for understanding proteins with low sequence similarity but conserved structural features, which often indicate functional or evolutionary relationships.
+A busca baseada em estrutura concentra-se em identificar semelhanças entre estruturas 3D de proteínas, em vez de suas sequências. Essa abordagem é fundamental para compreender proteínas que apresentam baixa semelhança de sequência, mas características estruturais conservadas, o que frequentemente indica relações funcionais ou evolutivas.
 
-### **How Foldseek works**
+### **Como o Foldseek funciona**
 
-Foldseek achieves its efficiency by simplifying 3D structures into a linear, one-dimensional representation through its unique ‘3Di alphabet’. This approach captures key local interactions within the protein structure using a pre-trained 3Di substitution matrix. The resulting linear representation allows Foldseek to leverage MMseqs2, to rapidly scan extensive databases and identify structural matches.
+O Foldseek alcança sua eficiência ao simplificar estruturas 3D em uma representação linear e unidimensional, utilizando seu exclusivo "alfabeto 3Di". Essa abordagem captura interações locais fundamentais na estrutura da proteína por meio de uma matriz de substituição 3Di pré-treinada. A representação linear resultante permite que o Foldseek utilize o MMseqs2 para realizar varreduras rápidas em grandes bancos de dados e identificar correspondências estruturais.
 
-### **Integration of Foldseek into the AlphaFold Database**
+### **Integração do Foldseek ao Banco de Dados AlphaFold**
 
-Foldseek is seamlessly integrated into the AFDB website. Simply search for your protein of interest, navigate to the “Similar structures” section, and you can launch a structure-based search against clustered predicted models in the AFDB (AFDB50) and experimentally determined structure from the Protein Data Bank (PDB).
+O Foldseek está perfeitamente integrado ao site do AFDB. Basta pesquisar a proteína de seu interesse, navegar até a seção "Similar structures" (Estruturas similares) e iniciar uma busca baseada em estrutura comparando-a com modelos previstos agrupados no AFDB (AFDB50) e com estruturas determinadas experimentalmente provenientes do Protein Data Bank (PDB).
 
-The PDB collection is updated weekly to incorporate the latest releases from the Worldwide Protein Data Bank, ensuring you can always access the most current entries for their searches.
+A coleção do PDB é atualizada semanalmente para incorporar as mais recentes inclusões do Worldwide Protein Data Bank, garantindo que você sempre tenha acesso às entradas mais atuais para suas pesquisas.
 
-The results are clearly presented and can be filtered and sorted to help you find the most relevant matches. You can align selected proteins with their query to assess the match quality. Visualisation options include toggling between full-chain colouring and pLDDT-based colouring of the query. The results are clearly presented and can be filtered and sorted.
+Os resultados são apresentados de forma clara e podem ser filtrados e classificados para ajudar você a encontrar as correspondências mais relevantes. É possível alinhar proteínas selecionadas à sua sequência de consulta (*query*) para avaliar a qualidade da correspondência. As opções de visualização incluem alternar entre a coloração da cadeia completa e a coloração baseada no pLDDT da sequência de consulta. Os resultados são apresentados de forma clara e podem ser filtrados e classificados.
 
-![AlphaMissense in the AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation3.gif?raw=true)
+![AlphaMissense no AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation3.gif?raw=true)
 
 
-Figure 29. AlphaFold Database showing Foldseek integration for [D435.](https://alphafold.ebi.ac.uk/entry/A0A1Y0BDV9)
+Figura 29. Banco de dados AlphaFold mostrando a integração com o Foldseek para [D435.](https://alphafold.ebi.ac.uk/entry/A0A1Y0BDV9)
 
-Each result includes an E-value, indicating the statistical significance of the structural match. Lower e-values suggest a higher degree of similarity. The structural superposition is accompanied by a root-mean-square deviation (RMSD) value, highlighting the average distance between corresponding atoms in the aligned structures. You can also download the aligned structures for further analysis.
+Cada resultado inclui um valor E, que indica a significância estatística da correspondência estrutural. Valores E mais baixos sugerem um grau de semelhança mais elevado. A sobreposição estrutural é acompanhada por um valor de desvio quadrático médio ( root-mean-square deviation - RMSD), que destaca a distância média entre átomos correspondentes nas estruturas alinhadas. Você também pode baixar as estruturas alinhadas para análises posteriores.
 
-### **What can Foldseek reveal?**
+### **O que o Foldseek pode revelar?**
 
-Foldseek can uncover surprising similarities between proteins that have evolved independently, shedding light on their shared ancestry or convergent evolution.
+O Foldseek pode revelar semelhanças surpreendentes entre proteínas que evoluíram de forma independente, lançando luz sobre sua ancestralidade compartilhada ou evolução convergente.
 
 Finding a structural match to a protein with a known function can provide clues about the function of an unknown protein.
 
