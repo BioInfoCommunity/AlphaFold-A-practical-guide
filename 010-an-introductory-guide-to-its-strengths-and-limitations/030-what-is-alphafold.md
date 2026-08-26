@@ -48,6 +48,6 @@ Figura 4. O número de artigos científicos e preprints citando o principal arti
 
 ---
 
-## Test your knowledge
+## Teste seus conhecimentos
 
-Time to flex your AlphaFold muscles!
+Hora de exercitar seus conhecimentos sobre o AlphaFold!
