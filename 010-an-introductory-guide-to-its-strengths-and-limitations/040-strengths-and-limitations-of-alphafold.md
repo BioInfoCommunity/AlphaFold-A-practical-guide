@@ -62,6 +62,6 @@ Tabela com marcadores
 
 
 
-| AlphaFold2 predicts | AlphaFold2 struggles to predict | AlphaFold2 doesn’t predict |
+| O AlphaFold2 prevê | O AlphaFold2 tem dificuldade em prever | O AlphaFold2 não prevê |
 | --- | --- | --- |
-| * Single protein chains * Protein multimers * Multisubunit protein-protein complexes | * Multiple conformations for the same sequence * Effects of point mutations * Antigen-antibody interactions | * Protein-DNA and protein-RNA complexes * Nucleic acid structure * Ligand and ion binding * Post-translational modifications * Membrane plane for transmembrane domains |
+| * Cadeias proteicas únicas * Multímeros proteicos * Complexos proteína-proteína multissubunitários | * Múltiplas conformações para a mesma sequência * Efeitos de mutações pontuais * Interações antígeno-anticorpo | * Complexos proteína-DNA e proteína-RNA * Estrutura de ácidos nucleicos * Ligação de ligantes e íons * Modificações pós-traducionais * Plano da membrana para domínios transmembrana |
