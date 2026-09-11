@@ -14,9 +14,14 @@ labels:
   written_by_text: "Written by"
   written_by_name:
     - name: "Paulyna Gabriela Magana Gomez"
-      profile_url: ""
+      profile_url: null
     - name: "Oleg Kovalevskiy"
       profile_url: "https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy"
+  translated_by_text: null
+  translated_by_name:
+    - name: null
+      profile_url: null
+      orcid: null
   next: "Next"
   previous: "Previous"
   contents: "Contents"
