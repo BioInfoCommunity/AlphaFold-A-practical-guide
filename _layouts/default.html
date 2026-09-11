@@ -88,28 +88,34 @@
                               </li>
                             {% endfor %}
                           </ul>
-												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
-													{{ t.labels.translated_by_text }}:</p>
-												<div class="vf-u-margin__top--100"></div>
-												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
-													{% assign lang = page.path | split: '/' | first %}
-                            {% assign t = site.data[lang] | default: site.data['en'] %}
-
-                            {% for translator in t.labels.translated_by_name %}
-                              <li class="vf-list__item">
-                                {% if translator.profile_url %}
-                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.profile_url }}">
-                                    {{ translator.name }}
-                                  </a>
-                                {% else %}
-                                  {{ translator.name }}
-                                {% endif %}
-                              </li>
-                            {% endfor %}
-												</ul>
-												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
-													{{ t.labels.translated_on_text }}: {{ t.labels.translated_on_value }}</p>
-												</p>
+												{% if t.labels.translated_by_text %}
+													<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom--xs">
+														{{ t.labels.translated_by_text }}:</p>
+													<div class="vf-u-margin__top--100"></div>
+													
+													<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
+														{% assign lang = page.path | split: '/' | first %}
+	                            						{% assign t = site.data[lang] | default: site.data['en'] %}
+	
+							                            {% for translator in t.labels.translated_by_name %}
+							                              <li class="vf-list__item">
+							                                {% if translator.profile_url %}
+							                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.profile_url }}">
+							                                    {{ translator.name }}
+							                                  </a>
+							                                {% else %}
+							                                  {{ translator.name }}
+							                                {% endif %}
+							                              </li>
+							                            {% endfor %}
+													</ul>
+												{% endif %}
+												
+												{% if t.labels.translated_on_text %}
+													<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
+														{{ t.labels.translated_on_text }}: {{ t.labels.translated_on_value }}</p>
+													</p>
+												{% endif %}
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
 													{{ t.labels.last_updated_text }}: {{ t.labels.last_updated_value }}</p>
 												</p>
