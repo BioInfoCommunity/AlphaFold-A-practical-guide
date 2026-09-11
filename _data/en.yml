@@ -13,18 +13,10 @@ labels:
   last_updated_value: "June 2025"
   written_by_text: "Written by"
   written_by_name:
-    - name: "Some Author"
-      profile_url: "https://example.com/some-author"
-    - name: "John Doe"
-      profile_url: null
-  translated_by_text: "Translated by"
-  translated_by_name:
-    - name: "Translator 1"
-      profile_url: null
-    - name: "Translator 2"
-      profile_url: null
-  translated_on_text: "Translated on"
-  translated_on_value: "October 2025"
+    - name: "Paulyna Gabriela Magana Gomez"
+      profile_url: ""
+    - name: "Oleg Kovalevskiy"
+      profile_url: "https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy"
   next: "Next"
   previous: "Previous"
   contents: "Contents"
