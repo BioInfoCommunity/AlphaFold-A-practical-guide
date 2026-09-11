@@ -1,53 +1,53 @@
 ---
 layout: default
-title: 'Predicting protein structures using the AlphaFold2 open-source code'
+title: 'Previsão de estruturas de proteínas usando o código-fonte de código aberto do AlphaFold2'
 ---
 
-# Predicting protein structures using the AlphaFold2 open-source code
+# Previsão de estruturas de proteínas usando o código-fonte de código aberto do AlphaFold2
 
-**Installing the AlphaFold2 source code gives you total control over protein structure prediction. This is the most powerful and adaptable way to use AlphaFold2. However, the software places considerable demands on servers and requires a high degree of computer skill to install and run.**
+**A instalação do código-fonte do AlphaFold2 oferece controle total sobre a previsão de estruturas de proteínas. Essa é a maneira mais poderosa e adaptável de utilizar o AlphaFold2. No entanto, o software exige recursos computacionais consideráveis ​​dos servidores e requer um alto nível de conhecimento técnico em informática para sua instalação e execução.**
 
-## **Why should I install the AlphaFold2 source code?**
+## **Por que instalar o código-fonte do AlphaFold2?**
 
-Installing AlphaFold2 on your own server or workstation, using the source code, gives you total control over the protein structure predictions that you run.
+Instalar o AlphaFold2 em seu próprio servidor ou estação de trabalho, utilizando o código-fonte, proporciona controle total sobre as previsões de estruturas de proteínas que você realiza.
 
-Running AlphaFold2 yourself may be the best option in several circumstances. These include: if your protein of interest is not in the AlphaFold Protein Structure Database (AFDB); if you want to predict an oligomer; if you want to predict a protein-protein complex; or if you need to manipulate the MSA and/or templates for a prediction. These functionalities are also available via Colabs, but using the source code gives you both full control and comprehensive outputs.
+Executar o AlphaFold2 por conta própria pode ser a melhor opção em diversas situações. Entre elas: se a proteína de seu interesse não constar no Banco de Dados de Estruturas de Proteínas do AlphaFold (AlphaFold Protein Structure Database - AFDB); se você desejar prever um oligômero; se quiser prever um complexo proteína-proteína; ou se precisar manipular o MSA (alinhamento múltiplo de sequências) e/ou os modelos para uma previsão. Essas funcionalidades também estão disponíveis via Colabs, mas o uso do código-fonte oferece controle total e resultados mais abrangentes.
 
-The AlphaFold2 source code is released under the Apache 2.0 licence.
+O código-fonte do AlphaFold2 é disponibilizado sob a licença Apache 2.0.
 
-To decide if installing AlphaFold2 is the right option for you, ask yourself the following two questions. Do you believe you can confidently follow the instructions from [README](https://github.com/google-deepmind/alphafold/blob/main/README.md) – or do you have an IT specialist who can do so? And do you have access to the necessary hardware? If the answer to both is yes, consider local AlphaFold2 installation. If not, we suggest sticking to [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb), which is enough for many practical applications.
+Para decidir se instalar o AlphaFold2 é a opção certa para você, faça a si mesmo as duas perguntas a seguir. Você acredita que consegue seguir com segurança as instruções do [README](https://github.com/google-deepmind/alphafold/blob/main/README.md) ou pode contar com um especialista em TI que possa fazê-lo? E você tem acesso ao hardware necessário? Se a resposta para ambas for sim, considere a instalação local do AlphaFold2. Caso contrário, sugerimos utilizar o [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb), que é suficiente para muitas aplicações práticas.
 
-## **Installing the AlphaFold2 source code**
+## **Instalando o código-fonte do AlphaFold2**
 
-All the code necessary to run AlphaFold2 can be found in the [official GitHub](https://github.com/google-deepmind/alphafold). This also includes model parameters, installation instructions, commands, and a record of changes in the [code versioning](https://github.com/google-deepmind/alphafold/releases). Please carefully review the [README](https://github.com/google-deepmind/alphafold/blob/main/README.md).
+Todo o código necessário para executar o AlphaFold2 pode ser encontrado no [GitHub oficial](https://github.com/google-deepmind/alphafold). Isso também inclui parâmetros do modelo, instruções de instalação, comandos e o histórico de alterações no [versionamento do código](https://github.com/google-deepmind/alphafold/releases). Por favor, leia atentamente o [README](https://github.com/google-deepmind/alphafold/blob/main/README.md).
 
-To install AlphaFold2, you will need a machine with Linux, up to 3 TB of disk space for genetic databases, and a modern NVIDIA GPU. While you can run AlphaFold2 without a GPU, it will be much slower. The maximum size of the modelled proteins or protein-protein complexes is determined only by the available GPU RAM; e.g. a single A100 GPU with 40Gb of RAM can handle complexes of up to ~5,000 residues.
+Para instalar o AlphaFold2, você precisará de uma máquina com Linux, até 3 TB de espaço em disco para bancos de dados genéticos e uma GPU NVIDIA moderna. Embora seja possível executar o AlphaFold2 sem uma GPU, o processo será muito mais lento. O tamanho máximo das proteínas ou complexos proteína-proteína modelados é determinado apenas pela memória RAM da GPU disponível; por exemplo, uma única GPU A100 com 40 GB de RAM consegue processar complexos de até ~5.000 resíduos.
 
-Note that the code is regularly updated and new versions of the model are released.
+Observe que o código é atualizado regularmente e novas versões do modelo são lançadas.
 
-If you don’t have access to such hardware, consider running AlphaFold2 on a virtual machine (VM) in the cloud. All major cloud providers are currently supporting AlphaFold2. Projects like [NMRBox](https://nmrbox.nmrhub.org/) provide free use of AlphaFold2 on their VMs for academic users. Furthermore, Google Cloud and Vertex.ai provide tailored, cost-effective solutions for running [AlphaFold in the cloud](https://cloud.google.com/blog/products/ai-machine-learning/running-alphafold-on-vertexai).
+Se você não tiver acesso a esse hardware, considere executar o AlphaFold2 em uma máquina virtual (VM) na nuvem. Todos os principais provedores de nuvem oferecem suporte ao AlphaFold2 atualmente. Projetos como o [NMRBox](https://nmrbox.nmrhub.org/) disponibilizam o uso gratuito do AlphaFold2 em suas VMs para usuários acadêmicos. Além disso, o Google Cloud e o Vertex.ai oferecem soluções personalizadas e de bom custo-benefício para executar o [AlphaFold na nuvem](https://cloud.google.com/blog/products/ai-machine-learning/running-alphafold-on-vertexai).
 
-Additionally, AlphaFold2 requires local access to a large number of genetic databases, including [BFD](https://bfd.mmseqs.com/), [MGnify](https://www.ebi.ac.uk/metagenomics/), [PDB70](http://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/), [PDB](https://www.wwpdb.org/), [UniRef30 (FKA UniClust30)](https://uniclust.mmseqs.com/), and [UniRef90](https://www.uniprot.org/help/uniref). Similarly, AlphaFold-Multimer requires the [PDB SEQRES](https://www.wwpdb.org/documentation/file-format-content/format33/sect3.html#SEQRES) and [UniProt](https://www.uniprot.org/uniprot/) databases. However, if necessary, you can download a reduced version of the databases. Please follow the detailed installation instructions in the [README](https://github.com/google-deepmind/alphafold/blob/main/README.md), where a script is provided to automate download and setup of the databases.
+Adicionalmente, o AlphaFold2 requer acesso local a um grande número de bancos de dados genéticos, incluindo [BFD](https://bfd.mmseqs.com/), [MGnify](https://www.ebi.ac.uk/metagenomics/), [PDB70](http://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/), [PDB](https://www.wwpdb.org/), [UniRef30 (anteriormente UniClust30)](https://uniclust.mmseqs.com/) e [UniRef90](https://www.uniprot.org/help/uniref). Da mesma forma, o AlphaFold-Multimer requer os bancos de dados [PDB SEQRES](https://www.wwpdb.org/documentation/file-format-content/format33/sect3.html#SEQRES) e [UniProt](https://www.uniprot.org/uniprot/). No entanto, se necessário, é possível baixar uma versão reduzida dos bancos de dados. Siga as instruções detalhadas de instalação presentes no [README](https://github.com/google-deepmind/alphafold/blob/main/README.md), onde é disponibilizado um script para automatizar o download e a configuração dos bancos de dados.
 
-**Note:** Your use of these databases is subject to their terms and conditions and/or licence provisions. You should check you can comply with any applicable restrictions or terms and conditions before use.
+**Nota:** O uso dessas bases de dados está sujeito aos seus termos e condições e/ou às disposições de licenciamento. Você deve verificar se consegue cumprir quaisquer restrições ou termos e condições aplicáveis ​​antes de utilizá-las.
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/source_code.gif)
 
 
-Figure 25. The AlphaFold2 source code is freely available, so anyone can install it if they have a suitable system. All the necessary information is in README.
+Figura 25. O código-fonte do AlphaFold2 está disponível gratuitamente, permitindo que qualquer pessoa o instale, desde que possua um sistema adequado. Todas as informações necessárias encontram-se no arquivo README.
 
-**Considerations for running your first structure predictions**
+**Considerações para realizar suas primeiras previsões de estrutura**
 
-You can choose which AlphaFold2 model version to run. For protein-protein complexes, you can specify the AlphaFold-Multimer model.
+Você pode escolher qual versão do modelo AlphaFold2 deseja executar. Para complexos proteína-proteína, é possível especificar o modelo AlphaFold-Multimer.
 
-To run a structure prediction, all you need to do is to provide the name of a file where the sequence of your protein, or sequences of the subunits in the case of a protein-protein complex, are kept in the FASTA format. You can then run AlphaFold2.
+Para realizar uma previsão de estrutura, basta fornecer o nome de um arquivo contendo a sequência da sua proteína — ou as sequências das subunidades, no caso de um complexo proteína-proteína — no formato FASTA. Em seguida, você pode executar o AlphaFold2.
 
-AlphaFold2 structure predictions typically take tens of minutes. A major contributor to the total time is the need to generate multiple sequence alignments (MSAs) and search templates: these processes can take tens of minutes. After this, the actual structure prediction may take seconds or minutes. For unrelaxed protein structures, structure predictions can typically take up to 5 seconds for a protein of 100 residues, and up to 20 minutes for a protein of 3,000 residues. The total time required to predict large complexes can be over an hour.
+As previsões de estrutura do AlphaFold2 geralmente levam dezenas de minutos. Um fator que contribui significativamente para o tempo total é a necessidade de gerar alinhamentos de múltiplas sequências (MSAs) e buscar modelos de referência (*templates*): esses processos podem levar dezenas de minutos. Após essa etapa, a previsão da estrutura em si pode levar segundos ou minutos. Para estruturas proteicas não relaxadas, a previsão pode levar tipicamente até 5 segundos para uma proteína de 100 resíduos e até 20 minutos para uma proteína de 3.000 resíduos. O tempo total necessário para prever grandes complexos pode ultrapassar uma hora.
 
-The workflow provided is for running one structure prediction at a time. There is also an option to run a series of structure predictions, by submitting a list of FASTA files. However, this is not practical for predicting structures of an entire proteome that includes thousands of proteins.
+O fluxo de trabalho fornecido destina-se à execução de uma previsão de estrutura por vez. Existe também a opção de realizar uma série de previsões enviando uma lista de arquivos FASTA. No entanto, essa abordagem não é prática para prever as estruturas de um proteoma inteiro que inclua milhares de proteínas.
 
-Bear in mind that AlphaFold2 uses random seeds to initialise each structure prediction. Normally, the structure prediction process for high-confidence regions of a protein will converge on the same solution, regardless of the seed used. However, in difficult cases, re-running your prediction with several different seeds may provide some diversity in the structure predictions, and ultimately improve your final structure prediction.
+Lembre-se de que o AlphaFold2 utiliza sementes aleatórias (random seeds) para inicializar cada previsão de estrutura. Normalmente, o processo de previsão para regiões de alta confiança de uma proteína converge para a mesma solução, independentemente da semente utilizada. Contudo, em casos complexos, repetir a previsão com diferentes sementes pode gerar certa diversidade nos resultados e, em última análise, melhorar a previsão final da estrutura.
 
-You also have the option to run your final structure through a relaxation process using [AMBER](https://github.com/openmm/openmmforcefields). Relaxation can help to resolve rare stereochemical violations and clashes. However, it typically takes several minutes to run. In most cases the direct output of the structure module is quite good even without relaxation.
+Você também tem a opção de submeter sua estrutura final a um processo de relaxamento utilizando o [AMBER](https://github.com/openmm/openmmforcefields). O relaxamento pode ajudar a corrigir eventuais violações estereoquímicas e colisões (clashes). No entanto, esse processo geralmente leva alguns minutos para ser executado. Na maioria dos casos, o resultado direto do módulo de estrutura é bastante satisfatório, mesmo sem o relaxamento.
 
-AlphaFold2 outputs will be saved into a subdirectory that you specify. These outputs include the computed MSAs, unrelaxed structures, relaxed structures, ranked structures, raw model outputs, structure prediction metadata, and times taken for each step of the process.
+Os resultados do AlphaFold2 serão salvos em um subdiretório especificado por você. Esses resultados incluem os MSAs calculados, as estruturas não relaxadas, as estruturas relaxadas, as estruturas classificadas, os dados brutos do modelo, os metadados da previsão de estrutura e os tempos de execução de cada etapa do processo.
