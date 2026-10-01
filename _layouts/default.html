@@ -97,8 +97,8 @@
 
                             {% for translator in t.labels.translated_by_name %}
                               <li class="vf-list__item">
-                                {% if translator.profile_url %}
-                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.profile_url }}">
+                                {% if translator.orcid %}
+                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.orcid }}">
                                     {{ translator.name }}
                                   </a>
                                 {% else %}
