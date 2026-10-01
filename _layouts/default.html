@@ -98,7 +98,7 @@
                             {% for translator in t.labels.translated_by_name %}
                               <li class="vf-list__item">
                                 {% if translator.orcid %}
-                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.orcid }}">
+                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="{{ translator.orcid }}" target="_blank">
                                     {{ translator.name }}
                                   </a>
                                 {% else %}
@@ -118,7 +118,7 @@
 												<!-- Navigation -->
                        {% assign lang = page.path | split: '/' | first %}
                       {% assign t = site.data[lang] | default: site.data['pt'] %}
-					<div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
+					<div style="height:auto" class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
   						<div class="vf-tree__inner">
 	                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
 	
