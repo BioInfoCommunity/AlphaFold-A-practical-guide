@@ -120,22 +120,22 @@
                       {% assign t = site.data[lang] | default: site.data['pt'] %}
 					<div style="height:auto" class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
   						<div class="vf-tree__inner">
-	                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
-	
-	                          <!-- Course overview -->
-	                          <li class="vf-tree__item">
-	                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/">
-	                              {{ t.course.title }}
-	                            </a>
-	                          </li>
-	                        <!-- {% assign nav = site.data.navigation.navigation %} -->
-	                        {% assign lang = page.url | split: '/' | second %}
-	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
-	
-	                        {% for section in nav %}
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/{{ course_slug }}{{ section.url }}">
-	                             {{ section.title }}
+		                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
+
+		                          <!-- Course overview -->
+		                          <li class="vf-tree__item">
+		                            <a class="vf-tree__link" href="/{{ course_slug }}/{{ lang }}/">
+		                              {{ t.course.title }}
+		                            </a>
+		                          </li>
+		                        <!-- {% assign nav = site.data.navigation.navigation %} -->
+		                        {% assign lang = page.url | split: '/' | second %}
+		                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
+
+		                        {% for section in nav %}
+		                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
+		                            <a class="vf-tree__link" href="/{{ course_slug }}{{ section.url }}">
+		                             {{ section.title }}
 									{% if section.children %}
 										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
 							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
@@ -146,14 +146,14 @@
 							            </svg>
 							          </button>
 									{% endif %}
-	                            </a>
-	
-	                            {% if section.children %}
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                {% for child in section.children %}
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/{{ course_slug }}{{ child.url }}">
-	                                      {{ child.title }}
+		                            </a>
+
+		                            {% if section.children %}
+		                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
+		                                {% for child in section.children %}
+		                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
+		                                    <a class="vf-tree__link" href="/{{ course_slug }}{{ child.url }}">
+		                                      {{ child.title }}
 											{% if child.children %}
 												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
 									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
@@ -164,57 +164,90 @@
 									            </svg>
 									          </button>
 											{% endif %}
-	                                    </a>
-	
-	                                    {% if child.children %}
-	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
-	                                        {% for subchild in child.children %}
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/{{ course_slug }}{{ subchild.url }}">
-	                                              {{ subchild.title }}
-	                                            </a>
-	                                          </li>
-	                                        {% endfor %}
-	                                      </ul>
-	                                    {% endif %}
-	
-	                                  </li>
-	                                {% endfor %}
-	                              </ul>
-	                            {% endif %}
-	
-	                          </li>
-	                        {% endfor %}
-	                      </ul>
-						</div>
-					</div>
-							
-		                  <hr class="vf-divider vf-u-margin__bottom-md">
-												<p>
-													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
-															src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"
-															style="width: 125px; height: 44px;" width="125" height="44"></a>
-												</p>
-												<p class="vf-u-type__text-body--3">Todos los materiales son obras culturales gratuitas con licencia Creative Commons.
-													<a href="https://creativecommons.org/licenses/by/4.0/"
-														class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia </a>
-												</p>
-												<div class="vf-u-margin__top--500"></div>
-												<hr class="vf-divider vf-u-margin__bottom-md">
+		                                    </a>
 
-												
+		                                    {% if child.children %}
+		                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
+		                                        {% for subchild in child.children %}
+		                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
+		                                            <a class="vf-tree__link" href="/{{ course_slug }}{{ subchild.url }}">
+		                                              {{ subchild.title }}
+		                                            </a>
+		                                          </li>
+		                                        {% endfor %}
+		                                      </ul>
+		                                    {% endif %}
+
+		                                  </li>
+		                                {% endfor %}
+		                              </ul>
+		                            {% endif %}
+
+		                          </li>
+		                        {% endfor %}
+		                      </ul>
+					</div>
+				</div>
+
+		                  <hr class="vf-divider vf-u-margin__bottom-md">
+											<p>
+												<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
+														src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"
+														style="width: 125px; height: 44px;" width="125" height="44"></a>
+											</p>
+											<p class="vf-u-type__text-body--3">Todos los materiales son obras culturales gratuitas con licencia Creative Commons.
+												<a href="https://creativecommons.org/licenses/by/4.0/"
+													class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia </a>
+											</p>
+											<div class="vf-u-margin__top--500"></div>
+											<hr class="vf-divider vf-u-margin__bottom-md">
+
+
 											</div>
 											<!-- Sidebar end -->
 											<div class="acc">
 												<div class="vf-u-margin__top--500"></div>
 												{{ content }}
 
+												<!-- Previous/Next Navigation -->
+												{% assign all_pages = site.pages | where_exp: "page", "page.url contains '/' and page.url != '/' and page.path contains '.md'" | sort: "url" %}
+												{% assign current_index = -1 %}
+												{% for p in all_pages %}
+													{% if p.url == page.url %}
+														{% assign current_index = forloop.index0 %}
+													{% endif %}
+												{% endfor %}
+
+												{% if current_index >= 0 %}
+													<div class="vf-u-margin__top--500"></div>
+													<hr class="vf-divider vf-u-margin__bottom-md">
+													<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 2rem;">
+														{% if current_index > 0 %}
+															{% assign prev_page = all_pages[current_index | minus: 1] %}
+															<a href="{{ prev_page.url }}" class="vf-link vf-link--primary" style="flex: 0 1 45%;">
+																<span style="font-size: 0.9em; color: #666;">← Previous</span><br>
+																<span style="font-weight: 500;">{{ prev_page.title | default: prev_page.name }}</span>
+															</a>
+														{% else %}
+															<div style="flex: 0 1 45%;"></div>
+														{% endif %}
+
+														{% if current_index < all_pages.size | minus: 1 %}
+															{% assign next_page = all_pages[current_index | plus: 1] %}
+															<a href="{{ next_page.url }}" class="vf-link vf-link--primary" style="flex: 0 1 45%; text-align: right;">
+																<span style="font-size: 0.9em; color: #666;">Next →</span><br>
+																<span style="font-weight: 500;">{{ next_page.title | default: next_page.name }}</span>
+															</a>
+														{% else %}
+															<div style="flex: 0 1 45%;"></div>
+														{% endif %}
+													</div>
+												{% endif %}
 
 											</div>
 										</section>
 									</div>
-								</div>
-							</article>
+								</article>
 
 
 
