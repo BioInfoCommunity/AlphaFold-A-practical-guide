@@ -266,59 +266,98 @@
     {% assign lang = page.url | split: '/' | second %}
     {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
     
-    <!-- Flatten navigation to find current page and get prev/next -->
-    {% assign all_pages = '' | split: '' %}
-    {% assign course_url = '/' | append: course_slug | append: '/' | append: lang | append: '/' %}
+    {% assign current_url = page.url %}
+    {% assign prev_item = nil %}
+    {% assign next_item = nil %}
+    {% assign found_current = false %}
     
-    <!-- Add course home -->
-    {% capture course_home %}
-      <item><url>{{ course_url }}</url><title>{{ t.course.title }}</title></item>
-    {% endcapture %}
+    <!-- Iterate through all pages to find previous and next -->
+    {% assign course_url = '/' | append: course_slug | append: '/' | append: lang %}
     
-    <!-- Build flat list of all navigation items -->
-    {% for section in nav %}
-      {% capture section_item %}
-        <item><url>{{ course_url | remove: '/' }}{{ section.url }}</url><title>{{ section.title }}</title></item>
-      {% endcapture %}
-      {% assign all_pages = all_pages | push: section_item %}
-      
-      {% if section.children %}
-        {% for child in section.children %}
-          {% capture child_item %}
-            <item><url>{{ course_url | remove: '/' }}{{ child.url }}</url><title>{{ child.title }}</title></item>
-          {% endcapture %}
-          {% assign all_pages = all_pages | push: child_item %}
+    <!-- Check course home page -->
+    {% if current_url == course_url | append: '/' %}
+      {% assign found_current = true %}
+    {% else %}
+      <!-- Check all sections and children -->
+      {% for section in nav %}
+        {% if found_current == false %}
+          {% assign section_url = course_url | append: section.url %}
           
-          {% if child.children %}
-            {% for subchild in child.children %}
-              {% capture subchild_item %}
-                <item><url>{{ course_url | remove: '/' }}{{ subchild.url }}</url><title>{{ subchild.title }}</title></item>
-              {% endcapture %}
-              {% assign all_pages = all_pages | push: subchild_item %}
-            {% endfor %}
+          {% if current_url == section_url or current_url == section_url | append: '/' %}
+            {% assign found_current = true %}
+          {% else %}
+            {% assign prev_item = section %}
+            {% assign prev_url = section_url %}
+            {% assign prev_title = section.title %}
           {% endif %}
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
+        {% elsif found_current == true and next_item == nil %}
+          {% assign next_item = section %}
+          {% assign next_url = course_url | append: section.url %}
+          {% assign next_title = section.title %}
+        {% endif %}
+        
+        <!-- Check child items -->
+        {% if section.children %}
+          {% for child in section.children %}
+            {% if found_current == false %}
+              {% assign child_url = course_url | append: child.url %}
+              
+              {% if current_url == child_url or current_url == child_url | append: '/' %}
+                {% assign found_current = true %}
+              {% else %}
+                {% assign prev_item = child %}
+                {% assign prev_url = child_url %}
+                {% assign prev_title = child.title %}
+              {% endif %}
+            {% elsif found_current == true and next_item == nil %}
+              {% assign next_item = child %}
+              {% assign next_url = course_url | append: child.url %}
+              {% assign next_title = child.title %}
+            {% endif %}
+            
+            <!-- Check grandchild items -->
+            {% if child.children %}
+              {% for subchild in child.children %}
+                {% if found_current == false %}
+                  {% assign subchild_url = course_url | append: subchild.url %}
+                  
+                  {% if current_url == subchild_url or current_url == subchild_url | append: '/' %}
+                    {% assign found_current = true %}
+                  {% else %}
+                    {% assign prev_item = subchild %}
+                    {% assign prev_url = subchild_url %}
+                    {% assign prev_title = subchild.title %}
+                  {% endif %}
+                {% elsif found_current == true and next_item == nil %}
+                  {% assign next_item = subchild %}
+                  {% assign next_url = course_url | append: subchild.url %}
+                  {% assign next_title = subchild.title %}
+                {% endif %}
+              {% endfor %}
+            {% endif %}
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
     
     <!-- Display Previous and Next links -->
+    {% if prev_item %}
     <div class="vf-navigation-pagination__prev">
-      {% if page.previous %}
-        <a href="{{ page.previous.url }}" class="vf-link vf-link--primary">
-          <span class="vf-navigation-pagination__label">{{ t.navigation.previous_page | default: 'Previous' }}</span>
-          <span class="vf-navigation-pagination__title">{{ page.previous.title }}</span>
-        </a>
-      {% endif %}
+      <a href="{{ prev_url }}" class="vf-link vf-link--primary">
+        <span class="vf-navigation-pagination__label">← {{ t.navigation.previous | default: 'Previous' }}</span>
+        <span class="vf-navigation-pagination__title">{{ prev_title }}</span>
+      </a>
     </div>
+    {% endif %}
     
+    {% if next_item %}
     <div class="vf-navigation-pagination__next">
-      {% if page.next %}
-        <a href="{{ page.next.url }}" class="vf-link vf-link--primary">
-          <span class="vf-navigation-pagination__label">{{ t.navigation.next_page | default: 'Next' }}</span>
-          <span class="vf-navigation-pagination__title">{{ page.next.title }}</span>
-        </a>
-      {% endif %}
+      <a href="{{ next_url }}" class="vf-link vf-link--primary">
+        <span class="vf-navigation-pagination__label">{{ t.navigation.next | default: 'Next' }} →</span>
+        <span class="vf-navigation-pagination__title">{{ next_title }}</span>
+      </a>
     </div>
+    {% endif %}
   </div>
 </nav>
 						</div>
