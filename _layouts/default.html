@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   {% assign lang = page.path | split: '/' | first %}
-  {% assign t = site.data[lang] | default: site.data['en'] %}
+  {% assign t = site.data[lang] | default: site.data['pt'] %}
   {% assign course_slug = t.course.slug  %}
   <title>{{ t.course.title }} | EMBL-EBI Training</title>
 	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.25/css/styles.css" type="text/css">
@@ -74,7 +74,7 @@
 												<div class="vf-u-margin__top--100"></div>
 												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
                             {% assign lang = page.path | split: '/' | first %}
-                            {% assign t = site.data[lang] | default: site.data['en'] %}
+                            {% assign t = site.data[lang] | default: site.data['pt'] %}
 
                             {% for author in t.labels.written_by_name %}
                               <li class="vf-list__item">
@@ -95,7 +95,7 @@
 													
 													<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
 														{% assign lang = page.path | split: '/' | first %}
-	                            						{% assign t = site.data[lang] | default: site.data['en'] %}
+	                            						{% assign t = site.data[lang] | default: site.data['pt'] %}
 	
 							                            {% for translator in t.labels.translated_by_name %}
 							                              <li class="vf-list__item">
@@ -123,7 +123,7 @@
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
                        {% assign lang = page.path | split: '/' | first %}
-                      {% assign t = site.data[lang] | default: site.data['en'] %}
+                      {% assign t = site.data[lang] | default: site.data['pt'] %}
 
                         <div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
   						<div class="vf-tree__inner">
@@ -137,7 +137,7 @@
 	                          </li>
 	                        <!-- {% assign nav = site.data.navigation.navigation %} -->
 	                        {% assign lang = page.url | split: '/' | second %}
-	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['en'] %}
+	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
 	
 	                        {% for section in nav %}
 	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
