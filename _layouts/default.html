@@ -177,7 +177,7 @@
 	                            </a>
 	                          </li>
 	                        <!-- {% assign nav = site.data.navigation.navigation %} -->
-	                        {% assign lang = page.url | split: '/' | second %}
+	                        {% assign lang = page.path | split: '/' | first %}
 	                        {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
 	
 	                        {% for section in nav %}
@@ -263,19 +263,20 @@
 							<!-- Navigation Links for Next/Previous Pages -->
 <nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
   <div class="vf-navigation-pagination__inner">
-    {% assign lang = page.url | split: '/' | second %}
+    {% assign lang = page.path | split: '/' | first %}
     {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
-    
-    {% assign current_url = page.url %}
+
+    {% assign current_url = '/' | append: course_slug | append: page.url %}
     {% assign prev_item = nil %}
     {% assign next_item = nil %}
     {% assign found_current = false %}
     
     <!-- Iterate through all pages to find previous and next -->
-    {% assign course_url = '/' | append: course_slug | append: '/' | append: lang %}
+    {% assign course_url = '/' | append: course_slug %}
     
     <!-- Check course home page -->
-    {% if current_url == course_url | append: '/' %}
+    {% assign home_url = course_url | append: '/' | append: lang | append: '/' %}
+    {% if current_url == home_url %}
       {% assign found_current = true %}
     {% else %}
       <!-- Check all sections and children -->
