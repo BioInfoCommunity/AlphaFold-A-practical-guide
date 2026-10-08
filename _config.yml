@@ -26,3 +26,4 @@ defaults:
       path: ""
     values:
       layout: default
+      sort_reverse_posts: true
