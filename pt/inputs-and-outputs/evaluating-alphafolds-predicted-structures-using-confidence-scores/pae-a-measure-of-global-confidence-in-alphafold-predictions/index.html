@@ -18,46 +18,14 @@
 			background-size: cover;
 		}
 
-		.vf-navigation-pagination {
-			padding: 2rem 0;
-			border-top: 1px solid #e0e0e0;
-			margin-top: 3rem;
-		}
-
-		.vf-navigation-pagination__inner {
-			display: grid;
-			grid-template-columns: 1fr 1fr;
-			gap: 2rem;
-		}
-
-		.vf-navigation-pagination__prev,
-		.vf-navigation-pagination__next {
-			padding: 1rem;
-			background-color: #f5f5f5;
-			border-radius: 4px;
-		}
-
-		.vf-navigation-pagination__prev {
-			text-align: left;
-		}
-
-		.vf-navigation-pagination__next {
-			text-align: right;
-			margin-left: auto;
-		}
-
-		.vf-navigation-pagination__label {
-			display: block;
-			font-size: 0.875rem;
-			color: #666;
-			text-transform: uppercase;
-			margin-bottom: 0.5rem;
-		}
-
-		.vf-navigation-pagination__title {
-			display: block;
-			font-weight: 600;
-			font-size: 1rem;
+		.vf-pagination__item svg {
+			flex-grow: 1;
+			fill: #d0d0ce;
+			min-width: 40px;
+			max-width: 40px;
+			margin-left: 5px;
+			margin-right: 5px;
+			display: table-cell;
 		}
 	</style>
 </head>
@@ -1005,8 +973,8 @@
 
 
 												<!-- Navigation Links for Next/Previous Pages -->
-												<nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
-													<div class="vf-navigation-pagination__inner">
+												<nav class="vf-pagination" role="navigation" aria-label="Pagination">
+													<ul class="vf-pagination__list">
 														
 														
 
@@ -1250,36 +1218,42 @@
 
 														<!-- Display Previous and Next links -->
 														
-														<div class="vf-navigation-pagination__prev">
-															<a href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/" class="vf-link vf-link--primary">
-																<span class="vf-navigation-pagination__label">← Previous</span>
-																<span class="vf-navigation-pagination__title">pLDDT: Compreendendo a confiança local</span>
+														<li
+															class="vf-pagination__item vf-pagination__item--next-page | vf-u-border-color--grey--lightest">
+															<a href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/" class="vf-pagination__link">
+																<span class="vf-u-type__text-body--2 vf-u-margin--0">pLDDT: Compreendendo a confiança local</span>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>navigation-left-circle-1_1</title><path d="M24,12A12,12,0,1,0,12,24,12.013,12.013,0,0,0,24,12ZM10.293,17.2l-4.5-4.5a1,1,0,0,1,0-1.414l4.5-4.5a1,1,0,1,1,1.414,1.414L9.341,10.571A.25.25,0,0,0,9.518,11H18a1,1,0,0,1,0,2H9.518a.25.25,0,0,0-.177.426l2.366,2.367A1,1,0,0,1,10.293,17.2Z"></path></svg>
 															</a>
-														</div>
+														</li>
 														
 
 														
-														<div class="vf-navigation-pagination__next">
-															<a href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/confidence-scores-in-alphafold-multimer/" class="vf-link vf-link--primary">
-																<span class="vf-navigation-pagination__label">Next
-																	→</span>
-																<span class="vf-navigation-pagination__title">Pontuações de confiança no AlphaFold-Multimer</span>
+														<li
+															class="vf-pagination__item vf-pagination__item--next-page | vf-u-border-color--grey--lightest">
+															<a href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/confidence-scores-in-alphafold-multimer/" class="vf-pagination__link">
+																<span class="vf-u-type__text-body--2 vf-u-margin--0">Pontuações de confiança no AlphaFold-Multimer</span>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																	<title>navigation-right-circle-1_1</title>
+																	<path
+																		d="M0,12A12,12,0,1,0,12,0,12.014,12.014,0,0,0,0,12ZM13.707,6.791l4.5,4.5a1,1,0,0,1,0,1.414l-4.5,4.5a1,1,0,0,1-1.414-1.414l2.366-2.367A.25.25,0,0,0,14.482,13H6a1,1,0,1,1,0-2h8.482a.25.25,0,0,0,.177-.427L12.293,8.205a1,1,0,0,1,1.414-1.414Z">
+																	</path>
+																</svg>
 															</a>
-														</div>
+														</li>
 														
-													</div>
-												</nav>
 											</div>
-										</section>
+											</nav>
 									</div>
+									</section>
 								</div>
-							</article>
 						</div>
+						</article>
 					</div>
 				</div>
-			</main>
-			<script src="https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js"></script>
 		</div>
+		</main>
+		<script src="https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js"></script>
+	</div>
 
 	</div>
 	<footer class="vf-footer vf-minimal-footer  | vf-u-background-color-ui--dark-grey">
