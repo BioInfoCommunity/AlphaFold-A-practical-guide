@@ -215,6 +215,68 @@
 												<div class="vf-u-margin__top--500"></div>
 												{{ content }}
 
+												<!-- Navigation Links for Next/Previous Pages -->
+<nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
+  <div class="vf-navigation-pagination__inner">
+    {% assign lang = page.url | split: '/' | second %}
+    {% assign nav = site.data.navigation.navigation[lang] | default: site.data.navigation.navigation['pt'] %}
+    
+    <!-- Flatten navigation to find current page and get prev/next -->
+    {% assign all_pages = '' | split: '' %}
+    {% assign course_url = '/' | append: course_slug | append: '/' | append: lang | append: '/' %}
+    
+    <!-- Add course home -->
+    {% capture course_home %}
+      <item><url>{{ course_url }}</url><title>{{ t.course.title }}</title></item>
+    {% endcapture %}
+    
+    <!-- Build flat list of all navigation items -->
+    {% for section in nav %}
+      {% capture section_item %}
+        <item><url>{{ course_url | remove: '/' }}{{ section.url }}</url><title>{{ section.title }}</title></item>
+      {% endcapture %}
+      {% assign all_pages = all_pages | push: section_item %}
+      
+      {% if section.children %}
+        {% for child in section.children %}
+          {% capture child_item %}
+            <item><url>{{ course_url | remove: '/' }}{{ child.url }}</url><title>{{ child.title }}</title></item>
+          {% endcapture %}
+          {% assign all_pages = all_pages | push: child_item %}
+          
+          {% if child.children %}
+            {% for subchild in child.children %}
+              {% capture subchild_item %}
+                <item><url>{{ course_url | remove: '/' }}{{ subchild.url }}</url><title>{{ subchild.title }}</title></item>
+              {% endcapture %}
+              {% assign all_pages = all_pages | push: subchild_item %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+    
+    <!-- Display Previous and Next links -->
+    <div class="vf-navigation-pagination__prev">
+      {% if page.previous %}
+        <a href="{{ page.previous.url }}" class="vf-link vf-link--primary">
+          <span class="vf-navigation-pagination__label">{{ t.navigation.previous_page | default: 'Previous' }}</span>
+          <span class="vf-navigation-pagination__title">{{ page.previous.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+    
+    <div class="vf-navigation-pagination__next">
+      {% if page.next %}
+        <a href="{{ page.next.url }}" class="vf-link vf-link--primary">
+          <span class="vf-navigation-pagination__label">{{ t.navigation.next_page | default: 'Next' }}</span>
+          <span class="vf-navigation-pagination__title">{{ page.next.title }}</span>
+        </a>
+      {% endif %}
+    </div>
+  </div>
+</nav>
+
 
 											</div>
 										</section>
