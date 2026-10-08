@@ -17,6 +17,47 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+		.vf-navigation-pagination {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
+}
+
+.vf-navigation-pagination__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vf-navigation-pagination__prev,
+.vf-navigation-pagination__next {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.vf-navigation-pagination__prev {
+  text-align: left;
+}
+
+.vf-navigation-pagination__next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.vf-navigation-pagination__label {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.vf-navigation-pagination__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
 	</style>
 </head>
 <body class="vf-body">
@@ -880,8 +921,12 @@
 
 <p>Figure 30. Foldseek revealed a surprising structural similarity between <a href="https://alphafold.ebi.ac.uk/entry/P51530">DNA replication ATP-dependent helicase/nuclease DNA2</a>, a protein involved in DNA repair in humans, and Cas4 (PDB ID: <a href="https://www.ebi.ac.uk/pdbe/entry/pdb/8d3m">8D3M</a>), a protein involved in bacterial immune systems. Despite having very different sequences, they share a common structural core, suggesting a distant evolutionary relationship.</p>
 
-
-												<!-- Navigation Links for Next/Previous Pages -->
+											</div>
+										</section>
+									</div>
+								</div>
+							</article>
+							<!-- Navigation Links for Next/Previous Pages -->
 <nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
   <div class="vf-navigation-pagination__inner">
     
@@ -907,14 +952,6 @@
     </div>
   </div>
 </nav>
-
-
-											</div>
-										</section>
-									</div>
-								</div>
-							</article>
-
 						</div>
 					</div>
 				</div>

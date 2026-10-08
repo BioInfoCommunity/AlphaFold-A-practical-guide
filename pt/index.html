@@ -17,6 +17,47 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+		.vf-navigation-pagination {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
+}
+
+.vf-navigation-pagination__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vf-navigation-pagination__prev,
+.vf-navigation-pagination__next {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.vf-navigation-pagination__prev {
+  text-align: left;
+}
+
+.vf-navigation-pagination__next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.vf-navigation-pagination__label {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.vf-navigation-pagination__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
 	</style>
 </head>
 <body class="vf-body">
@@ -846,8 +887,12 @@ Ao longo do curso, você poderá encontrar termos com os quais não esteja famil
 
 <p>O AlphaFold é uma ferramenta de pesquisa, e seus resultados apresentam níveis variados de confiança. As informações fornecidas nestes módulos e pelo AlphaFold (incluindo no Banco de Dados do AlphaFold) são disponibilizadas gratuitamente, estritamente “no estado em que se encontram” e sem declarações ou garantias de qualquer tipo. Não nos responsabilizamos pela precisão, confiabilidade, disponibilidade, eficácia ou uso correto dessas informações, nem por qualquer impacto decorrente do uso contínuo de tais informações. Se você utilizar essas informações, fá-lo-á exclusivamente por sua conta e risco. Estes módulos, o AlphaFold e seus resultados não se destinam a uso clínico, não foram validados para tal fim e não possuem aprovação para uso clínico. Você não deve utilizar nenhuma dessas informações para fins clínicos nem basear-se nelas para obter aconselhamento médico ou outro tipo de orientação profissional. Qualquer conteúdo relacionado a esses temas é fornecido apenas para fins informativos e não substitui a orientação de um profissional qualificado.</p>
 
-
-												<!-- Navigation Links for Next/Previous Pages -->
+											</div>
+										</section>
+									</div>
+								</div>
+							</article>
+							<!-- Navigation Links for Next/Previous Pages -->
 <nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
   <div class="vf-navigation-pagination__inner">
     
@@ -873,14 +918,6 @@ Ao longo do curso, você poderá encontrar termos com os quais não esteja famil
     </div>
   </div>
 </nav>
-
-
-											</div>
-										</section>
-									</div>
-								</div>
-							</article>
-
 						</div>
 					</div>
 				</div>

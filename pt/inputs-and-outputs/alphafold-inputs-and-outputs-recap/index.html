@@ -17,6 +17,47 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+		.vf-navigation-pagination {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
+}
+
+.vf-navigation-pagination__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vf-navigation-pagination__prev,
+.vf-navigation-pagination__next {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.vf-navigation-pagination__prev {
+  text-align: left;
+}
+
+.vf-navigation-pagination__next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.vf-navigation-pagination__label {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.vf-navigation-pagination__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
 	</style>
 </head>
 <body class="vf-body">
@@ -841,8 +882,12 @@
 
 <p>Para a modelagem de multimers, duas pontuações adicionais são fornecidas. A pTM avalia a precisão da estrutura geral do complexo, enquanto a ipTM mede a precisão das previsões da interface entre as subunidades do complexo proteína-proteína. As pontuações pTM e ipTM são escritas nos arquivos de log e salvas no arquivo JSON de saída (<a href="https://github.com/google-deepmind/alphafold/blob/main/README.md">consulte a documentação</a>).</p>
 
-
-												<!-- Navigation Links for Next/Previous Pages -->
+											</div>
+										</section>
+									</div>
+								</div>
+							</article>
+							<!-- Navigation Links for Next/Previous Pages -->
 <nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
   <div class="vf-navigation-pagination__inner">
     
@@ -868,14 +913,6 @@
     </div>
   </div>
 </nav>
-
-
-											</div>
-										</section>
-									</div>
-								</div>
-							</article>
-
 						</div>
 					</div>
 				</div>

@@ -17,6 +17,47 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+		.vf-navigation-pagination {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
+}
+
+.vf-navigation-pagination__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vf-navigation-pagination__prev,
+.vf-navigation-pagination__next {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.vf-navigation-pagination__prev {
+  text-align: left;
+}
+
+.vf-navigation-pagination__next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.vf-navigation-pagination__label {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.vf-navigation-pagination__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
 	</style>
 </head>
 <body class="vf-body">
@@ -827,8 +868,12 @@
 
 <p>A cobertura e diversidade dos MSA podem ser examinadas visualizando o gráfico de cobertura  (_coverage.png). Este gráfico mostra o número de sequências no MSA e sua identidade em relação a posições específicas de aminoácidos. Isso pode fornecer insights sobre as informações de sequência usadas para a predição.</p>
 
-
-												<!-- Navigation Links for Next/Previous Pages -->
+											</div>
+										</section>
+									</div>
+								</div>
+							</article>
+							<!-- Navigation Links for Next/Previous Pages -->
 <nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
   <div class="vf-navigation-pagination__inner">
     
@@ -854,14 +899,6 @@
     </div>
   </div>
 </nav>
-
-
-											</div>
-										</section>
-									</div>
-								</div>
-							</article>
-
 						</div>
 					</div>
 				</div>

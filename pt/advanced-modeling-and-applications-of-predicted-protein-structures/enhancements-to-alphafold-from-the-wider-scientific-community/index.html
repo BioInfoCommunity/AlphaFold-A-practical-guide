@@ -17,6 +17,47 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
+		.vf-navigation-pagination {
+  padding: 2rem 0;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 3rem;
+}
+
+.vf-navigation-pagination__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.vf-navigation-pagination__prev,
+.vf-navigation-pagination__next {
+  padding: 1rem;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+}
+
+.vf-navigation-pagination__prev {
+  text-align: left;
+}
+
+.vf-navigation-pagination__next {
+  text-align: right;
+  margin-left: auto;
+}
+
+.vf-navigation-pagination__label {
+  display: block;
+  font-size: 0.875rem;
+  color: #666;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.vf-navigation-pagination__title {
+  display: block;
+  font-weight: 600;
+  font-size: 1rem;
+}
 	</style>
 </head>
 <body class="vf-body">
@@ -848,8 +889,12 @@
 
 <p>O AlphaFill está disponível em duas formas. Primeiro, está online como um <a href="https://alphafill.eu/">banco de dado</a>: com ligantes transplantados adicionados sempre que isso foi possível. Segundo, para quem precisa adicionar pequenas moléculas a estruturas personalizadas usando o AlphaFill, o <a href="https://alphafill.eu/">web server</a> pode transplantar ligantes ausentes para estruturas proteicas previstas do AlphaFold2.</p>
 
-
-												<!-- Navigation Links for Next/Previous Pages -->
+											</div>
+										</section>
+									</div>
+								</div>
+							</article>
+							<!-- Navigation Links for Next/Previous Pages -->
 <nav class="vf-navigation-pagination" role="navigation" aria-label="Pagination">
   <div class="vf-navigation-pagination__inner">
     
@@ -875,14 +920,6 @@
     </div>
   </div>
 </nav>
-
-
-											</div>
-										</section>
-									</div>
-								</div>
-							</article>
-
 						</div>
 					</div>
 				</div>
