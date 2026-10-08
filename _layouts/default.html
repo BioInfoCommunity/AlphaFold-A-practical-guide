@@ -125,6 +125,10 @@
                        {% assign lang = page.path | split: '/' | first %}
                       {% assign t = site.data[lang] | default: site.data['pt'] %}
 
+					   <!-- Temporary debug -->
+						Lang: {{ lang }}
+						Nav sections count: {{ nav | size }}
+
                         <div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
   						<div class="vf-tree__inner">
 	                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
