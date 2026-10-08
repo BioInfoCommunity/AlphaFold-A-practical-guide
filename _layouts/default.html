@@ -278,6 +278,9 @@
     {% assign home_url = course_url | append: '/' | append: lang | append: '/' %}
     {% if current_url == home_url %}
       {% assign found_current = true %}
+      {% assign next_item = nav[0] %}
+      {% assign next_url = course_url | append: nav[0].url %}
+      {% assign next_title = nav[0].title %}
     {% else %}
       <!-- Check all sections and children -->
       {% for section in nav %}
