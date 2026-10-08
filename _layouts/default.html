@@ -282,6 +282,10 @@
       {% assign next_url = course_url | append: nav[0].url %}
       {% assign next_title = nav[0].title %}
     {% else %}
+      <!-- Default previous is the course home page, overwritten below if there is an earlier item -->
+      {% assign prev_item = true %}
+      {% assign prev_url = home_url %}
+      {% assign prev_title = t.course.title %}
       <!-- Check all sections and children -->
       {% for section in nav %}
         {% if found_current == false %}
