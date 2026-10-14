@@ -1,66 +1,48 @@
 ---
 layout: default
-title: Strengths and limitations of AlphaFold 2
+title: 'Fortalezas y limitaciones de AlphaFold 2'
 ---
 
-# Strengths and limitations of AlphaFold 2
+# Fortalezas y limitaciones de AlphaFold 2
 
-**What a neural network can and can’t do largely depends on the data used for its training. For training AlphaFold2, only the protein parts of the PDB structures were used: other parts like small molecules and nucleic acids were not included in the training. This means there are some aspects of the structures that AlphaFold cannot predict, or cannot guarantee accuracy.**
+**Lo que una red neuronal puede y no puede hacer depende en gran medida de los datos utilizados para su entrenamiento. Para entrenar AlphaFold2, solo se utilizaron las partes proteicas de las estructuras del PDB: otras partes como las pequeñas moléculas y los ácidos nucleicos no se incluyeron en el entrenamiento. Esto significa que hay algunos aspectos de las estructuras que AlphaFold no puede predecir, o no puede garantizar su precisión.**
 
-## **What AlphaFold can do**
+## **Lo que AlphaFold puede hacer**
 
-AlphaFold2 was originally trained on single protein chains, so it excels at predicting their structures. Later, an extension of AlphaFold2 was trained specifically to predict protein-protein complexes: this version is now known as AlphaFold-Multimer ([Evans et al., 2022](https://doi.org/10.1101/2021.10.04.463034)). It can predict the structures of protein complexes that are made of several copies of the same chain (homo-multimers such as dimers and hexamers) as well as those made of several different protein chains (hetero-multimers). For specific limitations, see section “[Accessing and predicting protein structures with AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/)”.
+AlphaFold2 se entrenó originalmente en cadenas proteicas individuales, por lo que destaca en la predicción de sus estructuras. Más tarde, se entrenó una extensión de AlphaFold2 específicamente para predecir complejos proteína-proteína: esta versión ahora se conoce como AlphaFold-Multimer ([Evans et al., 2022](https://doi.org/10.1101/2021.10.04.463034)). Puede predecir las estructuras de complejos proteicos que están formados por varias copias de la misma cadena (homo-multímeros como dímeros y hexámeros) así como aquellos formados por varias cadenas proteicas diferentes (hetero-multímeros). Para limitaciones específicas, consulta la sección “[Acceder y predecir estructuras proteicas con AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/)”.
 
-Crucially, AlphaFold2 does not simply replicate known protein structures. Independent researchers have shown that AlphaFold2 can predict structures never previously seen in the PDB, i.e. novel protein folds ([Bordin et al., 2023](https://doi.org/10.1038/s42003-023-04488-9); [Barrio-Hernandez et al., 2023](https://doi.org/10.1038/s41586-023-06510-w); [Durairaj et al., 2023](https://doi.org/10.1038/s41586-023-06622-3)).
+Es crucial que AlphaFold2 no simplemente replique estructuras proteicas conocidas. Investigadores independientes han demostrado que AlphaFold2 puede predecir estructuras que nunca antes se habían visto en el PDB, es decir, pliegues proteicos novedosos ([Bordin et al., 2023](https://doi.org/10.1038/s42003-023-04488-9); [Barrio-Hernandez et al., 2023](https://doi.org/10.1038/s41586-023-06510-w); [Durairaj et al., 2023](https://doi.org/10.1038/s41586-023-06622-3)).
 
+##### Figura 5. Proteína no caracterizada (ID de AlphaFold: [AF-A0A849ZK06-F1](https://alphafold.ebi.ac.uk/entry/A0A849ZK06))
 
+Predicha como una proteína de unión a ribonucleótidos con una estructura general que se asemeja a un pliegue de quinasa proteica, función molecular predicha por DeepFRI ([Barrio-Hernandez et al., 2023](https://doi.org/10.1038/s41586-023-06510-w))
 
+AlphaFold2 se puede utilizar para identificar regiones intrínsecamente desordenadas. Naturalmente, el sistema no puede predecir subestructuras desordenadas o dinámicas, o las estructuras de secuencias que no existen en una conformación fija en la naturaleza. Tales regiones son verdaderamente dinámicas y no tienen una estructura fija para predecir. Sin embargo, la métrica de confianza local de AlphaFold2 (pLDDT) exhibe una fuerte correlación con el desorden intrínseco, lo que convierte a AlphaFold en una herramienta de última generación para la identificación de las regiones desordenadas ([Tunyasuvunakool et al., 2021](https://doi.org/10.1038/s41586-021-03828-1); [Akdel et al., 2022](https://www.nature.com/articles/s41594-022-00849-w)).
 
+## **Con lo que AlphaFold2 tiene dificultades**
 
+Tal cual, AlphaFold no es sensible a las mutaciones puntuales que cambian un solo residuo, debido a la alteración en la secuencia de ADN. Esto se debe a la falta de datos sobre el efecto de las variaciones, combinado con el enfoque de AlphaFold2 en los patrones en lugar de calcular las fuerzas físicas. Por las mismas razones, AlphaFold2 también es menos preciso a la hora de predecir las estructuras asociadas con secuencias altamente variables, como las de las moléculas del sistema inmunitario, como los anticuerpos.
 
+AlphaFold2 tiene dificultades para predecir las estructuras de las proteínas “huérfanas” – aquellas con pocos parientes cercanos – ya que funciona derivando relaciones entre las secuencias proteicas. Si no hay suficientes secuencias para la comparación, AlphaFold2 a menudo produce predicciones de baja calidad con bajas puntuaciones de confianza. Este problema se agrava si las pocas secuencias relacionadas no tienen estructuras conocidas en el PDB. Por otro lado, esta elección metodológica significa que AlphaFold2 a menudo puede predecir la estructura proteica, incluso si no hay estructuras relacionadas conocidas en el PDB, siempre que una secuencia tenga miles de parientes.
 
-
-
-
-
-
-##### Figure 5. Uncharacterised protein (AlphaFold ID: [AF-A0A849ZK06-F1](https://alphafold.ebi.ac.uk/entry/A0A849ZK06))
-
-Predicted to be a ribonucleotide-binding protein with an overall structure that resembles a protein kinase fold, molecular function predicted by DeepFRI ([Barrio-Hernandez et al., 2023](https://doi.org/10.1038/s41586-023-06510-w))
-
-AlphaFold2 can be used to identify intrinsically disordered regions. Naturally, the system cannot predict disordered or dynamic substructures, or the structures of sequences that do not exist in one set conformation in nature. Such regions are truly dynamic and do not have a fixed structure to predict. However, AlphaFold2’s local confidence metric (pLDDT) exhibits a strong correlation with intrinsic disorder, making AlphaFold a state-of-the-art tool for identification of the disordered regions ([Tunyasuvunakool et al., 2021](https://doi.org/10.1038/s41586-021-03828-1); [Akdel et al., 2022](https://www.nature.com/articles/s41594-022-00849-w)).
-
-## **What AlphaFold2 struggles with**
-
-Out of the box, AlphaFold is not sensitive to point mutations that change a single residue, due to the alteration in the DNA sequence. This is because of a lack of data on the effect of variations, combined with AlphaFold2’s focus on patterns as opposed to calculating physical forces. For the same reasons, AlphaFold2 is also less accurate at predicting the structures associated with highly variable sequences, such as those of immune system molecules like antibodies.
-
-AlphaFold2 struggles to predict the structures of “orphan” proteins – those with few close relatives – as it works by deriving relationships between protein sequences. If there are not enough sequences for comparison, AlphaFold2 often produces low-quality predictions with poor confidence scores. This problem is exacerbated if the few related sequences do not have known structures in the PDB. On the other hand, this methodological choice means AlphaFold2 can often predict protein structure, even if there are no known related structures in the PDB, provided a sequence has thousands of relatives.
-
-Proteins undergo structural changes when they perform their functions. However, these different conformations are only described for a minority of the proteins in the PDB. By default, AlphaFold2 does not capture such conformational changes, as it was designed to predict static structures, i.e. structural snapshots. However, researchers have found that, by applying certain tricks, one can force AlphaFold2 to produce a different conformation of the protein (see section “[Advanced modelling and applications of predicted protein structures](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/)“).
+Las proteínas sufren cambios estructurales cuando realizan sus funciones. Sin embargo, estas diferentes conformaciones solo se describen para una minoría de las proteínas en el PDB. Por defecto, AlphaFold2 no captura estos cambios conformacionales, ya que fue diseñado para predecir estructuras estáticas, es decir, instantáneas estructurales. Sin embargo, los investigadores han descubierto que, aplicando ciertos trucos, se puede forzar a AlphaFold2 a producir una conformación diferente de la proteína (consulta la sección “[Advanced modelling and applications of predicted protein structures](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/)“).
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/PDBe_KB_2.gif)
 
+Figura 6. Una de las limitaciones de AlphaFold es que no es consciente de las moléculas que se unen a las proteínas, lo que puede afectar la estructura 3D de la proteína. La hexoquinasa ([Q96Y14](https://www.uniprot.org/uniprotkb/Q96Y14/entry)) adopta distintas conformaciones en presencia (naranja, izquierda) y ausencia (verde, derecha) de azúcar. Cabe destacar que la predicción de estructura de AlphaFold se alinea con el estado sin azúcar (como se pudo ver visualmente y a través del valor RMSD).
 
-Figure 6. One of AlphaFold’s limitations is that it is not aware of molecules that bind to proteins, which can affect the protein’s 3D structure. Hexokinase ([Q96Y14](https://www.uniprot.org/uniprotkb/Q96Y14/entry)) adopts distinct conformations in the presence (orange, left) and absence (green, right) of sugar. Notably, AlphaFold’s structure prediction aligns with the sugar-free state (as could be seen both visually and via RMSD value).
+ID PDB con azúcar unido: [2E2Q](https://www.wwpdb.org/pdb?id=pdb_00002e2q)
 
-Sugar-bound PDB ID:[2E2Q](https://www.wwpdb.org/pdb?id=pdb_00002e2q)
+ID PDB sin azúcar unido: [2E2N](https://www.wwpdb.org/pdb?id=pdb_00002e2n)
 
-Sugar-free PDB ID: [2E2N](https://www.wwpdb.org/pdb?id=pdb_00002e2n)
+## **Lo que AlphaFold2 no puede hacer**
 
-## **What AlphaFold2 can’t do**
+AlphaFold2 no es consciente de otras moléculas que interactúan con las proteínas, como ácidos nucleicos, cofactores de moléculas pequeñas, iones y otros componentes no proteicos. Del mismo modo, AlphaFold2 no fue diseñado para modelar modificaciones postraduccionales, ni para modelar estructuras de ácidos nucleicos libres. Sin embargo, AlphaFold2 a menudo puede predecir una forma de proteína unida a un ligando o ion, incluso en ausencia del ligando/ion real.
 
-AlphaFold2 is not aware of other molecules that interact with proteins, such as nucleic acids, small molecule co-factors, ions and other non-protein components. Similarly, AlphaFold2 was not designed to model post-translational modifications, or to model structures of free nucleic acids. However, AlphaFold2 may often predict a ligand- or ion-bound form of a protein, even in the absence of the actual ligand/ion.
+AlphaFold2 no es consciente del plano de la membrana. En consecuencia, no puede modelar correctamente las orientaciones relativas de los dominios transmembrana y otros dominios proteicos de las proteínas de membrana. Sin embargo, como se ha señalado, AlphaFold2 alerta a los usuarios sobre las incertidumbres asignando una puntuación de confianza baja. Este problema específico normalmente se refleja en la puntuación de error alineado predicho (PAE). (Consulta la sección “[Inputs and Outputs](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/)“).
 
-AlphaFold2 is not aware of the membrane plane. Consequently, it cannot correctly model the relative orientations of trans-membrane domains and other protein domains of the membrane proteins. However, as noted, AlphaFold2 alerts users to uncertainties by assigning a low confidence score. This specific issue is normally reflected in the predicted aligned error (PAE) score. (See section “[Inputs and Outputs](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/)“).
+Tabla con viñetas
 
-
-
-
-
-Bulleted Table
-
-
-
-| AlphaFold2 predicts | AlphaFold2 struggles to predict | AlphaFold2 doesn’t predict |
+| AlphaFold2 predice | AlphaFold2 tiene dificultades para predecir | AlphaFold2 no predice |
 | --- | --- | --- |
-| * Single protein chains * Protein multimers * Multisubunit protein-protein complexes | * Multiple conformations for the same sequence * Effects of point mutations * Antigen-antibody interactions | * Protein-DNA and protein-RNA complexes * Nucleic acid structure * Ligand and ion binding * Post-translational modifications * Membrane plane for transmembrane domains |
+| * Cadenas proteicas individuales * Multímeros proteicos * Complejos proteicos multisubunitarios | * Múltiples conformaciones para la misma secuencia * Efectos de mutaciones puntuales * Interacciones antígeno-anticuerpo | * Complejos proteína-ADN y proteína-ARN * Estructura de ácidos nucleicos * Unión de ligandos e iones * Modificaciones postraduccionales * Plano de la membrana para dominios transmembrana |

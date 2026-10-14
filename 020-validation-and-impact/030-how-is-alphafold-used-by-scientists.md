@@ -1,61 +1,50 @@
 ---
 layout: default
-title: How is AlphaFold 2 used by scientists?
+title: '¿Cómo usan los científicos AlphaFold 2?'
 ---
 
-# How is AlphaFold 2 used by scientists?
+# ¿Cómo utilizan los científicos AlphaFold 2?
 
-**AlphaFold2 has been used in a wide range of research applications, with impressive results. AlphaFold2 is not intended as a rival to experimental methods. Instead, the starting point provided by AlphaFold2 is facilitating experimental structure determination, assisting with interpretation of low-resolution structural data, and accelerating structural studies. Also, AlphaFold2 can provide testable hypotheses that guide biochemical and cell biology experiments.**
+**AlphaFold2 se ha utilizado en una amplia gama de aplicaciones de investigación, con resultados impresionantes. AlphaFold2 no está pensado como un rival de los métodos experimentales. En cambio, el punto de partida proporcionado por AlphaFold2 está facilitando la determinación experimental de la estructura, ayudando con la interpretación de datos estructurales de baja resolución y acelerando los estudios estructurales. Además, AlphaFold2 puede proporcionar hipótesis comprobables que guíen los experimentos de bioquímica y biología celular.**
 
-## **Structural biology**
+## **Biología estructural**
 
-Structural biology has been the research field most impacted by AlphaFold2. Predicted protein structures have been used to enhance or fill in experimental structures obtained by techniques like X-ray crystallography, cryo-EM and NMR spectroscopy. Structures from AlphaFold2 have been instrumental for X-ray crystallography studies, serving as a valuable starting point in the process (helping to solve the [phase problem](https://en.wikipedia.org/wiki/Phase_problem) via [molecular replacement](https://en.wikipedia.org/wiki/Molecular_replacement)).
+La biología estructural ha sido el campo de investigación más impactado por AlphaFold2. Las estructuras de proteínas predichas se han utilizado para mejorar o completar estructuras experimentales obtenidas mediante técnicas como la cristalografía de rayos X, la criomicroscopía electrónica y la espectroscopía de RMN. Las estructuras de AlphaFold2 han sido fundamentales para los estudios de cristalografía de rayos X, sirviendo como un valioso punto de partida en el proceso (ayudando a resolver el [problema de fase](https://en.wikipedia.org/wiki/Phase_problem) a través del [reemplazo molecular](https://en.wikipedia.org/wiki/Molecular_replacement)).
 
-AlphaFold2 has enabled researchers to describe the structures of very large protein complexes. One example is the nuclear pore complex, which lines the nucleus of eukaryotic cells and contains around 1000 nucleoporin proteins of about 30 types. Analyses incorporating AlphaFold have now resolved about 90% of the human nuclear pore complex ([Mosalaganti et al., 2022](https://doi.org/10.1126/science.abm9506)). Similarly, AlphaFold2 was instrumental in resolving the structure of Mce1, a protein used by the tuberculosis bacterium to scavenge nutrients from host cells ([Chen et al., 2023](https://doi.org/10.1038/s41586-023-06366-0)).
+AlphaFold2 ha permitido a los investigadores describir las estructuras de complejos proteicos muy grandes. Un ejemplo es el complejo del poro nuclear, que recubre el núcleo de las células eucariotas y contiene alrededor de 1000 nucleoporinas de unos 30 tipos. Los análisis que incorporan AlphaFold han resuelto ahora aproximadamente el 90% del complejo del poro nuclear humano ([Mosalaganti et al., 2022](https://doi.org/10.1126/science.abm9506)). De manera similar, AlphaFold2 fue fundamental para resolver la estructura de Mce1, una proteína utilizada por la bacteria de la tuberculosis para obtener nutrientes de las células huésped ([Chen et al., 2023](https://doi.org/10.1038/s41586-023-06366-0)).
 
+##### Figura 12. Complejo del poro nuclear humano (dilatado) (ID PDB: [7R5J](https://www.wwpdb.org/pdb?id=pdb_00007r5j))
 
+Se usó AlphaFold2 para resolver estructuras de proteínas nucleoporinas individuales [(Mosalaganti et al., 2022)](https://doi.org/10.1126/science.abm9506).
 
+Las predicciones de AlphaFold2 han demostrado una gran sinergia con la espectrometría de masas de reticulación (XL-MS). Las estructuras predichas han ayudado a interpretar y comprender las distancias obtenidas con este método. Las distancias de XL-MS, a su vez, proporcionan una validación experimental de los modelos predichos, incluyendo predicciones para complejos proteína-proteína. En un estudio, AlphaFold2 y XL-MS se utilizaron para identificar las estructuras y posiciones de las proteínas intracelulares en las cilias de *Tetrahymena thermophila* ([McCafferty et al., 2023](https://doi.org/10.1038/s42003-023-04773-7)). Un enfoque similar de dos puntas que combina AlphaFold2 y XL-MS reveló interacciones proteína-proteína en células humanas, incluyendo “28.910 pares únicos de residuos capturados en 4.084 proteínas humanas únicas y 2.110 interacciones únicas proteína-proteína” ([Bartolec et al., 2023](https://doi.org/10.1073/pnas.2219418120)).
 
+## **Usar las predicciones de estructura de AlphaFold2 para guiar la biología molecular y celular**
 
+AlphaFold2 está demostrando ser particularmente valioso para guiar los análisis de mutaciones. También está ayudando a los científicos a generar y probar hipótesis sobre dónde y cómo una proteína podría interactuar con otras proteínas o moléculas.
 
+Cuando buscas proteínas que podrían realizar una función deseable, AlphaFold2 tiene un papel que desempeñar en la realización de evaluaciones tempranas y de bajo coste. Uno de estos desafíos es identificar enzimas que puedan degradar el poli(tereftalato de etileno) (PET), un plástico de uso generalizado. Investigadores utilizaron AlphaFold2 para ayudarles a identificar 74 enzimas potenciales degradadoras de PET y a caracterizar su estructura 3D y mecanismos ([Erickson et al., 2022](https://doi.org/10.1038/s41467-022-35237-x)).
 
+Las estructuras predichas por AlphaFold2 se están utilizando para proponer mecanismos de acción de las proteínas, que son cruciales para la investigación biomédica en etapas tempranas. Por ejemplo, las mutaciones en la proteína humana PINK1 causan la enfermedad de Parkinson de inicio temprano autosómico recesivo. Los investigadores utilizaron AlphaFold2 para predecir la estructura de PINK1. Esto proporcionó evidencia de que la proteína humana PINK1 utiliza el mismo mecanismo que la proteína PINK1 de insectos, que está mejor caracterizada tanto estructural como funcionalmente. Las mutaciones humanas patógenas podrían entonces analizarse en el contexto de la estructura de la proteína ([Gan et al., 2021](https://doi.org/10.1038/s41586-021-04340-2)).
 
+También ha demostrado ser posible utilizar AlphaFold2 para predecir las interacciones proteína-proteína, que son centrales para muchas funciones celulares. Un estudio en levaduras identificó 106 ensamblajes de proteínas que eran previamente desconocidos, y otros 806 que no habían sido caracterizados estructuralmente ([Humphreys et al., 2021](https://doi.org/10.1126/science.abm4805)). Otro estudio utilizó AlphaFold-Multimer para identificar el mecanismo de acción del factor de replicación DONSON. Un pequeño cribado *in silico* de interactores de DONSON sugirió que DONSON cataliza el paso final en el ensamblaje de la helicasa replicativa CMG (entrega del cofactor de la helicasa GINS), un modelo que se confirmó utilizando el análisis estructura-función. Este estudio demostró que AlphaFold-Multimer puede identificar nuevas interacciones proteína-proteína relevantes funcionalmente ([Lim et al., 2023](https://doi.org/10.1126/science.adi3448)).
 
+## **Ingeniería y diseño de proteínas**
 
+AlphaFold2 puede ser el punto de partida para la ingeniería y el diseño de proteínas. Un grupo reingenió una “jeringa” molecular, utilizada en la naturaleza por las bacterias, para administrar proteínas terapéuticas a las células humanas. No había información estructural experimental disponible para la “punta” de la jeringa, por lo que se utilizó AlphaFold2 para guiar la ingeniería ([Kreitz et al., 2023](https://doi.org/10.1038/s41586-023-05870-7)).
 
+Otro grupo utilizó AlphaFold2 para “hallucinar” ensamblajes de proteínas simétricos que no existían en la naturaleza. El equipo luego creó diez de estos ensamblajes de proteínas artificiales y demostró que sus estructuras determinadas experimentalmente coincidían con las predichas por AlphaFold2 con una RMSD promedio de 0.6 Å ([Wicky et al., 2022](https://doi.org/10.1126/science.add1964)).
 
-##### Figure 12. Human nuclear pore complex (dilated) (PDB ID: [7R5J](https://www.wwpdb.org/pdb?id=pdb_00007r5j))
-
-AlphaFold2 was used to resolve structures of individual nucleoporin proteins [(Mosalaganti et al., 2022)](https://doi.org/10.1126/science.abm9506).
-
-AlphaFold2 predictions have demonstrated great synergy with cross-linking mass-spectrometry (XL-MS). Predicted structures have helped interpret and make sense of distances obtained with this method. XL-MS distances, in turn, provide experimental validation of the predicted models, including predictions for protein-protein complexes. In one study, AlphaFold2 and XL-MS were used to identify the structures and positions of intracellular proteins in the cilia of *Tetrahymena thermophila* ([McCafferty et al., 2023](https://doi.org/10.1038/s42003-023-04773-7)). A similar two-pronged approach combining AlphaFold2 and XL-MS revealed protein-protein interactions in human cells, including “28,910 unique residue pairs captured across 4,084 unique human proteins and 2,110 unique protein-protein interactions” ([Bartolec et al., 2023](https://doi.org/10.1073/pnas.2219418120)).
-
-## **Using AlphaFold2 structure predictions to guide molecular and cell biology**
-
-AlphaFold2 is proving particularly valuable in guiding mutational analyses. It is also helping scientists generate and test hypotheses about where and how a protein might interact with other proteins or molecules.
-
-When searching for proteins that might perform a desirable function, AlphaFold2 has a role to play in conducting early, low-cost assessments. One such challenge is identifying enzymes that can break down poly(ethylene terephthalate) (PET), a widely-used plastic. Researchers used AlphaFold2 to help them identify 74 potential PET-degrading enzymes and to characterise their 3D structure and mechanisms ([Erickson et al., 2022](https://doi.org/10.1038/s41467-022-35237-x)).
-
-AlphaFold2 predicted structures are being used to propose mechanisms of protein action, which are crucial for early-stage biomedical research. For instance, mutations in the human protein PINK1 cause autosomal recessive early onset Parkinson’s disease. Researchers used AlphaFold2 to predict the structure of PINK1. This provided evidence that human PINK1 uses the same mechanism as insect PINK1, which is better characterised both structurally and functionally. The human pathogenic mutations could then be analysed in the context of the protein’s structure ([Gan et al., 2021](https://doi.org/10.1038/s41586-021-04340-2)).
-
-It has also proved possible to use AlphaFold2 to predict protein-protein interactions, which are central to many cellular functions. A study in yeast identified 106 protein assemblies that were previously unknown, and a further 806 that had not been structurally characterised ([Humphreys et al., 2021](https://doi.org/10.1126/science.abm4805)). Another study used AlphaFold-Multimer to identify the mechanism of action of the replication factor DONSON. A small in silico screen for DONSON interactors suggested that DONSON catalyses the final step in assembly of the replicative CMG helicase (delivery of the helicase co-factor GINS), a model that was confirmed using structure-function analysis. This study showed that AlphaFold-Multimer can identify new, functionally-relevant protein-protein interactions. ([Lim et al., 2023](https://doi.org/10.1126/science.adi3448)).
-
-## **Protein engineering and design**
-
-AlphaFold2 can be the starting point for protein engineering and design. One group re-engineered a molecular “syringe”, used in nature by bacteria, to deliver therapeutic proteins into human cells. No experimental structural information was available for the syringe “tip”, so AlphaFold2 was used to guide the engineering ([Kreitz et al., 2023](https://doi.org/10.1038/s41586-023-05870-7)).
-
-Another group used AlphaFold2 to “hallucinate” symmetric protein assemblies that did not exist in nature. The team then created ten of these artificial protein assemblies and showed that their experimentally-determined structures matched those predicted by AlphaFold2 with an average RMSD of 0.6 Å ([Wicky et al., 2022](https://doi.org/10.1126/science.add1964)).
-
-AlphaFold2 has also been used to validate engineered variants of proteins. For instance, one group is creating proteins to capture solar energy. They designed a protein maquette to recreate a compact photosynthetic reaction, and used AlphaFold2 to verify its structure ([Ennist et al., 2022](https://doi.org/10.3389/fmolb.2022.997295)).
+AlphaFold2 también se ha utilizado para validar variantes de proteínas diseñadas. Por ejemplo, un grupo está creando proteínas para capturar energía solar. Diseñaron un maqueta de proteína para recrear una reacción fotosintética compacta y utilizaron AlphaFold2 para verificar su estructura ([Ennist et al., 2022](https://doi.org/10.3389/fmolb.2022.997295)).
 
 ---
 
-For more ways to use AlphaFold2 predicted structures to help tackle fundamental biological questions, see section “[Advanced modelling and applications of predicted protein structures](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/)“.
+Para más formas de utilizar las estructuras predichas por AlphaFold2 para ayudar a abordar preguntas biológicas fundamentales, consulta la sección “[Modelado avanzado y aplicaciones de estructuras de proteínas predichas](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/)“.
 
-Dive deeper into the science and see how AlphaFold is transforming research on the Google DeepMind blog: [AlphaFold: a solution to a 50-year-old grand challenge in biology](https://www.deepmind.com/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology).
+Profundiza en la ciencia y descubre cómo AlphaFold está transformando la investigación en el blog de Google DeepMind: [AlphaFold: una solución a un gran desafío de 50 años en biología](https://www.deepmind.com/blog/alphafold-a-solution-to-a-50-year-old-grand-challenge-in-biology).
 
-Watch the videos in this playlist to discover how scientists are using AlphaFold2 to fuel their research.
+Mira los videos de esta lista de reproducción para descubrir cómo los científicos están utilizando AlphaFold2 para impulsar su investigación.
 
-Unfolded: Meet the scientists using AlphaFold
+Desplegado: Conoce a los científicos que utilizan AlphaFold
 
-## Test your knowledge
+## Pon a prueba tus conocimientos

@@ -1,10 +1,10 @@
 ---
 layout: default
-title: 'Evaluating AlphaFold2’s predicted structures using confidence scores'
+title: 'Evaluando las estructuras predichas de AlphaFold2 usando puntuaciones de confianza'
 ---
 
-# Evaluating AlphaFold2’s predicted structures using confidence scores
+# Evaluando las estructuras predichas de AlphaFold2 usando puntajes de confianza
 
-In order to hold practical significance, predicted protein structures must be accompanied by reliable measures of confidence. AlphaFold2 returns two confidence measures called pLDDT and PAE. These metrics can be used to identify regions of the predicted structure, and relative positions of different regions, that are more or less reliable. All predicted structures should be interpreted critically and in the light of these confidence scores.
+Para que tengan importancia práctica, las estructuras de proteínas predichas deben ir acompañadas de medidas de confianza fiables. AlphaFold2 devuelve dos medidas de confianza llamadas pLDDT y PAE. Estas métricas se pueden usar para identificar las regiones de la estructura predicha, y las posiciones relativas de las diferentes regiones, que son más o menos fiables. Todas las estructuras predichas deben interpretarse de forma crítica y a la luz de estos puntajes de confianza.
 
-Continue through the next subsections to learn more about these metrics.
+Continúa con las siguientes subsecciones para aprender más sobre estas métricas.

@@ -1,33 +1,33 @@
 ---
 layout: default
-title: 'How to cite AlphaFold'
+title: 'Cómo citar AlphaFold'
 ---
 
-# How to cite AlphaFold
+# Cómo citar AlphaFold
 
-**Please always credit AlphaFold2 when you use results derived from it. Depending on exactly how you use AlphaFold2, there are different papers to cite.**
+**Por favor, siempre acredita a AlphaFold2 cuando uses resultados derivados de él. Dependiendo de exactamente cómo uses AlphaFold2, hay diferentes artículos que debes citar.**
 
-**If you’re using AlphaFold2 in any way, please cite:**
+**Si estás usando AlphaFold2 de alguna manera, por favor cita:**
 
-* Jumper, J. et al. “Highly accurate protein structure prediction with AlphaFold.” *Nature*, **596**, pages 583–589 (2021). DOI: [10.1038/s41586-021-03819-2](https://doi.org/10.1038/s41586-021-03819-2)
+* Jumper, J. et al. “Predicción altamente precisa de la estructura de proteínas con AlphaFold.” *Nature*, **596**, páginas 583–589 (2021). DOI: [10.1038/s41586-021-03819-2](https://doi.org/10.1038/s41586-021-03819-2)
 
-**If you’re using the AlphaFold Protein Structure Database (AFDB), please also cite:**
+**Si estás usando la Base de Datos de Estructuras de Proteínas AlphaFold (AFDB), por favor cita también:**
 
-* Varadi, M. et al. “AlphaFold Protein Structure Database in 2024: Providing structure coverage for over 214 million protein sequences.” *Nucleic Acids Research*, gkad1011 (2023). DOI: [10.1093/nar/gkad1011](https://doi.org/10.1093/nar/gkad1011)
-* Varadi, M. et al. “AlphaFold Protein Structure Database: massively expanding the structural coverage of protein-sequence space with high-accuracy models.” *Nucleic Acids Research*, 50(D1), pages D439–D444 (2021). DOI: [10.1093/nar/gkab1061](https://doi.org/10.1093/nar/gkab1061)
+* Varadi, M. et al. “Base de Datos de Estructuras de Proteínas AlphaFold en 2024: Proporcionando cobertura estructural para más de 214 millones de secuencias de proteínas.” *Nucleic Acids Research*, gkad1011 (2023). DOI: [10.1093/nar/gkad1011](https://doi.org/10.1093/nar/gkad1011)
+* Varadi, M. et al. “Base de Datos de Estructuras de Proteínas AlphaFold: expandiendo masivamente la cobertura estructural del espacio de secuencias de proteínas con modelos de alta precisión.” *Nucleic Acids Research*, 50(D1), páginas D439–D444 (2021). DOI: [10.1093/nar/gkab1061](https://doi.org/10.1093/nar/gkab1061)
 
-**If you’re using AlphaFold-Multimer, please also cite:**
+**Si estás usando AlphaFold-Multimer, por favor cita también:**
 
-* Evans, R. et al. “Protein complex prediction with AlphaFold-Multimer.” *bioRxiv* (2021). DOI: [10.1101/2021.10.04.463034v1](https://doi.org/10.1101/2021.10.04.463034)
+* Evans, R. et al. “Predicción de complejos proteicos con AlphaFold-Multimer.” *bioRxiv* (2021). DOI: [10.1101/2021.10.04.463034v1](https://doi.org/10.1101/2021.10.04.463034)
 
-**If you’re using ColabFold, please also cite:**
+**Si estás usando ColabFold, por favor cita también:**
 
-* Mirdita, M. et al. “ColabFold: Making protein folding accessible to all.” *Nature Methods*, **19**, pages 679–682 (2022). DOI: [10.1038/s41592-022-01488-1](https://doi.org/10.1038/s41592-022-01488-1)
+* Mirdita, M. et al. “ColabFold: Haciendo que el plegamiento de proteínas sea accesible para todos.” *Nature Methods*, **19**, páginas 679–682 (2022). DOI: [10.1038/s41592-022-01488-1](https://doi.org/10.1038/s41592-022-01488-1)
 
-**If you’re using the 3D-Beacons Network, please also cite:**
+**Si estás usando la Red 3D-Beacons, por favor cita también:**
 
-* Varadi, M. et al. “3D-Beacons: decreasing the gap between protein sequences and structures through a federated network of protein structure data resources.” *GigaScience*, **11**, giac118 (2022). DOI: [10.1093/gigascience/giac118](https://doi.org/10.1093/gigascience/giac118)
+* Varadi, M. et al. “3D-Beacons: disminuyendo la brecha entre las secuencias de proteínas y las estructuras a través de una red federada de recursos de datos de estructuras de proteínas.” *GigaScience*, **11**, giac118 (2022). DOI: [10.1093/gigascience/giac118](https://doi.org/10.1093/gigascience/giac118)
 
-**If you’re using another piece of software that integrates AlphaFold2:**
+**Si estás usando otro software que integra AlphaFold2:**
 
-* Please follow the citation instructions given by the software providers.
+* Por favor, sigue las instrucciones de citación dadas por los proveedores del software.

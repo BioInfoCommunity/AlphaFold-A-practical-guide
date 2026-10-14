@@ -1,29 +1,29 @@
 ---
 layout: default
-title: 'Interpreting results from AlphaFold Server'
+title: 'Interpretando los resultados de AlphaFold Server'
 ---
 
-# Interpreting results from AlphaFold Server
+# Interpretando los resultados de AlphaFold Server
 
-**Alongside predicted structures, AlphaFold 3 supplies a range of confidence metrics, enabling you to assess the accuracy of the predictions. The confidence metrics are similar to those used by AlphaFold 2.**
+**Junto con las estructuras predichas, AlphaFold 3 proporciona una variedad de métricas de confianza, lo que te permite evaluar la precisión de las predicciones. Las métricas de confianza son similares a las utilizadas por AlphaFold 2.**
 
-However, because AlphaFold 3 predicts the structures of multimolecular complexes, there are additional factors to consider. AlphaFold 3 is not intended for, validated for, or approved for clinical use.
+Sin embargo, dado que AlphaFold 3 predice las estructuras de complejos multimoleculares, hay factores adicionales a considerar. AlphaFold 3 no está destinado, validado ni aprobado para uso clínico.
 
-## **Outputs provided by AlphaFold Server**
+## **Resultados proporcionados por AlphaFold Server**
 
-AlphaFold Server produces five predictions per job. (Technically, five diffusion samples per seed, but currently each job runs one seed.)
+AlphaFold Server produce cinco predicciones por trabajo. (Técnicamente, cinco muestras de difusión por semilla, pero actualmente cada trabajo se ejecuta con una semilla).
 
-The top-ranked prediction is displayed on the results page. Predicted structures are ranked using the *ranking\_score* metric. This uses two measures of confidence in overall structure (pTM and ipTM), but also includes terms that penalise clashes and encourage disordered regions not to have spurious helices. These extra terms mean *ranking\_score* should only be used to rank structures.
+La predicción con la mejor puntuación se muestra en la página de resultados. Las estructuras predichas se clasifican utilizando la métrica *ranking\_score*. Esto utiliza dos medidas de confianza en la estructura general (pTM e ipTM), pero también incluye términos que penalizan las colisiones y animan a que las regiones desordenadas no tengan hélices espurias. Estos términos adicionales significan que *ranking\_score* solo debe utilizarse para clasificar estructuras.
 
-All five samples, along with their associated confidences, are available to download as a zip file. This contains:
+Las cinco muestras, junto con sus confianzas asociadas, están disponibles para descargar como un archivo zip. Este contiene:
 
-* Five .cif files named **fold\_<job\_name>\_model\_<N>cif**, where “<N>” is the rank of the predicted structure. Structures are ranked from 0 to 4, where 0 has the highest confidence. The .cif files contain predicted structures in the mmCIF format. They can be viewed in any molecular viewer like PyMOL or ChimeraX.
-* Five .json files named **fold\_<job\_name>\_summary\_confidences\_<N>.json**, where “<N>” is the rank of the predicted structure from 0 to 4. These .json files contain summaries of the confidence metrics for the predictions (see below for more details on confidence metrics).
-* Five .json files named **fold\_<job\_name>\_full\_data\_<N>.json**, where “<N>” is the rank of the predicted structure from 0 to 4. These .json files contain detailed confidence metrics, such as full PAE data, for the predictions (see below for more on confidence metrics).
-* A file named **fold\_<job\_name>\_job\_request.json**. This contains the inputs of the modelling job and could be used to re-run the job (for more details, see “[Advanced use of AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-features-of-alphafold-server/)“).
-* A file named **terms\_of\_use.md**. This is a legal document detailing the terms of use for the predictions.
+* Cinco archivos .cif con el nombre **fold\_<job\_name>\_model\_<N>cif**, donde “<N>” es el rango de la estructura predicha. Las estructuras se clasifican de 0 a 4, donde 0 tiene la mayor confianza. Los archivos .cif contienen estructuras predichas en formato mmCIF. Se pueden visualizar en cualquier visor molecular como PyMOL o ChimeraX.
+* Cinco archivos .json con el nombre **fold\_<job\_name>\_summary\_confidences\_<N>.json**, donde “<N>” es el rango de la estructura predicha de 0 a 4. Estos archivos .json contienen resúmenes de las métricas de confianza para las predicciones (consulta más abajo para obtener más detalles sobre las métricas de confianza).
+* Cinco archivos .json con el nombre **fold\_<job\_name>\_full\_data\_<N>.json**, donde “<N>” es el rango de la estructura predicha de 0 a 4. Estos archivos .json contienen métricas de confianza detalladas, como datos completos de PAE, para las predicciones (consulta más abajo para obtener más información sobre las métricas de confianza).
+* Un archivo con el nombre **fold\_<job\_name>\_job\_request.json**. Este contiene las entradas del trabajo de modelado y podría utilizarse para volver a ejecutar el trabajo (para obtener más detalles, consulta “[Uso avanzado de AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-features-of-alphafold-server/)“).
+* Un archivo con el nombre **terms\_of\_use.md**. Este es un documento legal que detalla los términos de uso de las predicciones.
 
-JSON is a text-based format, so it is both human- and machine-readable. You can check JSON files with any text editor, or use a programming system like Python to read and visualise outputs.
+JSON es un formato basado en texto, por lo que es legible tanto para humanos como para máquinas. Puedes comprobar los archivos JSON con cualquier editor de texto o utilizar un sistema de programación como Python para leer y visualizar los resultados.
 
 ```
 {
@@ -100,33 +100,33 @@ JSON is a text-based format, so it is both human- and machine-readable. You can 
 }
 ```
 
-An example of the contents of a fold\_\_summary\_confidences\_.json file, showing multiple confidence metrics.
+Un ejemplo del contenido de un archivo fold\_\_summary\_confidences\_.json, mostrando múltiples métricas de confianza.
 
-## **Confidence metrics**
+## **Métricas de confianza**
 
-Some of the metrics in the JSON files are very straightforward: for instance, the “ptm” record contains the overall pTM score. However, some other metrics are more targeted at advanced users. Full explanations of the confidence metrics are provided in subsequent sections.
+Algunas de las métricas en los archivos JSON son muy directas: por ejemplo, el registro “ptm” contiene la puntuación pTM general. Sin embargo, otras métricas están más dirigidas a usuarios avanzados. Explicaciones completas de las métricas de confianza se proporcionan en las secciones siguientes.
 
-JSON files with summary outputs contain the following information:
+Los archivos JSON con salidas resumidas contienen la siguiente información:
 
-* ***chain\_iptm*:** A [num\_chains] array that gives the average confidence (ipTM) in the interfaces between each chain and all other chains. This can be used for ranking predicted structures for a specific chain, when you care about where the chain binds to the rest of the complex and you do not know which other chains you expect it to interact with. This is often the case with ligands, each of which the system treats as a separate chain.
-* ***chain\_pair\_iptm*:** A square [num\_chains, num\_chains] array representing pairwise ipTM scores. The off-diagonal element (i, j) of the array contains the ipTM restricted to tokens from chains i and j. The diagonal element (i, i) contains the pTM restricted to chain i. The array can be used for ranking predictions of a structure by the accuracy of a specific interface between two chains that you know interact, e.g. antibody-antigen interactions. As these values are calculated based on tokens, this metric also encompasses small molecules and chemically-modified residues and nucleotides.
-* ***chain\_pair\_pae\_min***: A square [num\_chains, num\_chains] array of PAE values. Element (i, j) of the array contains the lowest PAE value across rows restricted to chain i and columns restricted to chain j. This has been found to correlate with whether or not two chains interact, so it can be used to distinguish interacting and non-interacting molecules. As these values are calculated based on tokens, this metric also encompasses small molecules and chemically-modified residues and nucleotides.
-* ***c******hain\_ptm*:** A [num\_chains] array. Element i contains the pTM restricted to chain i. This can be used for ranking the predicted structures of individual chains when you are most interested in the structure of that chain, rather than its cross-chain interactions.
-* ***fraction\_disordered*:** A scalar in the range 0-1 that indicates what fraction of the prediction structure is disordered, as measured by accessible surface area (see [Abramson et al., 2024](https://doi.org/10.1038/s41586-024-07487-w) for details).
-* ***has\_clash*:** A Boolean, i.e. a yes/no value, indicating if the structure has a significant number of clashing atoms (more than 50% of a chain, or a chain with more than 100 clashing atoms).
-* ***iptm*:** A scalar in the range 0-1 indicating predicted interface TM-score (confidence in the predicted interfaces) for all interfaces in the structure.*num\_recycles: An integer number that represents the total number of recycles.*
-* ***ptm*:** A scalar in the range 0-1 indicating the predicted TM-score for the full structure.
-* ***ranking\_score*****:** A scalar ranging from -100 to 1.5 that can be used for ranking predictions. It combines *ptm*, *iptm*, *fraction\_disordered* and *has\_clash* into a single number with the following equation:
+* ***chain\_iptm*:** Un array de [num\_chains] que da la confianza promedio (ipTM) en las interfaces entre cada cadena y todas las demás cadenas. Esto se puede usar para clasificar las estructuras predichas para una cadena específica, cuando te importa dónde se une la cadena al resto del complejo y no sabes qué otras cadenas esperas que interactúen con ella. Este suele ser el caso con los ligandos, cada uno de los cuales el sistema trata como una cadena separada.
+* ***chain\_pair\_iptm*:** Un array cuadrado de [num\_chains, num\_chains] que representa las puntuaciones ipTM por pares. El elemento fuera de la diagonal (i, j) del array contiene el ipTM restringido a los tokens de las cadenas i y j. El elemento diagonal (i, i) contiene el pTM restringido a la cadena i. El array se puede usar para clasificar las predicciones de una estructura por la precisión de una interfaz específica entre dos cadenas que sabes que interactúan, por ejemplo, las interacciones anticuerpo-antígeno. Como estos valores se calculan en base a los tokens, esta métrica también abarca moléculas pequeñas y residuos y nucleótidos modificados químicamente.
+* ***chain\_pair\_pae\_min***: Un array cuadrado de [num\_chains, num\_chains] de valores PAE. El elemento (i, j) del array contiene el valor PAE más bajo en las filas restringidas a la cadena i y las columnas restringidas a la cadena j. Se ha descubierto que esto se correlaciona con si dos cadenas interactúan o no, por lo que se puede usar para distinguir moléculas que interactúan y que no interactúan. Como estos valores se calculan en base a los tokens, esta métrica también abarca moléculas pequeñas y residuos y nucleótidos modificados químicamente.
+* ***chain\_ptm*:** Un array de [num\_chains]. El elemento i contiene el pTM restringido a la cadena i. Esto se puede usar para clasificar las estructuras predichas de cadenas individuales cuando estás más interesado en la estructura de esa cadena, en lugar de sus interacciones entre cadenas.
+* ***fraction\_disordered*:** Un escalar en el rango de 0 a 1 que indica qué fracción de la estructura de la predicción está desordenada, según la superficie accesible (consulta [Abramson et al., 2024](https://doi.org/10.1038/s41586-024-07487-w) para obtener más detalles).
+* ***has\_clash*:** Un Booleano, es decir, un valor sí/no, que indica si la estructura tiene un número significativo de átomos que chocan (más del 50% de una cadena, o una cadena con más de 100 átomos que chocan).
+* ***iptm*:** Un escalar en el rango de 0 a 1 que indica la puntuación TM de la interfaz predicha (confianza en las interfaces predichas) para todas las interfaces en la estructura. *num\_recycles*: Un número entero que representa el número total de reciclajes.
+* ***ptm*:** Un escalar en el rango de 0 a 1 que indica la puntuación TM predicha para la estructura completa.
+* ***ranking\_score*****:** Un escalar que varía de -100 a 1.5 que se puede usar para clasificar las predicciones. Combina *ptm*, *iptm*, *fraction\_disordered* y *has\_clash* en un solo número con la siguiente ecuación:
 
-0.8 × ipTM + 0.2 × pTM + 0.5 × disorder − 100 × has\_clash
+0.8 × ipTM + 0.2 × pTM + 0.5 × desorden − 100 × tiene\_colisión
 
-JSON files with full outputs contain the following information:
+Los archivos JSON con salidas completas contienen la siguiente información:
 
-* ***atom\_chain\_ids*:** A [num\_atoms] array indicating the chain IDs corresponding to each atom in the prediction.
-* ***atom\_plddts*:** A [num\_atoms] array. Element i indicates the predicted local distance difference test (pLDDT) for atom i in the prediction.
-* ***contact\_probs*:** A square [num\_tokens, num\_tokens] array. Element (i, j) indicates the predicted probability that token i and token j are in contact, where “in contact” is defined as a maximum distance of 8Å between a system-defined representative atom for each token (for details, see [Abramson et al., 2024](https://doi.org/10.1038/s41586-024-07487-w)).
-* ***pae*:** A square [num\_tokens, num\_tokens] array. Element (i, j) indicates the predicted aligned error (PAE) in the position of token j, when the prediction is aligned to the ground truth using the frame of token i.
-* ***token\_chain\_ids*:** A [num\_tokens] array indicating the chain IDs corresponding to each token in the prediction.
-* **token\_res\_ids:** A [num\_res] array.
+* ***atom\_chain\_ids*:** Un array de [num\_atoms] que indica los IDs de cadena correspondientes a cada átomo en la predicción.
+* ***atom\_plddts*:** Un array de [num\_atoms]. El elemento i indica la prueba de diferencia de distancia local predicha (pLDDT) para el átomo i en la predicción.
+* ***contact\_probs*:** Un array cuadrado de [num\_tokens, num\_tokens]. El elemento (i, j) indica la probabilidad predicha de que el token i y el token j estén en contacto, donde “en contacto” se define como una distancia máxima de 8Å entre un átomo representativo definido por el sistema para cada token (para más detalles, consulta [Abramson et al., 2024](https://doi.org/10.1038/s41586-024-07487-w)).
+* ***pae*:** Un array cuadrado de [num\_tokens, num\_tokens]. El elemento (i, j) indica el error alineado predicho (PAE) en la posición del token j, cuando la predicción se alinea con la verdad fundamental utilizando el marco del token i.
+* ***token\_chain\_ids*:** Un array de [num\_tokens] que indica los IDs de cadena correspondientes a cada token en la predicción.
+* **token\_res\_ids:** Un array de [num\_res].
 
-JSON files with full outputs (**fold\_<job\_name>\_full\_data\_<N>.json**) can be used with tools like the latest version of [ChimeraX](https://www.rbvi.ucsf.edu/chimerax/) or [PAE Viewer](https://subtiwiki.uni-goettingen.de/v4/paeViewerDemo). In this way, you can visualise dynamic PAE plots and match PAE data onto predicted structures stored in the **fold\_<job\_name>\_model\_<N>.cif** files.
+Los archivos JSON con salidas completas (**fold\_<job\_name>\_full\_data\_<N>.json**) se pueden usar con herramientas como la última versión de [ChimeraX](https://www.rbvi.ucsf.edu/chimerax/) o [PAE Viewer](https://subtiwiki.uni-goettingen.de/v4/paeViewerDemo). De esta manera, puedes visualizar gráficos PAE dinámicos y hacer coincidir los datos PAE con las estructuras predichas almacenadas en los archivos **fold\_<job\_name>\_model\_<N>.cif**.

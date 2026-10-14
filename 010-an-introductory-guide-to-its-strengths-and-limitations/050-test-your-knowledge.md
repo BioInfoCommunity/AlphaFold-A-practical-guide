@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Test your knowledge
+title: 'Pon a prueba tus conocimientos'
 ---
 
-# Test your knowledge
+# Pon a prueba tus conocimientos
 
-Throughout this section, you’ve explored the capabilities of AlphaFold, along with its potential impact on scientific research. Now, it’s time to solidify your knowledge. In this interactive exercise, you will explore the strengths and limitations of AlphaFold by dragging and dropping specific examples into their corresponding categories.
+A lo largo de esta sección, has explorado las capacidades de AlphaFold, junto con su posible impacto en la investigación científica. Ahora, es hora de consolidar tus conocimientos. En este ejercicio interactivo, explorarás las fortalezas y limitaciones de AlphaFold arrastrando y soltando ejemplos específicos en sus categorías correspondientes.
 
 <iframe
     src="https://www.ebi.ac.uk/training/online/courses/alphafold/wp-admin/admin-ajax.php?action=h5p_embed&id=7"
@@ -13,4 +13,4 @@ Throughout this section, you’ve explored the capabilities of AlphaFold, along 
     height="600"
     frameborder="0"
     allowfullscreen>
-</iframe>
+</iframes>

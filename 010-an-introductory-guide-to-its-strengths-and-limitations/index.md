@@ -1,14 +1,14 @@
 ---
 layout: default
-title: An introductory guide to AlphaFold&#8217;s strengths and limitations
+title: 'Una guía introductoria a las fortalezas y limitaciones de AlphaFold'
 ---
 
-# An introductory guide to AlphaFold&#8217;s strengths and limitations
+# Una guía introductoria a las fortalezas y limitaciones de AlphaFold
 
-Proteins are foundational components of life. Each protein molecule has a distinctive 3D shape that dictates its functions, such as catalysing (speeding up) a biochemical reaction or enabling muscular contractions. Accurately predicting a protein’s structure enables us to better understand its functions and roles.
+Las proteínas son componentes fundamentales de la vida. Cada molécula de proteína tiene una forma 3D distintiva que dicta sus funciones, como catalizar (acelerar) una reacción bioquímica o permitir las contracciones musculares. Predecir con precisión la estructura de una proteína nos permite comprender mejor sus funciones y roles.
 
-### By the end of this section you will be able to:
+### Al final de esta sección, tú podrás:
 
-* Recall the significance of the protein folding problem.
-* Evaluate the fundamental concepts behind AlphaFold and why it is considered a significant breakthrough in protein structure prediction.
-* Describe the strengths and limitations of AlphaFold’s structure predictions.
+* Recordar la importancia del problema del plegamiento de proteínas.
+* Evaluar los conceptos fundamentales detrás de AlphaFold y por qué se considera un avance significativo en la predicción de la estructura de las proteínas.
+* Describir las fortalezas y limitaciones de las predicciones de estructura de AlphaFold.

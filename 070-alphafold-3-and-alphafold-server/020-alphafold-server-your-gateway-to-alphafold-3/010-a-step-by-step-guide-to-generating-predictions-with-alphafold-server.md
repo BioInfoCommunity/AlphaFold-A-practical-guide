@@ -1,91 +1,90 @@
 ---
 layout: default
-title: 'A step-by-step guide to generating predictions with AlphaFold Server'
+title: 'Cómo generar predicciones con AlphaFold Server: una guía paso a paso'
 ---
 
-# A step-by-step guide to generating predictions with AlphaFold Server
+# Una guía paso a paso para generar predicciones con AlphaFold Server
 
-AlphaFold Server was designed for simple and intuitive use. For a simple introduction to the workflow, please see the video below.
+AlphaFold Server fue diseñado para un uso sencillo e intuitivo. Para una introducción simple al flujo de trabajo, consulta el vídeo a continuación.
 
 AlphaFold Server Demo
 
-It is easy and straightforward to specify AlphaFold Server inputs:
+Es fácil y directo especificar las entradas de AlphaFold Server:
 
-* For a protein, enter the single-letter amino acid sequence. Alternatively, paste in the contents of a FASTA file. If you have multiple proteins, you can put all their sequences into one FASTA file (see below). Use only standard single-letter codes. Nonstandard codes like B, J, O, U, X and Z are not supported.
-* For DNA, enter the single-letter nucleotide sequence in standard notation (5’-3’). Use only standard single-letter codes, i.e. A, C, G and T.
-* For RNA, similarly enter the single-letter nucleotide sequence in standard notation (5’-3’). Use only standard single-letter codes, i.e. A, C, G and U.
-* For ligands, ions, and post-translational modifications, select the desired entity from the list. The three-letter codes displayed in the interface come from the Worldwide Protein Data Bank’s [Chemical Component Dictionary (CCD)](https://www.wwpdb.org/data/ccd).
+* Para una proteína, introduce la secuencia de aminoácidos de una sola letra. Alternativamente, pega el contenido de un archivo FASTA. Si tienes múltiples proteínas, puedes poner todas sus secuencias en un solo archivo FASTA (consulta abajo). Utiliza solo códigos estándar de una sola letra. No se admiten códigos no estándar como B, J, O, U, X y Z.
+* Para ADN, introduce la secuencia de nucleótidos de una sola letra en notación estándar (5’-3’). Utiliza solo códigos estándar de una sola letra, es decir, A, C, G y T.
+* Para ARN, de manera similar, introduce la secuencia de nucleótidos de una sola letra en notación estándar (5’-3’). Utiliza solo códigos estándar de una sola letra, es decir, A, C, G y U.
+* Para ligandos, iones y modificaciones postraduccionales, selecciona la entidad deseada de la lista. Los códigos de tres letras que se muestran en la interfaz provienen del [Diccionario de Componentes Químicos (CCD)](https://www.wwpdb.org/data/ccd) del Banco Mundial de Datos de Proteínas (Worldwide Protein Data Bank).
 
-## Adding complexes
+## Añadiendo complejos
 
-If multiple copies of an entity are present (for example, a homomultimeric protein), indicate this by setting the number of copies in the corresponding field.
+Si están presentes múltiples copias de una entidad (por ejemplo, una proteína homotetramérica), indícalo estableciendo el número de copias en el campo correspondiente.
 
-If you are modelling a large complex, you will need to fill in multiple sequences. To do this quickly, paste in the contents of a FASTA file. Simply open a FASTA file containing your sequences in any text editor, copy the entire contents and paste it into AlphaFold Server’s text input box. The Server will recognise the FASTA format and fill in multiple entities automatically. It will also recognise protein, DNA and RNA sequences and assign the correct entity type.
+Si estás modelando un complejo grande, necesitarás rellenar múltiples secuencias. Para hacerlo rápidamente, pega el contenido de un archivo FASTA. Simplemente abre un archivo FASTA que contenga tus secuencias en cualquier editor de texto, copia todo el contenido y pégalo en la caja de entrada de texto de AlphaFold Server. El Servidor reconocerá el formato FASTA y rellenará múltiples entidades automáticamente. También reconocerá secuencias de proteínas, ADN y ARN y asignará el tipo de entidad correcto.
 
-The vertical ellipsis (three-dot) menu ⋮ at the right-hand side of every entity allows several different options, depending on the entity type.
+El menú de elipsis vertical (tres puntos) ⋮ en el lado derecho de cada entidad permite varias opciones diferentes, dependiendo del tipo de entidad.
 
-## Adding modifications
+## Añadiendo modificaciones
 
-For proteins, you can add post-translational modifications (PTMs). Selecting the “+ PTMs” option will open a dialogue window displaying the sequence of the protein chain. Click a residue to which you wish to add a PTM and choose a supported modification from the list that appears. You can add multiple modifications to different residues one at a time. Once finished, save the modifications via the corresponding button.
+Para proteínas, puedes añadir modificaciones postraduccionales (PTMs). Seleccionar la opción “+ PTMs” abrirá una ventana de diálogo que mostrará la secuencia de la cadena proteica. Haz clic en un residuo al que deseas añadir una PTM y elige una modificación compatible de la lista que aparece. Puedes añadir múltiples modificaciones a diferentes residuos uno a la vez. Una vez terminado, guarda las modificaciones mediante el botón correspondiente.
 
-Please note, once you add a PTM and save it, you can’t edit the protein sequence. For detailed information on modelling protein glycosylation, see the [AlphaFold Server FAQ](https://alphafoldserver.com/faq#can-i-model-glycosylated-proteins).
+Ten en cuenta que, una vez que añades una PTM y la guardas, no puedes editar la secuencia de la proteína. Para obtener información detallada sobre el modelado de la glicosilación de proteínas, consulta las [Preguntas Frecuentes de AlphaFold Server](https://alphafoldserver.com/faq#can-i-model-glycosylated-proteins).
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-17.55.28.png)
 
-Figure 41. A screenshot showing the window for adding post-translational modifications.
+Figura 41. Una captura de pantalla que muestra la ventana para añadir modificaciones postraduccionales.
 
-For DNA and RNA chains, you can add chemical modifications to the corresponding nucleotides. The procedure works exactly as described above for proteins.
+Para las cadenas de ADN y ARN, puedes añadir modificaciones químicas a los nucleótidos correspondientes. El procedimiento funciona exactamente como se describe anteriormente para las proteínas.
 
-AlphaFold Server treats “DNA” and “RNA” entities as single strands. This facilitates adding chemical modifications, as the modifications to double-stranded DNA could be different for the two complementary strands.
+AlphaFold Server trata las entidades “ADN” y “ARN” como hebras simples. Esto facilita la adición de modificaciones químicas, ya que las modificaciones del ADN de doble hebra podrían ser diferentes para las dos hebras complementarias.
 
-To model double-stranded DNA, add the first DNA entity and fill in the sequence, either by copy-and-paste or by typing it in. Then select the “+ Reverse complement” option from the vertical ellipsis menu to add the complementary strand; it will be added as a separate DNA entity.
+Para modelar el ADN de doble cadena, añade la primera entidad de ADN y completa la secuencia, ya sea copiándola y pegándola o escribiéndola. Luego, selecciona la opción “+ Complemento inverso” del menú de los tres puntos verticales ⋮⋮ para añadir la cadena complementaria; se añadirá como una entidad de ADN separada.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-24-at-16.53.32.png)
 
-Figure 42. A screenshot showing the input interface for defining a DNA entity, including options to specify sequence, add modifications, or generate the reverse complement.
+Figura 42. Una captura de pantalla que muestra la interfaz de entrada para definir una entidad de ADN, incluyendo opciones para especificar la secuencia, añadir modificaciones o generar el complemento inverso.
 
-It is possible to change the order of the entities. Simply drag the entities using the grey two-by-three dots ⋮⋮ to their left until you get the correct order. AlphaFold Server normally sticks to your input order, so you should find the entities in the same order in the modelled structure and output mmCIF files. However, there is one exception: the mmCIF standard dictates that ligands and ions must be listed last, so AlphaFold Server may reorder the inputs to put them last.
+Es posible cambiar el orden de las entidades. Simplemente arrastra las entidades usando los tres puntos grises ⋮⋮ a su izquierda hasta que obtengas el orden correcto. AlphaFold Server normalmente se adhiere a tu orden de entrada, por lo que deberías encontrar las entidades en el mismo orden en la estructura modelada y en los archivos mmCIF de salida. Sin embargo, hay una excepción: el estándar mmCIF dicta que los ligandos y los iones deben aparecer al final, por lo que AlphaFold Server puede reordenar las entradas para ponerlos al final.
 
-To clear all inputs, just use the “Clear” button on the top right.
+Para borrar todas las entradas, simplemente usa el botón “Clear” (“Borrar”) en la esquina superior derecha.
 
-It is possible to save draft jobs and modify or run them later. If you press the “Save job” button, the system will ask you for the job name and will save it. Saved jobs are displayed in History alongside running and finished jobs, and are marked by the corresponding icon. For easier access, you can click categories on the top of the History list to filter for certain types of jobs, e.g. “Completed” or “Saved draft”. Saving the job might be useful if you use up your daily jobs quota: you can save several jobs and run them the next day once the jobs allocation is renewed.
+Es posible guardar trabajos en borrador y modificarlos o ejecutarlos más tarde. Si pulsas el botón “Save job” (“Guardar trabajo”), el sistema te pedirá el nombre del trabajo y lo guardará. Los trabajos guardados se muestran en History (“Historial”) junto con los trabajos en curso y los finalizados, y están marcados con el icono correspondiente. Para un acceso más fácil, puedes hacer clic en las categorías en la parte superior de la lista de History para filtrar por ciertos tipos de trabajos, por ejemplo, “Completed” (“Completados”) o “Saved draft” (“Borrador guardado”). Guardar el trabajo puede ser útil si te quedas sin tu cuota diaria de trabajos: puedes guardar varios trabajos y ejecutarlos al día siguiente una vez que se renueve la asignación de trabajos.
 
-## Job submission
+## Envío de trabajos
 
-After you have prepared all the inputs, press the “Continue and preview job” button. The dialogue allows you to specify a meaningful job name; if you don’t, the current date and time will be used. You can also switch between an automatically- and manually-defined seed value for this job (for more information on seeds, see Advanced features of AlphaFold Server and corresponding [FAQ section](https://alphafoldserver.com/faq#what-are-seeds-and-how-are-they-set)).
+Después de haber preparado todas las entradas, pulsa el botón “Continue and preview job” (“Continuar y previsualizar trabajo”). El diálogo te permite especificar un nombre de trabajo significativo; si no lo haces, se utilizará la fecha y la hora actuales. También puedes cambiar entre un valor de semilla definido automáticamente y uno definido manualmente para este trabajo (para más información sobre las semillas, consulta las características avanzadas de AlphaFold Server y la sección de [FAQ](https://alphafoldserver.com/faq#what-are-seeds-and-how-are-they-set)) correspondiente).
 
-Check that all inputs are correct. You may also want to note the number of remaining jobs for better planning of your modelling efforts. Finally, press “Confirm and submit job”. The number of remaining jobs will decrease by one and the job will appear in the History list as a job in progress.
+Comprueba que todas las entradas son correctas. También puedes querer anotar el número de trabajos restantes para una mejor planificación de tus esfuerzos de modelado. Finalmente, pulsa “Confirm and submit job” (“Confirmar y enviar trabajo”). El número de trabajos restantes disminuirá en uno y el trabajo aparecerá en la lista de History como un trabajo en progreso.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-18.13.35.png)
 
-Figure 43. The History list, showing multiple jobs on the AlphaFold Server. The top one is running, the others have finished.
-.
+Figura 43. La lista de History, mostrando múltiples trabajos en AlphaFold Server. El primero está en curso, los demás han finalizado.
 
-## Results
+## Resultados
 
-Normally, a job will finish in several minutes. For example, it usually takes 3-6 minutes to predict a structure with 1,000 tokens and 6-8 minutes to predict a structure with 3,600 tokens. However, heavy Server loads may cause delays. When a job has finished, its icon changes and you can double-click it to see the results.
+Normalmente, un trabajo se completará en varios minutos. Por ejemplo, suele tardar entre 3 y 6 minutos en predecir una estructura con 1.000 tokens y entre 6 y 8 minutos en predecir una estructura con 3.600 tokens. Sin embargo, una carga pesada del servidor puede causar retrasos. Cuando un trabajo ha finalizado, su icono cambia y puedes hacer doble clic en él para ver los resultados.
 
-The vertical ellipsis menu ⋮ to the right of every job in the History allows you to:
+El menú de los tres puntos verticales ⋮ a la derecha de cada trabajo en History te permite:
 
-* Delete the job from the list
-* Rename the job
-* For finished jobs, open the results page or download the predicted structures
-* “Clone and reuse” the job. This will bring all its inputs back into the job creation interface: you can then re-run the job as is, or edit it and re-run with modifications (creating a new job in the process). This is useful if you are generating a series of similar structure predictions, for example, the same protein with different DNAs.
+* Eliminar el trabajo de la lista
+* Renombrar el trabajo
+* Para trabajos finalizados, abre la página de resultados o descarga las estructuras predichas
+* “Clona y reutiliza” el trabajo. Esto traerá todas sus entradas de nuevo a la interfaz de creación del trabajo: puedes entonces volver a ejecutar el trabajo tal cual, o editarlo y volver a ejecutarlo con modificaciones (creando un nuevo trabajo en el proceso). Esto es útil si estás generando una serie de predicciones de estructura similares, por ejemplo, la misma proteína con diferentes ADNs.
 
-Extremely rarely (less than 0.1% of overall job submissions), modelling jobs may fail. Failed jobs will be marked with a specific icon and clicking the job will display the exact error. Re-submitting a job will often help if the reason for failure is technical. One possible reason for a job to fail is if the submitted sequence is highly similar to a sequence from a viral pathogen that has been placed on the restricted list (for more details see [AlphaFold Server FAQ](https://alphafoldserver.com/faq#are-there-any-restrictions-on-the-protein-sequences-that-are-allowed)).
+Extremadamente raramente (menos del 0.1% de todas las envíos de trabajos), los trabajos de modelado pueden fallar. Los trabajos fallidos se marcarán con un icono específico y al hacer clic en el trabajo se mostrará el error exacto. Volver a enviar un trabajo a menudo ayuda si la razón del fallo es técnica. Una posible razón para que falle un trabajo es si la secuencia enviada es muy similar a una secuencia de un patógeno viral que ha sido colocado en la lista restringida (para más detalles, consulta [AlphaFold Server FAQ](https://alphafoldserver.com/faq#are-there-any-restrictions-on-the-protein-sequences-that-are-allowed)).
 
-Once the job is finished, clicking on its row will get you to the results page. The results page displays:
+Una vez que el trabajo esté finalizado, hacer clic en su fila te llevará a la página de resultados. La página de resultados muestra:
 
-* Backbone visualisation of the structure, coloured by pLDDT scores
-* PAE plot
-* Overall pTM score
-* Overall ipTM score if the structure is a complex (for more on these confidence metrics, see subsection “[Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“)
-* Information about the job’s inputs, including the value of the random seed
-* “Download” and “Clone and reuse” buttons
-* A link to provide feedback on the structure
+* Visualización de la cadena principal de la estructura, coloreada por las puntuaciones pLDDT
+* Gráfico PAE
+* Puntuación pTM general
+* Puntuación ipTM general si la estructura es un complejo (para más información sobre estas métricas de confianza, consulta la subsección “[Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“)
+* Información sobre las entradas del trabajo, incluido el valor de la semilla aleatoria
+* Botones “Descargar” y “Clonar y reutilizar”
+* Un enlace para proporcionar comentarios sobre la estructura
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-24-at-17.06.35.png)
 
-Figure 44. A sample results page on the AlphaFold Server
+Figura 44. Una página de resultados de ejemplo en el AlphaFold Server
 
-You can download all modelling results in a single zip file. It contains atomic coordinates of the predicted structures in the mmCIF format and additional information about confidence scores in the JSON files (for more details on the outputs, see [Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)).
+Puedes descargar todos los resultados del modelado en un único archivo zip. Contiene las coordenadas atómicas de las estructuras predichas en formato mmCIF e información adicional sobre las puntuaciones de confianza en los archivos JSON (para más detalles sobre las salidas, consulta [Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)).

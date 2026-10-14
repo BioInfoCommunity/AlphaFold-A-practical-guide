@@ -1,28 +1,28 @@
 ---
 layout: default
-title: 'Choosing how to access AlphaFold2'
+title: 'Cómo acceder a AlphaFold2'
 ---
 
-# Choosing how to access AlphaFold2
+# Eligiendo cómo acceder a AlphaFold2
 
-**There are multiple ways to access AlphaFold2, from simply viewing a predicted protein structure online in the AlphaFold Protein Structure Database, to installing the source code and running custom predictions yourself. You should choose judiciously, based on your needs and the resources you have available.**
+**Hay múltiples maneras de acceder a AlphaFold2, desde simplemente visualizar una estructura de proteína predicha en línea en la Base de Datos de Estructuras de Proteínas AlphaFold, hasta instalar el código fuente y ejecutar tus propias predicciones personalizadas. Debes elegir cuidadosamente, basándote en tus necesidades y los recursos que tengas disponibles.**
 
-## **A common workflow with AlphaFold**2
+## **Un flujo de trabajo común con AlphaFold**2
 
-* As an initial approach, you can check if the monomer of the protein of interest is already available in the AlphaFold Protein Structure Database. If it is, you should evaluate the proposed structure based on the confidence metrics.
-* If it is not available, you can use a Colab such as [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb). This will give you a starting point for predicting your protein. You can predict the oligomeric form of the protein, and/or a protein-protein complex and get extended control over MSAs and templates. Additionally, [ColabFold batch](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/batch/AlphaFold2_batch.ipynb) is available to predict a few hundred protein structures.
-* Lastly, if you plan to predict a sizeable number of structures, consider installing AlphaFold2 locally on a powerful workstation with a state-of-the-art GPU. You could even use a computational cluster, e.g. for protein-protein interaction screening. Please note that local installation might be challenging.
+* Como primer enfoque, puedes comprobar si el monómero de la proteína de interés ya está disponible en la Base de Datos de Estructuras de Proteínas AlphaFold. Si lo está, deberías evaluar la estructura propuesta basándote en las métricas de confianza.
+* Si no está disponible, puedes usar un Colab como [ColabFold](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/AlphaFold2.ipynb). Esto te dará un punto de partida para predecir tu proteína. Puedes predecir la forma oligomérica de la proteína, y/o un complejo proteína-proteína y obtener un control extendido sobre las MSAs y las plantillas. Además, [ColabFold batch](https://colab.research.google.com/github/sokrypton/ColabFold/blob/main/batch/AlphaFold2_batch.ipynb) está disponible para predecir unos cientos de estructuras de proteínas.
+* Por último, si planeas predecir un número considerable de estructuras, considera instalar AlphaFold2 localmente en una estación de trabajo potente con una GPU de última generación. Incluso podrías usar un clúster de computación, por ejemplo, para el cribado de interacciones proteína-proteína. Ten en cuenta que la instalación local puede ser complicada.
 
-**Note: ​​**These research tools are all freely available for both academic and commercial use, under permissive open-source licences.
+**Nota:** Estas herramientas de investigación están disponibles gratuitamente tanto para uso académico como comercial, bajo licencias de código abierto permisivas.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/02/Workflow.png)
 
-Figure 20. A typical workflow with AlphaFold, showing how to predict a protein structure. The workflow starts with the least computationally-intensive approach, only scaling up if that does not work.
+Figura 20. Un flujo de trabajo típico con AlphaFold, que muestra cómo predecir una estructura de proteína. El flujo de trabajo comienza con el enfoque computacionalmente menos intensivo, escalando solo si eso no funciona.
 
-The pros and cons of the three ways to access AlphaFold.
+Los pros y los contras de las tres formas de acceder a AlphaFold.
 
-|  | PROS | CONS |
+|  | VENTAJAS | DESVENTAJAS |
 | --- | --- | --- |
-| AlphaFold source code | * Full customisation of structure predictions. * Reproducibility. * Can perform structure predictions in bulk. * Gives a complete set of outputs, including MSA. | * Needs major computational resources (state-of-the-art GPU and 3 TB of disk space, ideally SSD). * Complexity of the installation procedures. * Only on Linux. |
-| ColabFold or AlphaFold Colab | * No installation needed: uses a free cloud-based platform with access to computing resources. * Easy to use. * Gives full data on MSA used. | * Limited resources in the free mode. * Can upgrade to Colab Pro, but that requires a subscription. * AlphaFold Colab: Limited control on configurations. |
-| AlphaFold Protein Structure Database (AFDB) | * Freely accessible. * Users can simply search for a protein sequence and download the corresponding predicted structure. * No waiting times. * Bulk download available. * Metadata available. | * Protein of interest might be missing. * Only monomers. * Only pre-computed structures are hosted. * Users cannot run their own structure predictions. * MSAs not available for structure predictions. |
+| Código fuente de AlphaFold | * Personalización completa de las predicciones de estructura. * Reproducibilidad. * Puede realizar predicciones de estructura a granel. * Proporciona un conjunto completo de salidas, incluyendo MSA. | * Necesita importantes recursos computacionales (GPU de última generación y 3 TB de espacio en disco, idealmente SSD). * Complejidad de los procedimientos de instalación. * Solo en Linux. |
+| ColabFold o AlphaFold Colab | * No necesita instalación: utiliza una plataforma en la nube gratuita con acceso a recursos computacionales. * Fácil de usar. * Proporciona datos completos sobre la MSA utilizada. | * Recursos limitados en el modo gratuito. * Se puede actualizar a Colab Pro, pero eso requiere una suscripción. * AlphaFold Colab: Control limitado sobre las configuraciones. |
+| Base de Datos de Estructuras de Proteínas AlphaFold (AFDB) | * Accesible gratuitamente. * Los usuarios pueden simplemente buscar una secuencia de proteína y descargar la estructura predicha correspondiente. * Sin tiempos de espera. * Descarga masiva disponible. * Metadatos disponibles. | * La proteína de interés podría faltar. * Solo monómeros. * Solo se alojan estructuras precalculadas. * Los usuarios no pueden ejecutar sus propias predicciones de estructura. * Las MSAs no están disponibles para las predicciones de estructura. |

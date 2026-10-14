@@ -1,91 +1,68 @@
 ---
 layout: default
-title: 'PAE: A measure of global confidence in AlphaFold2 predictions'
+title: 'PAE: Una medida de confianza global en las predicciones de AlphaFold2'
 ---
 
-# PAE: A measure of global confidence in AlphaFold2 predictions
+# PAE: Una medida de confianza global en las predicciones de AlphaFold2
 
-Predicted aligned error (PAE) is a measure of how confident AlphaFold2 is in the relative position of two residues within the predicted structure. PAE is defined as the expected positional error at residue X, measured in Ångströms (Å), if the predicted and actual structures were aligned on residue Y.
+El error alineado predicho (PAE) es una medida de la confianza de AlphaFold2 en la posición relativa de dos residuos dentro de la estructura predicha. PAE se define como el error posicional esperado en el residuo X, medido en Ångströms (Å), si las estructuras predicha y real se alinearan en el residuo Y.
 
-Therefore, PAE is effectively a measure of how confident AlphaFold2 is that the domains are well packed and that the relative placement of the domains in the predicted structure is correct.
+Por lo tanto, PAE es efectivamente una medida de la confianza de AlphaFold2 en que los dominios están bien empaquetados y que la colocación relativa de los dominios en la estructura predicha es correcta.
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/alphafold.gif)
 
-Figure 16. A sample PAE (Predicted Aligned Error) plot, showing regions of high confidence (dark green) and low confidence (pale green) for the predicted structure of ferrous iron transport protein B (AlphaFold ID: [AF-Q12XU1-F1](https://alphafold.ebi.ac.uk/entry/Q12XU1)).
+Figura 16. Un ejemplo de gráfico de PAE (Error Alineado Predicho), que muestra regiones de alta confianza (verde oscuro) y baja confianza (verde pálido) para la estructura predicha de la proteína transportadora de hierro ferroso B (ID de AlphaFold: [AF-Q12XU1-F1](https://alphafold.ebi.ac.uk/entry/Q12XU1)).
 
-A low PAE score between two residues from two different domains means low predicted error. This in turn means AlphaFold2 is confident in the position of these residues. Conversely, a high PAE score means that AlphaFold2 is not confident in their relative position.
+Una puntuación de PAE baja entre dos residuos de dos dominios diferentes significa un error predicho bajo. Esto a su vez significa que AlphaFold2 confía en la posición de estos residuos. Por el contrario, una puntuación de PAE alta significa que AlphaFold2 no confía en su posición relativa.
 
-Ignoring the PAE score can lead to misinterpretation of the relative position of domains ([Guo et al., 2022](https://doi.org/10.1038/s41598-022-14382-9)). One example is the mediator of DNA damage checkpoint protein 1 (AlphaFold ID: [AF-Q14676-F1](https://alphafold.ebi.ac.uk/entry/Q14676)). Its two domains appear to be close together in space, but the PAE indicates that the positions of these domains are essentially random.
+Ignorar la puntuación de PAE puede llevar a una mala interpretación de la posición relativa de los dominios ([Guo et al., 2022](https://doi.org/10.1038/s41598-022-14382-9)). Un ejemplo es el mediador de la proteína de control de daños en el ADN 1 (ID de AlphaFold: [AF-Q14676-F1](https://alphafold.ebi.ac.uk/entry/Q14676)). Sus dos dominios parecen estar cerca en el espacio, pero el PAE indica que las posiciones de estos dominios son esencialmente aleatorias.
 
+![Descripción de la imagen](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/Screenshot-2024-01-08-at-11.24.21.png)
 
+##### Figura 17. Mediador de la proteína de control de daños en el ADN 1
 
+Explora la visualización interactiva de PAE (Error Alineado Predicho) directamente en la Base de Datos de Estructuras de Proteínas de AlphaFold ([AF-Q14676-F1](https://alphafold.ebi.ac.uk/entry/Q14676))
 
+El PAE se puede visualizar como un gráfico de PAE fácil de interpretar. Cada estructura de proteína predicha en la Base de Datos de Estructuras de Proteínas de AlphaFold (AFDB) se acompaña de un gráfico de PAE. El gráfico es un gráfico 2D, con los residuos de la proteína a lo largo de los ejes. En cada cuadrado, el tono de verde indica el error de distancia esperado en Ångströms (Å) para un par de residuos. Una baldosa verde oscuro designa una buena predicción (bajo error), mientras que una baldosa verde claro indica una mala predicción (alto error).
 
+El gráfico de PAE siempre tendrá una línea diagonal verde oscuro que vaya de arriba a la izquierda a abajo a la derecha. Esto representa los residuos que se alinean consigo mismos, donde la confianza es siempre alta por definición, por lo que no es informativo y se puede ignorar. La información biológicamente relevante, en términos de orientaciones relativas, se contiene en las regiones alejadas de la diagonal.
 
-
-
-
-
-
-
-![Description of the image](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/Screenshot-2024-01-08-at-11.24.21.png)
-
-##### Figure 17. Mediator of DNA damage checkpoint protein 1
-
-Explore the interactive PAE (Predicted Aligned Error) visualisation directly on the AlphaFold Protein Structure Database ([AF-Q14676-F1](https://alphafold.ebi.ac.uk/entry/Q14676))
-
-PAE can be visualised as an easy-to-interpret PAE plot. Every predicted protein structure in the AlphaFold Protein Structure Database (AFDB) is accompanied by a PAE plot. The plot is a 2D graph, with the protein residues running along the axes. In each square, the shade of green indicates the expected distance error in Ångströms (Å) for a pair of residues. A dark green tile designates a good prediction (low error), whereas a light green tile indicates poor prediction (high error).
-
-The PAE plot will always have a dark green diagonal line running from top-left to bottom-right. This represents residues being aligned against themselves, where confidence is always high by definition, so it is not informative and can be ignored. The biologically-relevant information, in terms of relative orientations, is contained in the regions away from the diagonal.
-
-If you are viewing the PAE plot on the AFDB, you can select a region of the plot. The AFDB will highlight the region or regions in question on the 3D structure, so you can examine the relationship between the sequence, the corresponding segment of the PAE plot and the structure.
+Si estás viendo el gráfico de PAE en la AFDB, puedes seleccionar una región del gráfico. La AFDB resaltará la región o regiones en cuestión en la estructura 3D, para que puedas examinar la relación entre la secuencia, el segmento correspondiente del gráfico de PAE y la estructura.
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/pae-plddt.gif)
 
+---
+
+## Pon a prueba tus conocimientos
+
+En esta sección verás una serie de estructuras para que tú las interpretes, centrándote en el Error Alineado Predicho (PAE). Después puedes comprobar tu interpretación del PAE con la nuestra. Interpreta el Error Alineado Predicho (PAE) y compara tus conclusiones con las nuestras. Recuerda que puedes usar el gráfico interactivo de PAE en la Base de Datos de Estructuras de Proteínas AlphaFold.
+
+![Descripción de la imagen](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/Q9NRI5.png)
+
+##### Proteína disrupcionada en la esquizofrenia 1 ([AF-Q9NRI5-F1](https://alphafold.ebi.ac.uk/entry/Q9NRI5))
+
+Involucrada en la regulación de múltiples aspectos de la neurogénesis embrionaria y adulta.
+
+![Descripción de la imagen](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/P9WNQ7.png)
+
+##### Proteína EccD1 del sistema de secreción ESX-1 ([AF-P9WNQ7-F1](https://alphafold.ebi.ac.uk/entry/P9WNQ7))
+
+Componente del sistema de secreción tipo VII ESX-1, que transporta activamente varios factores de virulencia a las células huésped durante el curso de la infección.
+
+![Descripción de la imagen](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/O15121.png)
+
+##### Desaturasa delta(4)-esfingolípidos DES1 ([AF-O15121-F1](https://alphafold.ebi.ac.uk/entry/O15121))
+
+Se ha relacionado con la leucodistrofia. Sin embargo, no hay información estructural o de modelo disponible para esta proteína.
+
+### Comprueba tus respuestas
 
 ---
 
-## Test your knowledge
+## Integrando las puntuaciones pLLDT y PAE
 
-In this section you’ll see a series of structures for you to interpret, focusing on the Predicted Aligned Error (PAE). You can then check your interpretation of the PAE against ours. Interpret the Predicted Aligned Error (PAE) and compare your conclusions with ours. Remember that you can use the interactive PAE plot in the AlphaFold Protein Structure Database.
+Aunque pLDDT y PAE miden la confianza en diferentes aspectos de la estructura predicha, en algunos casos pueden estar fuertemente correlacionados. Por ejemplo, un segmento de proteína desordenado predicho con un pLDDT bajo probablemente también tendrá un PAE grande. Esto se debe a que su posición relativa a otras partes de la proteína no está bien definida. Sin embargo, pLDDT no muestra si los dominios de la proteína están posicionados con confianza entre sí, mientras que PAE muestra exactamente esto.
 
-
-
-
-
-
-
-
-
-
-
-
-![Description of the image](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/Q9NRI5.png)
-
-##### Disrupted in schizophrenia 1 protein ([AF-Q9NRI5-F1](https://alphafold.ebi.ac.uk/entry/Q9NRI5))
-
-Involved in the regulation of multiple aspects of embryonic and adult neurogenesis
-
-![Description of the image](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/P9WNQ7.png)
-
-##### ESX-1 secretion system protein EccD1 ([AF-P9WNQ7-F1](https://alphafold.ebi.ac.uk/entry/P9WNQ7))
-
-Component of the ESX-1 type VII secretion system, which actively transports various virulence factors into host cells during the course of infection
-
-![Description of the image](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/01/O15121.png)
-
-##### Sphingolipid delta(4)-desaturase DES1 ([AF-O15121-F1](https://alphafold.ebi.ac.uk/entry/O15121))
-
-Has been linked to leukodystrophy. However, no structural or model information for this protein is available.
-
-### Check your answers
-
----
-
-## Integrating pLLDT and PAE scores
-
-Although pLDDT and PAE measure confidence in different aspects of the predicted structure, in some cases they can be strongly correlated. For example, a disordered protein segment predicted with low pLDDT will probably also have a large PAE. This is because its position relative to the other parts of the protein is not well-defined. However, pLDDT does not show whether protein domains are positioned confidently relative to each other, whereas PAE shows exactly this.
-
-PAE scores should always be interpreted in conjunction with other confidence scores like pLDDT.
+Las puntuaciones de PAE siempre deben interpretarse en conjunto con otras puntuaciones de confianza como pLDDT.
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/exportin-pae-plddt.gif)

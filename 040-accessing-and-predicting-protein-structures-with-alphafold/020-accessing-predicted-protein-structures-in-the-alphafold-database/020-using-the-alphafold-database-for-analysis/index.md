@@ -1,15 +1,15 @@
 ---
 layout: default
-title: 'Using the AlphaFold database for analysis'
+title: 'Usando la base de datos AlphaFold para tu análisis'
 ---
 
-# Using the AlphaFold database for analysis
+# Usando la base de datos AlphaFold para análisis
 
-This section explores how the AlphaFold Database (AFDB) can be used to analyse protein structures and their relationships. We’ll delve into two powerful features: clustering and Foldseek.
+Esta sección explora cómo la Base de Datos AlphaFold (AFDB) puede utilizarse para analizar estructuras de proteínas y sus relaciones. Profundizaremos en dos características potentes: el agrupamiento (clustering) y Foldseek.
 
-### By the end of this section, you will be able to:
+### Al final de esta sección, tú podrás:
 
-* Understand how proteins are clustered in the AFDB based on sequence and structural similarity.
-* Access and interpret cluster information to gain insights into protein function and evolution.
-* Perform structure-based searches using Foldseek to identify proteins with similar folds, even with low sequence similarity.
-* Interpret Foldseek results, including E-values and RMSD values, to assess structural similarity.
+* Entender cómo las proteínas se agrupan en la AFDB basándose en la similitud de secuencia y estructura.
+* Acceder e interpretar la información de los grupos para obtener información sobre la función y la evolución de las proteínas.
+* Realizar búsquedas basadas en la estructura utilizando Foldseek para identificar proteínas con pliegues similares, incluso con baja similitud de secuencia.
+* Interpretar los resultados de Foldseek, incluyendo los valores E y RMSD, para evaluar la similitud estructural.

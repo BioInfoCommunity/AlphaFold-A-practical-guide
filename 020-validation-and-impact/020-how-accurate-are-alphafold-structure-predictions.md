@@ -1,41 +1,30 @@
 ---
 layout: default
-title: How accurate are AlphaFold 2 structure predictions?
+title: '¿Qué tan precisas son las predicciones de estructura de AlphaFold 2?'
 ---
 
-# How accurate are AlphaFold 2 structure predictions?
+# ¿Qué tan precisas son las predicciones de estructura de AlphaFold 2?
 
-**High-confidence regions of AlphaFold2 structure predictions are usually very close to the experimental structures, and therefore very useful in designing downstream experiments. However, low-confidence regions may deviate substantially. AlphaFold2 gets the fold and majority of the side chain positions right, but if you are interested in the features that require atomic precision, like understanding the fine details of catalysis, AlphaFold2 may not be able to match such requirements.**
+**Las regiones de alta confianza de las predicciones de estructura de AlphaFold2 suelen estar muy cerca de las estructuras experimentales, y por lo tanto son muy útiles para diseñar experimentos posteriores. Sin embargo, las regiones de baja confianza pueden desviarse sustancialmente. AlphaFold2 acierta con el plegamiento y la mayoría de las posiciones de las cadenas laterales, pero si te interesan las características que requieren precisión atómica, como comprender los detalles finos de la catálisis, es posible que AlphaFold2 no pueda cumplir con dichos requisitos.**
 
-## **Measuring accuracy using RMSD**
+## **Medición de la precisión utilizando RMSD**
 
-Structural biologists have extensively analysed the match between AlphaFold2 structure predictions and experimentally-derived protein structures. The AlphaFold-experiment match can be compared to the match between different experimental structures for the same protein, the latter serving as a baseline.
+Los biólogos estructurales han analizado extensamente la concordancia entre las predicciones de estructura de AlphaFold2 y las estructuras de proteínas derivadas experimentalmente. La concordancia entre AlphaFold y el experimento se puede comparar con la concordancia entre diferentes estructuras experimentales para la misma proteína, siendo esta última una línea de base.
 
-To compare predicted and experimental structures, researchers use the root mean square deviation (RMSD). This is a measure of the average distance (or deviation) between corresponding atoms when two similar structures are superimposed. A smaller RMSD means a better match. Two identical structures would have an RMSD of 0 Ångströms (Å). An RMSD bigger than 2-3 Å suggests that the structures are substantially different.
+Para comparar las estructuras predichas y experimentales, los investigadores utilizan la desviación cuadrática media (RMSD). Esta es una medida de la distancia promedio (o desviación) entre átomos correspondientes cuando dos estructuras similares se superponen. Un RMSD más pequeño significa una mejor concordancia. Dos estructuras idénticas tendrían un RMSD de 0 Ångströms (Å). Un RMSD mayor a 2-3 Å sugiere que las estructuras son sustancialmente diferentes.
 
-The median RMSD between different experimental structures of the same protein is 0.6 Å, while it is 1 Å for the AlphaFold models and experimental structures. This is a very good match and indicates that the overall folds predicted by AlphaFold2 are usually correct.
+La mediana de RMSD entre diferentes estructuras experimentales de la misma proteína es de 0.6 Å, mientras que es de 1 Å para los modelos de AlphaFold y las estructuras experimentales. Esta es una muy buena concordancia e indica que los plegamientos generales predichos por AlphaFold2 suelen ser correctos.
 
-Furthermore, for high-confidence parts of the AlphaFold structure predictions (explained later in [“Inputs and Outputs”](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/)), the median RMSD is 0.6 Å: on par with the experimental structures. However, for low-confidence parts it may go up to 2 Å and higher. This means low-confidence regions of AlphaFold2 structure predictions may deviate substantially from the experimental structures ([Terwilliger et al., 2023](https://doi.org/10.1038/s41592-023-02087-4)).
+Además, para las partes de alta confianza de las predicciones de estructura de AlphaFold (explicado más adelante en [“Inputs and Outputs”](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/)), la mediana de RMSD es de 0.6 Å: a la par con las estructuras experimentales. Sin embargo, para las partes de baja confianza, puede subir hasta 2 Å o más. Esto significa que las regiones de baja confianza de las predicciones de estructura de AlphaFold2 pueden desviarse sustancialmente de las estructuras experimentales ([Terwilliger et al., 2023](https://doi.org/10.1038/s41592-023-02087-4)).
 
-Of the side chains predicted by AlphaFold2, 7% are not compatible with the experimental data. Nevertheless, 93% of the side chains are roughly correct, and 80% show a perfect fit. Analogous data for the experimental structures gives 98% of the side chains being roughly correct and 94% being perfect fit ([Terwilliger et al., 2023](https://doi.org/10.1038/s41592-023-02087-4)). Overall, AlphaFold2 gets the vast majority of the side chains right, but is marginally less reliable than experimental structures. Please note that this statistic can’t be extended to the disordered protein segments and parts of the structure modelled with low confidence. Conformations of amino acid side chains in the disordered and low-confidence regions are mostly random.
+Del 7% de las cadenas laterales predichas por AlphaFold2 no son compatibles con los datos experimentales. No obstante, el 93% de las cadenas laterales son aproximadamente correctas, y el 80% muestran un ajuste perfecto. Datos análogos para las estructuras experimentales dan un 98% de las cadenas laterales siendo aproximadamente correctas y un 94% siendo de ajuste perfecto ([Terwilliger et al., 2023](https://doi.org/10.1038/s41592-023-02087-4)). En general, AlphaFold2 acierta con la gran mayoría de las cadenas laterales, pero es ligeramente menos fiable que las estructuras experimentales. Ten en cuenta que esta estadística no se puede extender a los segmentos de proteína desordenados y a las partes de la estructura modeladas con baja confianza. Las conformaciones de las cadenas laterales de los aminoácidos en las regiones desordenadas y de baja confianza son en su mayoría aleatorias.
 
+##### Figura 11. Fenilalanina hidroxilasa
 
+Si bien la alineación estructural general es evidente, varias cadenas laterales (las estructuras más pequeñas y ramificadas que se extienden desde la columna vertebral principal de la proteína) en el modelo de AlphaFold ([AF-Q818B4-F1](https://alphafold.ebi.ac.uk/entry/Q818B4)) están posicionadas incorrectamente en comparación con las del modelo depositado (gris, ID PDB: [7VGM](https://doi.org/10.2210/pdb7VGM/pdb))
 
+Las regiones de baja confianza de una estructura predicha a menudo corresponden a regiones intrínsecamente desordenadas. Sin embargo, a veces puede indicar que AlphaFold2 no tiene suficiente información para predecir esta estructura con confianza.
 
+Un problema surge al predecir las estructuras de proteínas que contienen varios dominios conectados por enlaces flexibles. Es probable que estos dominios no tengan posiciones relativas bien definidas, ni siquiera en las células, o que solo adopten posiciones bien definidas en el contexto de un gran complejo proteína-proteína. En estos casos, AlphaFold2 predecirá las estructuras de los dominios individuales con precisión y confianza, pero las posiciones relativas de los dominios serán esencialmente aleatorias, reflejando su comportamiento en la vida real. Esto se reflejará en puntuaciones bajas en otra métrica de confianza llamada error alineado predicho (PAE) (consulta la sección “[Inputs and Outputs](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/)“). Sería imprudente extraer conclusiones biológicas de las posiciones relativas predichas de tales dominios.
 
-
-
-
-
-
-
-
-##### Figure 11. Phenylalanine hydroxylase
-
-While overall structural alignment is evident, several side chains (the smaller, branching structures extending from the main protein backbone) in the AlphaFold model ([AF-Q818B4-F1](https://alphafold.ebi.ac.uk/entry/Q818B4)) are positioned incorrectly compared to those in the deposited model (grey, PDB ID: [7VGM](https://doi.org/10.2210/pdb7VGM/pdb))
-
-Low-confidence regions of a predicted structure often correspond to intrinsically-disordered regions. However, sometimes it may indicate that AlphaFold2 doesn’t have enough information to confidently predict this structure.
-
-An issue arises when predicting the structures of proteins that contain several domains connected by flexible linkers. Such domains likely don’t have well-defined relative positions, even in cells, or they may only adopt well-defined positions in the context of a large protein-protein complex. In these instances, AlphaFold2 will predict the structures of the individual domains accurately and confidently, but the relative positions of the domains will be essentially random – mirroring their behaviour in real life. This will be reflected in poor scores on another confidence metric called predicted aligned error (PAE) (see section “[Inputs and Outputs](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/)“). It would be unwise to draw any biological conclusions from the predicted relative positions of such domains.
-
-This is especially true for membrane proteins: AlphaFold2 is not aware of the membrane plane, so it may assign domains to positions that in reality would clash with the membrane. Again, uncertainty in the orientations of the domains is usually reflected in the PAE when visualised as a plot.
+Esto es especialmente cierto para las proteínas de membrana: AlphaFold2 no es consciente del plano de la membrana, por lo que puede asignar dominios a posiciones que en realidad chocarían con la membrana. De nuevo, la incertidumbre en las orientaciones de los dominios suele reflejarse en el PAE cuando se visualiza como un gráfico.

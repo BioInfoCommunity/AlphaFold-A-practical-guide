@@ -1,38 +1,38 @@
 ---
 layout: default
-title: 'Enhancements to AlphaFold2 from the wider scientific community'
+title: 'Mejoras a AlphaFold2 de la comunidad científica'
 ---
 
-# Enhancements to AlphaFold2 from the wider scientific community
+# Mejoras a AlphaFold2 por parte de la comunidad científica
 
-**Ever since the open release of the AlphaFold2 source code, researchers have been extending AlphaFold2’s capabilities. In this way, researchers have made progress on problems that the original version of AlphaFold2 was not trained to solve.**
+**Desde la publicación del código fuente de AlphaFold2, los investigadores han estado ampliando sus capacidades. De esta manera, han logrado avances en problemas que la versión original de AlphaFold2 no estaba entrenada para resolver.**
 
-## **Predicting the structure of immune system proteins**
+## **Prediciendo la estructura de las proteínas del sistema inmunitario**
 
-The original version of AlphaFold2 struggled to predict the structures of many immune system proteins, such as antibodies and T-cell receptors. Such molecules change rapidly in evolutionary time, making them especially difficult to analyse.
+La versión original de AlphaFold2 tuvo dificultades para predecir las estructuras de muchas proteínas del sistema inmunitario, como los anticuerpos y los receptores de células T. Estas moléculas cambian rápidamente en el tiempo evolutivo, lo que las hace especialmente difíciles de analizar.
 
-Research groups have adapted parts of AlphaFold2 and AlphaFold-Multimer to build antibody-specific versions of AlphaFold2. These software packages predict antibody structures far more accurately than AlphaFold2 ([Abanades et al., 2023](https://doi.org/10.1038/s42003-023-04927-7); [Peng et al., 2023](https://doi.org/10.1101/2023.04.20.537598); [Ruffolo et al., 2023](https://doi.org/10.1038/s41467-023-38063-x)).
+Grupos de investigación han adaptado partes de AlphaFold2 y AlphaFold-Multimer para construir versiones específicas de anticuerpos de AlphaFold2. Estos paquetes de software predicen las estructuras de los anticuerpos con mucha más precisión que AlphaFold2 ([Abanades et al., 2023](https://doi.org/10.1038/s42003-023-04927-7); [Peng et al., 2023](https://doi.org/10.1101/2023.04.20.537598); [Ruffolo et al., 2023](https://doi.org/10.1038/s41467-023-38063-x)).
 
-Other groups have adapted AlphaFold2 to predict the structures of T-cell receptors. These are crucial components of the adaptive immune system that recognise and eliminate foreign pathogens and abnormal cells. They do so by binding to major histocompatibility complex (MHC) proteins on the outside of target cells. Researchers are now using modified versions of AlphaFold2 to predict the interactions of T-cell receptors and MHCs, and the complexes they form ([Abanades et al., 2023](https://doi.org/10.1038/s42003-023-04927-7); [Yin et al., 2023](https://doi.org/10.1093/nar/gkad356); [Mikhaylov et al., 2023](https://doi.org/10.1101/2023.03.06.531396); [Bradley, 2023](https://doi.org/10.7554/eLife.82813)).
+Otros grupos han adaptado AlphaFold2 para predecir las estructuras de los receptores de células T. Estos son componentes cruciales del sistema inmunitario adaptativo que reconocen y eliminan patógenos extraños y células anormales. Lo hacen uniéndose a las proteínas del complejo mayor de histocompatibilidad (CMH) en el exterior de las células diana. Ahora, los investigadores están utilizando versiones modificadas de AlphaFold2 para predecir las interacciones de los receptores de células T y los CMH, y los complejos que forman ([Abanades et al., 2023](https://doi.org/10.1038/s42003-023-04927-7); [Yin et al., 2023](https://doi.org/10.1093/nar/gkad356); [Mikhaylov et al., 2023](https://doi.org/10.1101/2023.03.06.531396); [Bradley, 2023](https://doi.org/10.7554/eLife.82813)).
 
-## **Predicting the structures of transmembrane proteins**
+## **Prediciendo las estructuras de las proteínas transmembrana**
 
-AlphaFold2 is not aware of the membrane plane, so cannot reliably predict how protein structures are affected by interactions with membranes. However, researchers have found ways to tackle this problem.
+AlphaFold2 no es consciente del plano de la membrana, por lo que no puede predecir de forma fiable cómo las interacciones con las membranas afectan a las estructuras de las proteínas. Sin embargo, los investigadores han encontrado formas de abordar este problema.
 
-Multiple teams have analysed structures from the AlphaFold Protein Structure Database and identified their  transmembrane domains. These transmembrane proteins have been gathered in databases, enabling researchers to visualise the likeliest positions of the membrane planes ([Dobson et al., 2022](https://doi.org/10.1093/nar/gkac928); [Pei et al., 2023](https://doi.org/10.1093/database/baad008); [Lomize et al., 2022](https://doi.org/10.1002/pro.4318)).
+Múltiples equipos han analizado estructuras de la Base de Datos de Estructuras de Proteínas de AlphaFold y han identificado sus dominios transmembrana. Estas proteínas transmembrana se han recopilado en bases de datos, lo que permite a los investigadores visualizar las posiciones más probables de los planos de la membrana ([Dobson et al., 2022](https://doi.org/10.1093/nar/gkac928); [Pei et al., 2023](https://doi.org/10.1093/database/baad008); [Lomize et al., 2022](https://doi.org/10.1002/pro.4318)).
 
-## **Streamlining predictions of protein-protein interaction**
+## **Agilizando las predicciones de interacción proteína-proteína**
 
-AlphaFold-Multimer is able to predict protein-protein interactions, and to model the structures of larger complexes. However, the process requires considerable computing time and does not take into consideration prior experimental data.
+AlphaFold-Multimer es capaz de predecir las interacciones proteína-proteína y de modelar las estructuras de complejos más grandes. Sin embargo, el proceso requiere una cantidad considerable de tiempo de cálculo y no tiene en cuenta los datos experimentales previos.
 
-To aid this process, researchers developed a Python package called [AlphaPulldown](https://www.embl-hamburg.de/AlphaPulldown/). The software reduces the computing time needed to screen for protein-protein interactions and for modelling of large complexes. It also improves protein-protein interaction predictions by adding other functionalities, including an analysis pipeline for evaluating predicted interfaces with multiple scores, an interactive Jupyter notebook that facilitates the simultaneous analysis of multiple models, and support for custom multimeric templates and crosslink-based modelling offered through the AlphaLink program ([Stahl et al., 2023](https://www.nature.com/articles/s41587-023-01704-z)).
+Para ayudar a este proceso, los investigadores desarrollaron un paquete de Python llamado [AlphaPulldown](https://www.embl-hamburg.de/AlphaPulldown/). El software reduce el tiempo de cálculo necesario para buscar interacciones proteína-proteína y para modelar complejos grandes. También mejora las predicciones de interacción proteína-proteína añadiendo otras funcionalidades, incluyendo una línea de análisis para evaluar las interfaces predichas con múltiples puntuaciones, un cuaderno interactivo de Jupyter que facilita el análisis simultáneo de múltiples modelos, y soporte para plantillas multiméricas personalizadas y modelado basado en enlaces cruzados ofrecido a través del programa AlphaLink ([Stahl et al., 2023](https://www.nature.com/articles/s41587-023-01704-z)).
 
-## **Adding ligands and cofactors**
+## **Añadiendo ligandos y cofactores**
 
-AlphaFold2 predicts protein structures with high accuracy. It may often predict a ligand- or ion-bound form of a protein, even in the absence of the actual ligand/ion. This is because AlphaFold2 saw such ligand- or ion-bound conformations of proteins during training and has learned these patterns.
+AlphaFold2 predice las estructuras de las proteínas con alta precisión. A menudo puede predecir una forma de proteína unida a un ligando o ion, incluso en ausencia del ligando/ion real. Esto se debe a que AlphaFold2 vio tales conformaciones de proteínas unidas a ligandos o iones durante el entrenamiento y ha aprendido estos patrones.
 
-However, the predicted structures do not include small molecules such as ligands and cofactors. These are often essential for protein function.
+Sin embargo, las estructuras predichas no incluyen moléculas pequeñas como ligandos y cofactores. Estos son a menudo esenciales para la función de la proteína.
 
-To address this need, researchers have developed a method called AlphaFill. It automatically ‘transplants’ missing ligands into the predicted structures. AlphaFill does this by comparing the sequence and structure of the target protein to other proteins, the structures of which have been determined by experiment – including ligands. This comparison enables AlphaFill to identify suitable ligands and place them correctly ([Hekkelman et al., 2022](https://doi.org/10.1038/s41592-022-01685-y)).
+Para abordar esta necesidad, los investigadores han desarrollado un método llamado AlphaFill. Este ‘trasplanta’ automáticamente ligandos faltantes en las estructuras predichas. AlphaFill lo hace comparando la secuencia y la estructura de la proteína objetivo con otras proteínas, cuyas estructuras han sido determinadas experimentalmente – incluyendo ligandos. Esta comparación permite a AlphaFill identificar ligandos adecuados y colocarlos correctamente ([Hekkelman et al., 2022](https://doi.org/10.1038/s41592-022-01685-y)).
 
-AlphaFill is available in two forms. First, it is online as a [database](https://alphafill.eu/): this contains the structures from the AlphaFold Protein Structure Database (AFDB), with transplanted ligands added wherever this was possible. Second, for those who need to add small molecules to custom structures using AlphaFill, the [web server](https://alphafill.eu/) can transplant missing ligands into predicted protein structures from AlphaFold2.
+AlphaFill está disponible en dos formatos. Primero, está disponible en línea como una [base de datos](https://alphafill.eu/): esta contiene las estructuras de la Base de Datos de Estructuras Proteicas de AlphaFold (AFDB), con ligandos trasplantados añadidos siempre que fue posible. Segundo, para aquellos que necesiten añadir moléculas pequeñas a estructuras personalizadas usando AlphaFill, el [servidor web](https://alphafill.eu/) puede trasplantar ligandos faltantes en estructuras proteicas predichas de AlphaFold2.

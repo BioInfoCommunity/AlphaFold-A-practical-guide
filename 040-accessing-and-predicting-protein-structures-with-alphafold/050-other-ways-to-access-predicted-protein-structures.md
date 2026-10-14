@@ -1,49 +1,41 @@
 ---
 layout: default
-title: 'Other ways to access predicted protein structures'
+title: 'Otras formas de acceder a estructuras de proteínas predichas'
 ---
 
-# Other ways to access predicted protein structures
+# Otras formas de acceder a estructuras de proteínas predichas
 
-**There are many different ways to access protein structures predicted by AlphaFold2. The 3D-Beacons Network provides standardised macromolecular structures from a host of providers, including AlphaFold2. Furthermore, AlphaFold2 and its database have been integrated into many pieces of software used to work with predicted structures.**
+**Existen muchas maneras diferentes de acceder a las estructuras de proteínas predichas por AlphaFold2. La Red 3D-Beacons proporciona estructuras macromoleculares estandarizadas de una gran variedad de proveedores, incluyendo AlphaFold2. Además, AlphaFold2 y su base de datos se han integrado en muchos programas utilizados para trabajar con estructuras predichas.**
 
-## **The 3D-Beacons Network**
+## **La Red 3D-Beacons**
 
-The[3D-Beacons Network](https://www.ebi.ac.uk/pdbe/pdbe-kb/3dbeacons/) is an open collaboration of macromolecular structure model providers.
+La [Red 3D-Beacons](https://www.ebi.ac.uk/pdbe/pdbe-kb/3dbeacons/) es una colaboración abierta de proveedores de modelos de estructuras macromoleculares.
 
-It aims to provide standardised model coordinates and meta-information from all contributing data resources on a unified platform. It also provides unified programmatic access to experimentally-determined and predicted structure models. The 3D-Beacons Network brings together providers including: [PDBe](https://www.ebi.ac.uk/pdbe/), [AFDB](https://alphafold.ebi.ac.uk/), [Protein Ensemble Database](https://proteinensemble.org/), [Isoform.io](https://www.isoform.io/), [SWISS-MODEL](https://swissmodel.expasy.org/), [AlphaFill](https://alphafill.eu/), [SASBDB](https://www.sasbdb.org/) and more.
+Su objetivo es proporcionar coordenadas de modelos estandarizadas y metainformación de todos los recursos de datos contribuyentes en una plataforma unificada. También proporciona acceso programático unificado a modelos de estructuras determinados experimentalmente y predichos. La Red 3D-Beacons reúne a proveedores como: [PDBe](https://www.ebi.ac.uk/pdbe/), [AFDB](https://alphafold.ebi.ac.uk/), [Protein Ensemble Database](https://proteinensemble.org/), [Isoform.io](https://www.isoform.io/), [SWISS-MODEL](https://swissmodel.expasy.org/), [AlphaFill](https://alphafill.eu/), [SASBDB](https://www.sasbdb.org/) y más.
 
-All data on the 3D-Beacons Network is freely available for both academic and commercial use, under the Creative Commons Attribution 4.0 (CC-BY 4.0) licence.
+Todos los datos en la Red 3D-Beacons están disponibles de forma gratuita tanto para uso académico como comercial, bajo la licencia Creative Commons Attribution 4.0 (CC-BY 4.0).
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/3D_Beacons.gif)
 
+Figura 26. La Red 3D-Beacons es una colaboración abierta de proveedores de estructuras macromoleculares. Puedes comparar estructuras determinadas experimentalmente y predichas de macromoléculas de una variedad de proveedores, incluyendo la Base de Datos AlphaFold.
 
-Figure 26. The 3D-Beacons Network is an open collaboration of macromolecular structure providers. You can compare experimentally determined and predicted structures of macromolecules from a range of providers, including AlphaFold Database.
+## **Paquetes de software que soportan el acceso a AlphaFold**2
 
-## **Software packages supporting access to AlphaFold**2
+AlphaFold2 y la Base de Datos de Estructuras de Proteínas AlphaFold (AFDB) se han integrado en programas especializados, utilizados para importar, procesar y trabajar más con estructuras predichas.
 
-AlphaFold2 and the AlphaFold Protein Structure Database (AFDB) have been integrated into specialised pieces of software, used for importing, processing and further working with predicted structures.
+Esto significa que, para muchas aplicaciones prácticas, los usuarios no necesitan ejecutar las predicciones de AlphaFold2 manualmente. Ni siquiera necesitas descargar las estructuras de la AFDB. Estos programas especializados ofrecen acceso automatizado a las estructuras de AlphaFold2 como estándar.
 
-This means that, for many practical applications, users don’t need to run AlphaFold2 predictions manually. You don’t even need to download the structures from the AFDB. These specialist programs offer automated access to AlphaFold2 structures as standard.
+Por ejemplo, supón que eres un biólogo estructural experimental interesado en resolver una estructura cristalina por reemplazo molecular. Recomendamos utilizar software automatizado para cristalografía como [MrBUMP](https://doi.org/10.1107/S2059798318003455) del [CCP4 Suite](https://www.ccp4.ac.uk/) ([Agirre et al., 2023](https://doi.org/10.1107/S2059798323003595)). Analizará automáticamente tu secuencia de proteína, obtendrá las estructuras predichas correspondientes de la AFDB y resolverá la estructura. No se requiere intervención del usuario ([Simpkin et al., 2023](https://doi.org/10.1107/S2059798323006289)).
 
-For example, suppose you are an experimental structural biologist interested in solving a crystal structure by molecular replacement. We recommend using automated software for crystallography like [MrBUMP](https://doi.org/10.1107/S2059798318003455) from the [CCP4 Suite](https://www.ccp4.ac.uk/) ([Agirre et al., 2023](https://doi.org/10.1107/S2059798323003595)) . It will automatically analyse your protein sequence, fetch the corresponding predicted structures from AFDB, and solve the structure. No user intervention is required ([Simpkin et al., 2023](https://doi.org/10.1107/S2059798323006289)).
-
-
-
-
-
-
-
-
-| Software | AlphaFold2 functions supported |
+| Software | Funciones de AlphaFold2 soportadas |
 | --- | --- |
-| [CCP4: Software for Macromolecular X-Ray Crystallography](https://www.ccp4.ac.uk/) | * Integrates AlphaFold in all relevant software, such as molecular replacement pipelines * Automated import of AlphaFold models * [CCP4 Cloud](https://cloud.ccp4.ac.uk/) can run AlphaFold modeling ([Simpkin et al., 2023](https://doi.org/10.1107/S2059798323006289)). |
-| [CCP-EM](https://www.ccpem.ac.uk/) | * Import from the AFDB |
-| [ChimeraX](https://www.cgl.ucsf.edu/chimerax/docs/user/commands/alphafold.html) | * Modelling via ColabFold * Retrieving from the AFDB ([see presentation](https://www.rbvi.ucsf.edu/chimerax/data/alphafold-nov2021/af_sbgrid.html)) * Interactive visualization of PAE plots |
-| [COOT](https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/) | * Import from the AFDB |
-| [DALI server](http://ekhidna2.biocenter.helsinki.fi/dali/) | * Structure-based search over AFDB |
-| [Foldseek Search Server](https://search.foldseek.com/search) | * Structure-based search over AFDB |
-| [Jalview](https://www.jalview.org/) | * Import from the AFDB |
-| [Mol\* Viewer](https://molstar.org/viewer/) | * Import from the AFDB |
-| [PHENIX](https://phenix-online.org/) | * Integrates AlphaFold in all relevant software, such as molecular replacement pipelines ([Oeffner et al., 2022)](https://doi.org/10.1107/S2059798322010026) |
-| [PyMOL](https://pymol.org/) | * Import from the AFDB, pLDDT colouring to illustrate regions of high and low confidence |
+| [CCP4: Software para Cristalografía de Rayos X Macromolecular](https://www.ccp4.ac.uk/) | * Integra AlphaFold en todo el software relevante, como las canalizaciones de reemplazo molecular * Importación automatizada de modelos AlphaFold * [CCP4 Cloud](https://cloud.ccp4.ac.uk/) puede ejecutar el modelado de AlphaFold ([Simpkin et al., 2023](https://doi.org/10.1107/S2059798323006289)). |
+| [CCP-EM](https://www.ccpem.ac.uk/) | * Importación desde la AFDB |
+| [ChimeraX](https://www.cgl.ucsf.edu/chimerax/docs/user/commands/alphafold.html) | * Modelado a través de ColabFold * Recuperación desde la AFDB ([ver presentación](https://www.rbvi.ucsf.edu/chimerax/data/alphafold-nov2021/af_sbgrid.html)) * Visualización interactiva de los gráficos de PAE |
+| [COOT](https://www2.mrc-lmb.cam.ac.uk/personal/pemsley/coot/) | * Importación desde la AFDB |
+| [DALI server](http://ekhidna2.biocenter.helsinki.fi/dali/) | * Búsqueda basada en la estructura sobre AFDB |
+| [Foldseek Search Server](https://search.foldseek.com/search) | * Búsqueda basada en la estructura sobre AFDB |
+| [Jalview](https://www.jalview.org/) | * Importación desde la AFDB |
+| [Mol\* Viewer](https://molstar.org/viewer/) | * Importación desde la AFDB |
+| [PHENIX](https://phenix-online.org/) | * Integra AlphaFold en todo el software relevante, como las canalizaciones de reemplazo molecular ([Oeffner et al., 2022)](https://doi.org/10.1107/S2059798322010026) |
+| [PyMOL](https://pymol.org/) | * Importación desde la AFDB, coloreado pLDDT para ilustrar regiones de alta y baja confianza |
