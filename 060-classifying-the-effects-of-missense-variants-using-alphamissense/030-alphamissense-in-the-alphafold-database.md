@@ -1,25 +1,24 @@
 ---
 layout: default
-title: 'AlphaMissense in the AlphaFold Database'
+title: 'AlphaMissense en la base de datos AlphaFold'
 ---
 
-# AlphaMissense in the AlphaFold Database
+# AlphaMissense en la Base de Datos AlphaFold
 
-At the AlphaFold Database, you can now explore the predicted structures for canonical human proteins and seamlessly toggle between two key visual representations, the quality of structure model (pLDDT) and the average pathogenicity scores from AlphaMissense.
+En la Base de Datos AlphaFold, ahora puedes explorar las estructuras predichas para proteínas humanas canónicas y cambiar fácilmente entre dos representaciones visuales clave: la calidad del modelo de estructura (pLDDT) y las puntuaciones promedio de patogenicidad de AlphaMissense.
 
-The variant data is displayed using an innovative and interactive heatmap and 3D visualisation, offering insights into the broader implications of specific residue changes. The heatmap can help interpreting important functional areas with higher predicted pathogenicity.
+Los datos de variantes se muestran utilizando un mapa de calor innovador e interactivo y una visualización en 3D, ofreciendo información sobre las implicaciones más amplias de cambios específicos de residuos. El mapa de calor puede ayudar a interpretar áreas funcionales importantes con mayor patogenicidad predicha.
 
-Users can filter the heatmap by category and modify the range for categories based on their focus.
+Puedes filtrar el mapa de calor por categoría y modificar el rango para categorías según tu enfoque.
 
-The AFDB update significantly aids researchers in identifying structural areas to guide their investigations into protein function and provides easy access to download the data.
+La actualización de AFDB ayuda significativamente a los investigadores a identificar áreas estructurales para guiar sus investigaciones sobre la función de las proteínas y proporciona un acceso fácil para descargar los datos.
 
-![AlphaMissense in the AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation2.gif?raw=true)
+![AlphaMissense en la AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation2.gif?raw=true)
 
+Figura 33. Base de Datos AlphaFold mostrando la integración de datos de AlphaMissense para [proteína similar a Rab 2A](https://alphafold.ebi.ac.uk/entry/Q9UBK7)
 
-Figure 33. AlphaFold Database showing AlphaMissense data integration for [Rab-like protein 2A.](https://alphafold.ebi.ac.uk/entry/Q9UBK7)
+## **Más información**
 
-## **Further information**
+Si estás interesado en un análisis más profundo de AlphaMissense, te recomendamos que veas nuestro seminario web “Predicciones de AlphaMissense para la investigación de variaciones genéticas humanas”. Detalla cómo los datos de AlphaMissense pueden ser accedidos y visualizados por investigadores que estudian variaciones genéticas humanas.
 
-If you are interested in a deeper dive into AlphaMissense, we recommend you watch our webinar “AlphaMissense predictions for human genetic variation research”. It details how AlphaMissense data can be accessed and visualised by researchers studying human genetics variations.
-
-The webinar also demonstrates how EMBL-EBI resources have incorporated AlphaMissense data.
+El seminario web también demuestra cómo los recursos de EMBL-EBI han incorporado datos de AlphaMissense.

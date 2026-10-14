@@ -1,31 +1,30 @@
 ---
 layout: default
-title: 'Introducing missense variants and AlphaMissense'
+title: 'Presentando variantes de cambio de sentido y AlphaMissense'
 ---
 
-# Introducing missense variants and AlphaMissense
+# Presentando las variantes de sentido incorrecto y AlphaMissense
 
-Missense variants are the most common type of genetic variant. A single change in the DNA sequence results in the substitution of one amino acid for another in a protein. While some missense variants are harmless, others can lead to genetic disorders.
+Las variantes de sentido incorrecto son el tipo más común de variante genética. Un solo cambio en la secuencia de ADN resulta en la sustitución de un aminoácido por otro en una proteína. Aunque algunas variantes de sentido incorrecto son inofensivas, otras pueden llevar a trastornos genéticos.
 
-AlphaMissense is a machine-learning system that can categorise a missense genetic variant as likely to be pathogenic (disease-causing) or benign (limited effect). To classify missense variants, Google DeepMind has built a new tool called AlphaMissense. Google DeepMind based AlphaMissense on AlphaFold2, but implemented it as a separate system.
+AlphaMissense es un sistema de aprendizaje automático que puede categorizar una variante genética de sentido incorrecto como probablemente patogénica (causante de enfermedad) o benigna (efecto limitado). Para clasificar las variantes de sentido incorrecto, Google DeepMind ha creado una nueva herramienta llamada AlphaMissense. Google DeepMind basó AlphaMissense en AlphaFold2, pero lo implementó como un sistema separado.
 
-AlphaMissense has already provided high-confidence predictions for most human missense variants ([Cheng et al., 2023](https://doi.org/10.1126/science.adg7492)). See Disclaimer [1](https://www.ebi.ac.uk/training/online/courses/alphafold/?page_id=2721&preview=true#:~:text=1.%20Disclaimer%3A%20%E2%80%9CAlphaFold,a%20qualified%20professional.%E2%80%9D)
+AlphaMissense ya ha proporcionado predicciones de alta confianza para la mayoría de las variantes de sentido incorrecto humanas ([Cheng et al., 2023](https://doi.org/10.1126/science.adg7492)). Consulta el Aviso [1](https://www.ebi.ac.uk/training/online/courses/alphafold/?page_id=2721&preview=true#:~:text=1.%20Disclaimer%3A%20%E2%80%9CAlphaFold,a%20qualified%20professional.%E2%80%9D)
 
-## **How AlphaMissense works**
+## **Cómo funciona AlphaMissense**
 
-To predict whether a variant is pathogenic, AlphaMissense combines two types of data.
+Para predecir si una variante es patogénica, AlphaMissense combina dos tipos de datos.
 
-The first is the degree to which the amino acid residue has been conserved over evolutionary history. If a residue is deeply conserved, it is likely to be important for protein function. Changes to such conserved residues are more likely to be pathogenic.
+El primero es el grado en que el residuo de aminoácido se ha conservado a lo largo de la historia evolutiva. Si un residuo está profundamente conservado, es probable que sea importante para la función de la proteína. Los cambios en tales residuos conservados son más propensos a ser patogénicos.
 
-The second factor is the structural context of the variant. Depending on where an amino acid is located within a protein, it is more or less likely to be critical to function.
+El segundo factor es el contexto estructural de la variante. Dependiendo de dónde se encuentre un aminoácido dentro de una proteína, es más o menos probable que sea crítico para la función.
 
-AlphaMissense’s training process involved analysing a vast dataset of variant frequencies in human and primate populations. Variants that were frequently observed were categorised as benign, while rare or absent variants were deemed pathogenic.
+El proceso de entrenamiento de AlphaMissense involucró analizar un vasto conjunto de datos de frecuencias de variantes en poblaciones humanas y de primates. Las variantes que se observaron con frecuencia se categorizaron como benignas, mientras que las variantes raras o ausentes se consideraron patogénicas.
 
-To verify that AlphaMissense successfully predicted the pathogenicity of missense variants, it was validated against multiple benchmarks. These included annotated data from ClinVar, the Evolutionary model of Variant Effect (EVE) and MAVE datasets.
+Para verificar que AlphaMissense predijo con éxito la patogenicidad de las variantes de sentido incorrecto, se validó contra múltiples puntos de referencia. Estos incluyeron datos anotados de ClinVar, el modelo evolutivo de efecto de variantes (EVE) y los conjuntos de datos MAVE.
 
 ![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/11/alphamissense-1.png)
 
+Figura 31. AlphaMissense supera otros métodos computacionales en la predicción de los efectos de las variantes de sentido incorrecto de ClinVar. Los métodos resaltados en gris se entrenaron directamente en ClinVar; esto llevó a métricas de rendimiento potencialmente infladas, ya que algunas variantes de entrenamiento están incluidas en este conjunto.
 
-Figure 31. AlphaMissense surpasses other computational methods on predicting the effects of missense variants from ClinVar. Methods highlighted in grey were trained directly on ClinVar; this led to potentially inflated performance metrics, as some training variants are included in this set.
-
-1. Disclaimer: “AlphaFold is a research tool and its outputs have varying levels of confidence. The information provided in these modules and by AlphaFold (including in the AlphaFold Database) is provided free of charge, strictly as-is and without representation or warranty of any kind. We are not responsible for the accuracy, reliability, availability, effectiveness, or correct use of this information or for any impact from ongoing use of such information. If you rely on any such information, you do so solely at your own risk. These modules, AlphaFold and its outputs are not intended for, have not been validated for, and are not approved for clinical use. You should not use any of this information for clinical purposes or rely on it for medical or other professional advice. Any content regarding those topics is provided for informational purposes only and is not a substitute for advice from a qualified professional.”
+1. Aviso: “AlphaFold es una herramienta de investigación y sus salidas tienen diferentes niveles de confianza. La información proporcionada en estos módulos y por AlphaFold (incluida en la Base de Datos AlphaFold) se proporciona de forma gratuita, estrictamente tal como está y sin representación o garantía de ningún tipo. No somos responsables de la precisión, fiabilidad, disponibilidad, efectividad o uso correcto de esta información ni de ningún impacto derivado del uso continuo de dicha información. Si te basas en cualquier información de este tipo, lo haces bajo tu propio riesgo. Estos módulos, AlphaFold y sus salidas no están destinados para, no han sido validados para y no están aprobados para su uso clínico. No debes usar ninguna de esta información para fines clínicos ni basarte en ella para obtener asesoramiento médico u otro asesoramiento profesional. Cualquier contenido relacionado con estos temas se proporciona únicamente con fines informativos y no es un sustituto del asesoramiento de un profesional cualificado.”

@@ -1,14 +1,14 @@
 ---
 layout: default
-title: 'Inputs and outputs'
+title: 'Entradas y salidas'
 ---
 
-# Inputs and outputs
+# Entradas y salidas
 
-How does AlphaFold predict a protein structure? Why are confidence metrics important? AlphaFold is not perfect and its predictions can sometimes be inaccurate. By understanding these confidence metrics, we can make informed decisions about how to use the predicted structures and identify where further research is needed.
+¿Cómo predice AlphaFold una estructura de proteína? ¿Por qué son importantes las métricas de confianza? AlphaFold no es perfecto y sus predicciones pueden ser a veces inexactas. Al entender estas métricas de confianza, podemos tomar decisiones informadas sobre cómo usar las estructuras predichas e identificar dónde se necesita más investigación.
 
-### By the end of this section you will be able to:
+### Al final de esta sección podrás:
 
-* Recall the importance of the multiple sequence alignment (MSA) in the prediction of protein structures using AlphaFold.
-* Explain how to interpret confidence scores, specifically by interpreting PAE (Predicted Aligned Error) and  pLDDT (predicted Local Distance Difference Test).
-* Analyse predicted structures from AlphaFold by integrating the different confidence metrics.
+* Recordar la importancia del alineamiento múltiple de secuencias (MSA) en la predicción de estructuras de proteínas usando AlphaFold.
+* Explicar cómo interpretar las puntuaciones de confianza, específicamente interpretando PAE (Predicted Aligned Error) y pLDDT (predicted Local Distance Difference Test).
+* Analizar las estructuras predichas de AlphaFold integrando las diferentes métricas de confianza.

@@ -1,16 +1,16 @@
 ---
 layout: default
-title: 'Other tools to check quality of the predicted structures'
+title: 'Otras herramientas para verificar la calidad de las estructuras predichas'
 ---
 
-# Other tools to check quality of the predicted structures
+# Otras herramientas para verificar la calidad de las estructuras predichas
 
-**Users who wish to further evaluate the quality of predicted protein structures from AlphaFold2 can use a variety of open-source tools.**
+**Los usuarios que deseen evaluar aún más la calidad de las estructuras de proteínas predichas por AlphaFold2 pueden utilizar una variedad de herramientas de código abierto.**
 
-## **Open-source tools for evaluating predicted structures**
+## **Herramientas de código abierto para evaluar estructuras predichas**
 
-One option is a general structural biology validation tool like [MolProbity](http://molprobity.biochem.duke.edu/). These are used for diagnosing “correctness” in 3D models of proteins, nucleic acids or complexes. AlphaFold2 models generally have excellent geometrical quality in high-confidence regions. Nevertheless, if MolProbity flags part of the structure, you should examine it carefully.
+Una opción es una herramienta de validación de biología estructural general como [MolProbity](http://molprobity.biochem.duke.edu/). Estas se utilizan para diagnosticar la “correctitud” en modelos 3D de proteínas, ácidos nucleicos o complejos. Los modelos de AlphaFold2 generalmente tienen una excelente calidad geométrica en las regiones de alta confianza. Sin embargo, si MolProbity marca alguna parte de la estructura, debes examinarla cuidadosamente.
 
-For protein-protein complexes, tools like [PISA](https://www.ebi.ac.uk/pdbe/pisa/) can be used to further assess the quality of the predicted interface. The software allows you to check details like the total buried surface area and the number of cross-interface hydrogen bonds, which in turn give an indication of whether the predicted interface corresponds to reality or is artefactual. Note that PISA validation criteria may have some exceptions, e.g. strongly bound antibody-antigen complexes could be reported as weakly bound by PISA.
+Para complejos proteína-proteína, herramientas como [PISA](https://www.ebi.ac.uk/pdbe/pisa/) se pueden utilizar para evaluar aún más la calidad de la interfaz predicha. El software te permite verificar detalles como el área de superficie enterrada total y el número de enlaces de hidrógeno entre interfaces, lo que a su vez da una indicación de si la interfaz predicha corresponde a la realidad o es artificial. Ten en cuenta que los criterios de validación de PISA pueden tener algunas excepciones, por ejemplo, complejos fuertemente unidos de anticuerpo-antígeno podrían ser reportados como débilmente unidos por PISA.
 
-The [PAE viewer](http://www.subtiwiki.uni-goettingen.de/v4/paeViewerDemo) is a web server designed to facilitate the interpretation of PAE scores for multimeric predictions. The visualisation highlights the violations and/or satisfactions of crosslinker length restraints.
+El [PAE viewer](http://www.subtiwiki.uni-goettingen.de/v4/paeViewerDemo) es un servidor web diseñado para facilitar la interpretación de las puntuaciones PAE para predicciones multiméricas. La visualización resalta las violaciones y/o satisfacciones de las restricciones de longitud de los enlaces cruzados.

@@ -1,32 +1,32 @@
 ---
 layout: default
-title: "AlphaFold2 inputs and outputs &#8211; Recap"
+title: 'AlphaFold2 entradas y salidas &#8211; Resumen'
 ---
 
-# AlphaFold2 inputs and outputs &#8211; Recap
+# Entradas y salidas de AlphaFold2 &#8211; Resumen
 
-**The only required input is the amino acid sequence of your protein of interest. However, you may also supply additional data to guide AlphaFold2’s structure prediction. AlphaFold2 will output the predicted structure of the protein, accompanied by confidence scores such as pLDDT and PAE.**
+**La única entrada requerida es la secuencia de aminoácidos de tu proteína de interés. Sin embargo, también puedes proporcionar datos adicionales para guiar la predicción de la estructura de AlphaFold2. AlphaFold2 producirá la estructura predicha de la proteína, acompañada de puntuaciones de confianza como pLDDT y PAE.**
 
-## **AlphaFold2 inputs**
+## **Entradas de AlphaFold2**
 
-To obtain a predicted structure for a protein, all you need to do is supply AlphaFold2 with its amino acid sequence. No other inputs are essential.
+Para obtener una estructura predicha para una proteína, solo necesitas proporcionar a AlphaFold2 su secuencia de aminoácidos. No se requieren otras entradas.
 
-However, the quality of the predicted structure depends on the quality of the multiple sequence alignment (MSA), which is generated based on protein sequence data. MSAs built with the default mechanism usually work pretty well, but there could be exceptionally difficult cases (see section “[Strengths and limitations of AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/strengths-and-limitations-of-alphafold/)“).
+Sin embargo, la calidad de la estructura predicha depende de la calidad del alineamiento múltiple de secuencias (MSA), que se genera en función de los datos de secuencia de proteínas. Los MSAs construidos con el mecanismo predeterminado suelen funcionar bastante bien, pero podría haber casos excepcionalmente difíciles (consulta la sección “[Fortalezas y limitaciones de AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/strengths-and-limitations-of-alphafold/)“).
 
-If you feel that the MSA generated from your target protein sequence is not optimal, you may provide your own MSA, generated with your favourite tools (see section “[Customising AlphaFold2 structure predictions](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/)“).
+Si crees que el MSA generado a partir de la secuencia de tu proteína objetivo no es óptimo, puedes proporcionar tu propio MSA, generado con tus herramientas favoritas (consulta la sección “[Personalizar predicciones de estructuras de AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/)“).
 
-Alternatively, you may guide the modelling by providing AlphaFold2 with template structures from protein(s) related to the target protein. For example, templates could be used to model a protein in a particular state (see section “[Customising AlphaFold2 structure predictions](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/)“).
+Alternativamente, puedes guiar el modelado proporcionando a AlphaFold2 estructuras de plantilla de proteína(s) relacionadas con la proteína objetivo. Por ejemplo, las plantillas podrían usarse para modelar una proteína en un estado particular (consulta la sección “[Personalizar predicciones de estructuras de AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/)“).
 
-The default parameters of AlphaFold2 tend to work well for the vast majority of proteins. However, for difficult cases it might be beneficial to adjust certain parameters. For instance, you might increase the number of recycles, or run several predictions starting from different random seeds (see section “[Customising AlphaFold2 structure predictions](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/)“).
+Los parámetros predeterminados de AlphaFold2 tienden a funcionar bien para la mayoría de las proteínas. Sin embargo, para casos difíciles, podría ser beneficioso ajustar ciertos parámetros. Por ejemplo, podrías aumentar el número de reciclajes o realizar varias predicciones comenzando desde diferentes semillas aleatorias (consulta la sección “[Personalizar predicciones de estructuras de AlphaFold2](https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/)“).
 
-Other software like ColabFold, which is built on top of AlphaFold2, introduces additional parameters to control AlphaFold2 (see section “[Predicting protein structures with ColabFold and AlphaFold Colab](https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-with-colabfold-and-alphafold-colab/)“).
+Otros programas como ColabFold, que se construye sobre AlphaFold2, introducen parámetros adicionales para controlar AlphaFold2 (consulta la sección “[Predecir estructuras de proteínas con ColabFold y AlphaFold Colab](https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-with-colabfold-and-alphafold-colab/)“).
 
-## **AlphaFold2 outputs**
+## **Salidas de AlphaFold2**
 
-The main output of the AlphaFold2 neural network is the predicted structure of the protein or protein complex. It is saved in two standard formats: PDB and mmCIF.
+La salida principal de la red neuronal de AlphaFold2 es la estructura predicha de la proteína o complejo proteico. Se guarda en dos formatos estándar: PDB y mmCIF.
 
-The atomic coordinates are accompanied by pLDDT scores, which reflect local confidence of the prediction. pLDDT is also saved in the same PDB or mmCIF file, in the B-factors field. This means you can use molecular graphics programs like PyMOL to colour-code the predicted structure according to the pLDDT scores (See [ColabFold’s FAQ](https://github.com/sokrypton/ColabFold#faq) for the instructions).
+Las coordenadas atómicas van acompañadas de puntuaciones pLDDT, que reflejan la confianza local de la predicción. pLDDT también se guarda en el mismo archivo PDB o mmCIF, en el campo de factores B. Esto significa que puedes usar programas de gráficos moleculares como PyMOL para codificar por colores la estructura predicha según las puntuaciones pLDDT (consulta el [FAQ de ColabFold](https://github.com/sokrypton/ColabFold#faq) para las instrucciones).
 
-AlphaFold2 also supplies PAE: an indication of its confidence in the packing and relative positions of domains. PAE is written out separately as a JSON file and can be visualised as a PAE plot.
+AlphaFold2 también proporciona PAE: una indicación de su confianza en el empaquetamiento y las posiciones relativas de los dominios. PAE se escribe por separado como un archivo JSON y se puede visualizar como un gráfico PAE.
 
-For the modelling of multimers, two additional scores are supplied. pTM assesses the accuracy of the overall structure of the complex, while ipTM measures the precision of predictions of the interface between the subunits of the protein-protein complex. pTM and ipTM scores are written out in the log files and saved in the output JSON file ([please refer to the documentation](https://github.com/google-deepmind/alphafold/blob/main/README.md)).
+Para el modelado de multimers, se proporcionan dos puntuaciones adicionales. pTM evalúa la precisión de la estructura general del complejo, mientras que ipTM mide la precisión de las predicciones de la interfaz entre las subunidades del complejo proteína-proteína. Las puntuaciones pTM e ipTM se escriben en los archivos de registro y se guardan en el archivo JSON de salida ([consulta la documentación](https://github.com/google-deepmind/alphafold/blob/main/README.md)).

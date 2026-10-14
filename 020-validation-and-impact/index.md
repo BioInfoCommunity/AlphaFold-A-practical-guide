@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Validation and impact
+title: 'Validación e impacto'
 ---
 
-# Validation and impact
+# Validación e impacto
 
-Are AlphaFold structures “just structure predictions”? Are they even close to the experimentally determined structures? Are they good enough for any research use? This section answers these questions.
+¿Son las estructuras de AlphaFold “solo predicciones estructurales”? ¿Están siquiera cerca de las estructuras determinadas experimentalmente? ¿Son lo suficientemente buenas para cualquier uso en la investigación? Esta sección responde a estas preguntas.
 
-### By the end of this section you will be able to:
+### Al final de esta sección podrás:
 
-* Explain how AlphaFold structure predictions were validated experimentally
-* Describe the use of confidence scores to assess AlphaFold structure predictions
-* Recall the diverse potential research uses of AlphaFold and recognise AlphaFold’s role in advancing diverse areas of scientific research
+* Explicar cómo se validaron experimentalmente las predicciones estructurales de AlphaFold
+* Describir el uso de puntuaciones de confianza para evaluar las predicciones estructurales de AlphaFold
+* Recordar los diversos usos potenciales de AlphaFold en la investigación y reconocer el papel de AlphaFold en el avance de diversas áreas de la investigación científica

@@ -1,120 +1,120 @@
 ---
 layout: default
-title: 'Your feedback'
+title: 'Cómo usar AlphaFold para predecir la estructura de proteínas y ARN'
 ---
 
-# Your feedback
+# Tu retroalimentación
 
-Your feedback 2024 new
-Please tell us your thoughts about this tutorial. Your feedback helps us improve our training and enhance your learning experience.
+Tu retroalimentación 2024 nueva
+Por favor, dinos tus pensamientos sobre este tutorial. Tu retroalimentación nos ayuda a mejorar nuestra formación y mejorar tu experiencia de aprendizaje.
 
-Please tell us your overall rating for the tutorial.
+Por favor, dinos tu calificación general para el tutorial.
 \*
 
-Poor
+Mala
 
-Satisfactory
+Satisfactoria
 
-Good
+Buena
 
-Very good
+Muy buena
 
-Excellent
+Excelente
 
-Did you complete all of this tutorial?
+¿Completaste todo este tutorial?
 \*
 
-Yes
+Sí
 
 No
 
-Will you apply what you have learnt in your research/work?
+¿Aplicarás lo que has aprendido en tu investigación/trabajo?
 \*
 
-Yes
+Sí
 
 No
 
-Maybe
+Tal vez
 
-If yes, please tell us how will you use the knowledge learned in this tutorial (you may chose more than one option):
+Si sí, por favor dinos cómo usarás el conocimiento aprendido en este tutorial (puedes elegir más de una opción):
 
-To analyse data
+Para analizar datos
 
-To submit data to a data resource
+Para enviar datos a un recurso de datos
 
-To use publicly available data
+Para usar datos públicamente disponibles
 
-To teach others
+Para enseñar a otros
 
-To use in my studies
+Para usar en mis estudios
 
-Other
+Otro
 
-If you selected other, please tell us more.
+Si seleccionaste otro, por favor dinos más.
 
-What did you like about the tutorial?
+¿Qué te gustó del tutorial?
 
-What could be improved?
+¿Qué podría mejorar?
 
-Any other comments?
+¿Algún otro comentario?
 
-Please select the option that best describes your current career stage.
+Por favor, selecciona la opción que mejor describe tu etapa de carrera actual.
 \*
 
-Undergraduate student
+Estudiante de pregrado
 
-Masters student
+Estudiante de maestría
 
-PhD student
+Estudiante de doctorado
 
-Postdoctoral researcher
+Investigador postdoctoral
 
-Principal investigator
+Investigador principal
 
-Research technician
+Técnico de investigación
 
-Staff scientist
+Científico de personal
 
-Other
+Otro
 
-What is your primary discipline?
+¿Cuál es tu disciplina principal?
 \*
 
-Structural biology
+Biología estructural
 
-Molecular biology/Biochemistry/Cell Biology
+Biología molecular/Bioquímica/Biología celular
 
-Medicinal chemistry / drug discovery
+Química medicinal/descubrimiento de fármacos
 
-Protein design
+Diseño de proteínas
 
-Bioinformatics
+Bioinformática
 
-AI/ML research
+Investigación de IA/ML
 
-Other
+Otro
 
-If you selected other, please tell us more.
+Si seleccionaste otro, por favor dinos más.
 
-How would you describe the organisation in which you work?
+¿Cómo describirías la organización en la que trabajas?
 \*
 
-An academic/research institute
+Un instituto académico/investigación
 
-An industrial organisation
+Una organización industrial
 
-A clinical/healthcare organisation
+Una organización clínica/de salud
 
-Other
+Otro
 
-Country of residence
+País de residencia
 \*
 
-AfghanistanAland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntarcticaAntigua and BarbudaArgentinaArmeniaArubaAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBouvet IslandBrazilBritish Indian Ocean TerritoryBruneiBulgariaBurkina FasoBurundiCôte d'IvoireCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCook IslandsCosta RicaCroatiaCubaCuracaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEast TimorEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland Islands (Malvinas)Faroe IslandsFijiFinlandFranceFrench GuianaFrench PolynesiaFrench Southern TerritoriesGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHeard Island and McDonald IslandsHoly SeeHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMacedoniaMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMicronesiaMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPitcairnPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthelemySaint Helena, Ascension and Tristan da CunhaSaint Kitts and NevisSaint LuciaSaint Martin (French part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint Maarten (Dutch part)SlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth Georgia and the South Sandwich IslandsSouth KoreaSouth SudanSpainSri LankaSudanSurinameSvalbard and Jan MayenSwazilandSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTimor-LesteTogoTokelauTongaTrinidad and TobagoTunisiaTurkeyTurkmenistanTurks and Caicos IslandsTuvaluUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUnited States Minor Outlying IslandsUruguayUzbekistanVanuatuVatican CityVenezuelaVietnamVirgin Islands, BritishVirgin Islands, U.S.Wallis and FutunaWestern SaharaYemenZambiaZimbabwe
+AfganistánAland IslandsAlbaniaAlgeriaAmerican SamoaAndorraAngolaAnguillaAntarcticaAntigua and BarbudaArgentinaArmeniaArubaAustraliaAustriaAzerbaijanBahamasBahrainBangladeshBarbadosBelarusBelgiumBelizeBeninBermudaBhutanBoliviaBonaire, Sint Eustatius and SabaBosnia and HerzegovinaBotswanaBouvet IslandBrazilBritish Indian Ocean TerritoryBruneiBulgariaBurkina FasoBurundiCôte d'IvoireCambodiaCameroonCanadaCape VerdeCayman IslandsCentral African RepublicChadChileChinaChristmas IslandCocos (Keeling) IslandsColombiaComorosCongoCook IslandsCosta RicaCroatiaCubaCuracaoCyprusCzech RepublicDenmarkDjiboutiDominicaDominican RepublicEast TimorEcuadorEgyptEl SalvadorEquatorial GuineaEritreaEstoniaEthiopiaFalkland Islands (Malvinas)Faroe IslandsFijiFinlandFranceFrench GuianaFrench PolynesiaFrench Southern TerritoriesGabonGambiaGeorgiaGermanyGhanaGibraltarGreeceGreenlandGrenadaGuadeloupeGuamGuatemalaGuernseyGuineaGuinea-BissauGuyanaHaitiHeard Island and McDonald IslandsHoly SeeHondurasHong KongHungaryIcelandIndiaIndonesiaIranIraqIrelandIsle of ManIsraelItalyJamaicaJapanJerseyJordanKazakhstanKenyaKiribatiKosovoKuwaitKyrgyzstanLaosLatviaLebanonLesothoLiberiaLibyaLiechtensteinLithuaniaLuxembourgMacaoMacedoniaMadagascarMalawiMalaysiaMaldivesMaliMaltaMarshall IslandsMartiniqueMauritaniaMauritiusMayotteMexicoMicronesiaMoldovaMonacoMongoliaMontenegroMontserratMoroccoMozambiqueMyanmarNamibiaNauruNepalNetherlandsNew CaledoniaNew ZealandNicaraguaNigerNigeriaNiueNorfolk IslandNorth KoreaNorthern Mariana IslandsNorwayOmanPakistanPalauPalestinePanamaPapua New GuineaParaguayPeruPhilippinesPitcairnPolandPortugalPuerto RicoQatarReunionRomaniaRussiaRwandaSaint BarthelemySaint Helena, Ascension and Tristan da CunhaSaint Kitts and NevisSaint LuciaSaint Martin (French part)Saint Pierre and MiquelonSaint Vincent and the GrenadinesSamoaSan MarinoSao Tome and PrincipeSaudi ArabiaSenegalSerbiaSeychellesSierra LeoneSingaporeSint Maarten (Dutch part)SlovakiaSloveniaSolomon IslandsSomaliaSouth AfricaSouth Georgia and the South Sandwich IslandsSouth KoreaSouth SudanSpainSri LankaSudanSurinameSvalbard and Jan MayenSwazilandSwedenSwitzerlandSyriaTaiwanTajikistanTanzaniaThailandTimor-LesteTogoTokelauTongaTrinidad and TobagoTunisiaTurkeyTurkmenistanTurks and Caicos IslandsTuvaluUgandaUkraineUnited Arab EmiratesUnited KingdomUnited StatesUnited States Minor Outlying IslandsUruguayUzbekistanVanuatuVatican CityVenezuelaVietnamVirgin Islands, BritishVirgin Islands, U.S.Wallis and FutunaWestern SaharaYemenZambiaZimbabwe
 
-If you are human, leave this field blank.
+Si eres humano, deja este campo en blanco.
 
-If you would like some help, please email [trainonline@ebi.ac.uk](mailto: trainonline@ebi.ac.uk) or contact the relevant EMBL-EBI data resource directly using the [EMBL-EBI contact us](https://www.ebi.ac.uk/about/contact/support/) form.
+Si necesitas ayuda, envía un correo electrónico a [trainonline@ebi.ac.uk](mailto: trainonline@ebi.ac.uk) o contacta directamente el recurso de datos relevante de EMBL-EBI usando el [formulario de contacto de EMBL-EBI](https://www.ebi.ac.uk/about/contact/support/).
 
-Submit
+Enviar

@@ -1,16 +1,16 @@
 ---
 layout: default
-title: 'Should I use AlphaFold 2 or AlphaFold 3?'
+title: '¿Deberías usar AlphaFold 2 o AlphaFold 3?'
 ---
 
-# Should I use AlphaFold 2 or AlphaFold 3?
+# ¿Debería usar AlphaFold 2 o AlphaFold 3?
 
-In terms of functionality, AlphaFold 3 can do everything AlphaFold 2 can, and do it better. It also has additional capabilities, in particular predicting the structures of complexes containing multiple types of molecules.
+En términos de funcionalidad, AlphaFold 3 puede hacer todo lo que AlphaFold 2 puede hacer, y hacerlo mejor. También tiene capacidades adicionales, en particular predecir las estructuras de complejos que contienen múltiples tipos de moléculas.
 
-However, there are differences in how each model has been made available for use. AlphaFold 2 is freely available for both academic and commercial use under the permissive Apache 2 licence terms. In contrast, AlphaFold 3 is only currently available for non-commercial use, subject to [AlphaFold Server Terms of Service](https://alphafoldserver.com/terms), or [AlphaFold Model Parameters terms of use](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md), which include a number of use restrictions. Consequently, for some types of projects, you must use AlphaFold 2.
+Sin embargo, hay diferencias en cómo cada modelo ha sido puesto a disposición para su uso. AlphaFold 2 está libremente disponible tanto para uso académico como comercial bajo los términos de la licencia permisiva Apache 2. En contraste, AlphaFold 3 solo está disponible actualmente para uso no comercial, sujeto a [AlphaFold Server Terms of Service](https://alphafoldserver.com/terms), o [AlphaFold Model Parameters terms of use](https://github.com/google-deepmind/alphafold3/blob/main/WEIGHTS_TERMS_OF_USE.md), que incluyen un número de restricciones de uso. En consecuencia, para algunos tipos de proyectos, debes usar AlphaFold 2.
 
-Importantly, you can’t use AlphaFold 3 or its outputs in connection with any commercial activities, including research on behalf of commercial organisations, or to train machine learning models or related technology for biomolecular structure prediction similar to AlphaFold Server. You are free to use AlphaFold 2 for these purposes.
+Importantemente, no puedes usar AlphaFold 3 o sus salidas en conexión con cualquier actividad comercial, incluyendo la investigación en nombre de organizaciones comerciales, o para entrenar modelos de aprendizaje automático o tecnología relacionada para la predicción de estructuras biomoleculares similar a AlphaFold Server. Puedes usar AlphaFold 2 para estos propósitos.
 
-AlphaFold 3 confidence scores for polymers can be affected substantially by the inclusion (or removal) of non-polymer context, such as ions or stabilising ligands. If investigating something in a polymer-only setting (e.g. protein-protein interaction), it can be important to add non-polymer context where appropriate to improve confidence scores. Using AlphaFold 2 avoids this complexity, at the possible cost of slightly reduced structural accuracy.
+Las puntuaciones de confianza de AlphaFold 3 para polímeros pueden verse sustancialmente afectadas por la inclusión (o eliminación) de contexto no polimérico, como iones o ligandos estabilizantes. Si investigas algo en un entorno de solo polímero (por ejemplo, interacción proteína-proteína), puede ser importante agregar contexto no polimérico donde corresponda para mejorar las puntuaciones de confianza. Usar AlphaFold 2 evita esta complejidad, a costa posible de una ligera reducción en la precisión estructural.
 
-Because AlphaFold 2 remains a valuable tool in many research and development scenarios, Google DeepMind will continue to support it.
+Dado que AlphaFold 2 sigue siendo una herramienta valiosa en muchos escenarios de investigación y desarrollo, Google DeepMind continuará apoyándolo.

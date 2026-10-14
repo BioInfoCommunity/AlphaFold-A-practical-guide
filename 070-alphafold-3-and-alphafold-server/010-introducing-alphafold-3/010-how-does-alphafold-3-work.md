@@ -1,62 +1,60 @@
 ---
 layout: default
-title: 'How does AlphaFold 3 work?'
+title: '¿Cómo funciona AlphaFold 3?'
 ---
 
-# How does AlphaFold 3 work?
+# ¿Cómo funciona AlphaFold 3?
 
-AlphaFold 3 is built on similar general principles as AlphaFold 2 (for more on AlphaFold 2, see section [AlphaFold 2: A high-level overview](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/a-high-level-overview/)).
+AlphaFold 3 se basa en principios generales similares a los de AlphaFold 2 (para más información sobre AlphaFold 2, consulta la sección [AlphaFold 2: Una visión general de alto nivel](https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/a-high-level-overview/)).
 
-Many practical details remain the same, notably the use of multiple sequence alignments (MSAs) as the main input of the neural network. Furthermore, the overall architecture of AlphaFold 3 retains a familiar structure, that of AlphaFold 2, where a large trunk processes a pairwise representation of the chemical complex, which is then used by a structure module to generate explicit atomic positions.
+Muchos detalles prácticos siguen siendo los mismos, notablemente el uso de alineaciones múltiples de secuencias (MSAs) como la principal entrada de la red neuronal. Además, la arquitectura general de AlphaFold 3 conserva una estructura familiar, la de AlphaFold 2, donde un gran tronco procesa una representación por pares del complejo químico, que luego se utiliza por un módulo de estructura para generar posiciones atómicas explícitas.
 
-However, despite these foundational similarities, AlphaFold 3’s architecture has substantially improved over AlphaFold 2. The new architecture accommodates more general chemical structures and improves the data efficiency of learning.
+Sin embargo, a pesar de estas similitudes fundamentales, la arquitectura de AlphaFold 3 ha mejorado sustancialmente sobre AlphaFold 2. La nueva arquitectura acomoda estructuras químicas más generales e mejora la eficiencia de los datos en el aprendizaje.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/AFS-Education-Figure-2-240828-r01-1024x265.png)
 
-Figure 35. The architecture of AlphaFold 3. Rectangles represent processing modules, while arrows show the flow of data. Yellow, input data; blue, abstract network activations; green, output data. The coloured spheres represent physical atom coordinates.
+Figura 35. La arquitectura de AlphaFold 3. Los rectángulos representan módulos de procesamiento, mientras que las flechas muestran el flujo de datos. Amarillo, datos de entrada; azul, activaciones de red abstractas; verde, datos de salida. Las esferas de colores representan coordenadas de átomos físicos.
 
-For instance, to reduce the amount of MSA processing, AlphaFold 3 replaces AlphaFold 2’s Evoformer with a new Pairformer module that has a smaller and simpler MSA embedding block. Some of AlphaFold 3’s advancements, notably its improved performance predictions of antigen-antibody complexes, are directly related to its reduced dependence on the MSA signal. Nevertheless, for protein structure prediction, AlphaFold 3 still makes heavy use of co-evolutionary data from the MSA.
+Por ejemplo, para reducir la cantidad de procesamiento de MSA, AlphaFold 3 reemplaza el Evoformer de AlphaFold 2 con un nuevo módulo Pairformer que tiene un bloque de incrustación de MSA más pequeño y simple. Algunos de los avances de AlphaFold 3, notablemente sus predicciones de rendimiento mejoradas de complejos antígeno-anticuerpo, están directamente relacionados con su menor dependencia de la señal de MSA. Sin embargo, para la predicción de la estructura de proteínas, AlphaFold 3 aún hace un uso intensivo de datos co-evolutivos del MSA.
 
-Crucially, AlphaFold 3 predicts the coordinates of individual atoms within a complex. This is distinct from AlphaFold 2, which predicted the positions of amino acid residues and their side chains. The new approach gives AlphaFold 3 the computational flexibility to tackle different types of molecules.
+Crucialmente, AlphaFold 3 predice las coordenadas de átomos individuales dentro de un complejo. Esto es distinto de AlphaFold 2, que predijo las posiciones de los residuos de aminoácidos y sus cadenas laterales. El nuevo enfoque le da a AlphaFold 3 la flexibilidad computacional para abordar diferentes tipos de moléculas.
 
-### Tokenisation
+### Tokenización
 
-A further change in AlphaFold 3, compared to AlphaFold 2, is how the system subdivides a complex. Both divide the complex of interest into “tokens”. In AlphaFold 2, tokens directly correspond to amino acids, reflecting the system’s strict focus on protein structures. In contrast, AlphaFold 3 is designed to effectively model chemically different molecules, ranging from ions and small molecule ligands to macromolecules made of hundreds of amino acids or nucleotides. A one-token-per-atom approach for the whole structure, including proteins and nucleic acids, would offer the maximum flexibility: however, memory constraints necessitate a compromise.
+Un cambio adicional en AlphaFold 3, en comparación con AlphaFold 2, es cómo el sistema subdivide un complejo. Ambos dividen el complejo de interés en “tokens”. En AlphaFold 2, los tokens corresponden directamente a aminoácidos, reflejando el enfoque estricto del sistema en las estructuras de proteínas. En contraste, AlphaFold 3 está diseñado para modelar eficazmente moléculas químicamente diferentes, desde iones y pequeños ligandos hasta macromoléculas hechas de cientos de aminoácidos o nucleótidos. Un enfoque de un token por átomo para toda la estructura, incluyendo proteínas y ácidos nucleicos, ofrecería la máxima flexibilidad: sin embargo, las limitaciones de memoria necesitan un compromiso.
 
-Thus, AlphaFold 3’s tokenisation strategy balances the need for flexibility required for small molecules with computational practicality. Hence, a token may correspond to:
+Por lo tanto, la estrategia de tokenización de AlphaFold 3 equilibra la necesidad de flexibilidad requerida para pequeñas moléculas con la practicidad computacional. Por lo tanto, un token puede corresponder a:
 
-* One standard amino acid in the protein chain
-* One standard nucleotide in the nucleic acid chain
-* One atom of a ligand
-* One atom of an ion
-* One atom of a chemically-modified amino acid residue or nucleotide. In order to predict the structure of a chemically-modified amino acid residue or nucleotide, AlphaFold 3 will tokenise the entire residue/nucleotide as atoms. In other words, these are treated more like ligands than standard amino acids or nucleotides.
+* Un aminoácido estándar en la cadena de proteínas
+* Un nucleótido estándar en la cadena de ácidos nucleicos
+* Un átomo de un ligando
+* Un átomo de un ion
+* Un átomo de un residuo de aminoácido o nucleótido químicamente modificado. Para predecir la estructura de un residuo de aminoácido o nucleótido químicamente modificado, AlphaFold 3 tokenizará todo el residuo/nucleótido como átomos. En otras palabras, estos se tratan más como ligandos que como aminoácidos o nucleótidos estándar.
 
-To understand this, consider a structure made of 100 amino acid residues and a ligand containing 20 atoms. AlphaFold 3 will represent this structure using 100 + 20 = 120 tokens. This is important because confidence metrics like PAE (see subsection “[Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“) are now calculated for tokens rather than amino acids.
+Para entender esto, considera una estructura compuesta por 100 residuos de aminoácidos y un ligando que contiene 20 átomos. AlphaFold 3 representará esta estructura utilizando 100 + 20 = 120 tokens. Esto es importante porque las métricas de confianza como PAE (consulta la subsección “[Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“) ahora se calculan para tokens en lugar de aminoácidos.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/tokens.png)
 
-Figure 36. Illustrating tokenisation. Here, three amino acid residues take three tokens to model; three nucleotides take three tokens as well, and one citric acid takes 13 tokens, for 13 non-hydrogen atoms in this ligand.
+Figura 36. Ilustrando la tokenización. Aquí, tres residuos de aminoácidos toman tres tokens para modelar; tres nucleótidos toman tres tokens también, y un ácido cítrico toma 13 tokens, para 13 átomos no hidrógeno en este ligando.
 
-### Diffusion
+### Difusión
 
-AlphaFold 3 predicts raw atom coordinates using a diffusion module, making it a “generative” ML model. Generative models create new data similar to the examples they learn from: in the case of AlphaFold 3, structures from the Protein Data Bank. This contrasts with non-generative models like AlphaFold 2, which identify patterns in the existing data.
+AlphaFold 3 predice las coordenadas atómicas brutas utilizando un módulo de difusión, lo que lo convierte en un modelo de ML “generativo”. Los modelos generativos crean nuevos datos similares a los ejemplos que aprenden: en el caso de AlphaFold 3, estructuras del Protein Data Bank. Esto contrasta con los modelos no generativos como AlphaFold 2, que identifican patrones en los datos existentes.
 
-Diffusion is a standard technique in machine learning. First, a high-information dataset is distorted by varying levels of random noise; subsequently, the neural network learns to restore it to the original data. The system uses a conditioning description for each example that should be restored. For example, when generating images, a typical conditioning might be a text description of the final image. During training, the network learns to generate plausible data to fit any given conditioning by incrementally stepping from pure noise to the final output.
+La difusión es una técnica estándar en el aprendizaje automático. Primero, un conjunto de datos con alta información se distorsiona con diferentes niveles de ruido aleatorio; posteriormente, la red neuronal aprende a restaurarlo a los datos originales. El sistema utiliza una descripción de acondicionamiento para cada ejemplo que debe ser restaurado. Por ejemplo, al generar imágenes, un acondicionamiento típico podría ser una descripción de texto de la imagen final. Durante el entrenamiento, la red aprende a generar datos plausibles para ajustarse a cualquier acondicionamiento dado, dando pasos incrementales desde el ruido puro hasta la salida final.
 
-In AlphaFold 3, the diffusion module was trained to receive “noised” atomic coordinates and predict the correct coordinates. The conditioning information is the sequence information for the target molecule or complex.
+En AlphaFold 3, el módulo de difusión se entrenó para recibir coordenadas atómicas “ruidosas” y predecir las coordenadas correctas. La información de acondicionamiento es la información de secuencia para la molécula o complejo objetivo.
 
-For more details on the internal mechanics of AlphaFold 3, see the Supplementary Material to the AlphaFold 3 paper ([Abramson et al., 2024](https://doi.org/10.1038/s41586-024-07487-w)).
+Para más detalles sobre la mecánica interna de AlphaFold 3, consulta el Material Suplementario del artículo de AlphaFold 3 ([Abramson et al., 2024](https://doi.org/10.1038/s41586-024-07487-w)).
 
-## Overview of AlphaFold 3 outputs
+## Descripción general de las salidas de AlphaFold 3
 
-AlphaFold 3 outputs the predicted structure of a protein or complex, returning the coordinates of all atoms in the mmCIF format. By default, AlphaFold 3 produces five predicted structures from a single seed. These are generated by sampling the diffusion process five times.
+AlphaFold 3 produce la estructura predicha de una proteína o complejo, devolviendo las coordenadas de todos los átomos en el formato mmCIF. Por defecto, AlphaFold 3 genera cinco estructuras predichas a partir de una sola semilla. Estas se generan muestreando el proceso de difusión cinco veces.
 
-As with AlphaFold 2, AlphaFold 3 supplies multiple confidence metrics to help you critically assess its predictions:
+Al igual que con AlphaFold 2, AlphaFold 3 proporciona múltiples métricas de confianza para ayudarte a evaluar críticamente sus predicciones:
 
-* **Predicted LDDT (pLDDT):** predicted atomic coordinates are accompanied by pLDDT scores. These reflect AlphaFold 3’s local confidence in the prediction of the position of that particular atom.
-* **Predicted Aligned Error (PAE) scores and a PAE plot:** an indication of AlphaFold’s confidence in the packing and relative positions of domains, molecular chains such as proteins and DNA, and other entities like ligands and ions.
-* **Predicted TM (pTM) score**: a single-value metric reflecting the accuracy of the overall predicted structure.
-* **Interface-predicted TM (ipTM) score:** measures the accuracy of predictions of one component of the complex relative to the other components of the complex.
-* **Per chain pTM and per-chain pair ipTM:** confidence in individual chains or pairs of chains.
-
----
+* **Predicted LDDT (pLDDT):** las coordenadas atómicas predichas van acompañadas de puntuaciones pLDDT. Estas reflejan la confianza local de AlphaFold 3 en la predicción de la posición de ese átomo en particular.
+* **Predicted Aligned Error (PAE) scores y un gráfico PAE:** una indicación de la confianza de AlphaFold en el empaquetamiento y las posiciones relativas de dominios, cadenas moleculares como proteínas y ADN, y otras entidades como ligandos e iones.
+* **Predicted TM (pTM) score:** una métrica de un solo valor que refleja la precisión de la estructura predicha en general.
+* **Interface-predicted TM (ipTM) score:** mide la precisión de las predicciones de un componente del complejo en relación con los otros componentes del complejo.
+* **Per chain pTM y per-chain pair ipTM:** confianza en cadenas individuales o pares de cadenas.

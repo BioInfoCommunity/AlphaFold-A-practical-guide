@@ -1,30 +1,30 @@
 ---
 layout: default
-title: What is the protein folding problem?
+title: '¿Cuál es el problema del plegamiento de proteínas?'
 ---
 
-# What is the protein folding problem?
+# ¿Cuál es el problema del plegamiento de proteínas?
 
-**It is theoretically possible to predict the 3D structure of a protein just from its amino acid sequence. However, this is extremely challenging because of the sheer number of possible conformations. Artificial intelligence is ideally suited to this problem.**
+**Es teóricamente posible predecir la estructura 3D de una proteína solo a partir de su secuencia de aminoácidos. Sin embargo, esto es extremadamente desafiante debido al enorme número de conformaciones posibles. La inteligencia artificial está idealmente adaptada a este problema.**
 
-## **Protein folding problem: predicting protein structure from sequence**
+## **Problema del plegamiento de proteínas: predecir la estructura de proteínas a partir de la secuencia**
 
-The protein folding problem encompasses two interrelated challenges: understanding the process of protein chain folding and accurately predicting a protein’s final folded structure
+El problema del plegamiento de proteínas abarca dos desafíos interrelacionados: comprender el proceso de plegamiento de la cadena de proteínas y predecir con precisión la estructura plegada final de una proteína.
 
-In 1972 Christian Anfinsen shared the Nobel Prize in Chemistry for proposing that, in its standard physiological environment, a protein’s structure is determined by the sequence of amino acids that make it up. This came to be known as [Anfinsen’s dogma](https://www.science.org/doi/10.1126/science.181.4096.223).
+En 1972, Christian Anfinsen compartió el Premio Nobel de Química por proponer que, en su entorno fisiológico estándar, la estructura de una proteína está determinada por la secuencia de aminoácidos que la componen. Esto se conoció como el [dogma de Anfinsen](https://www.science.org/doi/10.1126/science.181.4096.223).
 
-This hypothesis was important, because it suggested we should be able to reliably predict a protein’s structure from its sequence. Decades of research into structural biology have since shown that Anfinsen was largely correct.
+Esta hipótesis fue importante, porque sugirió que deberíamos poder predecir de manera confiable la estructura de una proteína a partir de su secuencia. Décadas de investigación en biología estructural han mostrado desde entonces que Anfinsen tenía en gran medida la razón.
 
-## **The computational challenge**
+## **El desafío computacional**
 
-However, it turns out that predicting protein structure from sequence is not so simple. This is because of a second concept called [Levinthal’s paradox](https://doi.org/10.1073/pnas.89.1.20).
+Sin embargo, resulta que predecir la estructura de proteínas a partir de la secuencia no es tan sencillo. Esto se debe a un segundo concepto llamado [paradoja de Levinthal](https://doi.org/10.1073/pnas.89.1.20).
 
-In the 1960s, Cyrus Levinthal showed that there is a very large number of possible conformations a protein chain could theoretically adopt. If a protein was to explore them all, it would take an incomprehensible amount of time, comparable with the lifetime of the Universe.
+En la década de 1960, Cyrus Levinthal mostró que hay un número muy grande de conformaciones posibles que una cadena de proteínas podría adoptar teóricamente. Si una proteína fuera a explorarlas todas, tomaría una cantidad inconcebible de tiempo, comparable con la vida del Universo.
 
-Nevertheless, Anfinsen’s findings inspired a search for an efficient system that could reliably identify the most likely native structure of a protein, based solely on its amino acid sequence. While challenging, this was at least theoretically possible.
+Sin embargo, los hallazgos de Anfinsen inspiraron la búsqueda de un sistema eficiente que pudiera identificar de manera confiable la estructura nativa más probable de una proteína, basándose únicamente en su secuencia de aminoácidos. Aunque desafiante, esto era al menos teóricamente posible.
 
-## **The role of artificial intelligence**
+## **El papel de la inteligencia artificial**
 
-This is where artificial intelligence comes in. Modern machine learning methods can help identify complex relationships in large datasets, enabling prediction of protein structures.
+Es aquí donde entra la inteligencia artificial. Los métodos modernos de aprendizaje automático pueden ayudar a identificar relaciones complejas en grandes conjuntos de datos, lo que permite la predicción de estructuras de proteínas.
 
-Crucially, Anfinsen’s dogma implies that predicting the folded state of a protein does not necessarily require an understanding of the folding process. That is, it should be possible to predict the final 3D shape of a protein without predicting the sequence of movements that leads to this shape – sidestepping Levinthal’s paradox.
+Crucialmente, el dogma de Anfinsen implica que predecir el estado plegado de una proteína no requiere necesariamente comprender el proceso de plegamiento. Es decir, debería ser posible predecir la forma 3D final de una proteína sin predecir la secuencia de movimientos que lleva a esta forma, evitando así la paradoja de Levinthal.
