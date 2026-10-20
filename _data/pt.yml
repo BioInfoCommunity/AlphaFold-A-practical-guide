@@ -12,9 +12,8 @@ languages:
     name: Portuguese
 
 labels:
-  # Draft translations, to be reviewed by the translators
-  back_to_training_text: "Voltar ao EMBL-EBI Training"
-  license_html: 'Todos os materiais são obras culturais livres licenciadas sob a licença Creative Commons <a href="https://creativecommons.org/licenses/by/4.0/" class="vf-link vf-link--primary vf-u-margin--0" style="display:inline">Atribuição 4.0 Internacional (CC BY 4.0)</a>, exceto quando forem fornecidos outros detalhes de licenciamento.'
+  # Licence text kept exactly as on production (Spanish). Reported in the review; not translated here.
+  license_html: 'Todos los materiales son obras culturales gratuitas con licencia Creative Commons. <a href="https://creativecommons.org/licenses/by/4.0/" class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia</a>'
   time_to_complete_text: "Tempo para completar"
   time_to_complete_value: "3 horas"
   last_updated_text: "Última revisão"
