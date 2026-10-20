@@ -7,7 +7,7 @@
 	
 	
 	<title>AlphaFold: A practical guide | EMBL-EBI Training</title>
-	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.25/css/styles.css" type="text/css">
+	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.26/css/styles.css" type="text/css">
 
 	<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css"
 		media="all" />
@@ -47,6 +47,17 @@
 			margin-right: 5px;
 			display: table-cell;
 		}
+
+		/* Same spacing between paragraphs, lists and headings as the WordPress course pages
+		   (the course landing page keeps the default spacing, as on the original) */
+		.acc:not(.acc--landing) {
+			--vf-stack-margin: 2rem;
+		}
+
+		.acc .vf-box {
+			--vf-stack-margin: 0;
+			border-width: 1px;
+		}
 	</style>
 </head>
 
@@ -62,11 +73,15 @@
 					</a>
 				</div>
 
+				
 				<nav>
+					
 					<a href="/AlphaFold-A-practical-guide/en/">English</a> |
-					<a href="/AlphaFold-A-practical-guide/es/">Español</a> |
+					
 					<a href="/AlphaFold-A-practical-guide/pt/">Portuguese</a>
+					
 				</nav>
+				
 				<div class="vf-content">
 					<div>
 						<div id="block-ebi-academy-content--89">
@@ -87,6 +102,10 @@
 										<div class="vf-u-margin__top--500"></div>
 										<section class="embl-grid">
 											<div class="embl-training__sidebar">
+												<div class="vf-u-margin__top--500"></div>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0">
+													<a class="vf-link vf-link--primary" href="https://www.ebi.ac.uk/training/">&larr; Back to EMBL-EBI Training</a>
+												</p>
 												<div class="vf-u-margin__top--500"></div>
 												<figure class="vf-figure ebi-academy-book-cover-image">
 
@@ -114,6 +133,7 @@
 															Paulyna Gabriela Magana Gomez
 														</a>
 														
+														
 													</li>
 													
 													<li class="vf-list__item">
@@ -121,6 +141,7 @@
 														<a class="vf-link vf-link--primary vf-u-type__text-body--3" href="https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy">
 															Oleg Kovalevskiy
 														</a>
+														
 														
 													</li>
 													
@@ -139,12 +160,14 @@
 														
 														Joyce Karoline da Silva
 														
+														<a href="https://orcid.org/0000-0002-8039-9706" title="ORCID" style="display:inline-block;vertical-align:middle;margin-left:4px;line-height:0"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD of Joyce Karoline da Silva" width="16" height="16"></a>
 													</li>
 													
 													<li class="vf-list__item">
 														
 														Vinicius Maracaja-Coutinho
 														
+														<a href="https://orcid.org/0000-0002-8873-9381" title="ORCID" style="display:inline-block;vertical-align:middle;margin-left:4px;line-height:0"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD of Vinicius Maracaja-Coutinho" width="16" height="16"></a>
 													</li>
 													
 												</ul>
@@ -378,21 +401,30 @@
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/">
 																					pLDDT: Compreendendo a confiança local
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/pae-a-measure-of-global-confidence-in-alphafold-predictions/">
 																					PAE: Uma medida de confiança global nas previsões do AlphaFold2
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/confidence-scores-in-alphafold-multimer/">
 																					Pontuações de confiança no AlphaFold-Multimer
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																		</ul>
@@ -484,14 +516,41 @@
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/whats-the-best-way-to-access-the-database/">
 																					Qual é a melhor maneira de acessar o banco de dados?
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/using-the-alphafold-database-for-analysis/">
 																					Utilizando o banco de dados AlphaFold para análise
+																					
+																					<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																						<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																							Open Tree
+																						</p>
+																						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																							<path
+																								d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																						</svg>
+																					</button>
+																					
 																				</a>
+
+																				
+																				<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--4 | vf-list"
+																					aria-role="group">
+																					
+																					<li class="vf-tree__item">
+																						<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/using-the-alphafold-database-for-analysis/navigating-the-structural-landscape/">
+																							Explorando o panorama estrutural
+																						</a>
+																					</li>
+																					
+																				</ul>
+																				
 																			</li>
 																			
 																		</ul>
@@ -594,7 +653,10 @@
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/outputs-from-colabfold/">
 																					Saídas do ColabFold
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																		</ul>
@@ -734,28 +796,40 @@
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-does-alphafold-3-work/">
 																					Como funciona o AlphaFold 3?
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/introducing-alphafold-3/what-alphafold-3-struggles-with/">
 																					O que AlphaFold 3 tem dificuldade?
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/introducing-alphafold-3/should-i-use-alphafold-2-or-alphafold-3/">
 																					Devo usar AlphaFold 2 ou AlphaFold 3?
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-have-alphafold-3s-predictions-been-validated/">
 																					Como as previsões do AlphaFold 3 foram validadas?
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																		</ul>
@@ -788,21 +862,30 @@
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/a-step-by-step-guide-to-generating-predictions-with-alphafold-server/">
 																					Um guia passo a passo para gerar previsões com o AlphaFold Server
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/advanced-features-of-alphafold-server/">
 																					Recursos avançados do AlphaFold Server
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
 																				aria-role="treeitem" aria-expanded="">
 																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/">
 																					Interpretando resultados do AlphaFold Server
+																					
 																				</a>
+
+																				
 																			</li>
 																			
 																		</ul>
@@ -912,12 +995,10 @@
 															src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"
 															style="width: 125px; height: 44px;" width="125" height="44"></a>
 												</p>
-												<p class="vf-u-type__text-body--3">Todos los materiales son obras culturales gratuitas con
-													licencia Creative Commons.
-													<a href="https://creativecommons.org/licenses/by/4.0/"
-														class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución
-														4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia
-													</a>
+												<p class="vf-u-type__text-body--3">
+													
+													Todos los materiales son obras culturales gratuitas con licencia Creative Commons. <a href="https://creativecommons.org/licenses/by/4.0/" class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia</a>
+													
 												</p>
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
@@ -1071,39 +1152,19 @@
 														
 														
 
-														<!-- Check grandchild items -->
+														<!-- Check fourth-level items -->
 														
 														
 														
 
-														<!-- Check grandchild items -->
-														
-														
-														
-														
-														
-
-														<!-- Check child items -->
+														<!-- Check fourth-level items -->
 														
 														
 														
 
-														<!-- Check grandchild items -->
+														<!-- Check fourth-level items -->
 														
 														
-														
-
-														<!-- Check grandchild items -->
-														
-														
-														
-
-														<!-- Check grandchild items -->
-														
-														
-														
-
-														<!-- Check grandchild items -->
 														
 														
 														
@@ -1135,6 +1196,62 @@
 														
 														
 
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
 														<!-- Check grandchild items -->
 														
 														
@@ -1174,7 +1291,46 @@
 														
 														
 
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
 														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
 														
 														
 														
@@ -1266,7 +1422,7 @@
 				</div>
 		</div>
 		</main>
-		<script src="https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js"></script>
+		<script src="https://assets.emblstatic.net/vf/v2.5.26/scripts/scripts.js"></script>
 	</div>
 
 	</div>
