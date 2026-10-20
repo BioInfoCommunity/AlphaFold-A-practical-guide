@@ -17,7 +17,63 @@ pLDDT é uma estimativa por átomo da confiança do AlphaFold 3 em uma prediçã
 
 Ele utiliza uma escala de 0 a 100, onde valores mais altos indicam maior confiança. Um valor acima de 90 indica alta confiança; um valor abaixo de 50 indica que a parte correspondente da estrutura prevista provavelmente está errada. Isso vale para todos os tipos de moléculas consideradas pelo AlphaFold 3.
 
-![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/Screenshot-2025-06-25-at-10.51.27.png)
+<style>
+  #af-legend {
+    box-sizing: border-box;
+    padding: 6px 10px 12px;
+    overflow-x: auto; /* allows scroll on small screens instead of breaking layout */
+  }
+  #af-legend, #af-legend * {
+    box-sizing: border-box;
+    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  }
+  #af-legend .legend-row {
+    display: flex;
+    flex-wrap: nowrap;        /* force single line */
+    justify-content: center;  /* center horizontally */
+    align-items: center;
+    gap: 30px;
+  }
+  #af-legend .legend-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+  }
+  #af-legend .legend-label {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 8px;
+    color: #374151;
+    white-space: nowrap;
+  }
+  #af-legend .legend-bar {
+    width: 180px;
+    height: 14px;
+    border-radius: 9999px;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
+  }
+</style>
+<div id="af-legend">
+  <div class="legend-row">
+    <div class="legend-item">
+      <p class="legend-label">Very high (pLDDT &gt; 90)</p>
+      <div class="legend-bar" style="background-color: rgb(0, 83, 214);"></div>
+    </div>
+    <div class="legend-item">
+      <p class="legend-label">Confident (90 &gt; pLDDT &gt; 70)</p>
+      <div class="legend-bar" style="background-color: rgb(101, 203, 243);"></div>
+    </div>
+    <div class="legend-item">
+      <p class="legend-label">Low (70 &gt; pLDDT &gt; 50)</p>
+      <div class="legend-bar" style="background-color: rgb(255, 219, 19);"></div>
+    </div>
+    <div class="legend-item">
+      <p class="legend-label">Very low (pLDDT &lt; 50)</p>
+      <div class="legend-bar" style="background-color: rgb(255, 125, 69);"></div>
+    </div>
+  </div>
+</div>
 
 Assim como no AlphaFold 2, a pontuação pLDDT é salva no campo de fatores B do arquivo mmCIF que contém uma estrutura prevista. Isso significa que você pode usar programas de gráficos moleculares como o PyMOL para codificar por cores a estrutura prevista de acordo com as pontuações do pLDDT.
 
