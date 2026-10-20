@@ -79,7 +79,7 @@ Once the job is finished, clicking on its row will get you to the results page. 
 * Backbone visualisation of the structure, coloured by pLDDT scores
 * PAE plot
 * Overall pTM score
-* Overall ipTM score if the structure is a complex (for more on these confidence metrics, see subsection “[Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“)
+* Overall ipTM score if the structure is a complex (for more on these confidence metrics, see subsection “[Interpreting results from AlphaFold Server](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/)“)
 * Information about the job’s inputs, including the value of the random seed
 * “Download” and “Clone and reuse” buttons
 * A link to provide feedback on the structure
@@ -88,4 +88,4 @@ Once the job is finished, clicking on its row will get you to the results page. 
 
 Figure 44. A sample results page on the AlphaFold Server
 
-You can download all modelling results in a single zip file. It contains atomic coordinates of the predicted structures in the mmCIF format and additional information about confidence scores in the JSON files (for more details on the outputs, see [Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)).
+You can download all modelling results in a single zip file. It contains atomic coordinates of the predicted structures in the mmCIF format and additional information about confidence scores in the JSON files (for more details on the outputs, see [Interpreting results from AlphaFold Server](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/)).

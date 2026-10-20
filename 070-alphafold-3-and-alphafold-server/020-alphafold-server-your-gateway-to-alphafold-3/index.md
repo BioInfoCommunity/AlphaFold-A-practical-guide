@@ -59,6 +59,6 @@ AlphaFold Server is not aware of membrane planes, so predicted structures for me
 Each user is limited to 30 jobs per day. In the future the team plan to explore other approaches for quota allocation, such as weekly or monthly allocations. If you don’t have enough quota, you can save your job and submit it when your quota refreshes (at midnight, BST time zone).
 
 It is not currently possible to customise MSAs or templates, but the team is working on these features.  
-Finally, AlphaFold Server has all the limitations of the full AlphaFold 3 model described above (see [What AlphaFold 3 struggles with](https://www.ebi.ac.uk/training/online/courses/alphafold/introducing-alphafold-3/what-alphafold-3-struggles-with/)).
+Finally, AlphaFold Server has all the limitations of the full AlphaFold 3 model described above (see [What AlphaFold 3 struggles with](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/what-alphafold-3-struggles-with/)).
 
 AlphaFold Server is in active development, with many more features in the pipeline. See the [release updates notes](https://alphafoldserver.com/release-updates) to stay updated on the latest improvements on the AlphaFold Server.
