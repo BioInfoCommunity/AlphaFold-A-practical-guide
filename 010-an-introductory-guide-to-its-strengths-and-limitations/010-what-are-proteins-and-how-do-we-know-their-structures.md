@@ -27,19 +27,19 @@ Descobrir a estrutura da proteína é como abrir uma caixa preta. Revelar a estr
 
 
 
-##### Alfa-2-macroglobulina da Salmonella(PDB ID: 4U48)
+##### Alfa-2-macroglobulina da Salmonella(PDB ID: [4U48](https://www.ebi.ac.uk/pdbe/entry/pdb/4u48))
 
 Oferece proteção contra proteases secretadas pelo hospedeiro.
 
-##### Transcriptase reversa do HIV-1 (PDB ID: 8U6H)
+##### Transcriptase reversa do HIV-1 (PDB ID: [8U6H](https://www.ebi.ac.uk/pdbe/entry/pdb/8U6H))
 
 Uma das principais proteínas responsáveis ​​pelo ciclo de replicação do HIV-1 no hospedeiro.
 
-##### Protease principal do SARS-CoV (PDB ID: 6Y7M)
+##### Protease principal do SARS-CoV (PDB ID: [6Y7M](https://www.ebi.ac.uk/pdbe/entry/pdb/6Y7M))
 
  Esta proteína essencial do coronavírus processa as poliproteínas traduzidas a partir do RNA viral
 
-##### Proteína KaiA do relógio circadiano (PDB ID: 1R8J)
+##### Proteína KaiA do relógio circadiano (PDB ID: [1R8J](https://www.ebi.ac.uk/pdbe/entry/pdb/1R8J))
 
 Um minúsculo mecanismo que orquestra os ritmos diários das cianobactérias. A KaiA regula outras proteínas em um ciclo de 24 horas, como um metrônomo. Para manter o ritmo, detecta a luz e outros sinais.
 

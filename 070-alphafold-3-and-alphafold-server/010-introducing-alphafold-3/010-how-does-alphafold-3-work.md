@@ -32,7 +32,7 @@ Assim, a estratégia de tokenização do AlphaFold 3 equilibra a necessidade de 
 * Um átomo de um resíduo de aminoácido quimicamente modificado ou nucleotídeo. Para prever a estrutura de um resíduo de aminoácidos ou nucleotídeos quimicamente modificados, o AlphaFold 3 tokenizará todo o resíduo/nucleotídeo como átomos. Em outras palavras, esses são tratados mais como ligantes do que como aminoácidos ou nucleotídeos padrão.
 
 
-Para entender isso, considere uma estrutura composta por 100 resíduos de aminoácidos e um ligante contendo 20 átomos. AlphaFold 3 representará essa estrutura usando 100 + 20 = 120 tokens. Isso é importante porque métricas de confiança como PAE (veja a subseção “[Interpretando resultados do AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“) agora são calculadas para tokens em vez de aminoácidos.
+Para entender isso, considere uma estrutura composta por 100 resíduos de aminoácidos e um ligante contendo 20 átomos. AlphaFold 3 representará essa estrutura usando 100 + 20 = 120 tokens. Isso é importante porque métricas de confiança como PAE (veja a subseção “[Interpretando resultados do AlphaFold Server](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/)“) agora são calculadas para tokens em vez de aminoácidos.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/tokens.png)
 

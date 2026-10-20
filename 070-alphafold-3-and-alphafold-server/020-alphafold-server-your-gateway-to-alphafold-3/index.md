@@ -61,6 +61,6 @@ O AlphaFold Server não conhece planos de membrana, então as estruturas previst
 Cada usuário está limitado a 30 tarefas por dia. No futuro, a equipe planeja explorar outras abordagens para a alocação de cotas, como alocações semanais ou mensais. Se você não tiver cota suficiente, pode salvar seu emprego e enviá-lo quando a cota renovar (à meia-noite, fuso horário BST).
 
 Atualmente, não é possível personalizar MSAs ou templates, mas a equipe está trabalhando nesses recursos.
-Por fim, o AlphaFold Server possui todas as limitações do modelo completo do AlphaFold 3 descrito acima (veja [O que o AlphaFold 3 enfrenta](https://www.ebi.ac.uk/training/online/courses/alphafold/introducing-alphafold-3/what-alphafold-3-struggles-with/)).
+Por fim, o AlphaFold Server possui todas as limitações do modelo completo do AlphaFold 3 descrito acima (veja [O que o AlphaFold 3 enfrenta](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/introducing-alphafold-3/what-alphafold-3-struggles-with/)).
 
 O AlphaFold Server está em desenvolvimento ativo, com muitos mais recursos em desenvolvimento. Veja as notas de [atualização de lançamento](https://alphafoldserver.com/release-updates) para se manter atualizado sobre as últimas melhorias no AlphaFold Server.

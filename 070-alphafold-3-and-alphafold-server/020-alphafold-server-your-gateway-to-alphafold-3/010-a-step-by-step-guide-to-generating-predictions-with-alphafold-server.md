@@ -76,7 +76,7 @@ Quando o trabalho estiver concluído, clicar na linha você vai para a página d
 * Visualização da estrutura por espinha dorsal, colorida por escores pLDDT
 * Gráfico PAE
 * Pontuação geral do pTM
-* Pontuação geral do ipTM se a estrutura for complexa (para mais informações sobre essas métricas de confiança, veja a subseção “[Interpretando resultados do AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“)
+* Pontuação geral do ipTM se a estrutura for complexa (para mais informações sobre essas métricas de confiança, veja a subseção “[Interpretando resultados do AlphaFold Server](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/)“)
 * Informações sobre as entradas do trabalho, incluindo o valor da semente aleatória
 * Botões "Download" e "Clone e reutilização"
 * Um link para fornecer feedback sobre a estrutura
@@ -85,4 +85,4 @@ Quando o trabalho estiver concluído, clicar na linha você vai para a página d
 
 Figura 44. Uma página de resultados de exemplo no servidor AlphaFold
 
-Você pode baixar todos os resultados da modelagem em um único arquivo zip. Ele contém coordenadas atômicas das estruturas previstas no formato mmCIF e informações adicionais sobre pontuações de confiança nos arquivos JSON (para mais detalhes sobre as saídas, veja [Interpretando resultados do AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)).
+Você pode baixar todos os resultados da modelagem em um único arquivo zip. Ele contém coordenadas atômicas das estruturas previstas no formato mmCIF e informações adicionais sobre pontuações de confiança nos arquivos JSON (para mais detalhes sobre as saídas, veja [Interpretando resultados do AlphaFold Server](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/)).
