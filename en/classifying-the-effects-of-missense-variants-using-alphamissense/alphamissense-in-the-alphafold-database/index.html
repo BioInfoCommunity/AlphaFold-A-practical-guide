@@ -2,23 +2,65 @@
 
 <head>
 	<meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  
-  
-  <title>AlphaFold: A practical guide | EMBL-EBI Training</title>
-	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.25/css/styles.css" type="text/css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	
+	
+	<title>AlphaFold: A practical guide | EMBL-EBI Training</title>
+	<link rel="stylesheet" href="https://assets.emblstatic.net/vf/v2.5.26/css/styles.css" type="text/css">
 
 	<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css"
 		media="all" />
 	<style>
-	#ebi-hero-background {
-		background-image: url('https://acxngcvroo.cloudimg.io/v7/www.embl.org/files/wp-content/uploads/Online-tutorial.jpg');
-		background-repeat: no-repeat;
-		background-size: cover;
-	}
+		#ebi-hero-background {
+			background-image: url('https://acxngcvroo.cloudimg.io/v7/www.embl.org/files/wp-content/uploads/Online-tutorial.jpg');
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.vf-pagination__item {
+			align-self: center;
+			box-sizing: border-box;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin: 0 8px;
+			padding: 0px;
+			position: relative;
+		}
+
+		.vf-pagination__item--previous-page {
+			flex-direction: row-reverse;
+		}
+
+		.vf-pagination__item .vf-pagination__link {
+			align-self: center;
+			display: table;
+		}
+
+		.vf-pagination__item svg {
+			flex-grow: 1;
+			fill: #d0d0ce;
+			min-width: 40px;
+			max-width: 40px;
+			margin-left: 5px;
+			margin-right: 5px;
+			display: table-cell;
+		}
+
+		/* Same spacing between paragraphs, lists and headings as the WordPress course pages
+		   (the course landing page keeps the default spacing, as on the original) */
+		.acc:not(.acc--landing) {
+			--vf-stack-margin: 2rem;
+		}
+
+		.acc .vf-box {
+			--vf-stack-margin: 0;
+			border-width: 1px;
+		}
 	</style>
 </head>
+
 <body class="vf-body">
 	<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
 		<span data-protection-message-disable="true"></span>
@@ -31,11 +73,15 @@
 					</a>
 				</div>
 
-        <nav>
-          <a href="/AlphaFold-A-practical-guide/en/">English</a> |
-          <a href="/AlphaFold-A-practical-guide/es/">Español</a> |
-          <a href="/AlphaFold-A-practical-guide/pt/">Portuguese</a>
-        </nav>
+				
+				<nav>
+					
+					<a href="/AlphaFold-A-practical-guide/en/">English</a> |
+					
+					<a href="/AlphaFold-A-practical-guide/pt/">Portuguese</a>
+					
+				</nav>
+				
 				<div class="vf-content">
 					<div>
 						<div id="block-ebi-academy-content--89">
@@ -57,6 +103,10 @@
 										<section class="embl-grid">
 											<div class="embl-training__sidebar">
 												<div class="vf-u-margin__top--500"></div>
+												<p class="vf-u-type__text-body--3 vf-u-margin--0">
+													<a class="vf-link vf-link--primary" href="https://www.ebi.ac.uk/training/">&larr; Back to EMBL-EBI Training</a>
+												</p>
+												<div class="vf-u-margin__top--500"></div>
 												<figure class="vf-figure ebi-academy-book-cover-image">
 
 													<img class="vf-figure__image"
@@ -73,27 +123,29 @@
 													Written by:</p>
 												<div class="vf-u-margin__top--100"></div>
 												<ul class="vf-list vf-list--compact vf-u-margin__bottom-md">
-                            
-                            
+													
+													
 
-                            
-                              <li class="vf-list__item">
-                                
-                                  Paulyna Gabriela Magana Gomez
-                                
-                              </li>
-                            
-                              <li class="vf-list__item">
-                                
-                                  <a class="vf-link vf-link--primary vf-u-type__text-body--3" href="https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy">
-                                    Oleg Kovalevskiy
-                                  </a>
-                                
-                              </li>
-                            
-                          </ul>
+													
+													<li class="vf-list__item">
+														
+														Paulyna Gabriela Magana Gomez
+														
+														<a href="https://orcid.org/0009-0004-1524-2966" title="ORCID" style="display:inline-block;vertical-align:middle;margin-left:4px;line-height:0"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD of Paulyna Gabriela Magana Gomez" width="16" height="16"></a>
+													</li>
+													
+													<li class="vf-list__item">
+														
+														<a class="vf-link vf-link--primary vf-u-type__text-body--3" href="https://www.ebi.ac.uk/training/trainers/oleg-kovalevskiy">
+															Oleg Kovalevskiy
+														</a>
+														
+														<a href="https://orcid.org/0000-0003-1106-3966" title="ORCID" style="display:inline-block;vertical-align:middle;margin-left:4px;line-height:0"><img src="https://orcid.org/assets/vectors/orcid.logo.icon.svg" alt="ORCID iD of Oleg Kovalevskiy" width="16" height="16"></a>
+													</li>
+													
+												</ul>
 												
-												
+
 												
 												<p class="vf-u-type__text-body--3 vf-u-margin--0 vf-u-margin__bottom-md">
 													Last updated: June 2025</p>
@@ -101,675 +153,829 @@
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 												<!-- Navigation -->
-                       
-                      
+												
+												
 
-                        <div class="vf-tree" data-vf-js-tree aria-expanded="true" data-vf-js-button-hidden-open-text="Open Tree" data-vf-js-button-hidden-close-text="Close Tree">
-  						<div class="vf-tree__inner">
-	                        <ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
-	
-	                          <!-- Course overview -->
-	                          <li class="vf-tree__item">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/">
-	                              AlphaFold: A practical guide
-	                            </a>
-	                          </li>
-	                        <!--  -->
-	                        
-	                        
-	
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/">
-	                             An Introductory Guide To Its Strengths And Limitations
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/what-are-proteins-and-how-do-we-know-their-structures/">
-	                                      What Are Proteins And How Do We Know Their Structures
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/what-is-the-protein-folding-problem/">
-	                                      What Is The Protein Folding Problem
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/what-is-alphafold/">
-	                                      What Is Alphafold
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/strengths-and-limitations-of-alphafold/">
-	                                      Strengths And Limitations Of Alphafold
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/test-your-knowledge/">
-	                                      Test Your Knowledge
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/">
-	                             Validation And Impact
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/how-have-alphafolds-predictions-of-protein-structure-been-validated/">
-	                                      How Have Alphafolds Predictions Of Protein Structure Been Validated
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/how-accurate-are-alphafold-structure-predictions/">
-	                                      How Accurate Are Alphafold Structure Predictions
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/how-is-alphafold-used-by-scientists/">
-	                                      How Is Alphafold Used By Scientists
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/">
-	                             Inputs And Outputs
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/a-high-level-overview/">
-	                                      A High Level Overview
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/">
-	                                      Evaluating Alphafolds Predicted Structures Using Confidence Scores
-											
-												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-									              Open Tree
-									            </p>
-									            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-									            </svg>
-									          </button>
-											
-	                                    </a>
-	
-	                                    
-	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/">
-	                                              Plddt Understanding Local Confidence
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/pae-a-measure-of-global-confidence-in-alphafold-predictions/">
-	                                              Pae A Measure Of Global Confidence In Alphafold Predictions
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/confidence-scores-in-alphafold-multimer/">
-	                                              Confidence Scores In Alphafold Multimer
-	                                            </a>
-	                                          </li>
-	                                        
-	                                      </ul>
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/alphafold-inputs-and-outputs-recap/">
-	                                      Alphafold Inputs And Outputs Recap
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/other-tools-to-check-quality-of-the-predicted-structures/">
-	                                      Other Tools To Check Quality Of The Predicted Structures
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/">
-	                             Accessing And Predicting Protein Structures With Alphafold
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/choosing-how-to-access-alphafold/">
-	                                      Choosing How To Access Alphafold
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/">
-	                                      Accessing Predicted Protein Structures In The Alphafold Database
-											
-												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-									              Open Tree
-									            </p>
-									            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-									            </svg>
-									          </button>
-											
-	                                    </a>
-	
-	                                    
-	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/whats-the-best-way-to-access-the-database/">
-	                                              Whats The Best Way To Access The Database
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/using-the-alphafold-database-for-analysis/">
-	                                              Using The Alphafold Database For Analysis
-	                                            </a>
-	                                          </li>
-	                                        
-	                                      </ul>
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-with-colabfold-and-alphafold-colab/">
-	                                      Predicting Protein Structures With Colabfold And Alphafold Colab
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-using-the-alphafold-open-source-code/">
-	                                      Predicting Protein Structures Using The Alphafold Open Source Code
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/other-ways-to-access-predicted-protein-structures/">
-	                                      Other Ways To Access Predicted Protein Structures
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/how-to-cite-alphafold/">
-	                                      How To Cite Alphafold
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/">
-	                             Advanced Modeling And Applications Of Predicted Protein Structures
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/">
-	                                      Customising Alphafold Structure Predictions
-											
-												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-									              Open Tree
-									            </p>
-									            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-									            </svg>
-									          </button>
-											
-	                                    </a>
-	
-	                                    
-	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/outputs-from-colabfold/">
-	                                              Outputs From Colabfold
-	                                            </a>
-	                                          </li>
-	                                        
-	                                      </ul>
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/using-alphafold-predicted-structures-to-tackle-deeper-questions/">
-	                                      Using Alphafold Predicted Structures To Tackle Deeper Questions
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/enhancements-to-alphafold-from-the-wider-scientific-community/">
-	                                      Enhancements To Alphafold From The Wider Scientific Community
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/">
-	                             Classifying The Effects Of Missense Variants Using Alphamissense
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/introducing-missense-variants-and-alphamissense/">
-	                                      Introducing Missense Variants And Alphamissense
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/understanding-pathogenicity-scores-from-alphamissense/">
-	                                      Understanding Pathogenicity Scores From Alphamissense
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/alphamissense-in-the-alphafold-database/">
-	                                      Alphamissense In The Alphafold Database
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/">
-	                             Alphafold 3 And Alphafold Server
-									
-										<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-							            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-							              Open Tree
-							            </p>
-							            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-							              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-							            </svg>
-							          </button>
-									
-	                            </a>
-	
-	                            
-	                              <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list" aria-role="group">
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/">
-	                                      Introducing Alphafold 3
-											
-												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-									              Open Tree
-									            </p>
-									            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-									            </svg>
-									          </button>
-											
-	                                    </a>
-	
-	                                    
-	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-does-alphafold-3-work/">
-	                                              How Does Alphafold 3 Work
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/what-alphafold-3-struggles-with/">
-	                                              What Alphafold 3 Struggles With
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/should-i-use-alphafold-2-or-alphafold-3/">
-	                                              Should I Use Alphafold 2 Or Alphafold 3
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-have-alphafold-3s-predictions-been-validated/">
-	                                              How Have Alphafold 3s Predictions Been Validated
-	                                            </a>
-	                                          </li>
-	                                        
-	                                      </ul>
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/">
-	                                      Alphafold Server Your Gateway To Alphafold 3
-											
-												<button class="vf-button vf-tree__button" data-vf-js-tree--button>
-									            <p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
-									              Open Tree
-									            </p>
-									            <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-									              <path d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
-									            </svg>
-									          </button>
-											
-	                                    </a>
-	
-	                                    
-	                                      <ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list" aria-role="group">
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/a-step-by-step-guide-to-generating-predictions-with-alphafold-server/">
-	                                              A Step By Step Guide To Generating Predictions With Alphafold Server
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/advanced-features-of-alphafold-server/">
-	                                              Advanced Features Of Alphafold Server
-	                                            </a>
-	                                          </li>
-	                                        
-	                                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/">
-	                                              Interpreting Results From Alphafold Server
-	                                            </a>
-	                                          </li>
-	                                        
-	                                      </ul>
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/03.how-to-assess-the-quality-of-alphafold-3-predictions/">
-	                                      03.How To Assess The Quality Of Alphafold 3 Predictions
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                                  <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                                    <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/04.using-the-alphafold-3-source-code/">
-	                                      04.Using The Alphafold 3 Source Code
-											
-	                                    </a>
-	
-	                                    
-	
-	                                  </li>
-	                                
-	                              </ul>
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/summary/">
-	                             Summary
-									
-	                            </a>
-	
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/course-slides/">
-	                             Course Slides
-									
-	                            </a>
-	
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/your-feedback/">
-	                             Your Feedback
-									
-	                            </a>
-	
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/glossary-of-terms/">
-	                             Glossary Of Terms
-									
-	                            </a>
-	
-	                            
-	
-	                          </li>
-	                        
-	                          <li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree aria-role="treeitem" aria-expanded="">
-	                            <a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/references/">
-	                             References
-									
-	                            </a>
-	
-	                            
-	
-	                          </li>
-	                        
-	                      </ul>
-						</div>
-					</div>
-		                  <hr class="vf-divider vf-u-margin__bottom-md">
+												<div class="vf-tree" data-vf-js-tree aria-expanded="true"
+													data-vf-js-button-hidden-open-text="Open Tree"
+													data-vf-js-button-hidden-close-text="Close Tree" style="height:auto">
+													<div class="vf-tree__inner">
+														<ul class="vf-tree__list vf-tree__list--1 | vf-list" aria-role="tree">
+
+															<!-- Course overview -->
+															<li class="vf-tree__item">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/">
+																	AlphaFold: A practical guide
+																</a>
+															</li>
+															<!--  -->
+															
+															
+
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/">
+																	An introductory guide to AlphaFold&#8217;s strengths and limitations
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/what-are-proteins-and-how-do-we-know-their-structures/">
+																			What are proteins and how do we know their structures?
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/what-is-the-protein-folding-problem/">
+																			What is the protein folding problem?
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/what-is-alphafold/">
+																			What is AlphaFold?
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/strengths-and-limitations-of-alphafold/">
+																			Strengths and limitations of AlphaFold 2
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/an-introductory-guide-to-its-strengths-and-limitations/test-your-knowledge/">
+																			Test your knowledge
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/">
+																	Validation and impact
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/how-have-alphafolds-predictions-of-protein-structure-been-validated/">
+																			How have AlphaFold2’s predictions of protein structure been validated?
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/how-accurate-are-alphafold-structure-predictions/">
+																			How accurate are AlphaFold 2 structure predictions?
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/validation-and-impact/how-is-alphafold-used-by-scientists/">
+																			How is AlphaFold 2 used by scientists?
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/">
+																	Inputs and outputs
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/a-high-level-overview/">
+																			AlphaFold2: A high-level overview
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/">
+																			Evaluating AlphaFold2’s predicted structures using confidence scores
+																			
+																			<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																				<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																					Open Tree
+																				</p>
+																				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																					<path
+																						d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																				</svg>
+																			</button>
+																			
+																		</a>
+
+																		
+																		<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list"
+																			aria-role="group">
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/">
+																					pLDDT: Understanding local confidence
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/pae-a-measure-of-global-confidence-in-alphafold-predictions/">
+																					PAE: A measure of global confidence in AlphaFold2 predictions
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/confidence-scores-in-alphafold-multimer/">
+																					Confidence scores in AlphaFold-Multimer
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																		</ul>
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/alphafold-inputs-and-outputs-recap/">
+																			AlphaFold2 inputs and outputs &#8211; Recap
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/inputs-and-outputs/other-tools-to-check-quality-of-the-predicted-structures/">
+																			Other tools to check quality of the predicted structures
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/">
+																	Accessing and predicting protein structures with AlphaFold 2
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/choosing-how-to-access-alphafold/">
+																			Choosing how to access AlphaFold2
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/">
+																			Accessing predicted protein structures in the AlphaFold Database
+																			
+																			<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																				<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																					Open Tree
+																				</p>
+																				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																					<path
+																						d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																				</svg>
+																			</button>
+																			
+																		</a>
+
+																		
+																		<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list"
+																			aria-role="group">
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/whats-the-best-way-to-access-the-database/">
+																					What’s the best way to access the database?
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/using-the-alphafold-database-for-analysis/">
+																					Using the AlphaFold database for analysis
+																					
+																					<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																						<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																							Open Tree
+																						</p>
+																						<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																							<path
+																								d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																						</svg>
+																					</button>
+																					
+																				</a>
+
+																				
+																				<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--4 | vf-list"
+																					aria-role="group">
+																					
+																					<li class="vf-tree__item">
+																						<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/using-the-alphafold-database-for-analysis/01.navigating-the-structural-landscape/">
+																							Navigating the structural landscape
+																						</a>
+																					</li>
+																					
+																				</ul>
+																				
+																			</li>
+																			
+																		</ul>
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-with-colabfold-and-alphafold-colab/">
+																			Predicting protein structures with ColabFold and AlphaFold2 Colab
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-using-the-alphafold-open-source-code/">
+																			Predicting protein structures using the AlphaFold2 open-source code
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/other-ways-to-access-predicted-protein-structures/">
+																			Other ways to access predicted protein structures
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/accessing-and-predicting-protein-structures-with-alphafold/how-to-cite-alphafold/">
+																			How to cite AlphaFold
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/">
+																	Advanced modelling and applications of predicted protein structures
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/">
+																			Customising AlphaFold2 structure predictions
+																			
+																			<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																				<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																					Open Tree
+																				</p>
+																				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																					<path
+																						d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																				</svg>
+																			</button>
+																			
+																		</a>
+
+																		
+																		<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list"
+																			aria-role="group">
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/outputs-from-colabfold/">
+																					Outputs from ColabFold
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																		</ul>
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/using-alphafold-predicted-structures-to-tackle-deeper-questions/">
+																			Using AlphaFold2 predicted structures to tackle deeper questions
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/advanced-modeling-and-applications-of-predicted-protein-structures/enhancements-to-alphafold-from-the-wider-scientific-community/">
+																			Enhancements to AlphaFold2 from the wider scientific community
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/">
+																	Classifying the effects of missense variants using AlphaMissense
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/introducing-missense-variants-and-alphamissense/">
+																			Introducing missense variants and AlphaMissense
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/understanding-pathogenicity-scores-from-alphamissense/">
+																			Understanding pathogenicity scores from AlphaMissense
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/alphamissense-in-the-alphafold-database/">
+																			AlphaMissense in the AlphaFold Database
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/">
+																	AlphaFold 3 and AlphaFold Server
+																	
+																	<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																		<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																			Open Tree
+																		</p>
+																		<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																			<path
+																				d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																		</svg>
+																	</button>
+																	
+																</a>
+
+																
+																<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--2 | vf-list"
+																	aria-role="group">
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/">
+																			Introducing AlphaFold 3
+																			
+																			<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																				<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																					Open Tree
+																				</p>
+																				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																					<path
+																						d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																				</svg>
+																			</button>
+																			
+																		</a>
+
+																		
+																		<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list"
+																			aria-role="group">
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-does-alphafold-3-work/">
+																					How does AlphaFold 3 work?
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/what-alphafold-3-struggles-with/">
+																					What AlphaFold 3 struggles with
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/should-i-use-alphafold-2-or-alphafold-3/">
+																					Should I use AlphaFold 2 or AlphaFold 3?
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-have-alphafold-3s-predictions-been-validated/">
+																					How have AlphaFold 3’s predictions been validated?
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																		</ul>
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/">
+																			AlphaFold Server: Your gateway to AlphaFold 3
+																			
+																			<button class="vf-button vf-tree__button" data-vf-js-tree--button>
+																				<p data-vf-js-tree-button-hidden-text class="vf-u-sr-only">
+																					Open Tree
+																				</p>
+																				<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+																					<path
+																						d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z" />
+																				</svg>
+																			</button>
+																			
+																		</a>
+
+																		
+																		<ul class="vf-tree__list vf-tree__list--additional vf-tree__list--3 | vf-list"
+																			aria-role="group">
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/a-step-by-step-guide-to-generating-predictions-with-alphafold-server/">
+																					A step-by-step guide to generating predictions with AlphaFold Server
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/advanced-features-of-alphafold-server/">
+																					Advanced features of AlphaFold Server
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																			<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																				aria-role="treeitem" aria-expanded="">
+																				<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/">
+																					Interpreting results from AlphaFold Server
+																					
+																				</a>
+
+																				
+																			</li>
+																			
+																		</ul>
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/03.how-to-assess-the-quality-of-alphafold-3-predictions/">
+																			How to assess the quality of AlphaFold 3 predictions
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																	<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																		aria-role="treeitem" aria-expanded="">
+																		<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/04.using-the-alphafold-3-source-code/">
+																			Using the AlphaFold 3 source code
+																			
+																		</a>
+
+																		
+
+																	</li>
+																	
+																</ul>
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/summary/">
+																	Summary
+																	
+																</a>
+
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/course-slides/">
+																	Course slides
+																	
+																</a>
+
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/your-feedback/">
+																	Your feedback
+																	
+																</a>
+
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/glossary-of-terms/">
+																	Glossary of terms
+																	
+																</a>
+
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/acknowledgements/">
+																	Acknowledgements
+																	
+																</a>
+
+																
+
+															</li>
+															
+															<li class="vf-tree__item" data-vf-js-tree--collapsed="true" data-vf-js-tree
+																aria-role="treeitem" aria-expanded="">
+																<a class="vf-tree__link" href="/AlphaFold-A-practical-guide/en/references/">
+																	References
+																	
+																</a>
+
+																
+
+															</li>
+															
+														</ul>
+													</div>
+												</div>
+												<hr class="vf-divider vf-u-margin__bottom-md">
 												<p>
 													<a href="https://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons"
 															src="http://trainingcontent.embl.org/themes/custom/ebi_academy/images/CC_BY.png"
 															style="width: 125px; height: 44px;" width="125" height="44"></a>
 												</p>
-												<p class="vf-u-type__text-body--3">Todos los materiales son obras culturales gratuitas con licencia Creative Commons.
+												<p class="vf-u-type__text-body--3">
+													
+													All materials are free cultural works licensed under a Creative Commons
 													<a href="https://creativecommons.org/licenses/by/4.0/"
-														class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia </a>
+														class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Attribution 4.0
+														International (CC BY 4.0) license</a>, except where further licensing details are provided.
+													
 												</p>
 												<div class="vf-u-margin__top--500"></div>
 												<hr class="vf-divider vf-u-margin__bottom-md">
 
-												
+
 											</div>
 											<!-- Sidebar end -->
 											<div class="acc">
@@ -784,9 +990,9 @@
 
 <p>The AFDB update significantly aids researchers in identifying structural areas to guide their investigations into protein function and provides easy access to download the data.</p>
 
-<p><img src="https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation2.gif?raw=true" alt="AlphaMissense in the AFDB" /></p>
+<p><img src="https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/02/Screenshot-2026-02-25-at-19.19.25-1-1024x704.png" alt="AlphaMissense in the AFDB" /></p>
 
-<p>Figure 33. AlphaFold Database showing AlphaMissense data integration for <a href="https://alphafold.ebi.ac.uk/entry/Q9UBK7">Rab-like protein 2A.</a></p>
+<p>Figure 33. AlphaFold Database showing AlphaMissense data integration for <a href="https://alphafold.ebi.ac.uk/entry/AF-Q9UBK7-F1?activeTab=annotations">Rab-like protein 2A.</a></p>
 
 <h2 id="further-information"><strong>Further information</strong></h2>
 
@@ -795,24 +1001,393 @@
 <p>The webinar also demonstrates how EMBL-EBI resources have incorporated AlphaMissense data.</p>
 
 
+												<!-- Navigation Links for Next/Previous Pages -->
+												<div class="vf-u-margin__top--1600"></div>
+												<nav class="vf-pagination" role="navigation" aria-label="Pagination">
+													<ul class="vf-pagination__list">
+														
+														
 
+														
+														
+														
+														
+
+														<!-- Iterate through all pages to find previous and next -->
+														
+
+														<!-- Check course home page -->
+														
+														
+														<!-- Default previous is the course home page, overwritten below if there is an earlier item -->
+														
+														
+														
+														<!-- Check all sections and children -->
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+
+														<!-- Check fourth-level items -->
+														
+														
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+
+														<!-- Check grandchild items -->
+														
+														
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Check child items -->
+														
+														
+														
+
+														<!-- Display Previous and Next links -->
+														
+														<li
+															class="vf-pagination__item vf-pagination__item--previous-page | vf-u-border-color--grey--lightest">
+															<a href="/AlphaFold-A-practical-guide/en/classifying-the-effects-of-missense-variants-using-alphamissense/understanding-pathogenicity-scores-from-alphamissense/" class="vf-pagination__link" style="display: table;">
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+																	style="display: table-cell;">
+																	<title>navigation-left-circle-1_1</title>
+																	<path
+																		d="M24,12A12,12,0,1,0,12,24,12.013,12.013,0,0,0,24,12ZM10.293,17.2l-4.5-4.5a1,1,0,0,1,0-1.414l4.5-4.5a1,1,0,1,1,1.414,1.414L9.341,10.571A.25.25,0,0,0,9.518,11H18a1,1,0,0,1,0,2H9.518a.25.25,0,0,0-.177.426l2.366,2.367A1,1,0,0,1,10.293,17.2Z">
+																	</path>
+																</svg>
+																<span class="vf-u-type__text-body--2 vf-u-margin--0"
+																	style="display: table-cell; vertical-align: top;">Understanding pathogenicity scores from AlphaMissense</span>
+															</a>
+														</li>
+														
+
+														
+														<li
+															class="vf-pagination__item vf-pagination__item--next-page | vf-u-border-color--grey--lightest">
+															<a href="/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/" class="vf-pagination__link" style="display: table;">
+																<span class="vf-u-type__text-body--2 vf-u-margin--0"
+																	style="display: table-cell; vertical-align: top;">AlphaFold 3 and AlphaFold Server</span>
+																<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+																	style="display: table-cell;">
+																	<title>navigation-right-circle-1_1</title>
+																	<path
+																		d="M0,12A12,12,0,1,0,12,0,12.014,12.014,0,0,0,0,12ZM13.707,6.791l4.5,4.5a1,1,0,0,1,0,1.414l-4.5,4.5a1,1,0,0,1-1.414-1.414l2.366-2.367A.25.25,0,0,0,14.482,13H6a1,1,0,1,1,0-2h8.482a.25.25,0,0,0,.177-.427L12.293,8.205a1,1,0,0,1,1.414-1.414Z">
+																	</path>
+																</svg>
+															</a>
+														</li>
+														
 											</div>
-										</section>
+											</nav>
 									</div>
+									</section>
 								</div>
-							</article>
-
-
-
 						</div>
+						</article>
 					</div>
 				</div>
-			</main>
-  <script src="https://assets.emblstatic.net/vf/v2.5.25/scripts/scripts.js"></script>
 		</div>
-
+		</main>
+		<script src="https://assets.emblstatic.net/vf/v2.5.26/scripts/scripts.js"></script>
 	</div>
 
+	</div>
+	<footer class="vf-footer vf-minimal-footer  | vf-u-background-color-ui--dark-grey">
+		<div class="vf-footer__inner">
+			<div class="vf-minimal-footer__intro">
+				<a href="https://www.ebi.ac.uk" class="vf-logo">
+					<img class="vf-logo__image"
+						src="https://stable.visual-framework.dev/assets/vf-minimal-footer/assets/embl-ebi-rgb-all-white.png"
+						alt="EMBL-EBI Logo" loading="eager">
+				</a>
+				<p class="vf-footer__notice">BioInfoTraining-Community - A community driven collaborative platform where members
+					can contribute to the translations of the existing content or submit their specific use cases.</p>
+			</div>
+			<section class="vf-footer__legal vf-grid__col--span-all | vf-grid vf-grid__col-1">
+				<span class="vf-footer__link vf-u-text-color--grey--lightest">Copyright © BioInfoTraining-Community</span>
+				<a class="vf-footer__link vf-u-text-color--white" href="JavaScript:Void(0);">Terms of use</a>
+				<a class="vf-footer__link vf-u-text-color--grey--lightest" href="JavaScript:Void(0);">Contact</a>
+			</section>
+		</div>
+	</footer>
 </body>
 
 </html>
