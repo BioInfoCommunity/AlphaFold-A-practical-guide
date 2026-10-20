@@ -5,7 +5,7 @@ title: 'Como avaliar a qualidade das previsões do AlphaFold 3'
 
 # Como avaliar a qualidade das previsões do AlphaFold 3
 
-Todas as estruturas previstas devem ser interpretadas criticamente e à luz dos índices de confiança. O AlphaFold 3 utiliza as mesmas pontuações de confiança do AlphaFold 2, com pequenas modificações. Crucialmente, as pontuações de confiança agora são calculadas para tokens, em vez de para aminoácidos como no AlphaFold 2. O uso de tokens é essencial para permitir que o AlphaFold 3 preveja complexos heterogêneos que incluem vários tipos de moléculas (veja “[Como funciona o AlphaFold 3?](https://www.ebi.ac.uk/training/online/courses/alphafold/introducing-alphafold-3/how-does-alphafold-3-work/)”).
+Todas as estruturas previstas devem ser interpretadas criticamente e à luz dos índices de confiança. O AlphaFold 3 utiliza as mesmas pontuações de confiança do AlphaFold 2, com pequenas modificações. Crucialmente, as pontuações de confiança agora são calculadas para tokens, em vez de para aminoácidos como no AlphaFold 2. O uso de tokens é essencial para permitir que o AlphaFold 3 preveja complexos heterogêneos que incluem vários tipos de moléculas (veja “[Como funciona o AlphaFold 3?](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/pt/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-does-alphafold-3-work/)”).
 
 Como o AlphaFold 3 é voltado para complexos, é mais importante considerar aquelas métricas que refletem a confiança das interações previstas. Essas métricas incluem pTM, ipTM, ipTM por pares e PAE para contatos intersubunidades.
 

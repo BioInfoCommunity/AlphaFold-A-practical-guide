@@ -26,6 +26,6 @@ Os usuários podem baixar dados do AFDB. As coordenadas atômicas estão dispon�
 
 Os arquivos de dados no arquivo são versionados, e versões anteriores estão disponíveis via FTP, mas as páginas web sempre exibirão a versão mais recente.
 
-![](https://lh7-us.googleusercontent.com/mfvdwl_3bd7fBf4025L8MDWmMBPDHYFfDZZcCZWc791liIFAW9NoV7N-hN5eUWodNyiYFWDwo8fWdnJyD0Sig5NWEv6zRxVURNA24x_EJ5Z7Z5Z7rlZMQwoqxOj3Bw2ufl-EY5HKdMzqS2NQbYI2WWQ)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-22-1024x576.png)
 
 Figura 22. Linha do tempo dos principais marcos no desenvolvimento e uso do AFDB, desenvolvido pelo Google DeepMind e EMBL-EBI em parceria.

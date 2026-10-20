@@ -13,10 +13,10 @@ Os usuários podem filtrar o mapa de calor por categoria e modificar a faixa de 
 
 A atualização do AFDB auxilia significativamente os pesquisadores na identificação de áreas estruturais para orientar suas investigações sobre a função das proteínas e oferece fácil acesso para baixar os dados.
 
-![AlphaMissense in the AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation2.gif?raw=true)
+![AlphaMissense in the AFDB](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/02/Screenshot-2026-02-25-at-19.19.25-1-1024x704.png)
 
 
-Figura 33. Banco de Dados AlphaFold mostrando integração de dados AlphaMissense para [Rab-like protein 2A.](https://alphafold.ebi.ac.uk/entry/Q9UBK7)
+Figura 33. Banco de Dados AlphaFold mostrando integração de dados AlphaMissense para [Rab-like protein 2A.](https://alphafold.ebi.ac.uk/entry/AF-Q9UBK7-F1?activeTab=annotations)
 
 ## **Mais informações**
 

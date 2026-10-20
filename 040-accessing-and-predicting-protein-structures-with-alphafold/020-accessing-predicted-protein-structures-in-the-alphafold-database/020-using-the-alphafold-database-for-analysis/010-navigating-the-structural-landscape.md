@@ -51,7 +51,7 @@ A coleção do PDB é atualizada semanalmente para incorporar as mais recentes i
 
 Os resultados são apresentados de forma clara e podem ser filtrados e classificados para ajudar você a encontrar as correspondências mais relevantes. É possível alinhar proteínas selecionadas à sua sequência de consulta (*query*) para avaliar a qualidade da correspondência. As opções de visualização incluem alternar entre a coloração da cadeia completa e a coloração baseada no pLDDT da sequência de consulta. Os resultados são apresentados de forma clara e podem ser filtrados e classificados.
 
-![AlphaMissense no AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation3.gif?raw=true)
+![AlphaMissense no AFDB](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/03/Screenshot-2026-03-03-at-12.21.38-1024x756.png)
 
 
 Figura 29. Banco de dados AlphaFold mostrando a integração com o Foldseek para [D435.](https://alphafold.ebi.ac.uk/entry/A0A1Y0BDV9)
@@ -64,7 +64,7 @@ O Foldseek pode revelar semelhanças surpreendentes entre proteínas que evoluí
 
 Finding a structural match to a protein with a known function can provide clues about the function of an unknown protein.
 
-![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2024/11/Screenshot-2024-11-22-at-13.10.01.png)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/03/Screenshot-2026-03-03-at-12.36.33-1-1024x731.png)
 
 
-Figure 30. Foldseek revealed a surprising structural similarity between [DNA replication ATP-dependent helicase/nuclease DNA2](https://alphafold.ebi.ac.uk/entry/P51530), a protein involved in DNA repair in humans, and Cas4 (PDB ID: [8D3M](https://www.ebi.ac.uk/pdbe/entry/pdb/8d3m)), a protein involved in bacterial immune systems. Despite having very different sequences, they share a common structural core, suggesting a distant evolutionary relationship.
+Figure 30. Foldseek revealed a surprising structural similarity between [DNA replication ATP-dependent helicase/nuclease DNA2](https://alphafold.ebi.ac.uk/entry/AF-P51530-F1), a protein involved in DNA repair in humans, and Cas4 (PDB ID: [8D3M](https://www.ebi.ac.uk/pdbe/entry/pdb/8d3m)), a protein involved in bacterial immune systems. Despite having very different sequences, they share a common structural core, suggesting a distant evolutionary relationship.

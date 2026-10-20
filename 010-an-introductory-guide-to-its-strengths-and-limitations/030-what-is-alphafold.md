@@ -41,7 +41,7 @@ AlphaFold2 está disponível como um programa de código aberto. Ele pode ser in
 
 Desde o lançamento do AlphaFold2 em 2021, ele teve adoção rápida e ampla. O artigo que descreve o método já havia recebido mais de 15.000 citações até dezembro de 2023. Da mesma forma, no inverno de 2023, o Banco de Dados de Estrutura de Proteínas AlphaFold (AFDB) já havia recebido 1,65 milhão de visitantes únicos de mais de 180 países, e o arquivo já havia sido baixado mais de 22.000 vezes.
 
-![](https://lh7-us.googleusercontent.com/vpgdaTiu9z_0059LYPg16aBlMlLDFWuQnJ5xbLKh3VUzAuya8CxYkvY4vckxEmF0xiA6IEAD9Xmug8e1n6QdrULALU90T9HM43uJ0Ofl5QcaJgG7ghWjIvv_QNkoOsmAJC1nm7ncuQ51bPTgvtZfAyA)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-4-alphafold-1024x576.png)
 
 Figura 4. O número de artigos científicos e preprints citando o principal artigo do AlphaFold2 ([Jumper et al., 2021](https://doi.org/10.1038/s41586-021-03819-2)) todos os meses desde sua publicação em julho de 2021.
 
