@@ -59,3 +59,5 @@ Watch the videos in this playlist to discover how scientists are using AlphaFold
 Unfolded: Meet the scientists using AlphaFold
 
 ## Test your knowledge
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/how-is-alphafold-used-by-scientists/">Take the quiz on EMBL-EBI Training</a></p>

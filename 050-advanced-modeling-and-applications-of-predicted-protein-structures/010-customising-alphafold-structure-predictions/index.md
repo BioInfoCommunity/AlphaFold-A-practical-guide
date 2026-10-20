@@ -66,4 +66,6 @@ It is important to consider MSA depth when using templates. If the coevolutionar
 
 Here you can find a short example on how you can use ColabFold.
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/">See the answers on EMBL-EBI Training</a></p>
+
 For additional protocols on using ColabFold for protein structure prediction, check the guide *“Easy and accurate protein structure prediction using ColabFold”* ([Kim et al., 2023](https://doi.org/10.21203/rs.3.pex-2490/v1))
