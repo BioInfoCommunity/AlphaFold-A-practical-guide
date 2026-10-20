@@ -4,6 +4,7 @@ course:
   hero_kicker_text: "Online tutorial"
   slug: "AlphaFold-A-practical-guide" # should match repo name for GitHub Pages and should be english for consistency across languages
   image: "//trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png"
+  training_url: "https://www.ebi.ac.uk/training/online/courses/alphafold/" # original course on EMBL-EBI Training, used by the "Back to EMBL-EBI Training" link
 
 languages:
   - code: en
@@ -12,8 +13,6 @@ languages:
     name: Portuguese
 
 labels:
-  # Licence text kept exactly as on production (Spanish). Reported in the review; not translated here.
-  license_html: 'Todos los materiales son obras culturales gratuitas con licencia Creative Commons. <a href="https://creativecommons.org/licenses/by/4.0/" class="vf-link vf-link--primary  vf-u-margin--0" style="display:inline">Licencia Atribución 4.0 Internacional (CC BY 4.0), excepto cuando se proporcionen más detalles de la licencia</a>'
   time_to_complete_text: "Tempo para completar"
   time_to_complete_value: "3 horas"
   last_updated_text: "Última revisão"
