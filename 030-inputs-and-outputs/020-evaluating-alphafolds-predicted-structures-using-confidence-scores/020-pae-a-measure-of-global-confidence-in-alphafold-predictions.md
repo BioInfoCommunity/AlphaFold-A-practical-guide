@@ -82,6 +82,8 @@ Has been linked to leukodystrophy. However, no structural or model information f
 
 ### Check your answers
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/pae-a-measure-of-global-confidence-in-alphafold-predictions/">See the answers on EMBL-EBI Training</a></p>
+
 ---
 
 ## Integrating pLLDT and PAE scores

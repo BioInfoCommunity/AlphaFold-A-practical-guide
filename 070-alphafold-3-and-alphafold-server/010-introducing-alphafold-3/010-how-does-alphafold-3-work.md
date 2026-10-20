@@ -59,4 +59,6 @@ As with AlphaFold 2, AlphaFold 3 supplies multiple confidence metrics to help yo
 * **Interface-predicted TM (ipTM) score:** measures the accuracy of predictions of one component of the complex relative to the other components of the complex.
 * **Per chain pTM and per-chain pair ipTM:** confidence in individual chains or pairs of chains.
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-does-alphafold-3-work/">Take the quiz on EMBL-EBI Training</a></p>
+
 ---

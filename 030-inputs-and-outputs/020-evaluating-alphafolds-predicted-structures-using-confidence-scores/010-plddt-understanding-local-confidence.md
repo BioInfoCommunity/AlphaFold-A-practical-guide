@@ -83,3 +83,5 @@ Low (70 > pLDDT > 50)
 Very low (pLDDT < 50)
 
 ### Check your answers
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/plddt-understanding-local-confidence/">See the answers on EMBL-EBI Training</a></p>

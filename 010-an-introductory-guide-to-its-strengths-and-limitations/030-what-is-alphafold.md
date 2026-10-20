@@ -51,3 +51,5 @@ Figure 4. The number of scientific papers and preprints citing the key AlphaFold
 ## Test your knowledge
 
 Time to flex your AlphaFold muscles!
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/what-is-alphafold/">Take the quiz on EMBL-EBI Training</a></p>

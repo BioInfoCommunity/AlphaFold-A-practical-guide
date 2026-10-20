@@ -42,3 +42,5 @@ We have created a table summarising the different ways to access the AlphaFold P
 ## How to access through API, FTP and Big Query
 
 In this section, we will guide you through accessing the AlphaFold Protein Structure Database through API and BigQuery.
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/whats-the-best-way-to-access-the-database/">See the answers on EMBL-EBI Training</a></p>
