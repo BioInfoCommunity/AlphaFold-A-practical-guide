@@ -26,6 +26,6 @@ Users can download data from AFDB. The atomic coordinates are available in PDB a
 
 The data files in the archive are versioned, and previous versions are available via FTP, but the web pages will always display the latest version.
 
-![](https://lh7-us.googleusercontent.com/mfvdwl_3bd7fBf4025L8MDWmMBPDHYFfDZZcCZWc791liIFAW9NoV7N-hN5eUWodNyiYFWDwo8fWdnJyD0Sig5NWEv6zRxVURNA24x_EJ5Z7Z5Z7rlZMQwoqxOj3Bw2ufl-EY5HKdMzqS2NQbYI2WWQ)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-22-1024x576.png)
 
 Figure 22. Timeline of key milestones in the development and use of the AlphaFold Protein Structure Database (AFDB), developed by Google DeepMind and EMBL-EBI in partnership.
