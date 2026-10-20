@@ -26,7 +26,7 @@ AlphaFold2 has enabled researchers to describe the structures of very large prot
 
 ##### Figure 12. Human nuclear pore complex (dilated) (PDB ID: [7R5J](https://www.wwpdb.org/pdb?id=pdb_00007r5j))
 
-AlphaFold2 was used to resolve structures of individual nucleoporin proteins [(Mosalaganti et al., 2022)](https://doi.org/10.1126/science.abm9506).
+AlphaFold2 was used to resolve structures of individual nucleoporin proteins. [(Mosalaganti et al., 2022)](https://doi.org/10.1126/science.abm9506)
 
 AlphaFold2 predictions have demonstrated great synergy with cross-linking mass-spectrometry (XL-MS). Predicted structures have helped interpret and make sense of distances obtained with this method. XL-MS distances, in turn, provide experimental validation of the predicted models, including predictions for protein-protein complexes. In one study, AlphaFold2 and XL-MS were used to identify the structures and positions of intracellular proteins in the cilia of *Tetrahymena thermophila* ([McCafferty et al., 2023](https://doi.org/10.1038/s42003-023-04773-7)). A similar two-pronged approach combining AlphaFold2 and XL-MS revealed protein-protein interactions in human cells, including “28,910 unique residue pairs captured across 4,084 unique human proteins and 2,110 unique protein-protein interactions” ([Bartolec et al., 2023](https://doi.org/10.1073/pnas.2219418120)).
 
