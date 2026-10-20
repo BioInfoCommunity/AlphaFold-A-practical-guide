@@ -23,13 +23,15 @@ Previously, overall structure prediction accuracy, measured by global distance f
 
 Google DeepMind previously entered an earlier version of AlphaFold in 2018’s [CASP13](https://predictioncenter.org/casp13/). It took the first place but by a small margin. Those predictions were not accurate enough, so the protein structure prediction problem was not considered solved.
 
-![](https://lh7-us.googleusercontent.com/_BkbLSDY5zMIDo4Sza-QXz24DxJ7WHwcmFpm_xOIZIZGuTEiO_ZkgGicn-aIDErGAOlOeFLMELERcPRyamc_SkckEwF1p0jGOkHGcQ8AAoMkjjrRVS56eOWtlmjwsE_os6G-ITrsyU7WVHXAr7SiNbs)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-8-1024x576.png)
 
 Figure 8. Overall success at protein structure prediction in CASPs over the years. AlphaFold drove rapid improvements in 2018 and 2020.
 
 Google DeepMind did not directly participate in [CASP15](https://predictioncenter.org/casp15/index.cgi) in 2022. However, all the top performers used modified or customised versions of AlphaFold2. Because Google DeepMind released the source code for AlphaFold, other researchers were able to build on it and in some cases outperform the standard version of the software ([Elofsson, 2023](https://doi.org/10.1016/j.sbi.2023.102594); [Kryshtafovych et al., 2023](https://onlinelibrary.wiley.com/doi/10.1002/prot.26617)).
 
-![](https://lh7-us.googleusercontent.com/PfuIC2A8rK2wOrPVEnVhJT_2Kp3KHg3QTk20KXc-PdhDfpthIjM_NdTB1yElVEHaGOEYD9HU8KqopwW_8Zj-C9MEaAauhWBbIgS-WBmsrqRL6zRIKlWG1nIgCkLkugfJvCoB1So2FQp_iJTkRMFzK6g)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-9-1024x576.png)
+
+Figure 9. The highest-scoring entries in CASP15 in 2022. All top performers used some version of AlphaFold2 in their predictions.
 
 ## **Subsequent evidence from structural biology**
 

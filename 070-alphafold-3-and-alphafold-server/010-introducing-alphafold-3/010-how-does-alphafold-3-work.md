@@ -31,7 +31,7 @@ Thus, AlphaFold 3’s tokenisation strategy balances the need for flexibility re
 * One atom of an ion
 * One atom of a chemically-modified amino acid residue or nucleotide. In order to predict the structure of a chemically-modified amino acid residue or nucleotide, AlphaFold 3 will tokenise the entire residue/nucleotide as atoms. In other words, these are treated more like ligands than standard amino acids or nucleotides.
 
-To understand this, consider a structure made of 100 amino acid residues and a ligand containing 20 atoms. AlphaFold 3 will represent this structure using 100 + 20 = 120 tokens. This is important because confidence metrics like PAE (see subsection “[Interpreting results from AlphaFold Server](https://www.ebi.ac.uk/training/online/courses/alphafold/interpreting-results-from-alphafold-server/)“) are now calculated for tokens rather than amino acids.
+To understand this, consider a structure made of 100 amino acid residues and a ligand containing 20 atoms. AlphaFold 3 will represent this structure using 100 + 20 = 120 tokens. This is important because confidence metrics like PAE (see subsection “[Interpreting results from AlphaFold Server](https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/en/alphafold-3-and-alphafold-server/alphafold-server-your-gateway-to-alphafold-3/interpreting-results-from-alphafold-server/)“) are now calculated for tokens rather than amino acids.
 
 ![](http://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2025/06/tokens.png)
 

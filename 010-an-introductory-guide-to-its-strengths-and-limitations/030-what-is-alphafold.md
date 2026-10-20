@@ -40,7 +40,7 @@ AlphaFold2 is available as an open-source program. It can be installed locally o
 
 Since AlphaFold2’s release in 2021, it has seen rapid and widespread adoption. The paper describing the method had received over 15,000 citations by December 2023. Similarly, as of winter  2023, the AlphaFold Protein Structure Database (AFDB) had had 1.65 million unique visitors from more than 180 countries, and the archive had been downloaded over 22,000 times.
 
-![](https://lh7-us.googleusercontent.com/vpgdaTiu9z_0059LYPg16aBlMlLDFWuQnJ5xbLKh3VUzAuya8CxYkvY4vckxEmF0xiA6IEAD9Xmug8e1n6QdrULALU90T9HM43uJ0Ofl5QcaJgG7ghWjIvv_QNkoOsmAJC1nm7ncuQ51bPTgvtZfAyA)
+![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-4-alphafold-1024x576.png)
 
 Figure 4. The number of scientific papers and preprints citing the key AlphaFold2 paper ([Jumper et al., 2021](https://doi.org/10.1038/s41586-021-03819-2)) every month since its publication in July 2021.
 

@@ -42,6 +42,8 @@ If you are viewing the PAE plot on the AFDB, you can select a region of the plot
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/pae-plddt.gif)
 
+Figure 18. PAE and pLDDT plots for Sphingomyelinase (AlphaFold ID: [AF-P9WKQ0-F1](https://alphafold.ebi.ac.uk/entry/P9WKQ0)). The pLDDT is encoded in the colours on the protein structure (see key). PAE is represented in the square plot to the right
+
 
 ---
 
@@ -89,3 +91,5 @@ Although pLDDT and PAE measure confidence in different aspects of the predicted 
 PAE scores should always be interpreted in conjunction with other confidence scores like pLDDT.
 
 ![](https://ftp.ebi.ac.uk/pub/training/2024/On-demand/exportin-pae-plddt.gif)
+
+Figure 19. PAE and pLDDT plots for Exportin-4 (AlphaFold ID: [AF-A0A1I9LPW2-F1](https://alphafold.ebi.ac.uk/entry/A0A1I9LPW2)). The pLDDT is encoded in the colours on the protein structure (see key). PAE is represented in the square plot to the right.

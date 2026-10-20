@@ -26,19 +26,19 @@ Figuring out protein structure is like opening a black box. Revealing the 3D str
 
 
 
-##### Salmonella alpha-2-macroglobulin (PDB ID: 4U48)
+##### Salmonella alpha-2-macroglobulin (PDB ID: [4U48](https://www.ebi.ac.uk/pdbe/entry/pdb/4u48))
 
 Provides protection against proteases secreted from hosts
 
-##### HIV-1 Reverse Transcriptase (PDB ID: 8U6H)
+##### HIV-1 Reverse Transcriptase (PDB ID: [8U6H](https://www.ebi.ac.uk/pdbe/entry/pdb/8U6H))
 
 One of the key proteins responsible for the replication cycle of HIV-1 in the host.
 
-##### SARS-CoV main protease (PDB ID: 6Y7M)
+##### SARS-CoV main protease (PDB ID: [6Y7M](https://www.ebi.ac.uk/pdbe/entry/pdb/6Y7M))
 
 This essential coronavirus protease processes the polyproteins translated from the viral RNA
 
-##### Circadian Clock Protein KaiA (PDB ID: 1R8J)
+##### Circadian Clock Protein KaiA (PDB ID: [1R8J](https://www.ebi.ac.uk/pdbe/entry/pdb/1R8J))
 
 A tiny clockmaker that orchestrates the daily rhythms of cyanobacteria. KaiA regulates other proteins in a 24-hour cycle, like a metronome for time. To keep the rhythm on track, it senses light and other cues
 

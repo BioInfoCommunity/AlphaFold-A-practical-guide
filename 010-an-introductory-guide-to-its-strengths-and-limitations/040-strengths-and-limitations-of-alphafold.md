@@ -24,7 +24,7 @@ Crucially, AlphaFold2 does not simply replicate known protein structures. Indepe
 
 
 
-##### Figure 5. Uncharacterised protein (AlphaFold ID: [AF-A0A849ZK06-F1](https://alphafold.ebi.ac.uk/entry/A0A849ZK06))
+##### Figure 5. Uncharacterized protein (AlphaFold ID: [AF-A0A849ZK06-F1](https://alphafold.ebi.ac.uk/entry/A0A849ZK06))
 
 Predicted to be a ribonucleotide-binding protein with an overall structure that resembles a protein kinase fold, molecular function predicted by DeepFRI ([Barrio-Hernandez et al., 2023](https://doi.org/10.1038/s41586-023-06510-w))
 

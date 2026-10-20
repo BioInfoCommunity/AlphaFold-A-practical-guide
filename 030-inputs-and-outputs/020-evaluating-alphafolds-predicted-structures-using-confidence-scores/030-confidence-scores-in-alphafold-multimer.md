@@ -7,7 +7,7 @@ title: 'Confidence scores in AlphaFold-Multimer'
 
 AlphaFold-Multimer is a specialised version of the software. It is designed to predict the structures of protein complexes. AlphaFold-Multimer provides two additional metrics for evaluating the accuracy of its predictions: the predicted template modelling (pTM) score and the interface predicted template modelling (ipTM) score.
 
-Both are derived from a measure called the template modelling (TM) score. This measures the accuracy of the global structure of the protein and is relatively insensitive to localised inaccuracies ([Xu and Zhang, 2010](https://doi.org/10.1093/bioinformatics/btq066)).
+Both are derived from a measure called the template modelling (TM) score. This measures the accuracy of the global structure of the protein and is relatively insensitive to localised inaccuracies ([Zhang and Skolnick, 2004](https://doi.org/10.1002/prot.20264)).
 
 pTM is an integrated measure of how well AlphaFold-Multimer has predicted the overall structure of the complex. It is the predicted TM score for a superposition between the predicted structure and the hypothetical true structure. A TM score above 0.5 means the overall predicted fold for the complex might be similar to the true structure. A TM score below 0.5 means the predicted structure is likely wrong: pTM score follows the same definition. pTM score should be interpreted cautiously. For example, imagine a situation where one of the interacting proteins is larger, and its structure is predicted correctly, while a smaller partner protein is predicted incorrectly. The resulting pTM score of the complex could be dominated by the larger protein and show a pTM score above 0.5.
 

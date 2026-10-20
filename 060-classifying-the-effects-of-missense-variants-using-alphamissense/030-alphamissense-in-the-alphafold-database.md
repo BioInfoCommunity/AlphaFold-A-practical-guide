@@ -13,10 +13,10 @@ Users can filter the heatmap by category and modify the range for categories bas
 
 The AFDB update significantly aids researchers in identifying structural areas to guide their investigations into protein function and provides easy access to download the data.
 
-![AlphaMissense in the AFDB](https://github.com/paulynamagana/AFDB_notebooks/blob/main/Presentation2.gif?raw=true)
+![AlphaMissense in the AFDB](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/02/Screenshot-2026-02-25-at-19.19.25-1-1024x704.png)
 
 
-Figure 33. AlphaFold Database showing AlphaMissense data integration for [Rab-like protein 2A.](https://alphafold.ebi.ac.uk/entry/Q9UBK7)
+Figure 33. AlphaFold Database showing AlphaMissense data integration for [Rab-like protein 2A.](https://alphafold.ebi.ac.uk/entry/AF-Q9UBK7-F1?activeTab=annotations)
 
 ## **Further information**
 
