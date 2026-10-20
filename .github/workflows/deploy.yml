@@ -1,0 +1,15 @@
+name: Build and Deploy Jekyll Site for Portuguese
+
+on:
+  push:
+    branches:
+      - portuguese
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: BioInfoCommunity/course-template/.github/workflows/deploy.yml@main
+    with:
+      lang: pt
+    permissions:
+      contents: write

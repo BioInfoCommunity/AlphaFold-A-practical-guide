@@ -3,8 +3,18 @@ course:
   subtitle: "A practical guide"
   hero_kicker_text: "Online tutorial"
   slug: "AlphaFold-A-practical-guide" # should match repo name for GitHub Pages and should be english for consistency across languages
+  image: "//trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png"
+
+languages:
+  - code: en
+    name: English
+  - code: pt
+    name: Portuguese
 
 labels:
+  # Draft translations, to be reviewed by the translators
+  back_to_training_text: "Voltar ao EMBL-EBI Training"
+  license_html: 'Todos os materiais são obras culturais livres licenciadas sob a licença Creative Commons <a href="https://creativecommons.org/licenses/by/4.0/" class="vf-link vf-link--primary vf-u-margin--0" style="display:inline">Atribuição 4.0 Internacional (CC BY 4.0)</a>, exceto quando forem fornecidos outros detalhes de licenciamento.'
   time_to_complete_text: "Tempo para completar"
   time_to_complete_value: "3 horas"
   last_updated_text: "Última revisão"

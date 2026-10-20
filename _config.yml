@@ -1,29 +1,4 @@
+# Course-specific values. The rest of the config comes from course-template.
 title: AlphaFold - A practical guide
 description: This tutorial is aimed at researchers who are interested in using AlphaFold to predict protein structures and integrate these predictions into their projects
-
-baseurl: ""
-url: "https://sandykadam.github.io/AlphaFold-A-practical-guide"
-
-markdown: kramdown
-theme: null
-
-permalink: pretty
-
-# Build settings
-exclude:
-  - README.md
-  - Gemfile
-  - Gemfile.lock
-  - node_modules
-
-# Collections (optional if needed later)
-collections:
-  pages:
-    output: true
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
-      sort_reverse_posts: true
+url: "https://bioinfocommunity.github.io/AlphaFold-A-practical-guide"
