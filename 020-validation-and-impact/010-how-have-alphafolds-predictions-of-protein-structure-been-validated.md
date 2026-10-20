@@ -31,6 +31,8 @@ O Google DeepMind não participou diretamente do [CASP15](https://predictioncent
 
 ![](https://www.ebi.ac.uk/training/online/courses/alphafold/wp-content/uploads/sites/259/2026/07/Figure-9-1024x576.png)
 
+Figure 9. The highest-scoring entries in CASP15 in 2022. All top performers used some version of AlphaFold2 in their predictions.
+
 ## **Evidências subsequentes da biologia estrutural**
 
 Em CASP14, AlphaFold2 obteve sucesso ao prever as estruturas de dezenas de proteínas. No entanto, existem milhões de proteínas na natureza. Por isso, pesquisadores experimentalistas subsequentes submeteram o software a validação adicional.
