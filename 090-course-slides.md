@@ -13,7 +13,7 @@ Sinta-se à vontade para baixar e adaptar estes slides para seu próprio uso. El
 
 Baixe os slides completos da apresentação para usar em sua apresentação sobre o AlphaFold e suas aplicações práticas.
 
-[Baixar Apresentação Completa](https://docs.google.com/presentation/d/14fWYhE30-ya45vKft4mOdO8e8Y3qbezVipM3o_Fdr-Q/export/pptx)
+<p><a class="vf-button vf-button--primary vf-button--sm" href="https://bioinfocommunity.github.io/AlphaFold-A-practical-guide/en/files/alphafold-practical-guide-slides.pdf">Baixar Apresentação Completa (PDF)</a> <a class="vf-button vf-button--primary vf-button--sm" href="https://github.com/BioInfoCommunity/AlphaFold-A-practical-guide/releases/download/course-slides/AlphaFold-A-practical-guide-slides.pptx">Baixar Apresentação Completa (PowerPoint)</a></p>
 
 (Clicar neste botão fará o download do arquivo da apresentação diretamente para o seu dispositivo.)
 
