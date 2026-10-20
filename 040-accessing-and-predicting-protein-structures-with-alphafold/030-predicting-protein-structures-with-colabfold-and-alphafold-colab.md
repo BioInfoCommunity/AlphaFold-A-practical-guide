@@ -36,3 +36,5 @@ Por favor, note que usuários avançados com hardware de GPU de ponta podem conf
 Em ambos os casos, há limites no tamanho da proteína (medidos pelo número de resíduos de aminoácidos) que podem ser previstos. As restrições são definidas principalmente pela quantidade de RAM disponível na GPU gratuita fornecida pela Colab. Há um máximo de 4.000 resíduos para prever modelos de multômeros. O modelo de monômero tem um limite de 2.500 resíduos.
 
 A plataforma Google Colab, que roda tanto o ColabFold quanto o AlphaFold2 Colab, oferece aos usuários uma quantidade limitada de recursos computacionais gratuitamente. Os cadernos do Colab no nível gratuito ficam em tempo após um certo tempo. No entanto, você pode acessar o [Google Colab Pro](https://colab.research.google.com/signup) para mais GPUs.
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/predicting-protein-structures-with-colabfold-and-alphafold-colab/">See the answers on EMBL-EBI Training</a></p>

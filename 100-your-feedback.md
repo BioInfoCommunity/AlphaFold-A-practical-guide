@@ -5,6 +5,8 @@ title: 'Seu feedback'
 
 # Seu feedback
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/your-feedback/">Open the feedback form on EMBL-EBI Training</a></p>
+
 Seu feedback 2024 novoPor favor, nos conte sua opinião sobre este tutorial. Seu feedback nos ajuda a melhorar nosso treinamento e a aprimorar sua experiência de aprendizado.
 Por favor, nos conte sua avaliação geral para o tutorial.
 \*

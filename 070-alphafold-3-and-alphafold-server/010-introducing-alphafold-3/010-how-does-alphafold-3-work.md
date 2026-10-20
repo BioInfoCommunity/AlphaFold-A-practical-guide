@@ -62,4 +62,6 @@ Assim como o AlphaFold 2, o AlphaFold 3 fornece múltiplas métricas de confian�
 * **Pontuação TM prevista por interface (ipTM)** mede a precisão das previsões de um componente do complexo em relação aos outros componentes do complexo.
 * **PTM por cadeia e par por cadeia ipTM:** confiança em cadeias individuais ou pares de cadeias.
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/alphafold-3-and-alphafold-server/introducing-alphafold-3/how-does-alphafold-3-work/">Take the quiz on EMBL-EBI Training</a></p>
+
 ---

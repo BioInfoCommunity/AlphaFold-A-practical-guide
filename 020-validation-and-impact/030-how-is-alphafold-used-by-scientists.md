@@ -60,3 +60,5 @@ Assista aos vídeos desta playlist para descobrir como os cientistas estão usan
 Unfolded: Conheça os cientistas que utilizam o AlphaFold
 
 ## Teste seus conhecimentos
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/validation-and-impact/how-is-alphafold-used-by-scientists/">Take the quiz on EMBL-EBI Training</a></p>

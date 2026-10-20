@@ -43,3 +43,5 @@ Criamos uma tabela resumindo as diferentes formas de acessar o Banco de Dados de
 ## Como acessar via API, FTP e Big Query
 
 Nesta seção, vamos guiá-lo no acesso ao Banco de Dados de Estruturas de Proteínas AlphaFold via API e BigQuery.
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/accessing-and-predicting-protein-structures-with-alphafold/accessing-predicted-protein-structures-in-the-alphafold-database/whats-the-best-way-to-access-the-database/">See the answers on EMBL-EBI Training</a></p>
