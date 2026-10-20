@@ -4,6 +4,7 @@ course:
   hero_kicker_text: "Online tutorial"
   slug: "AlphaFold-A-practical-guide" # should match repo name for GitHub Pages and should be english for consistency across languages
   image: "//trainingcontent.embl.org/sites/default/files/book-images/AlphaFold.png"
+  training_url: "https://www.ebi.ac.uk/training/online/courses/alphafold/" # original course on EMBL-EBI Training, used by the "Back to EMBL-EBI Training" link
 
 languages:
   - code: en
