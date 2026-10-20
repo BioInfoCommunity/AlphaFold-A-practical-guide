@@ -51,3 +51,5 @@ Figura 4. O número de artigos científicos e preprints citando o principal arti
 ## Teste seus conhecimentos
 
 Hora de exercitar seus conhecimentos sobre o AlphaFold!
+
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/an-introductory-guide-to-its-strengths-and-limitations/what-is-alphafold/">Take the quiz on EMBL-EBI Training</a></p>

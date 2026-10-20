@@ -66,4 +66,6 @@ Você pode fornecer um modelo personalizado. Como alternativa, você pode permit
 
 Aqui você pode encontrar um exemplo curto de como usar o ColabFold.
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/advanced-modeling-and-applications-of-predicted-protein-structures/customising-alphafold-structure-predictions/">See the answers on EMBL-EBI Training</a></p>
+
 Para obter protocolos adicionais sobre como usar o ColabFold para predição da estrutura de proteínas, consulte o guia *“Easy and accurate protein structure prediction using ColabFold”* ([Kim et al., 2023](https://doi.org/10.21203/rs.3.pex-2490/v1))

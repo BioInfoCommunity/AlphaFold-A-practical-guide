@@ -80,6 +80,8 @@ Componente do sistema de secreção ESX-1 tipo VII, que transporta ativamente v�
 
 ### Verifica sua resposta
 
+<p><a class="vf-button vf-button--secondary vf-button--sm" href="https://www.ebi.ac.uk/training/online/courses/alphafold/inputs-and-outputs/evaluating-alphafolds-predicted-structures-using-confidence-scores/pae-a-measure-of-global-confidence-in-alphafold-predictions/">See the answers on EMBL-EBI Training</a></p>
+
 ---
 
 ## Integração das pontuações pLLDT e PAE
